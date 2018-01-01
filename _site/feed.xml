@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Centrarium</title>
-    <description>A simple yet classy theme for your Jekyll website or blog.
+    <title>Sungwon's blog</title>
+    <description>Personal blog with some machine learning.
 </description>
-    <link>http://bencentra.github.io/centrarium/</link>
-    <atom:link href="http://bencentra.github.io/centrarium/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Jan 2018 16:01:49 +0900</pubDate>
-    <lastBuildDate>Mon, 01 Jan 2018 16:01:49 +0900</lastBuildDate>
+    <link>http://lyusungwon.github.io/centrarium/</link>
+    <atom:link href="http://lyusungwon.github.io/centrarium/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 01 Jan 2018 16:42:09 +0900</pubDate>
+    <lastBuildDate>Mon, 01 Jan 2018 16:42:09 +0900</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -68,8 +68,8 @@ function demo(string, times) {
 
 </description>
         <pubDate>Sat, 18 Apr 2015 17:43:59 +0900</pubDate>
-        <link>http://bencentra.github.io/centrarium/jekyll/2015/04/18/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://bencentra.github.io/centrarium/jekyll/2015/04/18/welcome-to-jekyll.html</guid>
+        <link>http://lyusungwon.github.io/centrarium/jekyll/2015/04/18/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/centrarium/jekyll/2015/04/18/welcome-to-jekyll.html</guid>
         
         <category>jekyll</category>
         
@@ -92,8 +92,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 17:43:59 +0900</pubDate>
-        <link>http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy6.html</link>
-        <guid isPermaLink="true">http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy6.html</guid>
+        <link>http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy6.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy6.html</guid>
         
         <category>lorem</category>
         
@@ -116,8 +116,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 17:43:59 +0900</pubDate>
-        <link>http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy5.html</link>
-        <guid isPermaLink="true">http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy5.html</guid>
+        <link>http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy5.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy5.html</guid>
         
         <category>lorem</category>
         
@@ -138,8 +138,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 17:43:59 +0900</pubDate>
-        <link>http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy4.html</link>
-        <guid isPermaLink="true">http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy4.html</guid>
+        <link>http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy4.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy4.html</guid>
         
         <category>ipsum</category>
         
@@ -160,8 +160,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 17:43:59 +0900</pubDate>
-        <link>http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy3.html</link>
-        <guid isPermaLink="true">http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy3.html</guid>
+        <link>http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy3.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy3.html</guid>
         
         
         <category>Dummy</category>
@@ -180,8 +180,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 17:43:59 +0900</pubDate>
-        <link>http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy2.html</link>
-        <guid isPermaLink="true">http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy2.html</guid>
+        <link>http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy2.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy2.html</guid>
         
         
         <category>Dummy</category>
@@ -200,8 +200,8 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 17:43:59 +0900</pubDate>
-        <link>http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy.html</link>
-        <guid isPermaLink="true">http://bencentra.github.io/centrarium/dummy/2015/04/18/dummy.html</guid>
+        <link>http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/centrarium/dummy/2015/04/18/dummy.html</guid>
         
         
         <category>Dummy</category>
