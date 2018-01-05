@@ -10,7 +10,7 @@ categories: NLP
 
 ## WHAT?
 Subsampling of the frequent words: 너무 자주 등장하는 단어들은 임베딩에 거의 영향을 주지 않음으로 일정 Threshold이상의 단어들은 제외한다.\\
-Negative Sampling: 단어 벡터가 클 경우 Cross-entropy의 계산량이 많으므로 Hierarchical softmax보다 좋은 Negative sampleing을 사용한다. Noise distribution \\(frac{U^{\frac{3}{4}}}{Z})\\를 통하여 k개의 Negative sample을 추출하여 loss에 반영한다. \\
+Negative Sampling: 단어 벡터가 클 경우 Cross-entropy의 계산량이 많으므로 Hierarchical softmax보다 좋은 Negative sampleing을 사용한다. Noise distribution $$\frac{U^{\frac{3}{4}}}{Z}$$를 통하여 k개의 Negative sample을 추출하여 loss에 반영한다. \\
 Phrase vector: 하나 이상의 단어로 이루어진 구의 임베딩을 위하여 일정 스코어를 통하여 타당한 구를 추출하고 그 구를 하나의 단어처럼 학습한다.
 
 ## So
