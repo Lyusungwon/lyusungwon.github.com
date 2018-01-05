@@ -48,11 +48,11 @@ jekyll-archives:
 
 # Category descriptions (for archive pages)
 descriptions:
-  - cat: Private
-    desc: "Private thinking?"
+  - cat: NLP
+    desc: "Natural Language Processing"
 
-  - cat: Machine Learning
-    desc: "Machine Learning Summary?"
+  - cat: PGM
+    desc: "Probabilistic Graphical Modeling"
 
 # Social icons and sharing options
 #
