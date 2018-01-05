@@ -5,7 +5,6 @@ date:   2018-01-04 11:08:59
 author: Sungwon Lyu
 categories: NLP
 ---
-# Efficient Estimation of Word Representations in Vector Space
 ## WHY? 
 Continuous Word Representation을 평가할 수 있는 방법을 제시하고\\
 더 많은 데이터들로 부터 더 빠르게 더 나은 표현을 학습할 수 있는 Continous Bag-of-Words(CBOW)와 Continous Skip-gram Model을 제시
