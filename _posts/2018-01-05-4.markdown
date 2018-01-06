@@ -6,7 +6,7 @@ author: Sungwon Lyu
 categories: NLP
 ---
 ## WHY? 
-최근 제시된 Skipgram의 성능을 향상시킬만한 여러 기법을 시행하였다. 
+nono
 
 ## WHAT?
 Subsampling of the frequent words: 너무 자주 등장하는 단어들은 임베딩에 거의 영향을 주지 않음으로 일정 Threshold이상의 단어들은 제외한다.\\
