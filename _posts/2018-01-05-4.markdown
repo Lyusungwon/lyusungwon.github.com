@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "hihi"
-date:   2018-01-05 15:35:59
+title:  "node2vec"
+date:   2018-01-05 13:49:59
 author: Sungwon Lyu
-categories: NLP
+categories: PGM
 ---
 ## WHY? 
-nono
+네트워크의 노드들을 Skipgram과 같이 distributed representation을 통하여 나타내려고 했다. 최근의 이러한 시도들은 노드의 이웃들을 경직되게 정의하여 다양한 네트워크 모양의 패턴을 파악하는데 실패하였다. 
 
 ## WHAT?
-Sdd
+node를 벡터화하는데 node의 이웃을 유연하게 정의한 node2vec을 고안하였다. Random walk 방법을 통하여 노드의 이웃을 샘플링하는데 다시 돌아올 확률(1/p), 이 전 노드와 이어진 노드로 이동할 확률(1), 그리고 그렇지 않은 확률(1/q)을 하이퍼파라미터로 설정하였다. p가 작다면 node2vec은 균일성(homogenity)를 학습하게 되고 q가 작다면 노드의 구조적 특성을 학습하게 된다. 두 노드의 벡터를 통하여 엣지를 나타내는 표현형을 찾아본 결과 Hadamard Product가 가장 효과적이었다. 
 
 
 ## So
-Subsampling과 Negative Sampling을 통하여 더 빠르면서 우수한 성능을 보였다. 
+다양한 p, q를 통하여 학습한 결과 multilabel classification에서 다른 모델보다 좋은 성능을 보였고 Link prediction에서도 좋은 성능을 보였다. Node2vec은 대부분의 파라미터에 대하여 우수하고 노이즈에 강하며 Scalable하다. 
