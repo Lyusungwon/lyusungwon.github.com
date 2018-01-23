@@ -9,7 +9,7 @@ categories: NLP
 기존의 Skipgram과 CBOW는 일정 window 내의 정보만 반영할 뿐 global한 frequency정보는 반영하지 못한다. 
 
 ## WHAT?
-$$\hat{J} = \Sigma_{i, j}f(X_{i, j})(w_{i}^{T}\tilde{w}-logX_{ij})^{2}$$
+$$\hat{J} = \Sigma_{i, j}f(X_{i, j})(w_{i}^{T}\tilde{w}-logX_{ij})^{2}$$\\
 두 임베딩의 곱을 동시발생 빈도만큼 가중하여 두 단어의 동시발생 빈도에 가까워 지도록 학습하는 GloVe를 제안하였다.
 
 ## So

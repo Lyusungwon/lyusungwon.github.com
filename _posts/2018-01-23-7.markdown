@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Neural Machine Translation by Jointly Learning to Align and Translate"
+date:   2018-01-23 20:58:59
+author: Sungwon Lyu
+categories: NLP
+---
+## WHY? 
+기존의 encoder-decoder model들은 인코더의 맨 마지막 벡터의 모든 input정보가 담겨야 해서 긴 문장을 번역하는데 한계가 있었다.  
+
+## WHAT?
+맨 마지막 벡터 대신\\
+input벡터들의 hidden layer와 decoder의 이전 hidden layer와의 곱을 점수로 매겨\\
+그 점수로 input벡터들의 hidden layer들을 가중합한 context 벡터를 활용하여\\
+decoder의 다음 hidden layer를 구한다. 
+
+## So
+번역을 할 때 input 문장을 통째로 외워서 번역하는 것이 아니라 각 단어에 해당하는 단어를 참고하면서 번역하는 효과를 가져와 훨씬 효과가 좋았다. 
