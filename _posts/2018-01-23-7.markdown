@@ -15,6 +15,6 @@ input벡터들의 hidden layer와 decoder의 이전 hidden layer와의 곱을 �
 decoder의 다음 hidden layer를 구한다. 
 
 ## So
-번역을 할 때 input 문장을 통째로 외워서 번역하는 것이 아니라 각 단어에 해당하는 단어를 참고하면서 번역하는 효과를 가져와 훨씬 효과가 좋았다. \\
+번역을 할 때 input 문장을 통째로 외워서 번역하는 것이 아니라 각 단어에 해당하는 단어를 참고하면서 번역하는 효과를 가져와 훨씬 효과가 좋았다.
 
 참고: https://github.com/Lyusungwon/nmt

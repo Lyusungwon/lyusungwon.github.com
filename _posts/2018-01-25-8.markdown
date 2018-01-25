@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Human-level control through deep reinforcement learning"
+date:   2018-01-25 12:21:59
+author: Sungwon Lyu
+categories: RL
+---
+## WHY? 
+기존의 강화학습 agent들은 각 게임마다 다른 feature를 추출하여 state로 사용하였기 때문에 각 게임마다 다른 모델로 학습해야 한다는 한계가 있었다. 
+
+## WHAT?
+Deep convolution network 를 사용하여 게임 화면의 픽셀들로 부터 피쳐들을 학습하여 state로 사용하는 모델을 제시하였다. 샘플간의 공분산성을 해결하기 위하여 replay memory method를  사용하였고 moving target현상을 해결하기 위하여 메인 모델과 target모델을 다르게 유지하는 기법을 사용하였다. 
+
+## So
+한 모델을 통하여 많은 종류의 아타리 게임들에서 기존의 기법이나 사람보다 나은 결과를 가져왔다. 
