@@ -54,6 +54,11 @@ descriptions:
   - cat: PGM
     desc: "Probabilistic Graphical Modeling"
 
+  - cat: RL
+    desc: "Reinforcement Learning"
+
+  - cat: DL
+    desc: "Deep Learning"    
 # Social icons and sharing options
 #
 # Social settings are used in two places:
