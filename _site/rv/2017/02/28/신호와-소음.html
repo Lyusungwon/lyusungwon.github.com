@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>신호와 소음</title>
+  <meta name="description" content="I. 예측에 대한 근본적인 의문들">
+  
+  <meta name="author" content="Sungwon Lyu">
+  <meta name="copyright" content="&copy; Sungwon Lyu 2018">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="I. 예측에 대한 근본적인 의문들" />
+  <meta property="og:url" content="http://lyusungwon.github.io" />
+  <meta property="og:site_name" content="Sungwon's blog" />
+  <meta property="og:title" content="신호와 소음" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://lyusungwon.github.io/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="신호와 소음">
+  <meta name="twitter:description" content="I. 예측에 대한 근본적인 의문들">
+  <meta name="twitter:image" content="http://lyusungwon.github.io/assets/logo.png">
+  <meta name="twitter:url" content="http://lyusungwon.github.io">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://lyusungwon.github.io/rv/2017/02/28/%E1%84%89%E1%85%B5%E1%86%AB%E1%84%92%E1%85%A9%E1%84%8B%E1%85%AA-%E1%84%89%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7.html">
+  <link rel="alternate" type="application/rss+xml" title="Sungwon's blog" href="http://lyusungwon.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="Sungwon's blog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/posts/">Posts</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">신호와 소음</h1>
+      <p class="info">by <strong>Sungwon Lyu</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">February 28, 2017</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/RV">Rv</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <p>I. 예측에 대한 근본적인 의문들</p>
+
+<ol>
+  <li>
+    <p>경제: 경제 붕괴, 왜 전문가들은 예상하지 못했는가</p>
+  </li>
+  <li>
+    <p>정치: 내가 선거결과를 맞힌 비법</p>
+  </li>
+  <li>
+    <p>야구: 야구 경기는 왜 모든 ‘예측’의 모델이 되는가</p>
+  </li>
+</ol>
+
+<p>II. 움직이는 과녁을 맞혀라!</p>
+
+<ol>
+  <li>
+    <p>기상: 예측의 진보, 허리케인과 카오스의 원뿔</p>
+  </li>
+  <li>
+    <p>지진: 라퀼라의 재앙을 아무도 예상하지 못하다.</p>
+  </li>
+  <li>
+    <p>평균과 불확실성:숫자에 속지 마라</p>
+  </li>
+  <li>
+    <p>전염병: 신종플루부터 에이즈까지</p>
+  </li>
+</ol>
+
+<p>III.미래를 내 손에 움켜쥐는 법</p>
+
+<ol>
+  <li>
+    <p>베이즈 정리: 이기는 도바꾼은 어떻게 베팅하는가</p>
+  </li>
+  <li>
+    <p>체스: 컴퓨터가 인간처럼 미래를 내다볼 수 있을까</p>
+  </li>
+  <li>
+    <p>포커: 상대방의 허풍을 간파하는 법</p>
+  </li>
+</ol>
+
+<p>IV. 보이지 않는 손이 세상을 움직인다.</p>
+
+<ol>
+  <li>
+    <p>주식: 개인은 절대 시장을 이길 수 없을까</p>
+  </li>
+  <li>
+    <p>지구 온난화: 얄팍한 선동인가 과학적 진리인가</p>
+  </li>
+  <li>
+    <p>테러: 진주만 공습과 9.11 테러의 공통점</p>
+  </li>
+</ol>
+
+<p>우리가 아는 것과, 안다고 생각하는 것을 확실히 구분하고 이 차이를 줄여라.</p>
+
+<p>베이즈주의를 통해서.</p>
+
+<p>대체로 많은 사람들의 추측의 평균은, 개인의 평균보다 낫다.</p>
+
+<p>내가 가진 편견을 인정하고 점검해야 한다.</p>
+
+<p>편향을 없애야한다.</p>
+
+<p>예측할 수 없는 것에 대한 겸손함과 예측할 수 있는 것을 예측하는 용기, 그리고 이 둘 사이의 차이를 아는 지혜가 필요하다.</p>
+
+<p>불확실성을 적극 받아들여야 한다.</p>
+
+
+</article>
+
+
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=%EC%8B%A0%ED%98%B8%EC%99%80+%EC%86%8C%EC%9D%8C&u=http%3A%2F%2Flyusungwon.github.io%2Frv%2F2017%2F02%2F28%2F%25E1%2584%2589%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2592%25E1%2585%25A9%25E1%2584%258B%25E1%2585%25AA-%25E1%2584%2589%25E1%2585%25A9%25E1%2584%258B%25E1%2585%25B3%25E1%2586%25B7.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Sungwon's blog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/posts/">Posts</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:lyusungwon@dm.snu.ac.kr">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">lyusungwon@dm.snu.ac.kr</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://www.facebook.com/lyusungwon" title="Friend me on Facebook">
+              <i class="fa fa-facebook"></i>
+              <span class="username">lyusungwon</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://github.com/lyusungwon" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">lyusungwon</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Personal blog with some machine learning.
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

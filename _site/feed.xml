@@ -6,8 +6,8 @@
 </description>
     <link>http://lyusungwon.github.io/</link>
     <atom:link href="http://lyusungwon.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Feb 2018 22:09:38 +0900</pubDate>
-    <lastBuildDate>Fri, 02 Feb 2018 22:09:38 +0900</lastBuildDate>
+    <pubDate>Sat, 03 Feb 2018 01:05:36 +0900</pubDate>
+    <lastBuildDate>Sat, 03 Feb 2018 01:05:36 +0900</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -182,6 +182,156 @@ Skip-gram : 중심 단어들로 앞 뒤의 단어들을 예측하도록 학습&l
         
         
         <category>NLP</category>
+        
+      </item>
+    
+      <item>
+        <title>신호와 소음</title>
+        <description>&lt;p&gt;I. 예측에 대한 근본적인 의문들&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;경제: 경제 붕괴, 왜 전문가들은 예상하지 못했는가&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;정치: 내가 선거결과를 맞힌 비법&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;야구: 야구 경기는 왜 모든 ‘예측’의 모델이 되는가&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;II. 움직이는 과녁을 맞혀라!&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;기상: 예측의 진보, 허리케인과 카오스의 원뿔&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;지진: 라퀼라의 재앙을 아무도 예상하지 못하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;평균과 불확실성:숫자에 속지 마라&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;전염병: 신종플루부터 에이즈까지&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;III.미래를 내 손에 움켜쥐는 법&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;베이즈 정리: 이기는 도바꾼은 어떻게 베팅하는가&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;체스: 컴퓨터가 인간처럼 미래를 내다볼 수 있을까&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;포커: 상대방의 허풍을 간파하는 법&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;IV. 보이지 않는 손이 세상을 움직인다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;주식: 개인은 절대 시장을 이길 수 없을까&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;지구 온난화: 얄팍한 선동인가 과학적 진리인가&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;테러: 진주만 공습과 9.11 테러의 공통점&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;우리가 아는 것과, 안다고 생각하는 것을 확실히 구분하고 이 차이를 줄여라.&lt;/p&gt;
+
+&lt;p&gt;베이즈주의를 통해서.&lt;/p&gt;
+
+&lt;p&gt;대체로 많은 사람들의 추측의 평균은, 개인의 평균보다 낫다.&lt;/p&gt;
+
+&lt;p&gt;내가 가진 편견을 인정하고 점검해야 한다.&lt;/p&gt;
+
+&lt;p&gt;편향을 없애야한다.&lt;/p&gt;
+
+&lt;p&gt;예측할 수 없는 것에 대한 겸손함과 예측할 수 있는 것을 예측하는 용기, 그리고 이 둘 사이의 차이를 아는 지혜가 필요하다.&lt;/p&gt;
+
+&lt;p&gt;불확실성을 적극 받아들여야 한다.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 28 Feb 2017 23:45:59 +0900</pubDate>
+        <link>http://lyusungwon.github.io/rv/2017/02/28/%E1%84%89%E1%85%B5%E1%86%AB%E1%84%92%E1%85%A9%E1%84%8B%E1%85%AA-%E1%84%89%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/rv/2017/02/28/%E1%84%89%E1%85%B5%E1%86%AB%E1%84%92%E1%85%A9%E1%84%8B%E1%85%AA-%E1%84%89%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7.html</guid>
+        
+        
+        <category>RV</category>
+        
+      </item>
+    
+      <item>
+        <title>휘게 라이프</title>
+        <description>&lt;p&gt;1장 돈으로 살 수 없는 행복, 휘게&lt;/p&gt;
+
+&lt;p&gt;2장 우리 모두를 위한 새로운 라이프스타일, ‘휘게’&lt;/p&gt;
+
+&lt;p&gt;3장 ‘휘게’가 말하는 ‘함께’의 가치&lt;/p&gt;
+
+&lt;p&gt;4장 누구나 덴마크 사람처럼 휘게를 즐길 수 있다&lt;/p&gt;
+
+&lt;p&gt;5장 언제 어디서나 휘게 라이프&lt;/p&gt;
+
+&lt;p&gt;6장 휘게가 머무는 식탁&lt;/p&gt;
+
+&lt;p&gt;휘게 10계명&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;분위기: 조명을 조금 어둡게 한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;지금 이 순간: 현재에 충실한다. 휴대전화를 끈다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;달콤한 음식: 커피, 초콜릿, 쿠키, 케이크, 사탕. 더 주세요!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;평등: ‘나’보다는 ‘우리’. 뭔가를 함께하거나 TV를 함께 시청한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;감사: 만끽하라. 오늘이 인생 최고의 날일지도 모른다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;조화: 우리는 경쟁을 하고 있는 것이 아니다. 우리는 이미 당신을 좋아한다. 당신이 무엇을 성취했든 뽐낼 필요가 없다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;편안함: 편안함을 느낀다. 휴식을 취한다. 긴장을 풀고 쉬는 것이 가장 중요하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;휴전: 감정 소모는 그만. 정치에 관해서라면 나중에 얘기한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;화목: 추억에 대해 이야기를 나눔으로써 관계를 다져보자. “기억나? 우리 저번에…”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;보금자리: 이곳은 당신의 세계다. 평화롭고 안전한 장소다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;집: 휘게크로그, 벽난로, 양초, 나무로 만들어진 것, 자연, 책, 도자기, 촉감, 빈티지, 담요와 쿠션&lt;/p&gt;
+
+&lt;p&gt;양초, 양질의 초콜릿, 좋아하는 차, 좋아하는 책, 좋아하는 영화나 드라마, 잼, 모직양말, 편지, 스웨터, 일기장, 좋은 담요, 종이와 펜, 음악, 사진첩&lt;/p&gt;
+
+&lt;p&gt;덴마크 램프: Ph램프, 클린트, 팬톤 VP글로브&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 13 Feb 2017 02:53:59 +0900</pubDate>
+        <link>http://lyusungwon.github.io/rv/2017/02/12/%E1%84%92%E1%85%B1%E1%84%80%E1%85%A6-%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%91%E1%85%B3.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/rv/2017/02/12/%E1%84%92%E1%85%B1%E1%84%80%E1%85%A6-%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%91%E1%85%B3.html</guid>
+        
+        
+        <category>RV</category>
         
       </item>
     

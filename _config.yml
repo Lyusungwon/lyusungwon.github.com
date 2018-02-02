@@ -48,6 +48,9 @@ jekyll-archives:
 
 # Category descriptions (for archive pages)
 descriptions:
+  - cat: PL
+    desc: "Personal"    
+
   - cat: NLP
     desc: "Natural Language Processing"
 
@@ -59,6 +62,10 @@ descriptions:
 
   - cat: DL
     desc: "Deep Learning"    
+
+  - cat: RV
+    desc: "Reviews"    
+
 # Social icons and sharing options
 #
 # Social settings are used in two places:
