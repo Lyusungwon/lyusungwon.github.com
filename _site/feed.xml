@@ -6,9 +6,138 @@
 </description>
     <link>http://lyusungwon.github.io/</link>
     <atom:link href="http://lyusungwon.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 05 Jan 2018 16:13:39 +0900</pubDate>
-    <lastBuildDate>Fri, 05 Jan 2018 16:13:39 +0900</lastBuildDate>
+    <pubDate>Fri, 02 Feb 2018 22:09:38 +0900</pubDate>
+    <lastBuildDate>Fri, 02 Feb 2018 22:09:38 +0900</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Human-level control through deep reinforcement learning</title>
+        <description>&lt;h2 id=&quot;why&quot;&gt;WHY?&lt;/h2&gt;
+&lt;p&gt;기존의 강화학습 agent들은 각 게임마다 다른 feature를 추출하여 state로 사용하였기 때문에 각 게임마다 다른 모델로 학습해야 한다는 한계가 있었다.&lt;/p&gt;
+
+&lt;h2 id=&quot;what&quot;&gt;WHAT?&lt;/h2&gt;
+&lt;p&gt;Deep convolution network 를 사용하여 게임 화면의 픽셀들로 부터 피쳐들을 학습하여 state로 사용하는 모델을 제시하였다. 샘플간의 공분산성을 해결하기 위하여 replay memory method를  사용하였고 moving target현상을 해결하기 위하여 메인 모델과 target모델을 다르게 유지하는 기법을 사용하였다.&lt;/p&gt;
+
+&lt;h2 id=&quot;so&quot;&gt;So&lt;/h2&gt;
+&lt;p&gt;한 모델을 통하여 많은 종류의 아타리 게임들에서 기존의 기법이나 사람보다 나은 결과를 가져왔다.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 25 Jan 2018 21:21:59 +0900</pubDate>
+        <link>http://lyusungwon.github.io/rl/2018/01/25/8.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/rl/2018/01/25/8.html</guid>
+        
+        
+        <category>RL</category>
+        
+      </item>
+    
+      <item>
+        <title>Neural Machine Translation by Jointly Learning to Align and Translate</title>
+        <description>&lt;h2 id=&quot;why&quot;&gt;WHY?&lt;/h2&gt;
+&lt;p&gt;기존의 encoder-decoder model들은 인코더의 맨 마지막 벡터의 모든 input정보가 담겨야 해서 긴 문장을 번역하는데 한계가 있었다.&lt;/p&gt;
+
+&lt;h2 id=&quot;what&quot;&gt;WHAT?&lt;/h2&gt;
+&lt;p&gt;맨 마지막 벡터 대신&lt;br /&gt;
+input벡터들의 hidden layer와 decoder의 이전 hidden layer와의 곱을 점수로 매겨&lt;br /&gt;
+그 점수로 input벡터들의 hidden layer들을 가중합한 context 벡터를 활용하여&lt;br /&gt;
+decoder의 다음 hidden layer를 구한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;so&quot;&gt;So&lt;/h2&gt;
+&lt;p&gt;번역을 할 때 input 문장을 통째로 외워서 번역하는 것이 아니라 각 단어에 해당하는 단어를 참고하면서 번역하는 효과를 가져와 훨씬 효과가 좋았다.&lt;/p&gt;
+
+&lt;p&gt;참고: https://github.com/Lyusungwon/nmt&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Jan 2018 05:58:59 +0900</pubDate>
+        <link>http://lyusungwon.github.io/nlp/2018/01/23/7.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/nlp/2018/01/23/7.html</guid>
+        
+        
+        <category>NLP</category>
+        
+      </item>
+    
+      <item>
+        <title>Dynamic Topic Model</title>
+        <description>&lt;h2 id=&quot;why&quot;&gt;WHY?&lt;/h2&gt;
+&lt;p&gt;LDA를 통하여 토픽 모델링을 할 때 시간적으로 토픽과 그에 대한 단어 분포가 변화하는 정보를 반영하지 못한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;what&quot;&gt;WHAT?&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/dynamic_topic_model.png&quot; alt=&quot;image&quot; class=&quot;center-image&quot; width=&quot;50px&quot; /&gt;
+기존의 LDA의 모델에서 파라미터(토픽과 토픽의 비율 - &lt;script type=&quot;math/tex&quot;&gt;\alpha, \beta&lt;/script&gt;)를 평균으로 정규분포를 통하여 표본 추출했다고 가정함으로서 시계열적인 latent variable을 가지고 있다고 가정하고 근사 추정을 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;so&quot;&gt;So&lt;/h2&gt;
+&lt;p&gt;LDA보다 시계열적인 정보를 잘 반영한다.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Jan 2018 05:38:59 +0900</pubDate>
+        <link>http://lyusungwon.github.io/pgm/2018/01/23/6.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/pgm/2018/01/23/6.html</guid>
+        
+        
+        <category>PGM</category>
+        
+      </item>
+    
+      <item>
+        <title>GloVe: Global Vectors for Word Representation</title>
+        <description>&lt;h2 id=&quot;why&quot;&gt;WHY?&lt;/h2&gt;
+&lt;p&gt;기존의 Skipgram과 CBOW는 일정 window 내의 정보만 반영할 뿐 global한 frequency정보는 반영하지 못한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;what&quot;&gt;WHAT?&lt;/h2&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\hat{J} = \Sigma_{i, j}f(X_{i, j})(w_{i}^{T}\tilde{w}-logX_{ij})^{2}&lt;/script&gt;&lt;br /&gt;
+두 임베딩의 곱을 동시발생 빈도만큼 가중하여 두 단어의 동시발생 빈도에 가까워 지도록 학습하는 GloVe를 제안하였다.&lt;/p&gt;
+
+&lt;h2 id=&quot;so&quot;&gt;So&lt;/h2&gt;
+&lt;p&gt;Skipgram과 CBOW보다 여러면에서 좋은 성과를 내었다.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 09 Jan 2018 06:48:59 +0900</pubDate>
+        <link>http://lyusungwon.github.io/nlp/2018/01/08/5.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/nlp/2018/01/08/5.html</guid>
+        
+        
+        <category>NLP</category>
+        
+      </item>
+    
+      <item>
+        <title>node2vec</title>
+        <description>&lt;h2 id=&quot;why&quot;&gt;WHY?&lt;/h2&gt;
+&lt;p&gt;네트워크의 노드들을 Skipgram과 같이 distributed representation을 통하여 나타내려고 했다. 최근의 이러한 시도들은 노드의 이웃들을 경직되게 정의하여 다양한 네트워크 모양의 패턴을 파악하는데 실패하였다.&lt;/p&gt;
+
+&lt;h2 id=&quot;what&quot;&gt;WHAT?&lt;/h2&gt;
+&lt;p&gt;node를 벡터화하는데 node의 이웃을 유연하게 정의한 node2vec을 고안하였다. Random walk 방법을 통하여 노드의 이웃을 샘플링하는데 다시 돌아올 확률(1/p), 이 전 노드와 이어진 노드로 이동할 확률(1), 그리고 그렇지 않은 확률(1/q)을 하이퍼파라미터로 설정하였다. p가 작다면 node2vec은 균일성(homogenity)를 학습하게 되고 q가 작다면 노드의 구조적 특성을 학습하게 된다. 두 노드의 벡터를 통하여 엣지를 나타내는 표현형을 찾아본 결과 Hadamard Product가 가장 효과적이었다.&lt;/p&gt;
+
+&lt;h2 id=&quot;so&quot;&gt;So&lt;/h2&gt;
+&lt;p&gt;다양한 p, q를 통하여 학습한 결과 multilabel classification에서 다른 모델보다 좋은 성능을 보였고 Link prediction에서도 좋은 성능을 보였다. Node2vec은 대부분의 파라미터에 대하여 우수하고 노이즈에 강하며 Scalable하다.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 06 Jan 2018 22:49:59 +0900</pubDate>
+        <link>http://lyusungwon.github.io/pgm/2018/01/06/4.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/pgm/2018/01/06/4.html</guid>
+        
+        
+        <category>PGM</category>
+        
+      </item>
+    
+      <item>
+        <title>Distributed Representations of Words and Phrases and their Compositionality</title>
+        <description>&lt;h2 id=&quot;why&quot;&gt;WHY?&lt;/h2&gt;
+&lt;p&gt;최근 제시된 Skipgram의 성능을 향상시킬만한 여러 기법을 시행하였다.&lt;/p&gt;
+
+&lt;h2 id=&quot;what&quot;&gt;WHAT?&lt;/h2&gt;
+&lt;p&gt;Subsampling of the frequent words: 너무 자주 등장하는 단어들은 임베딩에 거의 영향을 주지 않음으로 일정 Threshold이상의 단어들은 제외한다.&lt;br /&gt;
+Negative Sampling: 단어 벡터가 클 경우 Cross-entropy의 계산량이 많으므로 Hierarchical softmax보다 좋은 Negative sampleing을 사용한다. Noise distribution &lt;script type=&quot;math/tex&quot;&gt;\frac{U^{\frac{3}{4}}}{Z}&lt;/script&gt;를 통하여 k개의 Negative sample을 추출하여 loss에 반영한다. &lt;br /&gt;
+Phrase vector: 하나 이상의 단어로 이루어진 구의 임베딩을 위하여 일정 스코어를 통하여 타당한 구를 추출하고 그 구를 하나의 단어처럼 학습한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;so&quot;&gt;So&lt;/h2&gt;
+&lt;p&gt;Subsampling과 Negative Sampling을 통하여 더 빠르면서 우수한 성능을 보였다.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 06 Jan 2018 00:35:59 +0900</pubDate>
+        <link>http://lyusungwon.github.io/nlp/2018/01/05/3.html</link>
+        <guid isPermaLink="true">http://lyusungwon.github.io/nlp/2018/01/05/3.html</guid>
+        
+        
+        <category>NLP</category>
+        
+      </item>
     
       <item>
         <title>Distributed Representations of Sentences and Documents</title>
@@ -53,76 +182,6 @@ Skip-gram : 중심 단어들로 앞 뒤의 단어들을 예측하도록 학습&l
         
         
         <category>NLP</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;h2 id=&quot;adding-new-posts&quot;&gt;Adding New Posts&lt;/h2&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;h3 id=&quot;tags-and-categories&quot;&gt;Tags and Categories&lt;/h3&gt;
-
-&lt;p&gt;If you list one or more categories or tags in the front matter of your post, they will be included with the post on the page as links. Clicking the link will bring you to an auto-generated archive page for the category or tag, created using the &lt;a href=&quot;https://github.com/jekyll/jekyll-archives&quot;&gt;jekyll-archive&lt;/a&gt; gem.&lt;/p&gt;
-
-&lt;h3 id=&quot;cover-images&quot;&gt;Cover Images&lt;/h3&gt;
-
-&lt;p&gt;To add a cover image to your post, set the “cover” property in the front matter with the relative URL of the image (i.e. &lt;code&gt;cover: &quot;/assets/cover_image.jpg&quot;&lt;/code&gt;).&lt;/p&gt;
-
-&lt;h3 id=&quot;code-snippets&quot;&gt;Code Snippets&lt;/h3&gt;
-
-&lt;p&gt;You can use &lt;a href=&quot;https://highlightjs.org/&quot;&gt;highlight.js&lt;/a&gt; to add syntax highlight code snippets:&lt;/p&gt;
-
-&lt;p&gt;Use the &lt;a href=&quot;https://github.com/Shopify/liquid/wiki/Liquid-for-Designers&quot;&gt;Liquid&lt;/a&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;highlight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;language&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt; tag to add syntax highlighting to code snippets.&lt;/p&gt;
-
-&lt;p&gt;For instance, this template…&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{% highlight javascript %}    
-function demo(string, times) {    
-  for (var i = 0; i &lt;span class=&quot;nt&quot;&gt;&amp;lt; times&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;    
-    &lt;span class=&quot;na&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;);&lt;/span&gt;    
-  &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;    
-&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;    
-&lt;span class=&quot;na&quot;&gt;demo&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;!&quot;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;{%&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;endhighlight&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;%}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;…will come out looking like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;demo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;demo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hello, world!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Syntax highlighting is done using &lt;a href=&quot;https://highlightjs.org/&quot;&gt;highlight.js&lt;/a&gt;. You can change the active theme in &lt;a href=&quot;https://github.com/bencentra/centrarium/blob/2dcd73d09e104c3798202b0e14c1db9fa6e77bc7/_includes/head.html#L15&quot;&gt;head.html&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;images&quot;&gt;Images&lt;/h3&gt;
-
-&lt;p&gt;Lightbox has been enabled for images. To create the link that’ll launch the lightbox, add &lt;code&gt;data-lightbox&lt;/code&gt; and &lt;code&gt;data-title&lt;/code&gt; attributes to an &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; tag around your &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tag. The result is:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;//bencentra.com/assets/images/falcon9_large.jpg&quot; data-lightbox=&quot;falcon9-large&quot; data-title=&quot;Check out the Falcon 9 from SpaceX&quot;&gt;
-  &lt;img src=&quot;//bencentra.com/assets/images/falcon9_small.jpg&quot; title=&quot;Check out the Falcon 9 from SpaceX&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;For more information, check out the &lt;a href=&quot;http://lokeshdhakar.com/projects/lightbox2/&quot;&gt;Lightbox&lt;/a&gt; website.&lt;/p&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 18 Apr 2015 17:43:59 +0900</pubDate>
-        <link>http://lyusungwon.github.io/jekyll/2015/04/18/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://lyusungwon.github.io/jekyll/2015/04/18/welcome-to-jekyll.html</guid>
-        
-        <category>jekyll</category>
-        
-        <category>welcome</category>
-        
-        
-        <category>Jekyll</category>
         
       </item>
     

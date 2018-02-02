@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>jekyll</title>
-  <meta name="description" content="Personal blog with some machine learning.
-">
+  <title>node2vec</title>
+  <meta name="description" content="WHY?네트워크의 노드들을 Skipgram과 같이 distributed representation을 통하여 나타내려고 했다. 최근의 이러한 시도들은 노드의 이웃들을 경직되게 정의하여 다양한 네트워크 모양의 패턴을 파악하는데 실패하였다.">
   
   <meta name="author" content="Sungwon Lyu">
   <meta name="copyright" content="&copy; Sungwon Lyu 2018">
@@ -42,11 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="Personal blog with some machine learning.
-" />
+  <meta property="og:description" content="WHY?네트워크의 노드들을 Skipgram과 같이 distributed representation을 통하여 나타내려고 했다. 최근의 이러한 시도들은 노드의 이웃들을 경직되게 정의하여 다양한 네트워크 모양의 패턴을 파악하는데 실패하였다." />
   <meta property="og:url" content="http://lyusungwon.github.io" />
   <meta property="og:site_name" content="Sungwon's blog" />
-  <meta property="og:title" content="jekyll" />
+  <meta property="og:title" content="node2vec" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://lyusungwon.github.io/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -57,9 +55,8 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="jekyll">
-  <meta name="twitter:description" content="Personal blog with some machine learning.
-">
+  <meta name="twitter:title" content="node2vec">
+  <meta name="twitter:description" content="WHY?네트워크의 노드들을 Skipgram과 같이 distributed representation을 통하여 나타내려고 했다. 최근의 이러한 시도들은 노드의 이웃들을 경직되게 정의하여 다양한 네트워크 모양의 패턴을 파악하는데 실패하였다.">
   <meta name="twitter:image" content="http://lyusungwon.github.io/assets/logo.png">
   <meta name="twitter:url" content="http://lyusungwon.github.io">
   
@@ -68,7 +65,7 @@
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://lyusungwon.github.io/tag/jekyll/">
+  <link rel="canonical" href="http://lyusungwon.github.io/pgm/2018/01/06/4.html">
   <link rel="alternate" type="application/rss+xml" title="Sungwon's blog" href="http://lyusungwon.github.io/feed.xml" />
 </head>
 
@@ -103,8 +100,6 @@
           
         
           
-          <li class="nav-link"><a href="/typography/">Typography</a>
-          
         
       </ul>
     </nav>
@@ -113,30 +108,92 @@
 
 
     <div class="page-content">
-        <div class="wrapper">
-<div class="page">
+        <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">Posts in "Jekyll"</h1>
-  </header>
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">node2vec</h1>
+      <p class="info">by <strong>Sungwon Lyu</strong></p>
+    </header>
+  </div>
+</div>
 
-  <span class="page-divider">
+<div class="wrapper">
+
+ <span class="page-divider">
   <span class="one"></span>
   <span class="two"></span>
 </span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">January 6, 2018</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/PGM">Pgm</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <h2 id="why">WHY?</h2>
+<p>네트워크의 노드들을 Skipgram과 같이 distributed representation을 통하여 나타내려고 했다. 최근의 이러한 시도들은 노드의 이웃들을 경직되게 정의하여 다양한 네트워크 모양의 패턴을 파악하는데 실패하였다.</p>
+
+<h2 id="what">WHAT?</h2>
+<p>node를 벡터화하는데 node의 이웃을 유연하게 정의한 node2vec을 고안하였다. Random walk 방법을 통하여 노드의 이웃을 샘플링하는데 다시 돌아올 확률(1/p), 이 전 노드와 이어진 노드로 이동할 확률(1), 그리고 그렇지 않은 확률(1/q)을 하이퍼파라미터로 설정하였다. p가 작다면 node2vec은 균일성(homogenity)를 학습하게 되고 q가 작다면 노드의 구조적 특성을 학습하게 된다. 두 노드의 벡터를 통하여 엣지를 나타내는 표현형을 찾아본 결과 Hadamard Product가 가장 효과적이었다.</p>
+
+<h2 id="so">So</h2>
+<p>다양한 p, q를 통하여 학습한 결과 multilabel classification에서 다른 모델보다 좋은 성능을 보였고 Link prediction에서도 좋은 성능을 보였다. Node2vec은 대부분의 파라미터에 대하여 우수하고 노이즈에 강하며 Scalable하다.</p>
+
+</article>
 
 
-  <article class="post-content">
-    <ul class="posts-list">
-      
-      <li><strong><a class="post-link" href="/jekyll/2015/04/18/welcome-to-jekyll.html">Welcome to Jekyll!</a></strong><span class="post-date"> - April 18, 2015</span></li>
-      
-    </ul>
-  </article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=node2vec&u=http%3A%2F%2Flyusungwon.github.io%2Fpgm%2F2018%2F01%2F06%2F4.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
 
 </div>
 </div>
-<br>
 
     </div>
 
@@ -165,8 +222,6 @@
           <li class="nav-link"><a href="/posts/">Posts</a>
         
         
-        
-          <li class="nav-link"><a href="/typography/">Typography</a>
         
         
       </ul>

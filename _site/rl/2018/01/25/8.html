@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Jekyll</title>
-  <meta name="description" content="Personal blog with some machine learning.
-">
+  <title>Human-level control through deep reinforcement learning</title>
+  <meta name="description" content="WHY?기존의 강화학습 agent들은 각 게임마다 다른 feature를 추출하여 state로 사용하였기 때문에 각 게임마다 다른 모델로 학습해야 한다는 한계가 있었다.">
   
   <meta name="author" content="Sungwon Lyu">
   <meta name="copyright" content="&copy; Sungwon Lyu 2018">
@@ -42,11 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="Personal blog with some machine learning.
-" />
+  <meta property="og:description" content="WHY?기존의 강화학습 agent들은 각 게임마다 다른 feature를 추출하여 state로 사용하였기 때문에 각 게임마다 다른 모델로 학습해야 한다는 한계가 있었다." />
   <meta property="og:url" content="http://lyusungwon.github.io" />
   <meta property="og:site_name" content="Sungwon's blog" />
-  <meta property="og:title" content="Jekyll" />
+  <meta property="og:title" content="Human-level control through deep reinforcement learning" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://lyusungwon.github.io/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -57,9 +55,8 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Jekyll">
-  <meta name="twitter:description" content="Personal blog with some machine learning.
-">
+  <meta name="twitter:title" content="Human-level control through deep reinforcement learning">
+  <meta name="twitter:description" content="WHY?기존의 강화학습 agent들은 각 게임마다 다른 feature를 추출하여 state로 사용하였기 때문에 각 게임마다 다른 모델로 학습해야 한다는 한계가 있었다.">
   <meta name="twitter:image" content="http://lyusungwon.github.io/assets/logo.png">
   <meta name="twitter:url" content="http://lyusungwon.github.io">
   
@@ -68,7 +65,7 @@
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://lyusungwon.github.io/category/jekyll/">
+  <link rel="canonical" href="http://lyusungwon.github.io/rl/2018/01/25/8.html">
   <link rel="alternate" type="application/rss+xml" title="Sungwon's blog" href="http://lyusungwon.github.io/feed.xml" />
 </head>
 
@@ -103,8 +100,6 @@
           
         
           
-          <li class="nav-link"><a href="/typography/">Typography</a>
-          
         
       </ul>
     </nav>
@@ -113,30 +108,92 @@
 
 
     <div class="page-content">
-        <div class="wrapper">
-<div class="page">
+        <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">Posts in "Jekyll"</h1>
-  </header>
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">Human-level control through deep reinforcement learning</h1>
+      <p class="info">by <strong>Sungwon Lyu</strong></p>
+    </header>
+  </div>
+</div>
 
-  <span class="page-divider">
+<div class="wrapper">
+
+ <span class="page-divider">
   <span class="one"></span>
   <span class="two"></span>
 </span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">January 25, 2018</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/RL">Rl</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <h2 id="why">WHY?</h2>
+<p>기존의 강화학습 agent들은 각 게임마다 다른 feature를 추출하여 state로 사용하였기 때문에 각 게임마다 다른 모델로 학습해야 한다는 한계가 있었다.</p>
+
+<h2 id="what">WHAT?</h2>
+<p>Deep convolution network 를 사용하여 게임 화면의 픽셀들로 부터 피쳐들을 학습하여 state로 사용하는 모델을 제시하였다. 샘플간의 공분산성을 해결하기 위하여 replay memory method를  사용하였고 moving target현상을 해결하기 위하여 메인 모델과 target모델을 다르게 유지하는 기법을 사용하였다.</p>
+
+<h2 id="so">So</h2>
+<p>한 모델을 통하여 많은 종류의 아타리 게임들에서 기존의 기법이나 사람보다 나은 결과를 가져왔다.</p>
+
+</article>
 
 
-  <article class="post-content">
-    <ul class="posts-list">
-      
-      <li><strong><a class="post-link" href="/jekyll/2015/04/18/welcome-to-jekyll.html">Welcome to Jekyll!</a></strong><span class="post-date"> - April 18, 2015</span></li>
-      
-    </ul>
-  </article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=Human-level+control+through+deep+reinforcement+learning&u=http%3A%2F%2Flyusungwon.github.io%2Frl%2F2018%2F01%2F25%2F8.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
 
 </div>
 </div>
-<br>
 
     </div>
 
@@ -165,8 +222,6 @@
           <li class="nav-link"><a href="/posts/">Posts</a>
         
         
-        
-          <li class="nav-link"><a href="/typography/">Typography</a>
         
         
       </ul>

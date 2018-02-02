@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Efficient Estimation of Word Representations in Vector Space</title>
-  <meta name="description" content="WHY?Continuous Word Representation을 평가할 수 있는 방법을 제시하고더 많은 데이터들로 부터 더 빠르게 더 나은 표현을 학습할 수 있는 Continous Bag-of-Words(CBOW)와 Continous Skip-gram Model을 제시">
+  <title>Dynamic Topic Model</title>
+  <meta name="description" content="WHY?LDA를 통하여 토픽 모델링을 할 때 시간적으로 토픽과 그에 대한 단어 분포가 변화하는 정보를 반영하지 못한다.">
   
   <meta name="author" content="Sungwon Lyu">
   <meta name="copyright" content="&copy; Sungwon Lyu 2018">
@@ -41,10 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="WHY?Continuous Word Representation을 평가할 수 있는 방법을 제시하고더 많은 데이터들로 부터 더 빠르게 더 나은 표현을 학습할 수 있는 Continous Bag-of-Words(CBOW)와 Continous Skip-gram Model을 제시" />
+  <meta property="og:description" content="WHY?LDA를 통하여 토픽 모델링을 할 때 시간적으로 토픽과 그에 대한 단어 분포가 변화하는 정보를 반영하지 못한다." />
   <meta property="og:url" content="http://lyusungwon.github.io" />
   <meta property="og:site_name" content="Sungwon's blog" />
-  <meta property="og:title" content="Efficient Estimation of Word Representations in Vector Space" />
+  <meta property="og:title" content="Dynamic Topic Model" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://lyusungwon.github.io/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -55,8 +55,8 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Efficient Estimation of Word Representations in Vector Space">
-  <meta name="twitter:description" content="WHY?Continuous Word Representation을 평가할 수 있는 방법을 제시하고더 많은 데이터들로 부터 더 빠르게 더 나은 표현을 학습할 수 있는 Continous Bag-of-Words(CBOW)와 Continous Skip-gram Model을 제시">
+  <meta name="twitter:title" content="Dynamic Topic Model">
+  <meta name="twitter:description" content="WHY?LDA를 통하여 토픽 모델링을 할 때 시간적으로 토픽과 그에 대한 단어 분포가 변화하는 정보를 반영하지 못한다.">
   <meta name="twitter:image" content="http://lyusungwon.github.io/assets/logo.png">
   <meta name="twitter:url" content="http://lyusungwon.github.io">
   
@@ -65,7 +65,7 @@
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://lyusungwon.github.io/nlp/2018/01/04/1.html">
+  <link rel="canonical" href="http://lyusungwon.github.io/pgm/2018/01/23/6.html">
   <link rel="alternate" type="application/rss+xml" title="Sungwon's blog" href="http://lyusungwon.github.io/feed.xml" />
 </head>
 
@@ -113,7 +113,7 @@
 <div class="post-header-container " >
   <div class="scrim ">
     <header class="post-header">
-      <h1 class="title">Efficient Estimation of Word Representations in Vector Space</h1>
+      <h1 class="title">Dynamic Topic Model</h1>
       <p class="info">by <strong>Sungwon Lyu</strong></p>
     </header>
   </div>
@@ -128,11 +128,11 @@
  
 
 <section class="post-meta">
-  <div class="post-date">January 4, 2018</div>
+  <div class="post-date">January 23, 2018</div>
   <div class="post-categories">
   in 
     
-    <a href="/category/NLP">Nlp</a>
+    <a href="/category/PGM">Pgm</a>
     
   
   </div>
@@ -143,17 +143,14 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
   <h2 id="why">WHY?</h2>
-<p>Continuous Word Representation을 평가할 수 있는 방법을 제시하고<br />
-더 많은 데이터들로 부터 더 빠르게 더 나은 표현을 학습할 수 있는 Continous Bag-of-Words(CBOW)와 Continous Skip-gram Model을 제시</p>
+<p>LDA를 통하여 토픽 모델링을 할 때 시간적으로 토픽과 그에 대한 단어 분포가 변화하는 정보를 반영하지 못한다.</p>
 
 <h2 id="what">WHAT?</h2>
-<p>NNLM : 앞 단어들로 뒷단어를 예측하도록 학습<br />
-CBOW : 앞 뒤의 단어들 각각에 대하여 중심 단어를 예측하도록 학습<br />
-Skip-gram : 중심 단어들로 앞 뒤의 단어들을 예측하도록 학습<br />
-실험: 여러 의미 관계의 Biggest - big + small 과 같은 문제를 얼마나 잘 학습했는지 확인</p>
+<p><img src="/assets/images/dynamic_topic_model.png" alt="image" class="center-image" width="50px" />
+기존의 LDA의 모델에서 파라미터(토픽과 토픽의 비율 - <script type="math/tex">\alpha, \beta</script>)를 평균으로 정규분포를 통하여 표본 추출했다고 가정함으로서 시계열적인 latent variable을 가지고 있다고 가정하고 근사 추정을 한다.</p>
 
 <h2 id="so">So</h2>
-<p>기존 방법들보다 훨씬 빠를 뿐만이 아니라 성능도 훨씬 좋았다. Skip-gram이 semantic의미를 가장 잘 확인했고 CBOW는 syntatic의미 파악에 정확도가 높았다.</p>
+<p>LDA보다 시계열적인 정보를 잘 반영한다.</p>
 
 </article>
 
@@ -171,7 +168,7 @@ Skip-gram : 중심 단어들로 앞 뒤의 단어들을 예측하도록 학습<b
     
     
     
-      <a href="//www.facebook.com/sharer.php?t=Efficient+Estimation+of+Word+Representations+in+Vector+Space&u=http%3A%2F%2Flyusungwon.github.io%2Fnlp%2F2018%2F01%2F04%2F1.html"
+      <a href="//www.facebook.com/sharer.php?t=Dynamic+Topic+Model&u=http%3A%2F%2Flyusungwon.github.io%2Fpgm%2F2018%2F01%2F23%2F6.html"
         onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
         <i class="fa fa-facebook-square fa-lg"></i>
       </a>
