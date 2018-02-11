@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Auto-Encoding Variational Bayes"
+date:   2018-02-11 18:18:59
+author: Sungwon Lyu
+categories: DL
+---
+## Note
+오토인코더는 분포 $$p(x)$$를 축소하여 latent variable z로 요약한 뒤 이를 재구성한 것과 원래의 데이터의 차이를 최소한으로 하도록 인코더와 디코더를 학습한다. 이 결과 z를 통하여 x의 가장 중요한 특징들을 요약하길 바란다.
+
+## WHY? 
+Variational 방법이란, 특정 분포를 직접 구하기 어려울 경우 우리가 안다고 가정하는 단순한 분포와의 거리(KL Divergence)를 최소한으로 함으로써 그 특정 분포에 근사한 분포를 도출하는 방법이다. 우리가 모르는 분포를 구하려 할때 보통 1)직접 구하거나 2)MCMC와 같은 샘플링을 통하여 구한다. 그러나 식을 직접 구할수 없는 경우(Intractable)나 데이터의 양이 커서 샘플링이 비효율적인 경우 분포를 구하기 어렵다. Autoencoder Variational Bayes는 Variational방법을 통하여 우리가 알지 못하는 $$p(z\mid x)$$를 근사하고자 한다. 
+
+## WHAT?
+이때 KL Divergence의 Derivative는 Monte Carlo방법을 사용하여 근사하는데 Z가 $$q(z\mid x)$$로 부터 샘플되기 때문에 Variance가 매우 크다. 이 때문에 z를 중심 부분과 노이즈 부분으로 분리하는 Reparameterization Trick을 사용한다. z의 평균과 분산은 x로 부터 도출 되었기 때문에 노이즈 $$\epsilon ~ p(\epsilon)$$만 샘플링하면 된다. 이를 통하여 원래 분포를 충분히 가깝게 근사할 수 있는 ELBO(Estimated Lower Bound)를 구할 수 있다. 
+
+## So
+이를 통하여 데이터의 중요한 피쳐인 z를 추출하고 이를 통하여 새로운 샘플을 추출할 수 있다. 이 방법을 통하여 이미지에서 우리가 인지할 수 있는 특징(방향, 밝기)등을 추출하고 이를 조정하여 우리가 원하는 이미지를 생성할 수 있다.
