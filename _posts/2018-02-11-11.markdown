@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Auto-Encoding Variational Bayes"
+title:  "Auto-Encoder Variational Bayes"
 date:   2018-02-11 18:18:59
 author: Sungwon Lyu
 categories: DL
