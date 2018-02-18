@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ask Me Anything: Dynamic Memory Networks for Natural Language Processing"
-date:   2018-02-14 15:18:59
+date:   2018-02-15 14:18:59
 author: Sungwon Lyu
 categories: NLP
 ---
