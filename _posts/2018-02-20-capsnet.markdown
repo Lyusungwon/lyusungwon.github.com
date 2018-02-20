@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Dynamic Routing Between Capsules"
+date:   2018-02-20 12:31:59
+author: Sungwon Lyu
+categories: DL
+---
+## WHY? 
+기존 CNN의 문제점은 Max-pooling layer에서 feature의 대략적인 존재여부만 확인하고 정확한 공간정보를 버린다는 것이다. 이 때문에 특징이 어디에 존재하건 존재여부를 확인할 수 있는 invariance한 성질을 가지지만 그 특징이 다른 특징들과 전혀 조화를 이루지 못하더라도 이를 구별하지 못한다. 우리가 원하는 것은 특징의 단순한 존재여부 뿐만 아니라 전체적인 조화까지 고려하는 equivariance의 성질이다.  
+
+## WHAT?
+이를 해결하기 위하여 캡슐(capsule)이라는 개념을 도입한다. Capsule이란 한 가지 entity에 대하여 그에 따른 속성(property)들을 나타낼 수 있는 뉴런들의 집합이다. 즉, CNN에서 filter가 특정 feature의 존재여부만 확인하는 scalar값을 도출했다면 capsule은 그 feature의 각각의 속성들의 존재여부를 파악하도록 벡터로 도출하는 것이다. 구현상으로는 CNN의 여러 채널을 하나의 캡슐로 묶었다고 보면 된다. 이 캡슐들이 층을 구성하는데 하위층의 캡슐들이 상위층 캡슐의 요소가 되도록 반영하기 위하여 Dynamic Routing이라는 방법을 사용한다. 
+![img](/assets/images/dr.png){: .center-image width="50px"}
+Dynamic Routing의 iteration은 hyperparameter로 설정할 수 있다. 1, 2층 CNN결과 6 * 6 * 8 * 32의 결과가 나왔다면, 크기 8의 벡터가 1152(6*6*8)개 있다고 생각할 수 있다. 이를 8 * 16 크기의 $$W_ij$$를 통하여 크기 16의 벡터($$u_ji$$:prediction vector)로 변환한다. 이때 j는 다음층 캡슐의 갯수로 아웃풋의 갯수에 해당하며 여기에서는 1152개의 벡터마다 10개의 prediction vector가 형성되는 것이다. 그 다음 각 클래스(10) 별로 1152개의 캡슐들을 마찬가지의 크기 16의 벡터 1152개($$c_ij$$: coupling coefficient)들과 inner prodect를 하여 각 클래스마다 크기 16의 벡터($$s_j$$)를 도출한다. 이를 activation 방법의 일종인 Squach를 하여 크기 16의 벡터 10개($$v_j$$: output vector)를 형성한다. 이렇게 각 클래스에 대한 특징 정보를 요약한 output과 1152개의 prediction vector들과 element wise 곱을 하여 이를 0으로 시작한 크기 16의 벡터($$b_ij$$: routing softmax)에 더한다. 여기까지가 한 iteration이 되며 routing softmax를 softmax취한 것을 coupling coefficient로 놓고 다음 iteration을 한다. 
+이 이후에 몇 층의 fc layer를 거친 후 784의 픽셀로 reconstruction한다. 
+
+## So
+학습결과 MNIST과 Multi-MNIST에서 좋은 테스트 결과를 거둘 수 있었고 capsule을 통하여 각 특징들을 잡아내는데 어느정도 성공하였다. 뿐만 아니라 겹쳐져서 알아보기 힘든 숫자들을 구별해 낼 수도 있다는 것을 확인하였다. 
