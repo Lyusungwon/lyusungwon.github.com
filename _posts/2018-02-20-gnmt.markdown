@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Google's Multilingual Neural Machine Translation System: Enabling Zero-Shot Translation"
+date:   2018-02-20 21:53:59
+author: Sungwon Lyu
+categories: NLP
+---
+## WHY? 
+기존의 NMT(Neural Machine Translation) 모델들은 특정 source languange에서 특정 target language로만 번역할 수 있었고 이를 위하여 이에 맞는 corpus가 필요하였다. 
+
+## WHAT?
+필자는 간단한 트릭을 통하여 한 모델로 여러 source language로 부터 여러 target language로 번역할 수 있는 모델을 고안하였다. 바로 input sentence 앞에 번역하고 싶은 언어를 표시할 수 있는 간단한 토큰을 함께 학습시키는 방법이다. 예를 들어, \\
+Machine learning is fun! : 머신 러닝은 재미있어!\\
+라는 parallel corpora가 있다고 한다면 nmt에 학습시킬 때 \\
+[2kr] Machine learning is fun! 라는 인풋을 집어넣는 것이다. 나머지는 [Johnson et al(2016)]()의 모델과 동일하다. 
+
+## So
+이 단순한 트릭을 통하여 한 모델로 여러 언어들을 여러 언어들로 번역할 수 있게 되었으며 이를 통하여 데이터가 부족한 언어들간의 번역 성능도 증가하였다. 더욱 중요한 것은 이 모델을 통하여 직접적인 parallel copora가 없는 언어간의 번역(zero-shot learning)도 가능해졌다는 것이다. 
