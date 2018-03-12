@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Wasserstein Auto-Encoders"
+date:   2018-03-12 19:40:59
+author: Sungwon Lyu
+categories: NLP
+---
+## WHY? 
+기존의 대표적인 Generation Model로 VAE와 GAN이 있다. VAE는 목적 분포를 직접 구하는 대신 계산 가능한 다른 분포를 가정하고 이와 목적 분포와의 거리(KL Divergence)를 최소화 함으로써 간접적으로 목적 분포를 구하였다. 하지만 KL Divergence는 두 함수의 support가 같은 영역에서 정의가 되어있어야 한다는 한계가 있다. 또한 GAN은 목적 분포를 직접 구하지 않고도 Discriminator loss를 통하여 표본을 생성하지만 discriminator와 generator간의 학습 비율이 중요하고 섬세하여 학습이 어렵다는 단점이 있다. 
+
+## WHAT?
+분포 간의 차이를 구할 때 기존의 KL Divergence보다 약화된 거리 개념인 Wasserstein distance를 사용하였다. Wasserstein distance란 다음과 같이 정의될 수 있다.\\
+$$W(\mathbb{P}_{r}, \mathbb{P}_{g}) = inf_{\rho \in \Pi(\mathbb{P}_{r}, \mathbb{P}_{g})} \mathbb{E}_{(x,y)~\rho} [\|x - y\|]$$\\
+이는 목적 분포와 우리가 만드려는 분포의 결합확률 분포의 차이의 기대값의 infimum(Greatest Lowerbound: 최대값)이다. 그러므로 두 분포간의 같은 support가 아니더라도 정의될 수 있다. 이를 Kantorovich-Rubinstein duality를 사용하여 다음과 같이 바꾼다. \\
+$$W(\mathbb{P}_{r}, \mathbb{P}_{g}) = sup_{\|f\|_{L}\leq1} \mathbb{E}_{x~\mathbb{P}_{r}}[f(x)] - \mathbb{E}_{x~\mathbb{P}_{\theta}}[f(x)]$$\\
+이리하여 WGAN은 두 분포의 Wasserstein distance를 구하기 위하여 위 식을 최대화하는 단계와 도출한 식을 최소화 하도록 generator를 학습시키는 두 단계를 거친다. 알고리즘은 다음과 같다. 
+![img](/assets/images/wgan.png){: .center-image width="50px"}
+
+## So?
+WGAN은 두 가지 강점을 가진다. 두 분포간의 Wasserstein distance와 생성된 표본의 품질이 비례하여 하나의 메트릭으로 참고할 수 있다. 또한 GAN보다 안정적으로 학습할 수 있다. 
