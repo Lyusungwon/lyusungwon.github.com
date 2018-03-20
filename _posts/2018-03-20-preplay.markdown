@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Prioritized Experience Replay"
+date:   2018-03-20 18:31:59
+author: Sungwon Lyu
+categories: RL
+---
+## WHY? 
+기존의 DQN은 학습 데이터들 간의 연관관계를 없애기 위하여 데이터들을 Experience Replay에 저장해 두고 랜덤으로 샘플하여 학습하였다. 하지만 모든 경험이 같은 가치를 가지는 것은 아니다. reward가 sparse한 환경의 경우 특정 경험이 더욱 중요한 가치를 가질 수 있다. 
+
+## WHAT?
+이를 위해 experience replay내에 있는 경험의 중요성을 판단하여 효율적으로 학습하고자 하였다. 경험의 중요성은 에이전트가 그 경험을 통하여 현재 state에 대하여 배우는 양에 비례한다. 이 값은 DQN에서 학습할 때 사용하는 TD-error로 나타날 수 있다. TD-error는 다음과 같다.\\
+$$\delta_j = R_j + \gamma_jQ_{target}(S_j, argmax_a Q(S_j, a)) - Q(S_{j-1}, A_{j-1})$$\\
+TD-error의 절대적인 크기에 따라 학습한다면 여러 문제가 생기므로 중요성의 크기에 따른 확률분포를 만들고 그에 따라 추출하여 학습하는 방법($$\frac{p_j^\alpha}{\Sigma_i p_j^\alpha}$$)을 제안하였다. 이에도 두가지 방법이 있을 수 있는데 $$p_j$$를 TD-error의 값으로 놓는 방법과 중요도의 순서에 따라 순위를 정한후 순위의 역으로 놓는 방법이다. 또한 이러한 학습의 결과 발생하는 bias를 보정하기 위하여 해당 경험을 학습할 때 $$w_i$$를 곱하여 학습하게 된다. 알고리즘은 다음과 같다. 
+![img](/assets/images/preplay.png){: .center-image width="50px"}
+
+## So?
+reward가 sparse한 환경에서 훨씬 효율적인 학습성과를 보였다. 
