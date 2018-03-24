@@ -17,6 +17,6 @@ $$f(x+t) = sign(x_t) \frac{ln(1+\mu\|x_t\|)}{ln(1+\mu)}$$\\
 또한 Gated activation unit을 사용하였고 pixelrnn에서와 같이 residual and skip connection을 사용하였다. 
 
 ## So?
-TTS에서 최고의 성능을 나타내었을 뿐만 아니라 음악 생성, 음성 인식에도 좋은 성과를 보였다. \\
+TTS에서 최고의 성능을 나타내었을 뿐만 아니라 음악 생성, 음성 인식에도 좋은 성과를 보였다.
 
 [van den Oord, Aäron, et al. "WaveNet: A Generative Model for Raw Audio." 9th ISCA Speech Synthesis Workshop.](https://arxiv.org/abs/1609.03499)
