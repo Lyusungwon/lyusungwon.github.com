@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Neural Discrete Representation Learning"
+date:   2018-03-22 10:15:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+[VAE](https://lyusungwon.github.io/dl/2018/02/11/vae.html)에서 추출하는 latent variable들은 기본적으로 continuous하다. 하지만 언어와 같이 discrete환경에서는 discrete한 latent variable들이 필요하기도 하다.  
+
+## WHAT?
+discrete한 latent variable들을 학습하기 위하여 Vector Quantization 방법을 사용하여 VQ-VAE라고 명명하였다. 이를 위해 먼저 latent embedding space $$e \in R_{K X D}$$를 정의한다. 여기서 k는  discrete한 latent variable들의 숫자, D는 variable들의 차원을 의미한다. encoder를 통하여 input의 latent variable들을 구하고 각 latent variable을 가장 가까운 임베딩 벡터($$e_i$$)에 배정한다. 디코더는 배정된 임베딩 벡터들을 바탕으로 reconstruction을 한다. Loss function은 다음과 같다.
+$$L = logp(x|z_q(x)) + \|sg[z_e(x)] - e\|^2_2 + \beta\|z_e(x) - sg[e]\|^2_2$$
+첫번째 텀의 reconstruction error를 통하여 인코더와 디코더를 동시에 학습한다. 가장 가까운 벡터를 배정하는 작업에는 gradient를 구할 수 없기 때문에 straight-through estimator를 사용한다. decoder를 통하여  e로 전파되는 gradient를 임베딩 벡터에 아직 배정하지 않은 인코더의 아웃풋으로 전파하는 것이다. 그리고 두번째 텀에서는 latent embedding space e를 학습하기 위하여 인코더의 결과를 고정해 두고 그로 가까이 가도록 학습시키는 Vector Quantisation방법을 사용한다. 인코더가 충분히 빠르게 학습시키는 것을 보장하기 위하여 세번째 텀을 베타를 통하여 조절한다. 
+
+## So?
+이러한 discretized latent variable들은 auto regressive data들의 중요한 정보를 latent variable들로 잡아내는데 성공하였다. 이를 통하여 그림 뿐만 아니라 음성, 영상에도 좋은 결과를 보였다. 
+
+[van den Oord, Aaron, and Oriol Vinyals. "Neural discrete representation learning." Advances in Neural Information Processing Systems. 2017.](http://papers.nips.cc/paper/7210-neural-discrete-representation-learning)
