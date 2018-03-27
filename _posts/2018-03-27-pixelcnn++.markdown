@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "PixelCNN++: Improving the PixelCNN with Discretized Logistic Mixture Likelihood and Other Modifications"
+date:   2018-03-27 10:34:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+[PixelRNN](https://lyusungwon.github.io/dl/2018/03/21/pixelrnn.html)에서 제안되었던 PixelCNN은 함께 제안되었던 다른 구조와는 달리 유연하고 병렬화가 가능하여 계산적으로 효율적이며 성능 또한 뛰어났다. 
+
+## WHAT?
+이 논문에서는 PixelCNN의 성능을 향상시키기 위한 몇 가지 방법을 제안하였다. 1) 가장 큰 변화는 256-softmax를 사용하여 한가지 값을 예측하는 대신 여러 logistic 분포를 mixture하여 연속 분포를 나타내고 이를 반올림하여 x값을 추정하였다. \\
+$$v ~ \Sigma_{i=1}^{K}\pi_i logistic(\mu_i, s_i)$$
+$$P(x|\pi, \mu, s) = \Sigma_{i=1}^{K}\pi_i [\sigma((x + 0.5 - \mu_i)/s_i - \sigma((x - 0.5 - \mu_i)/s_i)]$$\\
+2) 두번째 변화는 각 픽셀의 R, G, B의 값들을 전개하여 순서대로 도출하던 방식을 바꿔서 각 r, g, b의 값을 따로 도출하였다. 대신 g를 도출할 때에 사용하는 파라미터에 r의 값을 사용하고 b를 도출할때 사용하는 파라미터 값에 r과 g의 값을 사용한다. 3) convolution층에 stride 2와 같은 downsampling을 사용하여 receptive field를 넓혔다. 4) 세번째 변화의 결과 누락된 정보손실을 메우기 위하여 resnet처럼 k층의 레이어를 K - k층의 레이어의 인풋에 직접 넣어주는 shortcut을 사용하였다. 5) Regularization효과를 위하여 dropout을 사용하였다. 
+
+## So?
+NLL상으로 최고의 결과를 거두었다. 
+
+[Salimans, Tim, et al. "Pixelcnn++: Improving the pixelcnn with discretized logistic mixture likelihood and other modifications." arXiv preprint arXiv:1701.05517 (2017)." arXiv preprint arXiv:1606.04460 (2016).
+](http://lanl.arxiv.org/abs/1701.05517)
