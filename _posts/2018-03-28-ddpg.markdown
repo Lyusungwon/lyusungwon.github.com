@@ -14,7 +14,7 @@ Policy gradient는 neural net을 통하여 policy 자체를 평가하는 방법�
 $$ J = E_{r_i, s_i ~ E, a_i \pi}[R_1]$$\\
 이 목적식에 대한 gradient는 다음과 같다. \\
 $$\nabla_{\theta^\mu} \approx E_{s_t ~ \rho}[\nabla_{\theta^\mu} Q(s,a|\theta^Q)|_{s=s_t, a=\mu(s_t|\theta^\mu)}]$$
-$$E_{s_t ~ \rho}[\nabla_{a} Q(s,a|\theta^Q)|_{s=s_t, a=\mu(s_t)}\nabla_\theta_\mu \mu(s|\theta^\mu)|_{s=s_t}]$$
+$$= E_{s_t ~ \rho}[\nabla_{a} Q(s,a|\theta^Q)|_{s=s_t, a=\mu(s_t)}\nabla_{\theta_\mu} \mu(s|\theta^\mu)|_{s=s_t}]$$
 이 gradient를 구하기 위해서 action value function을 근사해야 한다. 여기서 action value function이 policy를 평가하기 때문에 critic, policy네트워크는 actor처럼 작용하여 actor-critic model이라고 불린다. \\
 이 논문에서는 이 actor critic algorithm을 적절하게 수렴시키기 위하여 여러가지 트릭을 사용하였다. Exploration을 위하여 action의 결과에 noise를 더하였다. 또한 DQN과 마찬가지로 q function을 approximate하기 위하여 target network를 만들고 천천히 변화시켰다. 그리고 Experience replay를 만들고 거기서 추출하여 학습함으로서 학습데이터 간의 correlation을 감소시켰다. 알고리즘은 다음과 같다.\\
 ![image](/assets/images/ddpg.png){: .center-image width="50px"}
