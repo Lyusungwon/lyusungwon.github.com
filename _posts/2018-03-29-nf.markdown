@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Variational Inference with Normalizing Flows"
+date:   2018-03-29 17:44:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+Variational Inference를 할때 다루기 쉬운 형태의 posterior함수 q를 가정하고 이를 실제 분포에 근사한다. 하지만 posterior를 쉬운 형태로 가정하기 때문에 실제 분포에 잘 근사되지 않는 것과 같은 한계가 존재한다. 
+
+## WHAT?
+Normalizing flow란 확률분포를 일련의 가역변환을 통하여 변화시키는 과정이다. 중요한 것은 변화한 뒤의 분포의 likelihood를 파악하는 것이다. 변화 이후의 likelihood를 파악하기 위하여 다음과 같은 원리를 이용한다.\\
+$$q(\mathbf{z'}) = q(\mathbf{z})|det\frac{\partial f^{-1}}{\partial\mathbf{z}'}| = q(\mathbf{z}) |det \frac{\partial f}{\partial\mathbf{z}}|^{-1}$$\\
+$$\mathbf{z}_K = f_K\circ...\circ f_2\circ f_1(\mathbf{z}_0)$$\\
+$$ln q(\mathbf{z}_K) = ln q_0(\mathbf{z}_0)-\Sigma_{k=1}^K ln|det\frac{\partial f_k}{\partial\mathbf{z}_{k-1}}| $$\\
+여기서 확률변수가 경로를 따라 변화하는 과정이 flow이며 그 결과인 $$q+k$$가 normalizing flow이다. 이를 활용하기 위해서는 invertible하면서도 Jacobian의 determinant를 구하기 쉬운 변환을 찾아야 한다. Invertible Linear-time Transformation이라는 변환은 다음과 같다. \\
+$$f(\mathbf{z}) = \mathbf{z} + \mathbf{u}h(\mathbf{w}^\top \mathbf{z} + b)$$\\
+h는 element-wise non-linearity에 속한다. 이 변환의 determinant는\\
+$$\psi(\mathbf{z}) = h'(\mathbf{w}^\top\mathbf{z} + b)\mathbf{w}\\
+\left| det \frac{\partial f}{\partial \mathbf{z}} \right|= |det(\mathbf{I} + \mathbf{u}\psi(z)^\top)| = |1 + \mathbf{u}^\top \psi(\mathbf{z})|$$\\
+와 같이 구할 수 있다. 그러므로 \\ 
+$$ln q(\mathbf{z}_K) = ln q_0(\mathbf{z}_0)-\Sigma_{k=1}^K ln|1 + \mathbf{u}^\top \psi(\mathbf{z})| $$\\
+로 나타낼 수 있다. 이와 같은 변환을 planar flow라고 구한다. \\
+Free energy bound에 있는 posteior를 K번 변화시킨 식을 위에서 구한 식을 통하여 나타내면 다음과 같이 나타낼 수 있다.\\
+$$F(x) = E_{q_\phi (z|x)}[log q_\phi (\mathbf{z}|\mathbf{x}) - log p(\mathbf{x}, \mathbf{z})] = E_{q_0 (z_0)}[ln q_0(\mathbf{z}_0)] - E_{q_0 (z_0)}[log p(\mathbf{x}, \mathbf{z}_K)] - E_{q_0 (z_0)}[\Sigma_{k=1}^K ln|1+ \mathbf{u}_k^\top \psi_k(\mathbf{z}_{k-1})]$$
+이 식을 variational EM이나 amortized variational inference에 사용할 수 있다. 알고리즘은 다음과 같다.\\
+![image](/assets/images/nf.png){: .center-image width="50px"}\\
+다른 flow based posterior인 NICE(Non-linear Independent Components Estimation)은 다음에 소개하기로 한다. 
+
+## So?
+이 결과 일정한 수의 변환을 통하여 Multimodal한 posterior들도 성공적으로 표현할 수 있게 되었다. 
+
+[Rezende, Danilo Jimenez, and Shakir Mohamed. "Variational inference with normalizing flows." arXiv preprint arXiv:1505.05770 (2015).](https://arxiv.org/abs/1505.05770)
