@@ -16,10 +16,10 @@ $$p(x_i|x_{1:i-1)}) = N(x_i|\mu_i, (exp\alpha_i)^2\\
 \mu_i = f_{\mu_i}(x_{1:i-1}), \alpha_i = f_{\alpha_i}(x_{1:i-1})$$
 이는 다음과 같이 나타낼 수 있다.
 $$x_i = u_i exp\alpha_i + \mu_i\\
-u_i ~ N(0,1)\\
-u_i = (x_i - u_i)exp(-/alpha_i)$$
+u_i \~ N(0,1)\\
+u_i = (x_i - \mu_i)exp(-\alpha_i)$$
 이 식은 x가 u로 변화하는 식으로 본다면 normalizing flow를 사용할 수 있다. 이때
-$$\leftㅣdet\left(\frac{\partial f^-1}{\partial\mathbf{x}}\right)\right| = exp\left(-\Sigma_i \alpha_i\right)$$\\
+$$\leftㅣdet(\frac{\partial f^-1}{\partial\mathbf{x}})\right| = exp(-\Sigma_i \alpha_i)$$\\
 이므로 determinant도 단순하게 나타나게 된다. 이를 통하면 새로운 데이터에 대해서도 density evaluation이 가능하게 된다. 이 autoregressive한 모델을 여러개 stacking하여 유연한 표현력을 가질 수 있게 된다. 이 논문에서는 [MADE](https://lyusungwon.github.io/dl/2018/04/02/made.html)를 여러층 쌓아서 Masked Autoregressive Flow(MAF)를 제안하였다. 
 
 ## So?
