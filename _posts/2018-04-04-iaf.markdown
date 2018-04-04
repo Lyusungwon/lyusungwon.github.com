@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Improved Variational Inference with Inverse Autoregressive Flow"
+date:   2018-04-04 20:03:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+[Normializing flow](https://lyusungwon.github.io/dl/2018/03/29/nf.html)는 posterior를 유연하게 가정하기 위하여 x를 변환시킨다. 이때 변환은 가역적이어야 하고 determinant를 구하기 쉬워야 한다. 
+
+## WHAT?
+[MAF]()에서 본 것과 같이 Autoregressive 구조는 유용한 성질을 가지고 있다. 하지만 Autoregressive transformation은 density evaluation에 사용되지만 variational inference는 posterior의 sampling을 요하기 때문에 사용되기 힘들다. 하지만 이의 sampling을 reparameterization trick을 사용한 변환으로 가정할 수 있고 이를 엡실론을 기준으로 뒤집으면(inverse) 두가지 중요한 특성이 나타난다. 
+$$\epsilon_i = \frac{y_i - \mu_i(y_{i:i-1})}{\sigma_i(y_{1:i-1})}\\
+\mathbf{\epsilon = \frac{y - \mu(y)}{\sigma(y)}} $$
+하나는 위 식을 통해서 역연산이 병렬적으로 이루어 질 수 있다는 점이고, 두번째는 이의 determinant가 다음과 같이 단순하게 나타난다는 점이다. 
+$$log det \|\frac{d\mathbf{\epsilon}}{d\mathbf{y}}\|= \Sigma^D_{i=1} -log\sigma_i(\mathbf{y})$$ 
+이를 이용하여 기존의 변환보다 훨씬 유연하게 posterior를 가정할 수 있는 새로운 normalizing flow인 inverse autoregressive flow(IAF)을 제안하였다. 이 모델은 x간의 autoregressive구조가 아닌 z간의 autoregressive구조를 가정한다. 
+$$\mathbf{z}_t = \mathbf{\mu}_t + \mathbf{\sigma}_t \odot \mathbf{z}_{t-1}$$
+determinant도 단순하기 때문에 likelihood는 다음과 같이 구할 수 있다.
+$$log q(\mathbf{z}_t|\mathbf{x}) = -\Sigma^D_{i=1}\left(\frac{1}{2}\epsilon^2_i + \frac{1}{2}log(2\pi) + \Sigma^T_{t=0}log \sigma_{t,i}\right)$$
+여기에 일정한 게이트를 추가하여 z를 업데이트 하는 모듈을 만들어 다음과 같은 구조를 가지게 된다.
+![image](/assets/images/iaf.png){: .center-image width="50px"}
+알고리즘은 다음과 같다. 
+![image](/assets/images/iaf2.png){: .center-image width="50px"}
+
+## So?
+이를 통하여 posterior를 유연하게 변화하면서도 간편하게 샘플링할 수 있게 되어 VAE성능을 향상시킬 수 있게 되었다.  
+
+[Kingma, Diederik P., et al. "Improved variational inference with inverse autoregressive flow." Advances in Neural Information Processing Systems. 2016.](https://arxiv.org/abs/1606.04934)
