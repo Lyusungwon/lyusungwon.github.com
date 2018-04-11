@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Adversarial Autoencoders"
+date:   2018-04-11 14:02:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+기존의 [VAE](https://lyusungwon.github.io/dl/2018/02/11/vae.html)는 latent variable들의 aggregated posterior를 특정 분포를 따르게 하기 위하여 KL Divergence의 regularizer를 사용한다.  
+
+## WHAT?
+Adversarial Autoencoder는 latent variable들의 agrregated posterior를 특정 분포를 따르게 만들기 위하여 GAN에서 사용하는 Discriminator Loss를 사용한다. 
+![image](/assets/images/aae.png){: .center-image width="50px"}
+
+## So?
+이를 통하여 특정 분포의 식을모르더라도 sampling만 할 수 있다면 latent variable들이 그 분포를 따르도록 만들 수 있다. latent variable의 분포를 형성하는데 label의 information을 사용할 수 있으며 semi-supervised, unsupervised에도 활용할 수 있다. 
+
+[Oord, Aaron van den, et al. "Parallel WaveNet: Fast High-Fidelity Speech Synthesis." arXiv preprint arXiv:1711.10433 (2017).](https://arxiv.org/abs/1711.10433)
