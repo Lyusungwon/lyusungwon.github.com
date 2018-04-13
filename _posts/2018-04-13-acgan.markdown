@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Conditional Image Synthesis with Auxiliary Classifier GANs"
+date:   2018-04-13 14:10:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+기존의 conditional gan에서는 hidden representation에 class의 정보를 concate하고 그에 맞는 이미지가 형성되길 바라는 방법 밖에 없었다. 이 방법은 단순한 이미지를 형성할 때는 괜찮지만 복잡한 이미지를 만들기는 힘들었다. 
+
+## WHAT?
+AC-GAN(auxiliary classifier GAN)은 generator에 노이즈와 label의 정보를 넣되 기존의 discriminator이외에 추가적인(auxiliary) classifier를 추가한다. 
+$$L_S = E[logP(S=real|X_{real})] + E[logP(S=fake|X_{fake})]\\
+L_C = E[logP(C=c|X_{real})] + E[logP(C=c|X_{fake})]$$
+그리하여 Discriminator는 LS + LC를 최대화하려 하고 G는 LC-LS를 최대화 하려 한다.
+
+## So?
+이를 활용하여 고화질의 이미지 데이터를 형성한 결과 저화질의 데이터보다 분류성과가 좋았다. 
+
+[Odena, Augustus, Christopher Olah, and Jonathon Shlens. "Conditional image synthesis with auxiliary classifier gans." arXiv preprint arXiv:1610.09585 (2016).](https://arxiv.org/abs/1610.09585)
