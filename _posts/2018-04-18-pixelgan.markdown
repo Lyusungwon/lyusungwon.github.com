@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "PixelGAN Autoencoders"
+date:   2018-04-18 10:33:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+기존의 implicit generative model(VAE)들은 hierarchical latent codes를 통하여 데이터의 statistics를 학습할 수 있지만 decoder를 통한 sampling만 가능하고 likelihood function은 tractable하지 않다. 반대로 likelihood function을 학습할 수 있는 autoregressive neural networks(NADE, MADE, PixelCNN)들은 likelihood function을 학습할 수 있는 대신 latent codes를 활용하지 못한다. 
+
+## WHAT?
+PixelGAN Autoencoder는 위 두 가지 방법을 통합하려 하였다. 우선 노이즈를 섞은 데이터를 인코더를 통하여 latent space로 보낸다. 그리고 이 latent variable의 분포를 adversarial training을 통하여 특정 분포에 근사한다. 그리고 이 latent variable을 PixelCNN에 Adaptive Bias로 반영하여 학습한다. 
+![image](/assets/images/pixelgan.png){: .center-image width="50px"}
+학습은 reconstruction phase와 adversarial phase로 나뉘는데 reconstruction phase에서는 PixelCNN을 학습하고 adversarial phase에서는 encoder와 discriminator를 학습한다. 
+
+## So?
+PixelGAN에서 latent variable을 근사하는 prior의 distribution에 따라 latent variable에 담기는 정보와 decoder에 담기는 정보를 조정할 수 있다. Gaussian prior같은 경우는 global vs local decomposition이 이루어 질 수 있고 categorical distribution은 content와 style(label과 그 외) decomposition을 할 수 있다. \\
+PixelGAN을 통하여 semi-supervised/unsupervised classification를 시행한 결과 양호한 성과가 나왔고 cross-domain relation도 학습할 수 있을 것으로 기대된다. 
+
+[Makhzani, Alireza, and Brendan J. Frey. "PixelGAN autoencoders." Advances in Neural Information Processing Systems. 2017.](http://papers.nips.cc/paper/6793-pixelgan-autoencoders)
