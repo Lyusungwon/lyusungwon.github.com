@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Unsupervised Learning of Disentangled and Interpretable Representations from Sequential Data"
+date:   2018-04-19 10:17:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+이미지에 대한 unsupervised disentangling의 시도는 많았지만 오디오와 같은 sequential data에서의 unsupervised disentangling의 시도는 많지 않았다. 
+
+## WHAT?
+Factorized Hierarchical Variational Autoencoder에서는 sequential data를 sequential dependent prior와 sequence independent prior를 가진 hierarchical graphical model로 가정한다. 
+![image](/assets/images/fhvae1.png){: .center-image width="50px"}
+Sequential data이기 때문에 sequence를 나타내는 인덱스 i와 segment를 나타내는 인덱스 n이 존재한다. 한 sequence의 likelihood에 대하여 variational approximation을 하기 위하여 inference model q를 가정하고 variational lowerbound를 구하면 이 식이 각 segment별로 factorized될 수 있다는 것을 알 수 있다.
+$$\mathfrak{L}(\theta, \phi; X) = \Sigma^M_{n=1} \mathfrak{L}(\theta, \phi; \mathb{x}^{(n)}|\mathb{\tilde{\mu}}_2) + const \\
+\mathfrak{L}(\theta, \phi; \mathb{x}^{(n)}) = \mathfrak{L}(\theta, \phi; \mathb{x}^{(n)}|\mathb{\tilde{\mu}}_2) + \frac{1}{N}log p_{\theta}(\mathb{\tilde{\mu}}_2) + const$$
+그리하여 sequence에 대한 lowerbound를 각 segment의 conditional segment variational lowerbound를 포함한 segment variational lowerbound를 최대화함으로써 구할 수 있다. 또한 각 sequence에 대하여 $$\mu_2$$를 다르게 하기 위하여 다음과 같은 Discriminative object를 추가하여 다음과 같은 목적식(discriminative segment variational lowerbound)이 완성된다.
+$$\mathfrak{L}^{dis}(\theta, \phi; \mathb^{(i, n)}) = \mathfrak(\theta, \phi; \mathb^{(i, n)}) + \alpha log p(i|\mathb{z}_2^{(i, n)})\\
+log p(i|\mathb{z}_2^{(i, n)}) := log p_{\theta}(\mathb{z}_2^{(i, n)}|\mathb{\tilde{\mu}}_2^{(i)}) - log(\Sigma_{j=1}^{M}p_{\theta}(\mathb{z}_2^{(i, n)}|\mathb{\tilde{\mu}}_2^{(j)})$$
+이와 같은 모델을 학습하기 위하여 sequence to sequence autoencoder model을 구성하여 학습한다. 
+![image](/assets/images/fhvae2.png){: .center-image width="50px"}
+
+## So?
+sequential data로부터 unsupervised하게 disentangling하여 오디오에서 음성과 소음/ 남자 음성과 여자 음성의 특징을 분리하여 합성하는 결과를 보였다. 
+
+## Critic
+시연 예제에서 reconstruction의 음질이 아직 자연스럽지 못한 것 같다. 아마 raw audio대신 Mel scale feature bank를 추출하여 사용하여 미세한 손실이 있었던 것 같다. feature를 추출할 수 밖에 없는 이유는 raw audio의 길이가 너무 길어서 각 segment에 대하여 variational inference를 하는 시간이 너무 오래 걸려서 그런 것이 아닌가 싶다. 이와 같은 scalability의 문제는 저자가 후속 논문에서 다루고 있는 것 같다. 
+
+[Hsu, Wei-Ning, Yu Zhang, and James Glass. "Unsupervised Learning of Disentangled and Interpretable Representations from Sequential Data." Advances in neural information processing systems. 2017.](http://papers.nips.cc/paper/6784-unsupervised-learning-of-disentangled-latent-representations-from-sequential-data)
