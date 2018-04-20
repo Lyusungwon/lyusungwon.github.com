@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "[Pytorch]VQVAE"
+date:   2018-04-20 13:17:59
+author: Sungwon Lyu
+categories: PI
+---
+
+[Neural Discrete Representation Learning](https://lyusungwon.github.io/dl/2018/03/25/vqvae.html)구현
+
+[https://github.com/Lyusungwon/vqvae](https://github.com/Lyusungwon/vqvae)
+
+## Reference
+- https://github.com/nakosung/VQ-VAE
+- https://github.com/nadavbh12/VQ-VAE
+
+## Note 
+- 각 latent variable 마다 가장 가까운 임베딩 벡터를 찾는게 복잡했는데 단순한 트릭으로 해결할 수 있다는 것을 발견
+- 들어오는 gradient를 가로채는 방법이 어려웠는데 register_hook을 통하여 해결
+
+## Result
+-Image
+![image](/assets/images/vqvaepy2.png){: .center-image width="50px"}
+-Loss
+![image](/assets/images/vqvaepy1.png){: .center-image width="50px"}

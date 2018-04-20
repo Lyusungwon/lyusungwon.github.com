@@ -63,6 +63,9 @@ descriptions:
   - cat: DL
     desc: "Deep Learning"    
 
+  - cat: PI
+    desc: "Pytorch Implementation"    
+
   - cat: RV
     desc: "Reviews"    
 
