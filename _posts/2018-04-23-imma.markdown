@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "Information Modeling Method and Application"
+date:   2018-04-23 23:36:59
+author: Sungwon Lyu
+categories: CW
+---
+Information Modeling Method and Application
+
+2. Internet and Web Fundamentals: 
+3 네트워크 지수법칙10 www의 출현과 성장 13 W3C 14 web browser 15 웹의 구성 요소 16 URL 18 HTML form 23 HTTP message request / response 30 web services 33 WWW web server web client plugin web proxy 35 browser 39 cookies 43 web proxy 47 cache consistency 유지50 web server server side cache server architecture Apache server hosting server cluster 58 CDN 59 web문서의 유형 static dynamic active 61 server-side script기술 66 JavaScript
+3. Search Engines and Information Retrieval: 
+13 IR 문서 24 연관성 평가 26 precision recall 28 사용자의 정보요구 30 검색엔진 색인 동적데이터 spam
+4. Architecture of a Search Engine: 
+3 색인 질의 5 text 획득 crawler feed 변환 저장소 8 text 변환 파서 스타핑 스테밍 link분석 정보 추출 분류기 12 색인 생성 문서 통계량 가중치 도치 색인 분산 14 사용자 상호작용 질의어 입력 질의어 변환 결과 출력 17 ranking 스코어링 성능 최적화 분산 21 평가 로깅 ranking 분석 성능 분석
+5. Crawls and Feeds: 
+2 web crawler 10 freshness 14 age 17 focused crawling deep web 19 sitemap 23문서 feed RSS 28 변환 29 인코딩 유니코드 34 문서의 저장 38 압축 Big table 41 중복 탐지 43 유사중복 탐지 45 지문 47 simhash 50 noise 제거 content block 찾기
+6. Processing text: 
+2 text처리 3 text 통계량 zipf의 법칙 12 어휘의 증가 Heaps법칙 17 검색결과 갯수의 추정 19 결과 집합 크기의 추정 sampling 22 전체 문서 모음 크기의 추정 23 tokenization 28 stopping 30 stemming Porter Krovetz 36 phrase POS tagging n-gram 44 문서구조와 마크업 48 PageRank dangling link 56 link 품질 trackback link 57 정보 추출 NER 60 HMM 64 hot topic detection chi-square test 70 Mutual Information 71 KL divergence 72 Coefficient of Variance 73 Gaussian test 79 국제화
+7. Ranking with Indexes: 
+2 색인과 ranking 5 역색인 proximity match 11 field extent 14 압축 16 delta encoding 18 byte-aligned code v-byte 21 skipping skip pointer 25 lexicon 26 분산색인 27 질의어 처리 문서 용어 30 최적화 conjunctive 처리 31 역치 기법 MaxScore 33 구조화된 질의어 35 분산형태의 평가 문서 분산 용어 분산 caching
+8. Queries and Interfaces: 
+2 정보 요구4 상호작용 5 keyword질의어 7 질의어 stemming co-occurrence Dice coefficient 11 철자검사 편집거리 Damerau-Levenshtein거리 15 사운덱스 코드 run-on 17 Noisy channel모형 21 유의어 사전 22 질의어 확장 24 단어 연관 척도 Dice MI EMIM 카이제곱 척도 구글 유사도 32 유사도의 특징 집합 유사도 35 bag 유사도 cosine유사도 피어슨 상관 계수 39 유사 관련성 피드백 context 벡터 질의어 log 41 연관성 피드백 유사 연관성 피드백 46 context와 개인화 사용자 모형 질의어 log 위치 기반 검색 51 snippet 생성 52 문장 선택 significance factor 54 snippet 생성 57 광고 스폰서 검색 문맥 광고 58 광고 검색 유사연관도 피드백 61 검색결과 군집화 65 군집화 방법 66 통계적 번역 모형 70 overture
+9. Retrieval Models: 
+2 검색 모형 3 relevance 4 검색 모형의 종류 5 boolean검색 7 vector space 모형 10 cosine similarity 12 tfidf 13 relevance feedback Rocchio알고리즘 15 TCSR consistency문제 19 검색문제와 분류문제 Bayes classifier 22 binary independence 모형 24 contingency table 26 BM25
+
+출처: 2018-1 서울대학교 산업공학과 박종헌 교수님 '정보모델링기법과 응용' 수업 자료의 Index

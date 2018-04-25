@@ -66,6 +66,9 @@ descriptions:
   - cat: PI
     desc: "Pytorch Implementation"    
 
+  - cat: CW
+    desc: "Course Work"    
+
   - cat: RV
     desc: "Reviews"    
 
