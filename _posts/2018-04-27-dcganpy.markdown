@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "[Pytorch] DCGAN"
+date:   2018-04-27 21:43:59
+author: Sungwon Lyu
+categories: CI
+---
+
+Deep Convolution Generetive Adversarial Network를 Pytorch로 구현
+
+[https://github.com/Lyusungwon/pytorch/tree/master/dcgan](https://github.com/Lyusungwon/pytorch/tree/master/dcgan)
+
+## Reference
+- https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN
+
+## Note 
+- 드디어 Mode-collapse문제는 해결
+- Transpose convolution의 크기 계산이 조금 까다로웠다
+
+## Result
+

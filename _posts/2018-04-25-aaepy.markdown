@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "[Pytorch] AAE"
-date:   2018-04-27 13:17:59
+date:   2018-04-25 13:17:59
 author: Sungwon Lyu
-categories: PI
+categories: CI
 ---
 
 [Adversarial Autoencoder](https://lyusungwon.github.io/dl/2018/04/11/aae.html)를 Pytorch로 구현
@@ -15,9 +15,8 @@ categories: PI
 
 ## Note 
 - latent variable들을 내가 원하는 그림 문양으로 만들고 싶어서 이미지로부터 sampling하는 부분을 구현
-- 기하학적 모양을 sampling하는 부분은 참고
-- 데이터 모양을 2d로 plot하기 위하여 여러 방법을 도전
-
+- 기하학적 모양을 sampling하는 부분은 참고하였
+- Reconstruction은 잘 되나 latent variable을 내가 원하는 모양으로 만드는 것은 실패. 
 
 ## Result
 

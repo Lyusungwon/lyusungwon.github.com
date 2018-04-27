@@ -16,7 +16,7 @@ $$E_{p_{data}}[KL(q(z|x)\|p(z))] = I(x;z) + KL(q(z)||p(z))\\$$
 ![image](/assets/images/fvae1.png){: .center-image width="50px"}
 그리하고 본 논문에서는 위의 KLD에 penalty를 주는 대신 기존의 VAE의 식에 q(z)의 독립을 강제적으로 유도하는 Total Correlation항을 추가하였다. 
 $$TC(z) = KL(q(z)\|\bar{q}(z)) = E_{q(z)}[log\frac{q(z)}{\bar{q}(z)}] \approx E_{q(z)}[log\frac{D(z)}{1 - D(z)}]\\
-\bar(q) := \Mu_{j=1}^{d}q(z_j)$$
+\bar{q}(z) := \Pi_{j=1}^{d}q(z_j)$$
 위 식에서 $$\bar{q}(z)$$는 z의 각 d마다 batch에 존재하는 모든 데이터들을 permutation함으로써 근사하였다. 만약 z의 각 항이 독립이라면 데이터끼리 섞더라도 영향이 없어야 한다. 알고리즘은 다음과 같다. 
 ![image](/assets/images/fvae2.png){: .center-image width="50px"}
 또한 Beta VAE에서 제안한 metric의 한계를 보완하여 disentanglement를 측정하는 다음과 같은 새로운 metric을 제안하였다. 
