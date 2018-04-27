@@ -3,7 +3,7 @@ layout: post
 title:  "Information Modeling Method and Application"
 date:   2018-04-23 23:36:59
 author: Sungwon Lyu
-categories: CW
+categories: SW
 ---
 Information Modeling Method and Application
 

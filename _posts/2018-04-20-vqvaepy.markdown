@@ -8,7 +8,7 @@ categories: PI
 
 [Neural Discrete Representation Learning](https://lyusungwon.github.io/dl/2018/03/25/vqvae.html)를 Pytorch로 구현
 
-[https://github.com/Lyusungwon/vqvae](https://github.com/Lyusungwon/vqvae)
+[https://github.com/Lyusungwon/pytorch/tree/master/vqvae](https://github.com/Lyusungwon/pytorch/tree/master/vqvae)
 
 ## Reference
 - https://github.com/nakosung/VQ-VAE
