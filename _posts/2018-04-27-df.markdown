@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Disentangling by Factorising"
+date:   2018-04-27 16:27:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+Beta-VAE에서는 q(z|x)와 p(z)의 KL divergence에 추가적인 penalty를 줌으로서 z간의 독립성을 유도하여 disentangling을 이루었다. 하지만 기존의 vae보다 reconstruction 성능이 떨어지는 결과가 나타났다. 
+
+## WHAT?
+위의 KL divergence는 다음과 같이 두 항으로 나누어질 수 있다. \\
+$$E_{p_{data}}[KL(q(z|x)\|p(z))] = I(x;z) + KL(q(z)||p(z))\\$$
+위에서 I(x;z)항은 x, z의 mutual information을 의미하는데 이에 penalty를 줄 경우 x와 z의 공통 정보량이 적어지는 부작용이 발생한다. 
+![image](/assets/images/fvae1.png){: .center-image width="50px"}
+그리하고 본 논문에서는 위의 KLD에 penalty를 주는 대신 기존의 VAE의 식에 q(z)의 독립을 강제적으로 유도하는 Total Correlation항을 추가하였다. 
+$$TC(z) = KL(q(z)\|\bar{q}(z)) = E_{q(z)}[log\frac{q(z)}{\bar{q}(z)}] \approx E_{q(z)}[log\frac{D(z)}{1 - D(z)}]\\
+\bar(q) := \Mu_{j=1}^{d}q(z_j)$$
+위 식에서 $$\bar{q}(z)$$는 z의 각 d마다 batch에 존재하는 모든 데이터들을 permutation함으로써 근사하였다. 만약 z의 각 항이 독립이라면 데이터끼리 섞더라도 영향이 없어야 한다. 알고리즘은 다음과 같다. 
+![image](/assets/images/fvae2.png){: .center-image width="50px"}
+또한 Beta VAE에서 제안한 metric의 한계를 보완하여 disentanglement를 측정하는 다음과 같은 새로운 metric을 제안하였다. 
+![image](/assets/images/fvae3.png){: .center-image width="50px"}
+
+## So?
+이를 통하여 reconstruction의 성능을 유지하면서도 factorize을 해낼 수 있게 되었다. 
+
+## Critic
+논문의 결론에서 스스로 밝히지만 disentanglement가 z간의 독립으로만 이루어 져야 하는 것은 아니다. z의 모든 변수를 독립으로 가정하지 않고 일부만 독립으로 가정하고 시험해 보면 좋을 것 같다. 
+
+[Kim, Hyunjik, and Andriy Mnih. "Disentangling by factorising." arXiv preprint arXiv:1802.05983 (2018).](https://arxiv.org/abs/1802.05983)
