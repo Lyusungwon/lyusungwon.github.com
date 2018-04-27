@@ -16,8 +16,8 @@ Adversarially regularized autoencoder는 discrete한 데이터들을 latent spac
 $$min_{\phi, \psi, \theta} L_{rec}(\phi, \psi) + \lambda^{(1)}W(P_r, P_g)$$
 이를 세부적으로 풀면 세가지 항으로 나눌 수 있다. 
 $$1) min_{\phi, \psi, \theta} L_{rec}(\phi, \psi)\\
-2)min_{w\in W} L_{cri}(w) = max_{w\in W} E_{x~p_x}[f_w(enc_{\phi}(x))] - E_{\bar{c} \sim P_g[f_w(\tilde{c})]}\\
-3)min_{\phi, \psi} L_{encs}({\phi, \psi) = min_{\phi, \psi, \theta} E_{x~p_x}[f_w(enc_{\phi}(x))] - E_{\bar{c} \sim P_g[f_w(\tilde{c})]}$$
+2)min_{w \in W} L_{cri}(w) = max_{w \in W} E_{x \sim p_x}[f_w(enc_{\phi}(x))] - E_{\bar{c} \sim P_g}[f_w(\tilde{c})]\\
+3)min_{\phi, \psi} L_{encs}(\phi, \psi) = min_{\phi, \psi, \theta} E_{x \sim p_x}[f_w(enc_{\phi}(x))] - E_{\bar{c} \sim P_g}[f_w(\tilde{c})]$$
 학습은 세 단계로 이루어 지는데 우선 reconstruction을 위하여 autoencoder를 학습시키고 generator와 encoder의 결과물 사이의 Wasserstein distance를 계산하는 critic을 학습하고 마지막으로 encoder와 generator를 critic에 대하여 adversarial하게 학습한다. 알고리즘은 다음과 같다.
 ![image](/assets/images/arae2.png){: .center-image width="50px"}
 이 과정에서 데이터가 가지고 있는 추가적인 알려진 성질(ex-sentiment)를 conditional하게 제공하고 이를 구분하는 classifier를 추가적으로 학습시킴으로서 code space transfer도 가능하다. 
