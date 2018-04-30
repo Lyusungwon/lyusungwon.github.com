@@ -6,7 +6,7 @@ author: Sungwon Lyu
 categories: CI
 ---
 
-Deep Convolution Generetive Adversarial Network를 Pytorch로 구현
+Deep Convolutional Generative Adversarial Network를 Pytorch로 구현
 
 [https://github.com/Lyusungwon/pytorch/tree/master/dcgan](https://github.com/Lyusungwon/pytorch/tree/master/dcgan)
 
