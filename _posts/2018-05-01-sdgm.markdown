@@ -16,9 +16,9 @@ M2는 Generative Semi-supervised Model로 VAE를 만들 때 label y를 반영한
 $$log p_{\theta}(x, y)  \geq E_{q_{\phi}(z|x, y)}[log p_{\theta}(x|y,z) + log p_{\theta}(y) + log p(z) - log q_{\phi}(z|x,y)] = -L(x, y)\\
 log p_{\theta}(x)  \geq E_{q_{\phi}(y, z|x)}[log p_{\theta}(x|y,z) + log p_{\theta}(y) + log p(z) - log q_{\phi}(y, z|x)]\\
 =\Sigma_y q_{\phi}(y|x)(-L(x,y)) + H(q_{\phi}(y|x)) = -U(x, y)\\
-J = \Sigma_{(x, y) \sim \tilde{p_l} + \Sigma_{x \sim \tilde{p_u} U(x)$$
+J = \Sigma_{(x, y) \sim \tilde{p_l} + \Sigma_{x \sim \tilde{p_u}} U(x)$$
 이에 label데이터를 통하여 classifier를 추가로 학습시키는 항을 추가하여 다음과 같은 목적식을 가지게 된다.
-$$J^{\alpha} = J = \alpha \cdot E_{\tilde{p_l}(x, y)}[-log q_{\phi}(y|x)]\\$$
+$$J^{\alpha} = J + \alpha \cdot E_{\tilde{p_l}(x, y)}[-log q_{\phi}(y|x)]\\$$
 ![image](/assets/images/sdgm2.png){: .center-image width="50px"}
 세번째 모델은 M1과 M2를 쌓아서 만든 모델로 M1을 통하여 학습한 latent variable로 M2를 학습한다. 
 

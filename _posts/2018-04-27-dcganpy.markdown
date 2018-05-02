@@ -14,8 +14,14 @@ Deep Convolutional Generative Adversarial Network를 Pytorch로 구현
 - https://github.com/znxlwm/pytorch-MNIST-CelebA-GAN-DCGAN
 
 ## Note 
-- 드디어 Mode-collapse문제는 해결
-- Transpose convolution의 크기 계산이 조금 까다로웠다
+- Mode-collapse문제는 해결
+- Transpose convolution의 크기 계산이 까다로웠다
+- 생각보다 숫자 모양이 나오기가 어렵다.
+- Model의 깊이, Loss, init, activation 모두 잘 맞추어 주는 것이 중요한 것 같다. 
 
 ## Result
+- Image
+![img](/assets/images/dcganpy1.png){: .center-image width="50px"}
 
+- Loss
+![img](/assets/images/dcganpy2.png){: .center-image width="50px"}
