@@ -10,7 +10,8 @@ categories: DL
 
 ## WHAT?
 Generator를 학습할 때 variational lower bound가 아닌 실제 분포와의 Wasserstein distance를 사용하여 학습하였다. Wasserstein distance란 다음과 같이 정의될 수 있다.\\
-$$W(\mathbb{P}_{X}, \mathbb{P}_{G}) = inf_{\Gamma \in P(\mathbb{P}_{X}, \mathbb{P}_{G})} \mathbb{E}_{(X,Y)~\gamma} [c(X - Y)] = inf_{Q: Q_{Z} = P_{Z}}\mathbb{E}_{P_{X}}\mathbb{E}_{Q_{Z|X}}[c(X,G(Z))] where Q_{Z} is the marginal distribution of Z when X ~ P_X and Z ~ Q(Z|X)$$\\
+$$W(\mathbb{P}_{X}, \mathbb{P}_{G}) = inf_{\Gamma \in P(\mathbb{P}_{X}, \mathbb{P}_{G})} \mathbb{E}_{(X,Y)~\gamma} [c(X - Y)] = inf_{Q: Q_{Z} = P_{Z}}\mathbb{E}_{P_{X}}\mathbb{E}_{Q_{Z|X}}[c(X,G(Z))]$$ 
+where $$Q_{Z}$$ is the marginal distribution of Z when $$X ~ P_X$$ and $$Z ~ Q(Z|X)$$\\
 여기에 Q(Z)에 대한 regularization term을 추가하여\\
 $$D_{WAE}(P_X, P_G) := inf_{Q_{Z|X} \in K}\mathbb{E}_{P_{X}}\mathbb{E}_{Q_{Z|X}}[c(X,G(Z))] + \lambda \cdot D_Z(Q_Z, P_Z)$$\\
 라는 목적식이 만들어지게 된다. 여기에서 $$D_Z(Q_Z, P_Z)$$는 GAN base와 MMD base 두가지를 제시한다. 학습하는 알고리즘은 다음과 같다. 
