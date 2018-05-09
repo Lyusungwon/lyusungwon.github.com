@@ -19,8 +19,7 @@ $$L_x(\theta, \phi; x, z_x, \beta) = E_{q_{\phi}(z_x | x)}\|J(\hat{x}) - J(x)\|^
 ![image](/assets/images/scan2.png){: .center-image width="50px"}
 그리고 SCAN은 symbol input을 받아 latent space에 임베딩을 하는데 이 latent space가 위의 학습된 BVAE와 같도록 유도한다(A). 이때 variability가 높은 이미지의 configuration보다 concept이 더 추상화 되어야 하기 때문에 기존에 사용되던 $$D_{KL}(q(z_y)\|q(z_x))$$대신 $$D_{KL}(q(z_x)\|q(z_y))$$를 사용한다(B). 따라서 목적식은 다음과 같다. 
 $$L_y(\theta_y, \phi_y; y, x, z_y, \beta, \lambda)\\ 
-= E_{q_{\phi_y}(z_y | y)}[log p_{\theta_y}(y|z_y)] - \beta D_{KL}(q_{\phi_y}(z_y|y)\|p(z_y))\\
-- \lambda D_{KL}(q_{\phi_x}(z_x|x)\|q_{\phi_y}(z_y|y))$$
+= E_{q_{\phi_y}(z_y | y)}[log p_{\theta_y}(y|z_y)] - \beta D_{KL}(q_{\phi_y}(z_y|y)\|p(z_y)) - \lambda D_{KL}(q_{\phi_x}(z_x|x)\|q_{\phi_y}(z_y|y))$$
 다양한 층위의 개념들로 기초적인 연산을 하기 위하여 추가적인 학습이 필요하다.
 ![image](/assets/images/scan3.png){: .center-image width="50px"}
 SCAN으로 부터 유추된 두가지의 latent variable과 and, in common, ignore을 나타내는 벡터를 condition한 conditional convolution module을 사용한다. 
