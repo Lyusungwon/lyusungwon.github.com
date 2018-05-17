@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "[PRML] 1.Introduction"
+date:   2018-05-09 11:32:59
+author: Sungwon Lyu
+categories: PRML
+---
+# 1. Introduction
+- training set / target vector
+- training / learning
+- test set / generalization
+- preprocess / feature extraction
+- supervised learning
+	- classification / regression
+- unsupervised learning
+	- clustering / density estimation
+- reinforcement learning
+	- exploration / exploitation
+## 1.1 Example: Ploynomial Curve Fitting
+- over-fit
+- regularization
+- validation set
+## 1.2 Probability Theory
+- sum rule / prodect rule
+### 1.2.1 Probability densities
+- probability density over x / cumulative distribution function 
+- probability mass function
+### 1.2.2 Expectations and covariances
+- expectation / conditional expectation
+- variance / covariance
+### 1.2.3 Bayesian probabilities
+- prior / likelihood / posterior
+- estimate the probability distribution over w
+### 1.2.4 The Gaussian distribution
+- variance / standard deviation / precision
+- sample mean / sample variance
+### 1.2.5 Curve fitting re-visited
+- Maximum likelihood Estimation
+- Predictive distribution
+- Maximum posterior
+### 1.2.6 Bayesian curve fitting
+## 1.3 Model Selection
+## 1.4 The Curse of Dimensionality
+## 1.5 Decision Theory
+### 1.5.1 Minimizng the misclassification rate
+### 1.5.2 Minimizing the expected loss
+### 1.5.3 The reject option
+### 1.5.4 Inference and decision
+### 1.5.5 Lossfunctions for regression
+## 1.6 Information Theory
+### 1.6.1 Relative entropy and mutual information
+
