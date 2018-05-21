@@ -13,10 +13,10 @@ Semi-supervised learning이란 적은 양의 labeled 데이터로 부터 정보�
 논문에서는 세가지 모델을 제안한다. M1은 latent feature discriminative model로 모든 데이터들에 대하여 VAE를 학습시킨 후 labeled data들의 latent variable로 discriminator를 학습하여 unlabeled data를 labeling하는 것이다. 
 ![image](/assets/images/sdgm1.png){: .center-image width="50px"}
 M2는 Generative Semi-supervised Model로 VAE를 만들 때 label y를 반영한다. unlabeled data들은 classifier를 통하여 classify를 하고 이 output을 decoder의 input으로 활용한다. 
-$$log p_{\theta}(x, y)  \geq E_{q_{\phi}(z|x, y)}[log p_{\theta}(x|y,z) + log p_{\theta}(y) + log p(z) - log q_{\phi}(z|x,y)] = -L(x, y)\\
-log p_{\theta}(x)  \geq E_{q_{\phi}(y, z|x)}[log p_{\theta}(x|y,z) + log p_{\theta}(y) + log p(z) - log q_{\phi}(y, z|x)]\\
+$$log p_{\theta}(x, y) \geq E_{q_{\phi}(z|x, y)}[log p_{\theta}(x|y,z) + log p_{\theta}(y) + log p(z) - log q_{\phi}(z|x,y)] = - L(x, y)\\
+log p_{\theta}(x) \geq E_{q_{\phi}(y, z|x)}[log p_{\theta}(x|y,z) + log p_{\theta}(y) + log p(z) - log q_{\phi}(y, z|x)]\\
 =\Sigma_y q_{\phi}(y|x)(-L(x,y)) + H(q_{\phi}(y|x)) = -U(x, y)\\
-J = \Sigma_{(x, y) \sim \tilde{p_l} + \Sigma_{x \sim \tilde{p_u}} U(x)$$
+J = \Sigma_{(x, y) \sim \tilde{p_l}} L(x,y) + \Sigma_{x \sim \tilde{p_u}} U(x)$$
 이에 label데이터를 통하여 classifier를 추가로 학습시키는 항을 추가하여 다음과 같은 목적식을 가지게 된다.
 $$J^{\alpha} = J + \alpha \cdot E_{\tilde{p_l}(x, y)}[-log q_{\phi}(y|x)]\\$$
 ![image](/assets/images/sdgm2.png){: .center-image width="50px"}

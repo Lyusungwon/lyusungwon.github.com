@@ -11,7 +11,7 @@ Disentanling과정은 기본적으로 x내에서 독립적인 요소를 찾아 �
 
 ## WHAT?
 DIP-VAE(Disentangled Inferred Prior VAE)는 encoder의 결과를 독립한 prior 분포에 거리로서 근사하는 것이 아니라 두 분포의 Covariance를 맞춤으로써 근사하였다. z의 Covariance는 첫번째 식과 같이 random variable을 포함하는 두 항으로 나눌 수 있다. 기존의 VAE들은 분산과 평균을 neural net으로 근사한 정규분포로 사용하였기 때문에 두번째 식을 Identity matrix에 근사함으로써 독립 분포에 근사할 수 있다. 
-$$Cov_{q_{\phi}(z)}[z] = E_{p_{\phi}(x)}Cov_{q_{\phi}(z|x)}[z] + Cov_{p(x)}(E_{q_{\phi}(z|x)[z])\\
+$$Cov_{q_{\phi}(z)}[z] = E_{p(x)}Cov_{q_{\phi}(z|x)}[z] + Cov_{p(x)}(E_{q_{\phi}(z|x)}[z])\\
 Cov_{q_{\phi}(z)}[z] = E_{p(x)}[\Sigma_{\phi}(x)] + Cov_{p(x)}[\mu_{\phi}(x)]$$
 일반적으로 $$\Sigma_{\phi}(x)$$는 Diagonal matrix로 취해지기 때문에 z간의 correlation은 $$Cov_{p(x)[\mu_{\phi}(x)]}$$로 부터만 발생한다. 이로 인하여 두 가지 모델이 생길 수 있는데 $$Cov_{p(x)}[\mu_{\phi}(x)]$$를 조절하는 DIP-VAE-I과 $$Cov_{q_{\phi}}[z]$$를 조절하는 DIP-VAE-II가 그것이다. 각 Covariance의 Diagonal term을 1로 제한하고 나머지를 0으로 제한함으로써 각각 다음과 같은 목적식을 가지게 된다. 
 $$max_{\theta, \phi}ELBO(\theta, \phi) - \lambda_{od}\Sigma_{i\neq j}[Cov_{p(x)}[\mu_{\phi}(x)]]^2_{ij} - \lambda_{d}\Sigma_{i}([Cov_{p(x)}[\mu_{\phi}(x)]]_{ii})^2\\
