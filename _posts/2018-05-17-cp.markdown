@@ -23,4 +23,4 @@ $$u_t = U(c_t, u_{t-1})$$\\
 ## Critic
 정말 인사이트가 넘치는 논문이었다. 기초적이긴 하지만 인간의 인지과정과 의식을 기존의 기계학습 개념들을 활용하여 표현하였다는 점이 놀라웠다. 인간에게도 설명하기 힘든 의식을 정식화하려 했다는 점에서 어찌보면 생물학 논문 같기도 하다. 속설에 벤지오가 술 한잔 걸치고 썼다는 말이 있을 정도로 추상적이지만 이 인사이트가 증명된다면 이 논문은 전설이 될 수 도 있을 것 같다. 
 
-[Bengio, Yoshua. "The consciousness prior." arXiv preprint arXiv:1709.08568 (2017).](https://arxiv.org/abs/1709.08568)
+[Bengio, Yoshua. "The consciousness prior." arXiv preprint arXiv:1709.08568 (2017).](https://arxiv.org/abs/1709.08568)\\

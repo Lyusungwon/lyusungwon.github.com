@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Disentangling Controllable and Uncontrollable Factors of Variation by Interacting with the World"
+date:   2018-05-23 10:32:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+[Independently Controllable Factors](https://lyusungwon.github.io/rl/2018/05/21/icf.html)에서는 agent가 environment와의 상호작용을 통하여 control가능한 factor들을 학습할 수 있었다. 하지만 uncontrollable한 factor는 인식하지 못한다는 단점이 있었다. 
+
+## WHAT?
+이 논문에서는 controllable한 factor와 uncontrollable한 factor를 따로 인식하는 DNN을 두개로 구성한다. \\
+$$L(\Phi, \Theta, \Psi) = \Sigma_i \hat{R}_i(\Phi, \Theta) - \lambda S_i(\phi_c, \Psi)\\
+\hat{R}_i(\Phi, \Theta) = \|x_i - [g_c(f_c(x_i)) + g_u(f_u(x_i))]\|^2$$
+이렇게 하면 충분히 잘 될 것 같지만 어떤것이 controllable하고 어떤 것이 uncontrollable한 object인지 구분하기가 어렵다고 한다. 그렇기 때문에 pretrained된 모델에 DNN을 추가한다면 그 DNN은 uncontrollable한 object를 학습할 것이다. 
+![image](/assets/images/dcuf.png){: .center-image width="50px"}
+
+## So?
+Obstacle을 피해야 하는 task가 있을 때 ICF의 모델이 uncontrollable한 feature를 학습하지 못하여 점수가 낮았는데 반하여 이 모델은 uncontrollable한 obstacle을 잘 피하여 점수가 높았다. 
+
+## Critic
+Pretrained된 모델을 사용하지 않고 uncontrollable한 feature을 구분할 수 있으면 좋을 것 같다. 
+
+[Sawada, Yoshihide. "Disentangling Controllable and Uncontrollable Factors of Variation by Interacting with the World." arXiv preprint arXiv:1804.06955 (2018).](https://arxiv.org/abs/1804.06955)

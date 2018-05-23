@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ladder Variational Autoencoders"
-date:   2018-05-18 8:10:59
+date:   2018-05-21 16:10:59
 author: Sungwon Lyu
 categories: DL
 ---
@@ -20,8 +20,6 @@ $$q_{\phi}(z|x) = q_{\phi}(z_L|x)\Pi_{i=1}^{L-1}q_{\phi}(z_i|z_{i+1})\\
 \sigma_{q,i} = \frac{1}{\hat{\sigma_{q, i}}^{-2} + \sigma_{p, i}^{-2}}\\
 \mu_{q,i} = \frac{\hat{\mu}_{q,i}\hat{\sigma_{q, i}}^{-2} + \mu_{p,i}\sigma_{p, i}^{-2}}{\hat{\sigma_{q, i}}^{-2} + \hat{\sigma_{p, i}}^{-2}}\\
 q_{\phi}(z_i|\cdot)=N(z_i|\mu_{q,i}, \sigma^2_{q,i})$$
-이때 reconstruction시 z를 잘 활용하지 않는 문제를 해결하기 위하여 KLdivergence를 처음에는 적게 주고 넘차 올리는 warm-up방식을 활용한다. 
-Skip RNN은 State의 update를 skip하면서 계산량을 줄이면서 성능을 유지할 수 있다. 각 State를 skip할 것인지 여부는 state update gate u를 통하여 결정한다. 또한 batch normalization을 활용하면 좋다. 
 
 ## So?
 ![image](/assets/images/lvae2.png){: .center-image width="50px"}
