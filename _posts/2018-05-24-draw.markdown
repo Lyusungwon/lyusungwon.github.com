@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "DRAW: A Recurrent Neural Nerwork For Image Generation"
+date:   2018-05-24 11:32:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+사람의 눈은 그림을 볼 때 한번에 보는 것이 아니라 시선에 따라 부분적으로 본다. 
+
+## WHAT?
+DRAW는 기본적으로 VAE의 구조를 가지고 있다. 하지만 encoder와 decoder를 모두 rnn을 사용한다. 그래서 encoder와 decoder는 code의 sequence를 주고 받을 뿐만 아니라 encoder가 전시점의 decoder의 output에도 의존한다. 또한 한번에 그림의 픽셀을 결정하는 것이 아니라 부분을 지속적으로 더하여 최종 그림을 도출한다. 마지막으로 attention machanism을 활용하여 encoder에 들어가는 input region과 decoer에 의해 변화하는 output region을 결정한다. 즉, 무엇을 쓸지 뿐만이 아니라 어디를 읽을지, 어디에 쓸지도 함께 결정하는 것이다. 
+![image](/assets/images/draw1.png){: .center-image width="50px"}
+모델 구조는 인코더와 디코더 모두 LSTM을 사용하였다. 
+$$\hat{x}_t = x - \sigma(c_{t-1})\\
+r_t = read(x_t, \hat{x}_t, h_{t-1}^{dec})\\
+h_t^{enc} = RNN^{enc}(h_{t-1}^{enc}, [r_t, h_{t-1}^{dec}])\\
+z_t \sim Q(Z_t|h_t^{enc})\\
+h_t^{dec} = RNN^{dec}(h_{t-1}^{dec}, z_t)\\
+c_t = c_{t-1} + write(h_t^{dec})$$
+read, write operation은 어탠션을 주냐 안주냐에 따라 나뉠 수 있다. 어탠션이 없다면
+$$read(x, \hat{x}_t, h_{t-1}^{dec}) = [x, \hat{x}_t]\\
+write(h_t^{dec}) = W(h_t^{dec})$$
+어탠션을 준다면
+$$read(x, \hat{x}_t, h_{t-1}^{dec}) = \gamma[F_Y x F_X^T, F_Y \hat{x} F_X^T]\\
+w_t = W(h_t^{dec})\\
+write(h_t^{dec}) = \frac{1}{\hat{\gamma}}\hat{F}_Y^T w_t \hat{F}_X$$
+여기서 w는 N x N사이즈의 writing patch를 의미한다. 
+$$F_X[i, a] = \frac{1}{Z_X} exp(-\frac{(a - \mu^i_X)^2}{2\sigma^2})\\
+F_X[i, b] = \frac{1}{Z_Y} exp(-\frac{(b - \mu^i_Y)^2}{2\sigma^2})\\
+\mu^i_X = g_X + (i - N/2 - 0.5)\delta\\
+\mu^j_Y = g_Y + (j - N/2 - 0.5)\delta\\
+(\tilde{g}_X, \tilde{g}_Y, log\sigma^2, log\tilde{\delta}, log\gamma) = W(h^{dec})
+g_X \frac{A + 1}{2}(\tilde{g}_X + 1)\\
+g_Y \frac{B + 1}{2}(\tilde{g}_Y + 1)\\
+\delta = \frac{max(A, B) - 1}{N - 1}\tilde{\delta}$$
+![image](/assets/images/draw2.png){: .center-image width="50px"}
+여기서 filter weight를 조정하며 attention을 자유자재로 움직일 수 있다. Loss function은 다음과 같다. 
+$$L^x = -log D(x|c_T)\\
+L^z = \Sigma_{t=1}^T KL(Q(Z_t|h_t^{enc})\|P(Z_t))\\
+L = \langle L^x + L^z \rangle_{z\sum Q}$$
+
+## So?
+MNIST, SVHN에서 좋은 성과를 거두었다. 하지만 CIFAR10에서는 좋은 성능이 나오지 못하였다. 
+
+## Critic
+부분에 주의를 기울여 generation한다는 발상은 좋은 것 같다. attention을 주는 방법을 다르게 한다던지 여러 방법을 적용하여 개선할 수 있을 것 같다.
+
+[Gregor, Karol, et al. "DRAW: A recurrent neural network for image generation." arXiv preprint arXiv:1502.04623 (2015).](https://arxiv.org/abs/1502.04623)
