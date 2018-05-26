@@ -16,7 +16,7 @@ Sequential data이기 때문에 sequence를 나타내는 인덱스 i와 segment�
 $$\mathfrak{L}(\theta, \phi; X) = \Sigma^M_{n=1} \mathfrak{L}(\theta, \phi; \mathbf{x}^{(n)}|\mathbf{\tilde{\mu}}_2) + const \\
 \mathfrak{L}(\theta, \phi; \mathbf{x}^{(n)}) = \mathfrak{L}(\theta, \phi; \mathbf{x}^{(n)}|\mathbf{\tilde{\mu}}_2) + \frac{1}{N}log p_{\theta}(\mathbf{\tilde{\mu}}_2) + const$$
 그리하여 sequence에 대한 lowerbound를 각 segment의 conditional segment variational lowerbound를 포함한 segment variational lowerbound를 최대화함으로써 구할 수 있다. 또한 각 sequence에 대하여 $$\mu_2$$를 다르게 하기 위하여 다음과 같은 Discriminative object를 추가하여 다음과 같은 목적식(discriminative segment variational lowerbound)이 완성된다.
-$$\mathfrak{L}^{dis}(\theta, \phi; \mathbf^{(i, n)}) = \mathfrak(\theta, \phi; \mathbf^{(i, n)}) + \alpha log p(i|\mathbf{z}_2^{(i, n)})\\
+$$\mathfrak{L}^{dis}(\theta, \phi; \mathbf{x}^{(i, n)}) = \mathfrak(\theta, \phi; \mathbf{x}^{(i, n)}) + \alpha log p(i|\mathbf{z}_2^{(i, n)})\\
 log p(i|\mathbf{z}_2^{(i, n)}) := log p_{\theta}(\mathbf{z}_2^{(i, n)}|\mathbf{\tilde{\mu}}_2^{(i)}) - log(\Sigma_{j=1}^{M}p_{\theta}(\mathbf{z}_2^{(i, n)}|\mathbf{\tilde{\mu}}_2^{(j)})$$
 이와 같은 모델을 학습하기 위하여 sequence to sequence autoencoder model을 구성하여 학습한다. 
 ![image](/assets/images/fhvae2.png){: .center-image width="50px"}
