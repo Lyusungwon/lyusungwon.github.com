@@ -1,0 +1,101 @@
+---
+layout: post
+title:  "Human Performance (6. Language and communication)"
+date:   2018-05-28 23:36:59
+author: Sungwon Lyu
+categories: SW
+---
+
+# 6. Language and communication
+## 1. overview p160
+## 2. the perception of print p160
+### 2.1 stages in word perception
+- 문자의 인식은 계층적이다. 
+- Figure 6.1 단어 인식의 계층적 구조
+#### 2.1.1 The features as a unit: visual search
+- 글자 한 자를 만드는 기호(선, 곡선)을 인식한다.
+#### 2.1.2 The letter as a unit: automatic processing
+- 일관된 경험을 통하여 글자 한 자는 기호들의 집합으로 다른 기호들보다 빠르게 자동으로 처리된다.
+#### 2.1.3 The word as a unit: word shape
+- 단어는 한 단어가 하나의 모양으로 처리되며 모양이 비슷하면 헷갈리기 쉽다.
+### 2.2 Top-Down Processing: Context and Redundancy
+- 방금은 단어 인식이 Botton-up / data-driven processing으로 묘사되었지만 Top-down process도 존재한다.
+- Figure 6.2 top-down vs bottom-up
+- Top-down processing: 기호, 글자, 단어를 다른 요소들과의 관계 속에서 이해한다.  Word superiority effect: 맥락이 주는 효과 덕분에 한 글자는 단어 내에서 더 빠르게 처리된다. 글자의 인식에는 Top-down과 bottom-up processing은 지속적으로 상호작용한다. 
+### 2.3 Reading: From words to Sentences
+- 문장을 scan할 때에 눈은 일련의 fixation사이에서 saccadic eyemovement를 한다. 한  fixation동안 한 단어의 정보와(bottom up) 앞뒤 단어의 맥락속에서의 해석(top-down)이 동시에 이루어 진다. 문장에서 단어가 직렬적으로 해석되는지 병렬적으로 해석되는지는 아직 밝혀지지 않았다.  
+## 3. Applications of unitization and top-down processing p165
+- 이러한 문자 인식 메커니즘을 활용해 보자
+### 3.1 Unitization
+- top-down방식을 위해서는 단위들을 unitization을 해야 하는데 이는 단위의 critical signal에 주목함으로써 빠르게 훈련할 수 있다. 
+### 3.2 Context-data tradeoffs
+- Figure 6.3 보이는 글자 수와 정보 활용도의 관계
+- 한정된 공간에 함축된 큰 글자의 단어를 제시함으로써 bottom up sensory quality를 향상시킬 수 있는 반면에 작은 글자의 여러 단어를 제시한다면 맥락적인 정보는 전할 수 있겠지만 잘 안보일 수도 있다. 
+### 3.3 Code design: economy versus security
+- 이러한 td와 bu의 tradeoff는 정보이론의 Shannon-Fano법칙과도 통한다. 높은 확률로 등장하는 정보는 짧고 잘 등장하지 않는 정보의 표현은 길어야 가장 경제적이다. 이러한 경제성도 중요하지만 중요한 단어가 전달되어야 하는 security도 중요하다. 상황에 따라 잘 선택하자
+## 4. Recognition of objects p170
+### 4.1 Top-down and bottom up processing
+- 물체의 인식에도 td와 bu 작업이 함께 이루어진다.
+### 4.2 Pictures and icons
+- Figure 6.5 여러 스타일의 아이콘
+- 물체의 인식도 글자만큼 빨리 이루어 질 수 있다는 점에서 착안하여 icon을 통하여 의미를 전달 할 수 있다. icon의 의미는 명확해야한다. concreteness란 icon이 현실의 정보를 묘사하느냐를 의미하고 그렇지 않으면 abstract라고 한다. Visual complexity는 icon의 디테일함의 정도를 의미한다. Semantic distance는 icon과 그 의미가 얼마나 가깝느냐를 의미하는데 이가 멀다면 추가적으로 학습해야 한다. 그래서 사람들의 경험에 비추어 보았을 때 친숙한지를 의미하는 familiarity가  중요해진다. 심미적인 특성을 나타내는 aesthetic appeal도 있다. 
+### 4.3 Sounds and Earcons
+- 음성이나 소리의 인식 과정도 유사하다. earcons란 abstract musical tones that can be structured in combinations varying in intensity, pitch and timbre이다. Auditory icons란 earcon과 달리 소리에 의미를 연계한 것이다(삭제할 때 나는 소리). 시각 정보처럼 청각 정보도 의미가 연계되었을 때 효과적이다. spearcon은 음성과 auditory icon을 혼합한 것이다. 
+## 5. Comprehension p175
+- 여기에서는 언어의 이해에 대하여 다룰 것이다.
+### 5.1 Instructions
+- 지시문이 명확한 정보를 전달하는 것은 사회를 위해 중요하다. 법률 instruction은 복잡하다고 비판받아왔다(개선 가이드라인 p177). 건강 도메인에서도 정확한 정보를 전달하는 instruction은 중요하다. Instruction의 명확한 전달은 단어나 문장 level에서만 이루어 지지 않는다. 이를 위해 5가지 카테고리를 고려해야 한다(5.2~5.5 + role of pictures).  
+### 5.2 Context
+- 그림이나 제목과 같은 문맥 정보가 언어 정보의 이전에 주어지면 이해도나 기억력의 측면에서 효과적이다.
+### 5.3 Command versus status
+- 지시문은 Command(“속도를 낮춰라”) 또는 status(“당신의 현재 속도는 너무 높습니다”)와 같이 나타낼 수 있다. 이 두 가지 방식의 효과는 확정적이지 않지만 급박한 상황에서는 command가 효과가가 있지만 시간적 여유가 있거나 너무 단정적인 내용이 아니라면 status가 적절하다. 또한 둘 다 표시하는 redunduncy도 효과가 있을 때도 있지만 이 두 개의 구분이 명확해야 한다. 
+### 5.4 Linguistic factors
+#### 5.4.1 Negatives
+- 부정어는 처리하는데 항상 오래걸리기 때문에 왠만해서는 긍정어로 표현해야 한다. 
+#### 5.4.2 Absence of cues
+- 사람들은 예상치 못한 것이 존재하는 것 보다 존재하지 않는 것을 더 못 알아차리기 때문에 무엇을 알리기 위해서는 기존 신호가 없어지는 방법보다 신호가 나타나는 것이 효과적이다. 
+#### 5.4.3 Congruence and order reversals
+- 순서대로 지시문을 나타낼 때에는 사건의 발생과 congrugent해야한다(“Start the component if the light is on”은 좋지 않은 지시문)
+### 5.5 Working memory load
+- 지시문은 사람들의 working memory를 감안하여 적당한 양의 정보를 전달해야 한다. proposition이 한 정보의 양을 나타낸다면 proposition이 4개를 넘어간다면 다시 설명(reinstatement)을 해야한다.
+## 6. Multimedia instructions p180
+- 다양한 매체(글, 그림, 소리)로 지시문을 나타낼 때는 다음 세가지 가이드라인을 지켜야 한다. 
+### 6.1 The optimal medium
+- 정보의 성격을 고려하여 매체를 선택해야 한다. 이미지는 복잡한 공간적인 관계를 나타내기에 적합하고 글은 추상적인 정보를 전달하는데에 적합하며 길고 복잡한 정보는 음성보다는 글이 적합하다. 여러 매체를 함께 사용하는 것은 조금 나을 수 있으나 이 효과는 크지 않은 것은 것으로 나타났다. 
+### 6.2 Redundancy and complementarity
+- Redundancy란 다른 매체들이 서로 보완하지 않고 같은 내용의 정보를 전달하는 것이며 complementarity는 다른 매체들이 서로 보완하면서 정확히 같지는 않은 정보를 전달하는 것이다. 글과 음성의 redundancy는 효과적이지만 처리 속도를 늦출 수 있다. 이미지와 글은 서로 보완적으로 제시되었을 때 가장 효과가 좋았다. 여러 경로를 통한 전달은 인지적 부담을 고려하여 전달되어야 한다. 글이 그림과 함께 배치될 때 spatial contiguity를 고려하여 관련된 그림과 글을 가까이 배치하면 효과적이다. 또한 temporal contiguity를 고려하여 텍스트와 그에 해당하는 이미지가 함께 제안되는 것이 좋다고 한다. 요약(p184)
+### 6.3 Realism of pictorial Material
+- 전달을 위한 그림은 단순히 정보 전달할 정도만 되면 더 사실적인 필요는 없는 것으로 나타났다. 인지적 부담 때문에 동적효과(animation)은 정적인 그림보다 효과가 떨어질 수 있는 것으로 나타났다. 
+## 7. Product warnings p184
+- 경고는 noticed(알아차려져야) 하고 read(단순히 응시하는 것이 아니라 읽혀야) 하며 undetstood(읽고 이해가 되어야) 한다. 경고는 명확히 무슨일이 일어날 지 명시되어야 효과적이다. 또한 위험의 정도에 따라 ‘danger’, ‘warning’, 그리고 ‘caution’처럼 전달의 정도를 조절할 수 있다. 네번째로 사용자에게 이해되었다고 하더라도 그 지시를 따르기 위한 ‘cost of compliance’가 적절해야 한다.  
+## 8. Speech perception p186
+- 음성의 전달도 중요하다. 글자를 처리할 때 처럼 음성은 phonemes – syllables – word로 구성되어 있다. 하지만 시각과는 달리 이 요소들이 잘 분리되어 있는 것이 아니라 연속적이다.
+### 8.1 Representation of speech
+- 그림 6.8 음성 신호
+- 음성 신호는 연속적인 파동의 형태로 나타날 수 있고 Fourier anlysis를 통하여 분석되어 여러 sine wave의 조합으로 나타낼 수 있다. 이 sine wave들은 초기 신호의 features로 생각할 수 있고 이를 경제적으로 표현하기 위하여 6.8.c와 같이 spectral representation 로 표현될 수 있다. Spectral representation에는 시간축이 포함되지 않기 때문에 시간축을 포함하여 6.8.d와 같이 speech spectrograph로 나타낼 수 있다. 
+### 8.2 Units of speech perception
+#### 8.2.1 phonemes
+- Phonemes은 영어의 글자와 같은 발음 단위를 의미하고 영어에는 대략 38개 + @가 존재한다(s=c). phoneme은 맥락에 따라 크게 달라질 수 있다(k in kid, lick: invariance problem).
+#### 8.2.2 syllables
+- 두개 이상의 phoneme이 조합되어 syllable을 형성한다. Syllable은 consonant(c)와 vowel(v)이 함꼐 존재하기 때문에 syllable(CV)는 형태에 invariant한 최소의 단위가 된다. 
+#### 8.2.3 words
+- 단어는 인지의 단위이지만 음성은 연속적으로 존재하기 때문에 명확히 나누어 지지 않아 segmentation problem이 존재한다. 
+### 8.3 Top-down processing of speech
+- 음성에서도 top-down process가 존재한다. 위와 같은 문제와 더불어 다시 듣지 못하는 음성의 특성상 인식이 더욱 어렵기 때문에 top-down process를 도와주는 prior가 존재한다. 맥락적인 정보나 대화에 관련된 지식을 활용하여 듣지 못한 단어를 유추한다. 신기하게도 나이가 많은 사람들은 인조 목소리로 맥락적 정보가 주어진다 해도 도움을 받지 못한다는 점이다(자연스러워야 한다). 
+### 8.4 Applications of voice recognition research
+- 그림 6.9 음성 이해도
+- 음성인식에 대한 이해는 사람처럼 동작하는 음성 인식 시스템을 만들때나 참사를 방지하기 위해 여러 방해 속에서의 음성 이해의 정도를 측정할 때 도움을 줄 수 있다. 
+- Articulation index란 speech power / noise power로 나타낼 수 있고 이를 x축, 이해 정도를 y축으로 하여 그래프를 만들 수 있다. 
+- Speech intelligibility란 음성을 정확히 이해하는 능력인데 이를 통하여 speech inteligibility index(SII)를 만들 수 있다. 
+### 8.5 Communications
+communication에는 음성 말고도 여러가지가 작용한다. 
+#### 8.5.1 Nonverbal communicatons
+- 비언어적 표현에는 4가지가 있을 수 있다. 1) visualizing the mouth: 음성을 들을 때 입모양 보기2) Nonverbal cues: 손가락질이나 제스쳐 , 표정3) Disambiguity: 음성과 nonverbal cue를 합쳐서 나타나는 disambiguity효과 4) Shared knowledge of action: 사람(팀원들)의 행동 상의 맥락
+#### 8.5.2 Video mediated communications
+- 대면 대화와 상체 비디오(tv based video), 얼굴 비디오(web cam를 통한 대화를 비교하였는데 웹캠을 활용한 소통의 이해도가 현저히 낮았다. 비디오는 대면 대화에 비하여 신뢰도가 낮았고 remote work는 고립감을 증가시키고 관계를 악화시켰다. 
+### 8.6 Crew resource management and team situation awareness
+- 팀원간의 소통에 대한 주의를 기울이기 위하여 crew resource management(CRM)라는 개념이 도입되어 소통의 비언어적 표현을 강조하였다. 이에는 팀원간의 권위(authority gradient: 신참이 고참의 권위로 인하여 말을 잘 못하는)를 감소하는 방법도 포함되었고 피드백이나 모호하지 않은 의사소통이 팀의 성과에 큰 영향을 미치는 것도 밝혀내었다. CRM은 큰 성과를 거두었다. Team Situation Awareness(TSA)이라는 개념도 관심을 받기 시작했는데 이는 팀원들 사이에 공유된 상황판단이 팀의 성과에 얼마나 영향을 미치느냐를 다룬다. 이는 단순히 개인들의 이해의 총합과는 다르다. 
+
+출처: 
+- Wickens, C.D. and Hollands, J. G. 2000. Engineering Psychology and Human Performance, 3rd ed. Prentice Hall. USA. (Sigma press. 323.4845)
+- 2018-1 서울대학교 산업공학과 윤명환 교수님 '인간 성능' 수업
