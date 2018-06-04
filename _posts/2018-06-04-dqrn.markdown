@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Deep Recurrent Q-Learning for Partially Observable MDPs"
+date:   2018-06-04 10:06:59
+author: Sungwon Lyu
+categories: RL
+---
+
+## WHY? 
+기존의 DQN은 MDP설정을 따르기 때문에 현재의 상태가 과거의 모든 정보를 포함하고 있다고 전제한다. 
+
+## WHAT?
+기존의 DQN에서 과거를 반영하기 위하여 마지막 n장면을 각 채널로 하여 convolution하였다. DRQN(Deep Recurrent Q-Network)에서는 한 frame씩 CNN으로 학습하고 마지막 벡터를 LSTM의 input으로 넣고 마지막 hidden state에 fc를 하여 Q-function을 도출한다. 
+![image](/assets/images/drqn.png){: .center-image width="50px"}
+업데이트 방식은 두 가지가 있을 수 있다. 1) Bootstrapped Sequential Updates는 replay memory로부터 특정 episode를 random 추출하고 이를 처음부터 에피소드 끝까지 학습하는 방식이다. 2) Bootstrapped Random Updates는 replay memory로부터 특정 episode를 random 추출하고 random point에서 시작하여 unrol iteration timestep만큼만 진행하여 학습한다. 
+
+## So?
+DRQN은 DQN과 달리 recurrent unit을 사용하기 때문에 순간순간 화면이 손상되더라도 generalize할 수 있다(Partially Observed MDP). 그래서 p(0.5)확률로 화면이 사라지는 flickering Pong게임에서 기존 DQN보다 좋은 성능을 보였다.  
+
+## Critic
+기존 DQN에 recurrent구조를 더한다는 간단한 발상으로 좋은 성능을 보인 것이 멋지다. 이러한 recurrent구조의 hidden state가 연속적이라면 consciousness prior에 나오는 consciousness역할을 할지도 모르겠다. 
+
+[Hausknecht, Matthew, and Peter Stone. "Deep recurrent q-learning for partially observable mdps." CoRR, abs/1507.06527 (2015).](https://arxiv.org/abs/1507.06527)

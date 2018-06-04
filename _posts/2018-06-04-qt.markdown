@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "An Efficient Framework for Learning Sentence Representations"
+date:   2018-06-04 09:42:59
+author: Sungwon Lyu
+categories: NLP
+---
+
+## WHY? 
+Sentence를 vector representation으로 나타내는 것은 쉽지 않고 특히 Unlabeled data로 부터 만드는 것은 더욱 어렵다. 
+
+## WHAT?
+Distributional hypothesis에 기반하여 한 Sentence를 그 주위에 있는 context sentence를 예측하는 방식으로 sentence representation을 학습한다. 기존의 Skip Thought보다 빠르고 간편하다는 점에서 Quick Thought이라고 이름 붙였다. \\
+![image](/assets/images/qt1.png){: .center-image width="50px"}
+center encoder f는 RNN계열의 함수로 벡터화 하고자 하는 문장을 인코딩하여 vector representation을 output한다. context encoder g는 그 주위에 있을 문장들을 마찬가지로 인코딩하여 vector를 output한다. Candidate sentences는 negative 방식으로 실제 context vector와 그 외의 문장들 중 일부를 sampling하여 구성된다. classifier는 candidate sentence중에서 context sentence의 scoring이 최고가 되도록 분류한다. 여기서 scoring은 간단하게 inner product를 따른다. 
+$$p(s_{cand}|s, S_{cand}) = \frac{exp[c(f(s), g(s_{cand}))]}{\Sigma_{s'\in S_{cand}}exp[c(f(s), g(s'))]}\\
+\Sigma_{s\in D}\Sigma_{s_{ctxt}\in S_{xtxt}}log p(s_{ctxt}|s, S_{cand})\\
+c(u,v)=u^T v$$
+
+## So?
+Movie Review sentiment, Product review sentiment, Subjectivity classifiation, Opinion Polarity와 같은 sentiment classification task에서 SOTA 성능을 보였으며 Question type classification, paraphrase identification, semantic relatedness task on the SICK dataset에서도 좋은 성능을 보였다. 
+
+## Critic
+기존의 Skipgram과 매우 유사한 방식으로 아주 간단하고 계산량이 적은 방식으로 좋은 성과를 내었다는 점이 인상깊다. Negative sampling 방식을 좀더 정교화 하면 더 좋은 성능을 보일 수 있지 않을까?
+
+[Logeswaran, Lajanugen, and Honglak Lee. "An efficient framework for learning sentence representations." arXiv preprint arXiv:1803.02893 (2018).](https://arxiv.org/abs/1803.02893)
