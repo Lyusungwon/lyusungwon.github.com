@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Highway Network"
+date:   2018-06-05 08:58:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+일반적으로 뉴럴 네트워크의 층이 깊어지면 성능이 향상되지만 그만큼 학습하기는 더욱 어려워진다. 
+
+## WHAT?
+Highway network은 LSTM의 구조에서 착안하여 각 층들에 대하여 gate를 학습하는 장치를 추가하였다. 
+$$y = H(x, W_H)\\
+y = H(x, W_H) \cdot T(x, W_T) + x \cdot C(x, W_c)\\
+y = H(x, W_H) \cdot T(x, W_T) + x \cdot (1 - T(x, W_c))\\
+H는 activation, T는 transform gate, C는 carry gate로 정의된다. C는 보통 1-T로 정의된다. 여기에서 x, y, H(x, W), T(x, W)의 dimension이 일치해야 하기 때문에 x를 subsampling하여 줄이던지 크기가 감소하지 않도록 zero-padding을 하는 방법을 사용한다. 
+
+## So?
+MNIST와 CIFAR100 데이터에 대하여 기존 네트워크는 깊이가 깊어질 수록 오히려 성능이 떨어지는 경우가 있는 반면 Highway network은 더 좋은 성능을 낼 수 있었다. 
+
+## Critic
+Resnet과 같은 효과를 내는 것 같다. 다른 데이터들에 대한 실험이 있었으면 더 좋을 것 같다.
+
+[Srivastava, Rupesh Kumar, Klaus Greff, and Jürgen Schmidhuber. "Highway networks." arXiv preprint arXiv:1505.00387 (2015).](https://arxiv.org/abs/1505.00387)

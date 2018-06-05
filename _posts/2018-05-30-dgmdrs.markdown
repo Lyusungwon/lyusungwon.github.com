@@ -13,7 +13,7 @@ Video나 Audio와 같은 sequential data로 부터 time-dependent feature(dynami
 Generative model은 다음과 같다. \\
 $$p_{\theta}(x_{1:T}, z_{1:T}, f) = p_{\theta}(f)\Pi^T_{t=1} p_{\theta}(z_t|z_{< t})p_{\theta}(x_t|z_t, f)$$\\
 Inference model은 VAE를 base로 한다. \\
-$$max_{\theta, \phi}E_{p_D(x_{1:T})}[E_q_{\phi}[log \frac{p_{\theta}(x_{1:T}, z_{1:T},f)}{q_{\phi}(z_{1:T}, f|x_{1:T})}]]$$\\
+$$max_{\theta, \phi}E_{p_D(x_{1:T})}[E_{q_{\phi}}[log \frac{p_{\theta}(x_{1:T}, z_{1:T},f)}{q_{\phi}(z_{1:T}, f|x_{1:T})}]]$$\\
 q의 factorisation 방식에 따라 두 가지 모델을 제시한다. 첫번째 방식은 "factorised q"라고 부른다.\\
 $$q_{\phi}(z_{1:T}, f|x_{1:T}) = q_{\phi}(f|x_{1:T})\Pi_{t=1}^T q_{\phi}(z_t|x_t)$$\\
 두번째 모델은 "full q"라고 부른다.
