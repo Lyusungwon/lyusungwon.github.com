@@ -13,7 +13,7 @@ categories: DL
 Highway network은 LSTM의 구조에서 착안하여 각 층들에 대하여 gate를 학습하는 장치를 추가하였다. 
 $$y = H(x, W_H)\\
 y = H(x, W_H) \cdot T(x, W_T) + x \cdot C(x, W_c)\\
-y = H(x, W_H) \cdot T(x, W_T) + x \cdot (1 - T(x, W_c))\\
+y = H(x, W_H) \cdot T(x, W_T) + x \cdot (1 - T(x, W_c))$$
 H는 activation, T는 transform gate, C는 carry gate로 정의된다. C는 보통 1-T로 정의된다. 여기에서 x, y, H(x, W), T(x, W)의 dimension이 일치해야 하기 때문에 x를 subsampling하여 줄이던지 크기가 감소하지 않도록 zero-padding을 하는 방법을 사용한다. 
 
 ## So?
