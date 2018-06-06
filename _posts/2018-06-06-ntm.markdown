@@ -17,7 +17,7 @@ $$ \Sigma_i w_t(i) = 1\\
 r_t \leftarrow \Sigma_i w_t(i)M_t(i)$$
 쓰기는 지우기와 더하기 두 가지로 구성되어있다. $$e_t$$는 erase vector, $$a_t$$는 add vector이며 이를 통하여 메모리에 수정을 가한다.
 $$\mathbf{\tilde{M}}_t(i)\leftarrow \mathbf{M}_{t-1}(i)[\mathbf{1} - w_t(i)\mathbf{e}_t]\\
-\mathbf{M}_t(i)\leftarrow \mathbf{\tilde{M}}_{t-1}(i) + w_t(i)\mathbf{a}_t\\
+\mathbf{M}_t(i)\leftarrow \mathbf{\tilde{M}}_{t-1}(i) + w_t(i)\mathbf{a}_t$$
 ![image](/assets/images/ntm2.png){: .center-image width="50px"}
 메모리에 대하여 읽고 쓸 때 활용하는 w는 Addressing mechanism을 통하여 도출된다. Addressing mechanism은 focusing by content와 focusing by location으로 구성된다. Content Addressing에서는 내용간의 유사도를 확인하는 방법으로 cosine similarity를 사용한다.
 $$w_t^c(i) \leftarrow \frac{exp(\beta_t K[\mathbf{k}_t, \mathbf{M}_t(i)])}{\Sigma_j exp(\beta_t K[\mathbf{k}_t, \mathbf{M}_t(j)])}\\
