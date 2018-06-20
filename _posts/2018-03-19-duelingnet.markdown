@@ -12,8 +12,8 @@ categories: RL
 Dueling Network는 한번에 state와 action을 평가하는 네트워크를 만드는 것이 아니라 state와 action을 만드는 네트워크를 분리한다. CNN을 통하여 이미지를 받아와 feature를 처리한 후, 각각 다른 feedforward network를 거쳐 하나는 state를 평가하고 나머지는 action을 평가한다. 즉, $$\alpha, \beta$$를 각 feedforward network의 parameter라고 할때, \\
 $$Q(s,a;\theta, \alpha,\beta)=V(s;\theta,\beta) + A(s,a;\theta,\alpha)$$\\
 로 구성되는 것이다. 이때, action의 평가는 상대적으로 이루어져도 괜찮으므로 모든 action에 대하여 그 action의 maximum, 혹은 mean값을 빼주게 된다. 즉,\\
-$$Q(s,a;\theta, \alpha,\beta)=V(s;\theta,\beta) + (A(s,a;\theta,\alpha) - max_{a'\in \mathcal{\Alpha}} A(s,a';\theta,\alpha)$$ 혹은 \\
-$$Q(s,a;\theta, \alpha,\beta)=V(s;\theta,\beta) + (A(s,a;\theta,\alpha) - \frac{1}{\|\mathcal{\Alpha}\|} \Sigma_{a'}A(s,a';\theta,\alpha)$$의 형태로 학습하게 된다. 
+$$Q(s,a;\theta, \alpha,\beta)=V(s;\theta,\beta) + (A(s,a;\theta,\alpha) - max_{a'\in \mathcal{A}} A(s,a';\theta,\alpha)$$ 혹은 \\
+$$Q(s,a;\theta, \alpha,\beta)=V(s;\theta,\beta) + (A(s,a;\theta,\alpha) - \frac{1}{\|\mathcal{A}\|} \Sigma_{a'}A(s,a';\theta,\alpha)$$의 형태로 학습하게 된다. 
 
 ## So?
 이를 통하여 기존보다 효율적으로 학습하고 좋은 결과를 낼 수 있게 되었다. 

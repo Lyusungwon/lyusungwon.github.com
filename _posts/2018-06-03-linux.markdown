@@ -31,10 +31,10 @@ Few useful notes from [Learn Linux in 5 Days and Level Up Your Career](https://w
 - clear - Clears the screen.
 
 ## ls options
-- -l Long list
 - -a List all files, including hidden files. 
 - --color List files with colorized output.
-- -d List directory names, not contents. -l Use the long listing format.
+- -d List directory names, not contents. 
+- -l Use the long listing format.
 - -r Reverse the order.
 - -R List files recursively.
 - -t Sort by time, most recent first.

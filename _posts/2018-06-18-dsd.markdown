@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Disentangling Sequential Data"
+date:   2018-06-13 11:41:59
+author: Sungwon Lyu
+categories: PR
+---
+
+Source: SNU Datamining Lab Seminar (20180618)
+
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.001.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.002.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.003.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.004.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.005.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.006.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.007.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.008.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.009.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.010.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.011.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.012.png){: .center-image width="50px"}
+![image](/assets/images/20180618_DisentanglingSequentialData_SungwonLyu/20180618_DisentanglingSequentialData_SungwonLyu.013.png){: .center-image width="50px"}

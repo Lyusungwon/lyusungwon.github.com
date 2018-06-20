@@ -69,6 +69,9 @@ descriptions:
   - cat: SW
     desc: "School Work"    
 
+  - cat: PR
+    desc: "Presentation"    
+
   - cat: RV
     desc: "Reviews"    
 
