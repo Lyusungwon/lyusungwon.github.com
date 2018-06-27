@@ -60,6 +60,9 @@ descriptions:
   - cat: RL
     desc: "Reinforcement Learning"
 
+  - cat: CV
+    desc: "Computer Vision"    
+
   - cat: DL
     desc: "Deep Learning"    
 
