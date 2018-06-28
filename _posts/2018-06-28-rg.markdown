@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Understanding deep learning requires rethinking generalization"
+date:   2018-06-28 11:34:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+Traditional explanation for generalization of a machine learning model was primarily concerned with tradeoff between model capacity and overfitting. If capacity of a model is too large, you must contrain the capacity to prevent overfitting. Choosing appropriate level of capacity of model has been seen as a key to generalized performance.
+
+## WHAT?
+This paper suggest that previous approach on generalization seems not explain the recent performance of neural network models. This paper performed an interesting experiment to fit NN model to random label. 
+
+## So?
+Strikingly, Deep neural network easily fit random data. Also, NN model was able to fit the data with shuffled pixels, random pixels, and even Gaussian sampled generation. This implies that NN model has capacity to memorize every single data. In fact, this paper proved that two-layer ReLU network with p=2n+d parameters can fit any labels of data with dize n in d dimensions. Then, how can we explain the generalization ability of NN? Some explicit and implicit regularizers exist and known to help generalization. However, this paper found that even NN model with explicit regularizer including data augmentation, weight decay, and dropout fit extremely well to the random label data. This means that regularizers does not work in a way to limit the capacity of models. This paper concluded that explicit regularization may imporve generalization performance, but is neither necessary nor by itself sufficient for controlling generalization error. This paper pointed out SGD as a source of regularization by showing regularizing effect of SGD on linear model. 
+
+## Critic
+Amazing insight regarding how neural net work so well. This paper seems like a steping stone for deeper understanding of neural network. 
+
+[Zhang, Chiyuan, et al. "Understanding deep learning requires rethinking generalization." arXiv preprint arXiv:1611.03530 (2016).](https://arxiv.org/abs/1611.03530)
