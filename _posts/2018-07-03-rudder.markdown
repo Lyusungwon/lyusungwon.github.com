@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "RUDDER: Return Decomposition for Delayed Rewards"
+date:   2018-07-03 10:37:59
+author: Sungwon Lyu
+categories: RL
+---
+
+## WHY? 
+In many enviroments of RL, rewards tend to be delayed from the actions taken. This paper proved that delayed reward exponentially increase the time of conversion in TD, and exponentially increase the variance in MC estimates. 
+
+## WHAT?
+RUDDER(Return Decomposition for Dalayed Reward) redistributes the rewards to reduce the delay. To do this, this papaer defined new MDP which is state-enriched with additional information compared to previous MDP with the same optimal policy. The additional information is $$\rho$$ which reprecent accumalated previously received reward. To redistribute the rewards, state-action sequence predict the final return. Using contribution analysis(layer-wise relevance propagation(LRP), Taylor decomposition, or integrated gradients(IG)), contribution of each state-action to the prediction of the final reward can be identified. To prevent the model to predict the final reward solely from the final state, s is replaced with the difference between states. Q value of a state-action pair equals to accumulated contribution in optimal. 
+$$
+g((s,a)_{0:T}) = \tilde{r}_{T+1}\\
+g((s,a)_{0:T}) = \Sigma^T_{t=0} h(a_t, s_t)\\
+g((a, \delta)_{0:T}) = \tilde{r}_{T+1} = \Sigma^T_{t=0} h(a_t, \delta(s_t, s_{t+1}))\\
+r_{t+1} = \tilde{r}_{T+1}h(a+t, \delta(s_t, s_{t+1}))/g((a, \delta))_{0:T})\\
+R_t = h_t = h(a_t, \delta(s_t, s_{t+1})) = q^{~\pi}(s_t, a_t) - q^{~\pi}(s_{t-1}, a_{t-1})
+$$
+RUDDER consists of 1) safe exploration which include Annealed ppo2 exploration and safe exploration strategy, 2) Lesson replay buffer which is similar to prioritized replay with prioritized by the prediction error, and 3) Contribution analysis which is implemented by LSTM.
+
+## So?
+RUDDER converged much faster than other models and outperformed most of the model including DQN, DDQN, priotized DDQN, Dueling DDQN, Noisy DQN, Distributional DQN, Ape-DQN in Atari game Bowling and Venture.
+
+## Critic
+Although the RUDDER itself seems a result of engineering, I was surprised to see all the mathmatical proof attached. It would be nicer if there were more benchmarks on other atari games. Great overview of reinforcement learning in intro and detailed explanation in appendix were kind. 
+
+[Arjona-Medina, Jose A., et al. "RUDDER: Return Decomposition for Delayed Rewards." arXiv preprint arXiv:1806.07857 (2018).](https://arxiv.org/abs/1806.07857)

@@ -1,4 +1,4 @@
-	---
+---
 layout: post
 title:  "You and your research"
 date:   2018-07-01 22:29:59
@@ -6,45 +6,45 @@ author: Sungwon Lyu
 categories: RV
 ---
 
-Reference: [Hamming, "You and Your Research" (June 6, 1995)](https://www.youtube.com/watch?v=a1zDuOPkMSw), summerized by sebster100\\
+Reference: [Hamming, "You and Your Research" (June 6, 1995)](https://www.youtube.com/watch?v=a1zDuOPkMSw), summerized by sebster100
 
 - Comment
-This paper made me seriously think about how is it like to be a great researcher. However, I also think these principles also applies to people who want to solve important problem. Do I? I'd say definately. 
+    - This paper made me seriously think about how is it like to be a great researcher. However, I also think these principles also applies to people who want to solve important problem. Do I? I'd say definately. 
 
 - Summary
-• In research, or in being successful, what matters is working on:
-    ○ The right problem
-        § These are problems which are important and you can conceivably solve (proving an adequate amount of courage)
-     ○ at The right time
-        § Prioritize problems where you have an approach, but which are important.
-     ○ with The right approach
-        § This is the real creative part of research
+    - In research, or in being successful, what matters is working on:
+        - The right problem
+            - These are problems which are important and you can conceivably solve (proving an adequate amount of courage)
+        - at The right time
+            - Prioritize problems where you have an approach, but which are important.
+        - with The right approach
+            - This is the real creative part of research
 
-• Succeeding in this is a mixture of luck and effort
-     ○ As Pasteur said: "luck favors the prepared mind"
-        § Luck will come eventually, "the lightning will strike"
-        § But how do you develop "the prepared mind"
+- Succeeding in this is a mixture of luck and effort
+    - As Pasteur said: "luck favors the prepared mind"
+        - Luck will come eventually, "the lightning will strike"
+        - But how do you develop "the prepared mind"
 
-• Preparedness:
-     ○ Work hard
-             § Hamming said to only focus on your career (citing his disavowal of The New Yorker), but I disagree: broad knowledge of the world is important for everyone, but connecting various arguments and interests to your career could be very useful, so that we might "wail the right question into the swaddling band of darkness" (as Dillard wrote).
-             § That being said, focus on your research and always mull and learn and try to create. Even if it pure luck, more time can't hurt.
-     ○ Be open
-             § This allows for the use of one of the strongest resources you have- your peers. 
-             § Learn everything you can, be open to change, but always be critical of it too. 
-             § Your peers will help you get a sense of what is important in your field.
-     ○ Be introspective
-             § Always "take a wider view, really see it, and describe what's going on there" (again, Dillard) as far as research goes. Ask yourself: "what is important in my field?"
-             § Try to consider the problems you face and readjust them and make them either more solvable or more important
-             § Learn from your successes, and find the essence of the methodology that lead to success, then try to apply that more broadly. Do the same for the success of others.
-     ○ Work Broadly
-             § Always try to at least understand the basics of all of your field.
-             § Interwork every piece of knowledge you have into a huge web of understanding, so that novel and interesting connections are more easily and readily made.
-             § Be comfortable with ambiguity, but simultaneously always striving to broaden and deepen your knowledge.
-            □ Hamming said that he didn’t know how to teach someone to be comfortable with ambiguity, but I say that the most effective way is to study good literature. Things like Nabokov, Faulkner, and others are full of intelligent ambiguity. 
+- Preparedness:
+    - Work hard
+            - Hamming said to only focus on your career (citing his disavowal of The New Yorker), but I disagree: broad knowledge of the world is important for everyone, but connecting various arguments and interests to your career could be very useful, so that we might "wail the right question into the swaddling band of darkness" (as Dillard wrote).
+            - That being said, focus on your research and always mull and learn and try to create. Even if it pure luck, more time can't hurt.
+    - Be open
+            - This allows for the use of one of the strongest resources you have- your peers. 
+            - Learn everything you can, be open to change, but always be critical of it too. 
+            - Your peers will help you get a sense of what is important in your field.
+    - Be introspective
+            - Always "take a wider view, really see it, and describe what's going on there" (again, Dillard) as far as research goes. Ask yourself: "what is important in my field?"
+            - Try to consider the problems you face and readjust them and make them either more solvable or more important
+            - Learn from your successes, and find the essence of the methodology that lead to success, then try to apply that more broadly. Do the same for the success of others.
+    - Work Broadly
+            - Always try to at least understand the basics of all of your field.
+            - Interwork every piece of knowledge you have into a huge web of understanding, so that novel and interesting connections are more easily and readily made.
+            - Be comfortable with ambiguity, but simultaneously always striving to broaden and deepen your knowledge.
+            - Hamming said that he didn’t know how to teach someone to be comfortable with ambiguity, but I say that the most effective way is to study good literature. Things like Nabokov, Faulkner, and others are full of intelligent ambiguity. 
 
-• Know how to communicate
-      ○ Communication is at the core of participating in the scientific community, so learn to communicate at three levels:
-              § Professionally: in the written word, like in your publications.
-              § Semi-professionally: communicating in an impromptu manner but in a professional context to your peers. This will be the bulk of your communication.
-              § Informally, both to peers, but more importantly to layman.﻿
+- Know how to communicate
+    - Communication is at the core of participating in the scientific community, so learn to communicate at three levels:
+            - Professionally: in the written word, like in your publications.
+            - Semi-professionally: communicating in an impromptu manner but in a professional context to your peers. This will be the bulk of your communication.
+            - Informally, both to peers, but more importantly to layman.﻿
