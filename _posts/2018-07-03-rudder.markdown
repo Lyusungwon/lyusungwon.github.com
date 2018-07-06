@@ -26,4 +26,4 @@ RUDDER converged much faster than other models and outperformed most of the mode
 ## Critic
 Although the RUDDER itself seems a result of engineering, I was surprised to see all the mathmatical proof attached. It would be nicer if there were more benchmarks on other atari games. Great overview of reinforcement learning in intro and detailed explanation in appendix were kind. 
 
-[Arjona-Medina, Jose A., et al. "RUDDER: Return Decomposition for Delayed Rewards." arXiv preprint arXiv:1806.07857 (2018).](https://arxiv.org/abs/1806.07857)
+[Arjona-Medina, Jose A., et al. "RUDDER: Return Decomposition for Delayed Rewards." (2018).](https://arxiv.org/abs/1806.07857)

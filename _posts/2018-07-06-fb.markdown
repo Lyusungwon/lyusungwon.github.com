@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Forward-Backward Reinforcement Learning"
+date:   2018-07-06 16:27:59
+author: Sungwon Lyu
+categories: RL
+---
+
+## WHY? 
+Reinforcement learning with sparse reward often suffer from finding rewards. 
+
+## WHAT?
+Forward-Backward Reinforcement Learning(FBRL) consists of forward and backward process. Forward process is like normal rl using memory to update Q function. In backward process, new model is introduced called backward model b. b is a neural network that predict the difference in state given action and next state. 
+$$b(s_{t+1}, a_t)\rightarrow \hat{\delta}$$\\
+Rewarded states are sampled from G which is a distribution of goal states. Using backward model, estimate the previous state and actions are sampled randomly or greedily. This imagined data is appended to the memory. Algorithm is as follows.  
+![image](/assets/images/fbrl.png){: .center-image width="50px"}
+
+## So?
+FBRL learned much faster than DDQN in Gridworld and Towers of Hanoi environment.
+
+## Critic
+Sampling from goal states maybe difficult and backward model may be noisy in stochastic environment. Is it worth to double the parameter of model? However, the concept to take advantage of memory seems like good idea to develop.
+
+[Edwards, Ashley D., Laura Downs, and James C. Davidson. "Forward-Backward Reinforcement Learning." arXiv preprint arXiv:1803.10227 (2018).](https://arxiv.org/abs/1803.10227)
