@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "World Models"
+date:   2018-07-10 17:32:59
+author: Sungwon Lyu
+categories: RL
+---
+
+## WHY? 
+Instead of instantly responding to incoming stimulus, having a model of environment to make some level of prediction would help perform in reinforcement learning.
+
+## WHAT?
+Agent model of this paper consists of three parts: Vision(V), Memory(M), and Controller(C). 
+![image](/assets/images/wm1.png){: .center-image width="50px"}
+Since simulating the whole pixels of environment is waste of time, VAE model is used to compress the essential information of the environment. For memory, mixture density network with a rnn(MDN=RNN) is used to predict the next state given current state and action. Since we extracted the core information of the environment, we can use a light contorller model, this paper used FNN. Since the number of parameters is rather small, this paper used evolution strategies(Covariance-Matrix Adaptation Evolution Strategy: CMA-ES) to train controller. Rolling out algorithm is as follows. M and C are pretrained with randomized agent.\\
+![image](/assets/images/wm2.png){: .center-image width="50px"}
+Iterative process of exploring the environment and training the model enables the model to navigate the environment.
+
+## Critic
+The model achieved state of the art result in Car racing of Atari and VizDoom.
+
+[Schulman, John, et al. "Gradient estimation using stochastic computation graphs." Advances in Neural Information Processing Systems. 2015.](http://papers.nips.cc/paper/5899-gradient-estimation-using-stochastic-computation-graphs)
