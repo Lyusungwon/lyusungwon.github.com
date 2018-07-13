@@ -12,11 +12,14 @@ Instead of instantly responding to incoming stimulus, having a model of environm
 ## WHAT?
 Agent model of this paper consists of three parts: Vision(V), Memory(M), and Controller(C). 
 ![image](/assets/images/wm1.png){: .center-image width="50px"}
-Since simulating the whole pixels of environment is waste of time, VAE model is used to compress the essential information of the environment. For memory, mixture density network with a rnn(MDN=RNN) is used to predict the next state given current state and action. Since we extracted the core information of the environment, we can use a light contorller model, this paper used FNN. Since the number of parameters is rather small, this paper used evolution strategies(Covariance-Matrix Adaptation Evolution Strategy: CMA-ES) to train controller. Rolling out algorithm is as follows. M and C are pretrained with randomized agent.\\
+Since simulating the whole pixels of environment is inefficient, VAE model is used to compress the essential information of the environment. For memory, mixture density network with a rnn(MDN-RNN) is used to predict the next state given current state and action. Since we only use latent variables of the images, controller model can be small as a simple FNN. FNN takes latent variables of V and hidden layer of M as input and output action. Since the number of parameters is small, this paper used evolution strategies(Covariance-Matrix Adaptation Evolution Strategy: CMA-ES) to train controller. M and C are pretrained with randomized agent. Roll-out algorithm is as follows.\\
 ![image](/assets/images/wm2.png){: .center-image width="50px"}
 Iterative process of exploring the environment and training the model enables the model to navigate the environment.
 
 ## Critic
-The model achieved state of the art result in Car racing of Atari and VizDoom.
+The model achieved state of the art result in CarRacing of Atari and VizDoom.
 
-[Schulman, John, et al. "Gradient estimation using stochastic computation graphs." Advances in Neural Information Processing Systems. 2015.](http://papers.nips.cc/paper/5899-gradient-estimation-using-stochastic-computation-graphs)
+## So?
+Idea of incorporating prediction of the future into rl model seems great. Though I'm not very familiar with evolution strategy, I think there would be ways to corporate this model to traditional rl model.
+
+[Ha, David, and Jürgen Schmidhuber. "World Models." arXiv preprint arXiv:1803.10122 (2018).](https://arxiv.org/abs/1803.10122)

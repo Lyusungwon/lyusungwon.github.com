@@ -5,14 +5,92 @@ date:   2018-07-07 19:10:59
 author: Sungwon Lyu
 categories: SW
 ---
-Few useful notes from [Onur Mutlu - Future Computing Architectures - ETH Zurich Inaugural Lecture](https://www.udemy.com/learn-linux-in-5-days/learn/v4/content). Highly recommandable course for people who want to start Linux!
+Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/spring2018/doku.php) course by Onur Mutlu in ETH Zurich. Thank you very much for opening up the great lectures and materials for self-learners like me. This course provided me invaluable insight to understand computers.
 
 1. Introduction and Basics
-2. Mysteries in Comp Arch
-3. Introduction to the Labs and FPGAs
-4. Mysteries in Comp Arch and Basics
-5. Combinational Logic
-6. Combinational Logics, Hardware Description Lang. & Verilog
-7. Sequential Logic Design
 
-출처: [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/spring2018/doku.php)
+2. Mysteries in Comp Arch
+- Meltdown and Spectre
+- RowHammer
+
+3. Introduction to the Labs and FPGAs
+- FPGA(Field Programmable Gate Array)
+- Vivado
+
+4. Mysteries in Comp Arch and Basics
+- Memory Performance Attacks
+- DRAM Refresh
+- Bloom Filters
+
+5. Combinational Logic
+- Computer
+- MOS(Metal-Oxide Semicondoctors) Transistors
+	- n-type, p-type
+- Logic gates
+	- CMOS NOT, NAND, AND Gates
+- Moores's Law
+- Functional Specification
+- Boolean Algebra
+
+6. Combinational Logics, Hardware Description Lang. & Verilog
+- Two-Level Canonical Forms
+	- Sum Of Products (SOP)
+	- A Product Of Sums (POS)
+- Combinational Building Blocks
+	- Decoder
+	- Multiplexer (MUX)
+	- Full adder
+	- PLA
+- Karnaugh Maps (K-Maps)
+- Hardware Description Languages(HDL)
+	- Verilog
+	- Implementation
+		- Structural HDL
+		- Behavioral HDL
+
+7. Sequential Logic Design
+- Basic Storage Element
+	- The Reset-Set Latch (R-S Latch)
+	- Gated D Latch
+	- The Register
+- Memory
+- Sequential Logic Circuits
+	- Clock
+- Finite State Machines
+	- Next state logic, State register, Output logic
+	- Sequential circuits
+		- D Flip-Flop
+	- Timing Diagram
+	- State Encoding
+	- Moore, Mealy Machines
+- Sequential Logic Using Verilog
+	- always, posedge, negedge, reg, begin ~ end, if ~ else, case
+	- Asynchronous / Synchronous reset
+	- Blocking / Non-Blocking assignment
+
+8. Timing and Verification
+- Combinational Circuit Timing
+	- contamination delay, propagation delay
+	- output glitches
+		- Avoiding glitches using K-Maps
+- Sequential Circuit Timing
+	- input timing constraints
+		- setup time, hold time, aperture time
+	- output timing constraints
+		- contamination delay clock-to-q (ccq), Propagation dalay clock-to-q (pcq)
+	- setup time constraints
+		- c > pcq + pd + setup
+	- hold time constraints
+		- cd > - ccq + hold
+	- Timing Analysis
+	- Clock skew
+- Circuit Verification
+	- Functional Verification
+		- device under test (DUT)
+		- Testbench-based functional testing
+			- Simple, Self-checking, Automatic testbench
+	- Timing Verification
+
+9. Von Neumann Model, ISA, LC-3 and MIPS
+
+10. ISA (II), and Assembly Programming
