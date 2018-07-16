@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "Deterministic Policy Gradient Algorithms"
+date:   2018-07-16 16:12:59
+author: Sungwon Lyu
+categories: RL
+---
+
+## WHY? 
+Policy gradient usually requires integral over all the possible actions.
+
+## WHAT?
+The purpose of reinforcement learning is to learn the policy to maximize the objective function.
+$$J(\pi_{\theta}) = \int_{\mathcal{S}}\rho^{\pi}(s)\int_{\mathcal{A}}\pi_{\theta}(s,a)r(s,a)\d a\d s \\
+= \mathbb{E}_{s\sim\rho^{\pi}, a\sim \pi_{\theta}}[r(s,a)]$$
+Policy gradient directly train the policy network to minimize the objective function. 
+$$\nabla J(\pi_{\theta}) = \int_{\mathcal{S}}\rho^{\pi}(s)\int_{\mathcal{A}} \nabla_{theta}\pi_{\theta}(a|s)Q^{\pi}(s,a)\d a\d s \\
+= \mathbb{E}_{s\sim\rho^{\pi}, a\sim \pi_{\theta}}[\nabla_{theta} \log \pi_{\theta}(a|s)Q^{\pi}(s,a)]$$
+Since this assumes stochastic policy, this is called Stochastic Policy Gradient. If a sample return is used to estimate the action-value function, it is called REINFORCE algorithm. We can train another network to directly learn the value of action-value function by td learning. 
+$$\nabla J(\pi_{\theta}) = = \mathbb{E}_{s\sim\rho^{\pi}, a\sim \pi_{\theta}}[\nabla_{theta} \log \pi_{\theta}(a|s)Q^{w}(s,a)]\\
+\epsilon^2(w) = \mathbb{E}_{s\sim\rho^{\pi}, a\sim \pi_{\theta}}[(Q^w(s,a) - Q^{\pi}(s,a))^2]$$
+On-policy learning has limitation in exploration. Off-policy learning use different policies to behave and to evaluate. 
+$$J_{\beta}(\pi_{\theta}) = \int_{\mathcal{S}}\int_{\mathcal{A}}\rho^{\beta}(s)\pi_{\theta}(a|s)Q^{\pi}(s,a)\d a\d s\\
+\nabla_{\theta} J_{\beta}(\pi_{\theta}) = \int_{\mathcal{S}}\int_{\mathcal{A}}\rho^{\beta}(s)\nabla_{\theta}\pi_{\theta}(a|s)Q^{\pi}(s,a)\d a\d s\\
+= \mathbb{E}_{s\sim\rho^{\beta}, a\sim \beta}[\frac{\pi_{\theta}(a|s)}{\beta_{\theta}(a|s)}\nabla_{theta} \log \pi_{\theta}(a|s)Q^{\pi}(s,a)]$$
+This Off-Policy Actor-Critic(OffPAC)require importance sampling. In continuous action space, integral over all the action space is intractable. Deterministic policy gradient uses the deterministic policy $$\mu_{\theta}(s)$$ instead of $$\pi_{\theta}(a|s)$$. And then, move the policy in the direction of the gradient of Q. This deterministic policy gradient is a special form of stochastic policy gradient\\
+$$\theta^{k+1} = \theta^k + \alpha \mathcal{E}_{s\sim\rho^\mu^k}[\nabla_{\theta}\mu_{\theta}(s)\nabla_{\a}Q^{\mu^k}(s,a)|_{a=\mu_{\theta}(s)}]\\
+J(\mu_{\theta}) = \int_{\mathcal{S}}\rho^{\mu}(s)r(s, \mu_{\theta}(s))\d s \\
+$$\nabla J(\mu_{\theta}) = = \mathbb{E}_{s\sim\rho^{\mu}}[\nabla_{theta} \mu_{\theta}(s) \nabla_{a}Q^{\mu}(s,a)|_{a=\mu_{\theta}(s)}]\\
+As in the case of stochastic policy gradient, off-policy is required to ensure adequate exploration. 
+$$J_{\beta}(\mu_{\theta}) = \int_{\mathcal{S}}\rho^{\beta}(s)Q^{\mu}(s,mu_{\theta}(s))\d s $$
+\nabla_{\theta} J_{\beta}(\mu_{\theta}) = \mathbb{E}_{s\sim\rho^{\beta}}[\nabla_{theta} \mu_{\theta}(s)\nabla_{a}Q^{\mu}(s,a)|_{a=\mu_{\theta}(s)}]\\
+We can use Q-learning for the critic in off-policy deterministic actor-critic(OPDAC).
+$$w_{t+1} = w_t + \alpha_w\delta_t\nabla_w Q^w(s_t, a_t)\\
+\theta_{t+1} = \theta_t + \alpha_{\theta}\nabla_{\theta}\mu_{\theta}(s_t)\nabla_a Q^w(s_t, a_t)|{a=\mu_{\theta}(s)}$$
+Deterministic policy removes the need for integral of actions and Q-learning removes the need for importance sampling. Since function approximator $$Q^w(s,a)$$ may not follow the true gradient, this paper suggest two restriction for the action-value function. 
+1. $$\nabla_a Q^w(s,a)|_{a=\mu_{\theta}(s)}=\nabla_{\theta}\mu_{\theta}(s)^T w$$
+2. w minimize MSE of $$\epsilon(s;\theta,w)=\nabla_a Q^w(s,a)|_{a=\mu_{\theta}(s) - \nabla_a Q^{\mu}(s,a)|_{a=\mu_{\theta}(s)
+The resulting algorithm is called compatible off-policy deterministic actor-critic(COPDAC). We can use baseline function to reduce the variance of gradient estimator. If we use Q-learning for critic, the algorithm is called COPDAC-Q. If we use gradient Q-learning for critic, the algorithm is called COPDAC-GQ. 
+
+## Critic
+Great reviews of policy gradient algorithms.
+
+[Silver, David, et al. "Deterministic policy gradient algorithms." ICML. 2014.](http://proceedings.mlr.press/v32/silver14.pdf)
