@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Categorical Reparameterization with Gunbel-Softmax"
+date:   2018-07-17 09:45:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+The same motivation with [Concrete](https://lyusungwon.github.io/dl/2018/07/16/cd.html). 
+
+## WHAT?
+Gumbel-Softmax distribution is the same as [Concrete distribution](https://lyusungwon.github.io/dl/2018/07/16/cd.html). GS distribution appoaches to on-hot as temperature goes 0. 
+![image](/assets/images/gs1.png){: .center-image width="50px"}
+However, GS samples are not exactly the same as categorical samples resulting bias. This GS estimator becomes close to unbiased but the variance of gradient increase (trade-off). If we do not replace categorical variables with GS variables, we can estimate the gradient with Straight-Through GS estimator.
+![image](/assets/images/gs2.png){: .center-image width="50px"}
+(3) is score function estimator, (4) is Straight-Through estimator and (5) is GS estimator (pathwise derivative).
+
+## So?
+GS outperformed in generation of MNIST images in NLL. ST-GS outperformed previous approach in semi-supervised classification.
+
+## Critic
+Nice visualization. I wonder how this can be used in NLP.	
+
+[Jang, Eric, Shixiang Gu, and Ben Poole. "Categorical reparameterization with gumbel-softmax." arXiv preprint arXiv:1611.01144 (2016).](https://arxiv.org/abs/1611.01144)
