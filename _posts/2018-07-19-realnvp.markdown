@@ -14,8 +14,10 @@ The motivation is almost the same as that of [NICE](https://lyusungwon.github.io
 [NICE](https://lyusungwon.github.io/dl/2018/07/17/nice.html) suggested coupling layers with tractable Jacobian matrix. This paper suggest flexible bijective function while keeping the property of coupling layers. Affine coupling layers scale and translate the x, its Jacobian is easy to compute and invertible. In this paper, s and t are used as rectified convolution layer.
 ![image](/assets/images/realnvp2.png){: .center-image width="50px"}
 $$y_{1:d} = x_{1:d}\\
-y_{d+1:D} = x_{d+1:D}\odot \exp(s(d_{x:d})) + t(x_{1:d})\\
-\frac{\partial y}{\partial^T} = \left[\begin{array}{cc} I_d & 0\\ \frac{\partial y_{d+1:D}}{\partial x^T_{1:d}} & \diag(\exp[s(x_{1:d})]) \right]\\
+y_{d+1:D} = x_{d+1:D}\odot \exp(s(d_{x:d})) + t(x_{1:d})\\$$
+$$
+\frac{\partial y}{\partial^T} = \left[\begin{array}{cc} I_d & 0\\ \frac{\partial y_{d+1:D}}{\partial x^T_{1:d}} & \diag(\exp[s(x_{1:d})]) \right]\\$$
+$$
 \left{ x_{1:d = y_{1:d} \\ x_{d+1:D} = (y_{d+1:D} - t(y_{1:d}))\odot \exp(-s(y_{1:d}))\right$$
 ![image](/assets/images/realnvp3.png){: .center-image width="50px"}
 This paper suggested two ways for partition. First is spatial checkerboard patterns and second is channel-wise masking (above). 
