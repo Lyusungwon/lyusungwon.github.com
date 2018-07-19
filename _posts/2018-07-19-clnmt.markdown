@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "A Character-Level Decoder without Explicit Segmentation for Neural Machine Translation"
+date:   2018-07-18 17:21:59
+author: Sungwon Lyu
+categories: NLP
+---
+
+## WHY? 
+All the previous neural machine translators are based on word-level translation. Word-level translators has critical problem of out-of-vocabulary error. 
+
+## WHAT?
+This paper suggest Bi-Scale recurrent neural network with attention to model character level translator. Input are encoded into BPE.
+![image](/assets/images/clnmt1.png){: .center-image width="50px"}
+Slower layer carries information of word and faster layer carries information of character. Architecturally, slower layer can update only faster layer finish a word, resulting slower layer updates slower. $$h^1$$ is faster layer and $$h^2$$ is slower layer.
+![image](/assets/images/clnmt2.png){: .center-image}
+![image](/assets/images/clnmt3.png){: .center-image}
+![image](/assets/images/clnmt4.png){: .center-image}
+![image](/assets/images/clnmt5.png){: .center-image}
+![image](/assets/images/clnmt6.png){: .center-image}
+![image](/assets/images/clnmt7.png){: .center-image}
+
+## So?
+![image](/assets/images/clnmt8.png){: .center-image}
+CL nmt showed better result than traditional non-neural translator and showed attention functioning properly. 
+
+## Critic
+One attempt to make rnn capture hierarchical structure. Result seems quite disappointing.
+
+[Chung, Junyoung, Kyunghyun Cho, and Yoshua Bengio. "A character-level decoder without explicit segmentation for neural machine translation." arXiv preprint arXiv:1603.06147 (2016).](https://arxiv.org/abs/1603.06147)
