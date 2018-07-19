@@ -7,26 +7,28 @@ categories: DL
 ---
 
 ## WHY? 
-Modeling data with known probability distribution has a lot of advantages. We can exactly calculate the log likelihood of the data and easily sample new data from distribution. However, finding tractable transformation of data into probability distribution or vice versa is difficult. For instance, a neural encoder is a common way to transform data but its log-likelihood is known to be intractable and another separately trained decoder is required to sample data. 
+The motivation is almost the same as that of [NICE](https://lyusungwon.github.io/dl/2018/07/17/nice.html). This papaer suggest more elaborate transformation to represent complex data.
 
 ## WHAT?
-This paper suggest tractable transformation of probability distribution. Suppose we model data with known distributions. We want to find a invertible function that map h to x (or x to h: f) to maximize the log-likelihood of data (Dimension of h is the same as that of x). $$p_H(h)$$ is prior distribution that we define (eg. isotropic Gaussian). If prioir distribution is factorial, we call this estimation of probability non-linear independent components estimation (NICE) criterion. 
-$$h \sim p_H(h)\\
-p_H(h) = \Pi_d p_H_d(h_d)\\
-x = f^{-1}(h)\\
-p_X(x) = p_H(f(x))|det\frac{\partial f(x)}{\partial x}|\\
-\log (p_X(x)) = \Sigma^D_{d=q} \log(p_D_h(f_d(x))) + log(|\det(\frac{\partial f(x)}{\partial x}))$$
-We can see that we need to calculate Jacobian matrix ($$\frac{\partial f(x)}{\partial x}$$) to find log likelihood. So we need to find transformation that is invertible and its Jacobian matrix is easy to compute. Note that the determinant of a matrix is easy to compute when the matrix is diagonal, lower triangular or upper triangular. This paper suggest elementary component of transformation with Jacobian that satisfy above conditions. General coupling layer transform x to y as follows. $$I_1$$ and $$I_2$$ are partition of [i, D] with d = $$|i_1|$$. 
-$$y_I_1 = x_I_2\\
-y_I_2 = g(x_I_2;m(x_I_1))\\
-\frac{\partial y}{\partial x} = \left[\begin{array}{cc} I_d & 0\\ \frac{\partial y_I_2}{\partial x_I_1} & \frac{\partial y_I_2}{\partial x_I_2}\end{array} \right]
-$$
-We call $$g: \mathdd{R}^{D-d} X m(\mathdd{R}^d) \rightarrow \mathcal^{D-d}$$ the coupling law, m a coupling function and this transformation a coupling layer. We can see that $$\det \frac{\partial y}{\partial x} = \det \frac{\partial y_I_2}{\partial x_I_2}$$. If we put coupling law as addition (Additive coupling layer), the determinant of Jacobian would be 1. Since some part of a layer is not affected in transformation, we alternate the index in alternating layers (at least three). We can define rescaling by defining diagonal matrix S.  
+[NICE](https://lyusungwon.github.io/dl/2018/07/17/nice.html) suggested coupling layers with tractable Jacobian matrix. This paper suggest flexible bijective function while keeping the property of coupling layers. Affine coupling layers scale and translate the x, its Jacobian is easy to compute and invertible. In this paper, s and t are used as rectified convolution layer.
+![image](/assets/images/realnvp1.png){: .center-image width="50px"}
+$$y_{1:d} = x_{1:d}\\
+y_{d+1:D} = x_{d+1:D}\odot \exp(s(d_{x:d})) + t(x_{1:d})\\
+\frac{\partial y}{\partial^T} = \left[\begin{array}{cc} I_d & 0\\ \frac{\partial y_{d+1:D}}{\partial x^T_{1:d}} & \diag(\exp[s(x_{1:d})]) \right]\\
+\left{ x_{1:d = y_{1:d} \\ x_{d+1:D} = (y_{d+1:D} - t(y_{1:d}))\odot \exp(-s(y_{1:d}))\right\\
+![image](/assets/images/realnvp2.png){: .center-image width="50px"}
+This paper suggested two ways for partition. First is spatial checkerboard patterns and second is channel-wise masking (above). To build up this components into a multiscale architecture, squeezing operation is used to divide a channel into four (above). A scale in architecture consists of three coupling layers with checkerboard masks, squeezing operation and three more coupling layers with alternating channel-wise masking. 
+$$h^{(0)} = x\\
+(z^{(i+1)}, h^{(i+1)}) = f^{(i+1)}(h^{(i)})\\
+z^{(L)} = f^{(L)}(h^{(L-1)})\\
+z = (z^{(1)}), ..., z^{(L)}$$
+Batch normalization is use whose Jacobian matrix is also tractable.
+$$\left(\prod)_i(\tilde{\sigma}_i^2 + \epsilon)\right)^{-\frac{1}{2}}\\$$
 
 ## So?
-NICE was able to model MNIST, TFD, SVHN and CIFAR-10 with the best log likelihood. Also NICE showed good performance in inpainting task of MNIST.
+Real NVP showed competitive performance in generation in CIFAR10, Imagenet, CelebA, and LSUN in terms of quality and log likelihood. 
 
 ## Critic
-Maybe more elaborate transformations are needed for more elaborate generation.	
+Are prior distributions trainable? I wonder if diverse form of priors affect the quality of sample.
 
 [Dinh, Laurent, Jascha Sohl-Dickstein, and Samy Bengio. "Density estimation using Real NVP." arXiv preprint arXiv:1605.08803 (2016).](https://arxiv.org/abs/1605.08803)

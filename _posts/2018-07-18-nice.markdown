@@ -21,7 +21,7 @@ $$y_{I_1} = x_{I_2}\\
 y_{I_2} = g(x_{I_2};m(x_{I_1}))\\
 \frac{\partial y}{\partial x} = \left[\begin{array}{cc} I_d & 0\\ \frac{\partial y_{I_2}}{\partial x_{I_1}} & \frac{\partial y_{I_2}}{\partial x_{I_2}}\end{array} \right]
 $$
-We call $$g: \mathbb{R}^{D-d} X m(\mathbb{R}^d) \rightarrow \mathcal^{D-d}$$ the coupling law, m a coupling function and this transformation a coupling layer. We can see that $$\det \frac{\partial y}{\partial x} = \det \frac{\partial y_{I_2}}{\partial x_{I_2}}$$. If we put coupling law as addition (Additive coupling layer), the determinant of Jacobian would be 1. Since some part of a layer is not affected in transformation, we alternate the index in alternating layers (at least three). We can define rescaling by defining diagonal matrix S.  
+We call $$g: \mathbb{R}^{D-d} X m(\mathbb{R}^d) \rightarrow \mathbb{R}^{D-d}$$ the coupling law, m a coupling function and this transformation a coupling layer. We can see that $$\det \frac{\partial y}{\partial x} = \det \frac{\partial y_{I_2}}{\partial x_{I_2}}$$. If we put coupling law as addition (Additive coupling layer), the determinant of Jacobian would be 1. Since some part of a layer is not affected in transformation, we alternate the index in alternating layers (at least three). We can define rescaling by defining diagonal matrix S.  
 
 ## So?
 NICE was able to model MNIST, TFD, SVHN and CIFAR-10 with the best log likelihood. Also NICE showed good performance in inpainting task of MNIST.
