@@ -12,16 +12,16 @@ Modeling data with known probability distribution has a lot of advantages. We ca
 ## WHAT?
 This paper suggest tractable transformation of probability distribution. Suppose we model data with known distributions. We want to find a invertible function that map h to x (or x to h: f) to maximize the log-likelihood of data (Dimension of h is the same as that of x). $$p_H(h)$$ is prior distribution that we define (eg. isotropic Gaussian). If prioir distribution is factorial, we call this estimation of probability non-linear independent components estimation (NICE) criterion. 
 $$h \sim p_H(h)\\
-p_H(h) = \Pi_d p_H_d(h_d)\\
+p_H(h) = \Pi_d p_{H_d}(h_d)\\
 x = f^{-1}(h)\\
 p_X(x) = p_H(f(x))|det\frac{\partial f(x)}{\partial x}|\\
-\log (p_X(x)) = \Sigma^D_{d=q} \log(p_D_h(f_d(x))) + log(|\det(\frac{\partial f(x)}{\partial x}))$$
-We can see that we need to calculate Jacobian matrix ($$\frac{\partial f(x)}{\partial x}$$) to find log likelihood. So we need to find transformation that is invertible and its Jacobian matrix is easy to compute. Note that the determinant of a matrix is easy to compute when the matrix is diagonal, lower triangular or upper triangular. This paper suggest elementary component of transformation with Jacobian that satisfy above conditions. General coupling layer transform x to y as follows. $$I_1$$ and $$I_2$$ are partition of [i, D] with d = $$|i_1|$$. 
-$$y_I_1 = x_I_2\\
-y_I_2 = g(x_I_2;m(x_I_1))\\
-\frac{\partial y}{\partial x} = \left[\begin{array}{cc} I_d & 0\\ \frac{\partial y_I_2}{\partial x_I_1} & \frac{\partial y_I_2}{\partial x_I_2}\end{array} \right]
+\log (p_X(x)) = \Sigma^D_{d=q} \log(p_{D_h}(f_d(x))) + log(|\det(\frac{\partial f(x)}{\partial x}))$$
+We can see that we need to calculate Jacobian matrix ($$\frac{\partial f(x)}{\partial x}$$) to find log likelihood. So we need to find transformation that is invertible and its Jacobian matrix is easy to compute. Note that the determinant of a matrix is easy to compute when the matrix is diagonal, lower triangular or upper triangular. This paper suggest elementary component of transformation with Jacobian that satisfy above conditions. General coupling layer transform x to y as follows. $$I_1$$ and $$I_2$$ are partition of [1, D] with d = $$|I_1|$$. 
+$$y_{I_1} = x_{I_2}\\
+y_{I_2} = g(x_{I_2};m(x_{I_1}))\\
+\frac{\partial y}{\partial x} = \left[\begin{array}{cc} I_d & 0\\ \frac{\partial y_{I_2}}{\partial x_{I_1}} & \frac{\partial y_{I_2}}{\partial x_{I_2}}\end{array} \right]
 $$
-We call $$g: \mathdd{R}^{D-d} X m(\mathdd{R}^d) \rightarrow \mathcal^{D-d}$$ the coupling law, m a coupling function and this transformation a coupling layer. We can see that $$\det \frac{\partial y}{\partial x} = \det \frac{\partial y_I_2}{\partial x_I_2}$$. If we put coupling law as addition (Additive coupling layer), the determinant of Jacobian would be 1. Since some part of a layer is not affected in transformation, we alternate the index in alternating layers (at least three). We can define rescaling by defining diagonal matrix S.  
+We call $$g: \mathbb{R}^{D-d} X m(\mathbb{R}^d) \rightarrow \mathcal^{D-d}$$ the coupling law, m a coupling function and this transformation a coupling layer. We can see that $$\det \frac{\partial y}{\partial x} = \det \frac{\partial y_{I_2}}{\partial x_{I_2}}$$. If we put coupling law as addition (Additive coupling layer), the determinant of Jacobian would be 1. Since some part of a layer is not affected in transformation, we alternate the index in alternating layers (at least three). We can define rescaling by defining diagonal matrix S.  
 
 ## So?
 NICE was able to model MNIST, TFD, SVHN and CIFAR-10 with the best log likelihood. Also NICE showed good performance in inpainting task of MNIST.
