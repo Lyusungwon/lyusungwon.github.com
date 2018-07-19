@@ -14,26 +14,30 @@ The purpose of reinforcement learning is to learn the policy to maximize the obj
 $$J(\pi_{\theta}) = \int_{\mathcal{S}}\rho^{\pi}(s)\int_{\mathcal{A}}\pi_{\theta}(s,a)r(s,a)da ds \\
 = \mathbb{E}_{s\sim\rho^{\pi}, a\sim \pi_{\theta}}[r(s,a)]$$
 Policy gradient directly train the policy network to minimize the objective function. 
+
 - Stochastic Policy Gradient\\
 $$\nabla J(\pi_{\theta}) = \int_{\mathcal{S}}\rho^{\pi}(s)\int_{\mathcal{A}} \nabla_{theta}\pi_{\theta}(a|s)Q^{\pi}(s,a)da ds \\
 = \mathbb{E}_{s\sim\rho^{\pi}, a\sim \pi_{\theta}}[\nabla_{\theta} \log \pi_{\theta}(a|s)Q^{\pi}(s,a)]$$
 Since this assumes stochastic policy, this is called Stochastic Policy Gradient. If a sample return is used to estimate the action-value function, it is called REINFORCE algorithm. 
+
 - Stochastic Actor-Critic\\
 We can train another network to directly learn the value of action-value function by td learning. 
 $$\nabla J(\pi_{\theta}) = = \mathbb{E}_{s\sim\rho^{\pi}, a\sim \pi_{\theta}}[\nabla_{\theta} \log \pi_{\theta}(a|s)Q^{w}(s,a)]\\
 \epsilon^2(w) = \mathbb{E}_{s\sim\rho^{\pi}, a\sim \pi_{\theta}}[(Q^w(s,a) - Q^{\pi}(s,a))^2]$$
+
 - Off-policy Actor-Critic (OffPAC)\\
 On-policy learning has limitation in exploration. Off-policy learning use different policies to behave and to evaluate. 
 $$J_{\beta}(\pi_{\theta}) = \int_{\mathcal{S}}\int_{\mathcal{A}}\rho^{\beta}(s)\pi_{\theta}(a|s)Q^{\pi}(s,a)da ds\\
 \nabla_{\theta} J_{\beta}(\pi_{\theta}) = \int_{\mathcal{S}}\int_{\mathcal{A}}\rho^{\beta}(s)\nabla_{\theta}\pi_{\theta}(a|s)Q^{\pi}(s,a)da ds\\
 = \mathbb{E}_{s\sim\rho^{\beta}, a\sim \beta}[\frac{\pi_{\theta}(a|s)}{\beta_{\theta}(a|s)}\nabla_{\theta} \log \pi_{\theta}(a|s)Q^{\pi}(s,a)]$$
 This Off-Policy Actor-Critic(OffPAC)require importance sampling. 
+
 - Deterministic Policy Gradient\\
 In continuous action space, integral over all the action space is intractable. Deterministic policy gradient uses the deterministic policy $$\mu_{\theta}(s)$$ instead of $$\pi_{\theta}(a|s)$$. And then, move the policy in the direction of the gradient of Q. This deterministic policy gradient is a special form of stochastic policy gradient.\\
 $$\theta^{k+1} = \theta^k + \alpha \mathcal{E}_{s\sim\rho^{\mu^k}}[\nabla_{\theta}\mu_{\theta}(s)\nabla_{\a}Q^{\mu^k}(s,a)|_{a=\mu_{\theta}(s)}]\\
 J(\mu_{\theta}) = \int_{\mathcal{S}}\rho^{\mu}(s)r(s, \mu_{\theta}(s))d s \\
-\nabla J(\mu_{\theta}) = = \mathbb{E}_{s\sim\rho^{\mu}}[\nabla_{theta} \mu_{\theta}(s) \nabla_{a}Q^{\mu}(s,a)|_{a=\mu_{\theta}(s)}]
-$$
+\nabla J(\mu_{\theta}) = = \mathbb{E}_{s\sim\rho^{\mu}}[\nabla_{theta} \mu_{\theta}(s) \nabla_{a}Q^{\mu}(s,a)|_{a=\mu_{\theta}(s)}]$$
+
 - Off-Policy Deterministic Actor-Critic (OPDAC)\\
 As in the case of stochastic policy gradient, off-policy is required to ensure adequate exploration. We can use Q-learning to train the critic. 
 $$J_{\beta}(\mu_{\theta}) = \int_{\mathcal{S}}\rho^{\beta}(s)Q^{\mu}(s,mu_{\theta}(s))d s \\
@@ -42,10 +46,12 @@ $$J_{\beta}(\mu_{\theta}) = \int_{\mathcal{S}}\rho^{\beta}(s)Q^{\mu}(s,mu_{\thet
 w_{t+1} = w_t + \alpha_w\delta_t\nabla_w Q^w(s_t, a_t)\\
 \theta_{t+1} = \theta_t + \alpha_{\theta}\nabla_{\theta}\mu_{\theta}(s_t)\nabla_a Q^w(s_t, a_t)|{a=\mu_{\theta}(s)}$$
 Deterministic policy removes the need for integral of actions and Q-learning removes the need for importance sampling. 
+
 - Compatible Off-Policy Deterministic Actor-Critic (COPDAC)\\
 Since function approximator $$Q^w(s,a)$$ may not follow the true gradient, this paper suggest two restriction for the compatible action-value function. 
 1. $$\nabla_a Q^w(s,a)|_{a=\mu_{\theta}(s)}=\nabla_{\theta}\mu_{\theta}(s)^T w$$
-2. w minimize MSE of $$\epsilon(s;\theta,w)=\nabla_a Q^w(s,a)|_{a=\mu_{\theta}(s) - \nabla_a Q^{\mu}(s,a)|_{a=\mu_{\theta}(s)$$\\
+2. w minimize MSE of $$\epsilon(s;\theta,w)=\nabla_a Q^w(s,a)|_{a=\mu_{\theta}(s)} - \nabla_a Q^{\mu}(s,a)|_{a=\mu_{\theta}(s)}$$\\
+
 The resulting algorithm is called compatible off-policy deterministic actor-critic(COPDAC). We can use baseline function to reduce the variance of gradient estimator. If we use gradient Q-learning for critic, the algorithm is called COPDAC-GQ. 
 
 ## Critic
