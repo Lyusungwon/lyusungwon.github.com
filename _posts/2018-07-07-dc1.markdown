@@ -24,73 +24,79 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 
 5. Combinational Logic
 - Computer
-- MOS(Metal-Oxide Semicondoctors) Transistors
-	- n-type, p-type
-- Logic gates
-	- CMOS NOT, NAND, AND Gates
+- MOS(Metal-Oxide Semicondoctors) Transistors\\
+	- n-type, p-type\\
+- Logic gates\\
+	- CMOS NOT, NAND, AND Gates\\
 - Moores's Law
 - Functional Specification
 - Boolean Algebra
 
 6. Combinational Logics, Hardware Description Lang. & Verilog
-- Two-Level Canonical Forms
+- Two-Level Canonical Forms\\
 	- Sum Of Products (SOP)
-	- A Product Of Sums (POS)
-- Combinational Building Blocks
+	- A Product Of Sums (POS)\\
+- Combinational Building Blocks\\
 	- Decoder
 	- Multiplexer (MUX)
 	- Full adder
-	- PLA
-- Karnaugh Maps (K-Maps)
-- Hardware Description Languages(HDL)
+	- PLA\\
+- Karnaugh Maps (K-Maps)\\
+- Hardware Description Languages(HDL)\\
 	- Verilog
-	- Implementation
+	- Implementation\\
 		- Structural HDL
 		- Behavioral HDL
 
 7. Sequential Logic Design
-- Basic Storage Element
+- Basic Storage Element\\
 	- The Reset-Set Latch (R-S Latch)
 	- Gated D Latch
-	- The Register
+	- The Register\\
 - Memory
-- Sequential Logic Circuits
-	- Clock
-- Finite State Machines
+- Sequential Logic Circuits\\
+	- Clock\\
+- Finite State Machines\\
 	- Next state logic, State register, Output logic
-	- Sequential circuits
-		- D Flip-Flop
+	- Sequential circuits\\
+		- D Flip-Flop\\
 	- Timing Diagram
 	- State Encoding
-	- Moore, Mealy Machines
-- Sequential Logic Using Verilog
+	- Moore, Mealy Machines\\
+- Sequential Logic Using Verilog\\
 	- always, posedge, negedge, reg, begin ~ end, if ~ else, case
 	- Asynchronous / Synchronous reset
 	- Blocking / Non-Blocking assignment
 
 8. Timing and Verification
-- Combinational Circuit Timing
+- Combinational Circuit Timing\\
 	- contamination delay, propagation delay
-	- output glitches
+	- output glitches\\
 		- Avoiding glitches using K-Maps
-- Sequential Circuit Timing
-	- input timing constraints
-		- setup time, hold time, aperture time
-	- output timing constraints
-		- contamination delay clock-to-q (ccq), Propagation dalay clock-to-q (pcq)
-	- setup time constraints
-		- c > pcq + pd + setup
-	- hold time constraints
-		- cd > - ccq + hold
+- Sequential Circuit Timing\\
+	- input timing constraints\\
+		- setup time, hold time, aperture time\\
+	- output timing constraints\\
+		- contamination delay clock-to-q (ccq), Propagation dalay clock-to-q (pcq)\\
+	- setup time constraints\\
+		- c > pcq + pd + setup\\
+	- hold time constraints\\
+		- cd > - ccq + hold\\
 	- Timing Analysis
-	- Clock skew
-- Circuit Verification
-	- Functional Verification
+	- Clock skew\\
+- Circuit Verification\\
+	- Functional Verification\\
 		- device under test (DUT)
-		- Testbench-based functional testing
-			- Simple, Self-checking, Automatic testbench
+		- Testbench-based functional testing\\
+			- Simple, Self-checking, Automatic testbench\\
 	- Timing Verification
 
 9. Von Neumann Model, ISA, LC-3 and MIPS
 
 10. ISA (II), and Assembly Programming
+
+11. Microarchitecture
+
+12. Microarchitecture II
+
+13. Microprogramming
