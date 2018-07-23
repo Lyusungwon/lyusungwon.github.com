@@ -10,8 +10,8 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 1. Introduction and Basics
 
 2. Mysteries in Comp Arch
-   - Meltdown and Spectre
-   - RowHammer
+- Meltdown and Spectre
+- RowHammer
 
 3. Introduction to the Labs and FPGAs
 - FPGA(Field Programmable Gate Array)
@@ -25,7 +25,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 5. Combinational Logic
 - Computer
 - MOS(Metal-Oxide Semicondoctors) Transistors  
-  - n-type, p-type  
+    - n-type, p-type  
 - Logic gates  
 		- CMOS NOT, NAND, AND Gates  
 - Moores's Law
@@ -114,22 +114,24 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 			- Store result
 		- Instruction set
 			- Opcodes
-				- Operate, data movement, control
 			- Data types
-				- 2's complement integers, unsigned integers, floating point
 
 10. ISA (II), and Assembly Programming
 - Instruction Set Architecture (ISA)
 		- Operate Instruction
 		- Data movement instruction
+			- LD, LDR, LDI, LEA, ST, STR, STI
 			- Addressing modes
 				- PC-relative mode
 				- Indirect mode
 				- Base + offset mode
 				- Immediate mode
-
-			- LD, LDR, LDI, LEA, ST, STR, STI
-
+		- Control flow instruction
+			- JMP
+			- Conditional branches
+				- BRn, BRz, BRp, BRzp, BRnp, BRnz, BRnzp
+				- Looping
+		- Assembly programming
 
 11. Microarchitecture
 
