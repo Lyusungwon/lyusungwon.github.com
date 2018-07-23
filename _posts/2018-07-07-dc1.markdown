@@ -45,28 +45,28 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 - Hardware Description Languages(HDL)  
 		- Verilog
 		- Implementation
-				- Structural HDL
-				- Behavioral HDL
+			- Structural HDL
+			- Behavioral HDL
 
 7. Sequential Logic Design
-- Basic Storage Element  
-	- The Reset-Set Latch (R-S Latch)
-	- Gated D Latch
-	- The Register  
+- Basic Storage Element
+		- The Reset-Set Latch (R-S Latch)
+		- Gated D Latch
+		- The Register
 - Memory
-- Sequential Logic Circuits  
-	- Clock  
-- Finite State Machines  
-	- Next state logic, State register, Output logic
-	- Sequential circuits  
-		- D Flip-Flop  
-	- Timing Diagram
-	- State Encoding
-	- Moore, Mealy Machines  
-- Sequential Logic Using Verilog  
-	- always, posedge, negedge, reg, begin ~ end, if ~ else, case
-	- Asynchronous / Synchronous reset
-	- Blocking / Non-Blocking assignment
+- Sequential Logic Circuits
+		- Clock
+- Finite State Machines
+		- Next state logic, State register, Output logic
+		- Sequential circuits
+					- D Flip-Flop  
+		- Timing Diagram
+		- State Encoding
+		- Moore, Mealy Machines  
+- Sequential Logic Using Verilog
+		- always, posedge, negedge, reg, begin ~ end, if ~ else, case
+		- Asynchronous / Synchronous reset
+		- Blocking / Non-Blocking assignment
 
 8. Timing and Verification
 - Combinational Circuit Timing  
@@ -94,6 +94,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 9. Von Neumann Model, ISA, LC-3 and MIPS
 - The Von Neumann Model
 	- Memory
+
 
 10. ISA (II), and Assembly Programming
 
