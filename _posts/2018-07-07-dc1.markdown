@@ -24,9 +24,9 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 
 5. Combinational Logic
 - Computer
-- MOS(Metal-Oxide Semicondoctors) Transistors
-  - n-type, p-type 
-- Logic gates
+- MOS(Metal-Oxide Semicondoctors) Transistors  
+  - n-type, p-type  
+- Logic gates  
 		- CMOS NOT, NAND, AND Gates  
 - Moores's Law
 - Functional Specification
@@ -45,8 +45,8 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 - Hardware Description Languages(HDL)  
   - Verilog
   - Implementation
-    - Structural HDL
-    - Behavioral HDL
+      - Structural HDL
+      - Behavioral HDL
 
 7. Sequential Logic Design
 - Basic Storage Element
@@ -127,6 +127,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 10. ISA (II), and Assembly Programming
 - Instruction Set Architecture (ISA)
 		- Operate Instruction
+		- Data movement instruction
 
 
 11. Microarchitecture
