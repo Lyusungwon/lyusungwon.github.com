@@ -25,7 +25,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 5. Combinational Logic
 - Computer
 - MOS(Metal-Oxide Semicondoctors) Transistors
-	- n-type, p-type
+		- n-type, p-type
 - Logic gates
 		- CMOS NOT, NAND, AND Gates
 - Moores's Law
@@ -164,10 +164,22 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 				- RegDest, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, PCSrc1, PCSrc2
 			- Control box
 		- Performance Analysis
-			- Cycles per instruction (CPI)
-			- Clock period
-			- Clock frequency
-
+			- Cycles per instruction (CPI), clock period (T), clock frequency (f)
+			- {# of instructions} x {Average CPI} x {Clock cycle time}
+			- Slowest instruction
+- Microarchitecture design principle
+		- Critical path design
+		- Bread and butter design
+		- Balanced design
+- Multi-Cycle Microarchitecture
+		- States
+		- Control Unit
+			- Main controller
+				- MUX: MemtoReg, RegDst, IorD, PCSrc, ALUSrcB, ALUSrcA
+				- Register Enable: IRWrite, MemWrite, PCWrite, Branch, RegWrite
+			- ALU decoder
+				- ALUControl
+		- Performance Analysis
 
 13. Microprogramming
 
