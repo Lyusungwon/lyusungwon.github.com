@@ -11,28 +11,21 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 
 2. Mysteries in Comp Arch
 
-
 - Meltdown and Spectre
 - RowHammer
 
-
 3. Introduction to the Labs and FPGAs
-
 
 - FPGA(Field Programmable Gate Array)
 - Vivado
 
-
 4. Mysteries in Comp Arch and Basics
-
 
 - Memory Performance Attacks
 - DRAM Refresh
 - Bloom Filters
 
-
 5. Combinational Logic
-
 
 - Computer
 - MOS(Metal-Oxide Semicondoctors) Transistors
@@ -43,9 +36,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 - Functional Specification
 - Boolean Algebra
 
-
 6. Combinational Logics, Hardware Description Lang. & Verilog
-
 
 - Two-Level Canonical Forms
 		- Sum Of Products (SOP)
@@ -54,17 +45,15 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 		- Decoder
 		- Multiplexer (MUX)
 		- Full adder
-		- PLA    
+		- PLA
 - Karnaugh Maps (K-Maps)
-- Hardware Description Languages(HDL)  
+- Hardware Description Languages(HDL)
 		- Verilog
 		- Implementation
 			- Structural HDL
 			- Behavioral HDL
 
-
 7. Sequential Logic Design
-
 
 - Basic Storage Element
 		- The Reset-Set Latch (R-S Latch)
@@ -85,9 +74,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 		- Asynchronous / Synchronous reset
 		- Blocking / Non-Blocking assignment
 
-
 8. Timing and Verification
-
 
 - Combinational Circuit Timing
 		- contamination delay, propagation delay
@@ -111,9 +98,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 				- Simple, self-checking, automatic testbench
 		- Timing verification
 
-
 9. Von Neumann Model, ISA, LC-3 and MIPS
-
 
 - The Von Neumann Model
 		- Memory
@@ -139,9 +124,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 			- Opcodes
 			- Data types
 
-
 10. ISA (II), and Assembly Programming
-
 
 - Instruction Set Architecture (ISA)
 		- Operate Instruction
@@ -167,9 +150,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 		- Function call
 		- Stack
 
-
 11. Microarchitecture
-
 
 - ISA vs Microarchitecture
 - Single cycle machine vs Multi-cycle machine
@@ -186,9 +167,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 			- j, jal, jr, jalr
 			- beq, bne, blez, bgtz
 
-
 12. Microarchitecture II
-
 
 - Single-Cycle Microarchitecture
 		- Control Logic
@@ -196,7 +175,6 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 				- RegDest, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, PCSrc1, PCSrc2
 			- Control box
 		- Performance Analysis
-
 
 13. Microprogramming
 
