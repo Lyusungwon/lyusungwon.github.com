@@ -10,29 +10,43 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 1. Introduction and Basics
 
 2. Mysteries in Comp Arch
+
+
 - Meltdown and Spectre
 - RowHammer
 
+
 3. Introduction to the Labs and FPGAs
+
+
 - FPGA(Field Programmable Gate Array)
 - Vivado
 
+
 4. Mysteries in Comp Arch and Basics
+
+
 - Memory Performance Attacks
 - DRAM Refresh
 - Bloom Filters
 
+
 5. Combinational Logic
+
+
 - Computer
-- MOS(Metal-Oxide Semicondoctors) Transistors  
-    - n-type, p-type  
-- Logic gates  
-		- CMOS NOT, NAND, AND Gates  
+- MOS(Metal-Oxide Semicondoctors) Transistors
+	- n-type, p-type
+- Logic gates
+		- CMOS NOT, NAND, AND Gates
 - Moores's Law
 - Functional Specification
 - Boolean Algebra
 
+
 6. Combinational Logics, Hardware Description Lang. & Verilog
+
+
 - Two-Level Canonical Forms
 		- Sum Of Products (SOP)
 		- A Product Of Sums (POS)   
@@ -43,12 +57,15 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 		- PLA    
 - Karnaugh Maps (K-Maps)
 - Hardware Description Languages(HDL)  
-  - Verilog
-  - Implementation
-    - Structural HDL
-    - Behavioral HDL
+		- Verilog
+		- Implementation
+			- Structural HDL
+			- Behavioral HDL
+
 
 7. Sequential Logic Design
+
+
 - Basic Storage Element
 		- The Reset-Set Latch (R-S Latch)
 		- Gated D Latch
@@ -68,7 +85,10 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 		- Asynchronous / Synchronous reset
 		- Blocking / Non-Blocking assignment
 
+
 8. Timing and Verification
+
+
 - Combinational Circuit Timing
 		- contamination delay, propagation delay
 		- output glitches
@@ -91,7 +111,10 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 				- Simple, self-checking, automatic testbench
 		- Timing verification
 
+
 9. Von Neumann Model, ISA, LC-3 and MIPS
+
+
 - The Von Neumann Model
 		- Memory
 			- Memory Address Register (MAR)
@@ -116,7 +139,10 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 			- Opcodes
 			- Data types
 
+
 10. ISA (II), and Assembly Programming
+
+
 - Instruction Set Architecture (ISA)
 		- Operate Instruction
 		- Data movement instruction
@@ -127,14 +153,55 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 				- Base + offset mode
 				- Immediate mode
 		- Control flow instruction
-			- JMP
+			- Jump
+				- JMP, RET, JSR, JSRR
 			- Conditional branches
 				- BRn, BRz, BRp, BRzp, BRnp, BRnz, BRnzp
 				- Looping
-		- Assembly programming
+- Assembly programming
+		- Sequential construct
+		- Conditional construct
+		- Iterative construct
+		- Debugging
+		- Array
+		- Function call
+		- Stack
+
 
 11. Microarchitecture
 
+
+- ISA vs Microarchitecture
+- Single cycle machine vs Multi-cycle machine
+		- Instruction processing cycle vs Machine clock cycle
+		- Datapath & Control logic
+		- Performance Analysis
+- Single-Cycle Microarchitecture
+		- Instruction Processing
+			- IF, ID/RF, EX/AG, MEM, WB
+		- Arithmetic and logical instruction
+		- Data Movement Instruction
+			- lw, sw
+		- Control flow instruction
+			- j, jal, jr, jalr
+			- beq, bne, blez, bgtz
+
+
 12. Microarchitecture II
 
+
+- Single-Cycle Microarchitecture
+		- Control Logic
+			- Control signals
+				- RegDest, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, PCSrc1, PCSrc2
+			- Control box
+		- Performance Analysis
+
+
 13. Microprogramming
+
+14. Pipelining
+
+15. Pipelining Issues
+
+16. Out-of-Order Execution
