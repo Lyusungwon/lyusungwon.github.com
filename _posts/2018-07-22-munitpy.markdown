@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "[Pytorch] MUNIT"
+date:   2018-07-22 22:09:59
+author: Sungwon Lyu
+categories: CI
+---
+
+Pytorch implementation of [Multimodal Unsupervised Image-to-Image Translation](https://lyusungwon.github.io/dl/2018/04/18/munit.html).
+
+[https://github.com/Lyusungwon/munit_pytorch](https://github.com/Lyusungwon/munit_pytorch)
+
+## Reference
+- https://github.com/NVlabs/MUNIT
+
+## Note 
+My impression on this paper differed a lot from the first time when I read this paper.
+- 8+ models took all of my memory, so I had to train with batch size < 4. 
+- 8 latent variables vs 256 * H * W content variables?? Really???
+- Seems like 'Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization' should take credit for good quality of samples
+- Would only work in image. Need to find other model for audio.
+- DATASET PLEASE!!

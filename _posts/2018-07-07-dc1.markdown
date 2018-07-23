@@ -25,9 +25,9 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 5. Combinational Logic
 - Computer
 - MOS(Metal-Oxide Semicondoctors) Transistors  
-	- n-type, p-type  
+		- n-type, p-type  
 - Logic gates  
-	- CMOS NOT, NAND, AND Gates  
+		- CMOS NOT, NAND, AND Gates  
 - Moores's Law
 - Functional Specification
 - Boolean Algebra
