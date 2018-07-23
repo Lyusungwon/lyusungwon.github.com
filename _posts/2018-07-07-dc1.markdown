@@ -10,8 +10,8 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 1. Introduction and Basics
 
 2. Mysteries in Comp Arch
-- Meltdown and Spectre
-- RowHammer
+   - Meltdown and Spectre
+   - RowHammer
 
 3. Introduction to the Labs and FPGAs
 - FPGA(Field Programmable Gate Array)
@@ -45,8 +45,8 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 - Hardware Description Languages(HDL)  
   - Verilog
   - Implementation
-      - Structural HDL
-      - Behavioral HDL
+    - Structural HDL
+    - Behavioral HDL
 
 7. Sequential Logic Design
 - Basic Storage Element
@@ -104,8 +104,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 			- Instruction register (IR)
 			- Program counter (PC)
 		- LC-3 & MIPS
-		- Instruction
-			- Operate instruction, data movement instruction, control flow instruction
+- Instruction Set Architecture (ISA)
 		- Instruction cycle
 			- Fetch
 			- Decode
@@ -113,21 +112,23 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 			- Fetch operands
 			- Execute
 			- Store result
-		- Control flow
-			- jump
-- Instruction Set Architecture (ISA)
 		- Instruction set
 			- Opcodes
 				- Operate, data movement, control
 			- Data types
 				- 2's complement integers, unsigned integers, floating point
-			- Addressing modes
-				- Immediate or literal, register, PC-relative, indirect, base + offset, pseudo-direct addressing
 
 10. ISA (II), and Assembly Programming
 - Instruction Set Architecture (ISA)
 		- Operate Instruction
 		- Data movement instruction
+			- Addressing modes
+				- PC-relative mode
+				- Indirect mode
+				- Base + offset mode
+				- Immediate mode
+
+			- LD, LDR, LDI, LEA, ST, STR, STI
 
 
 11. Microarchitecture
