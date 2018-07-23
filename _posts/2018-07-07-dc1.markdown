@@ -25,9 +25,9 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 5. Combinational Logic
 - Computer
 - MOS(Metal-Oxide Semicondoctors) Transistors
-		- n-type, p-type
+		- n-type, p-type 
 - Logic gates
-		- CMOS NOT, NAND, AND Gates
+		- CMOS NOT, NAND, AND Gates  
 - Moores's Law
 - Functional Specification
 - Boolean Algebra
@@ -35,12 +35,12 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 6. Combinational Logics, Hardware Description Lang. & Verilog
 - Two-Level Canonical Forms
 		- Sum Of Products (SOP)
-		- A Product Of Sums (POS)  
+		- A Product Of Sums (POS)   
 - Combinational Building Blocks
 		- Decoder
 		- Multiplexer (MUX)
 		- Full adder
-		- PLA
+		- PLA    
 - Karnaugh Maps (K-Maps)
 - Hardware Description Languages(HDL)  
 		- Verilog
@@ -59,7 +59,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 - Finite State Machines
 		- Next state logic, State register, Output logic
 		- Sequential circuits
-					- D Flip-Flop  
+			- D Flip-Flop  
 		- Timing Diagram
 		- State Encoding
 		- Moore, Mealy Machines  
@@ -69,10 +69,10 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 		- Blocking / Non-Blocking assignment
 
 8. Timing and Verification
-- Combinational Circuit Timing  
-	- contamination delay, propagation delay
-	- output glitches  
-		- Avoiding glitches using K-Maps
+- Combinational Circuit Timing
+		- contamination delay, propagation delay
+		- output glitches
+			- Avoiding glitches using K-Maps
 - Sequential Circuit Timing  
 	- input timing constraints  
 		- setup time, hold time, aperture time  
@@ -93,8 +93,12 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 
 9. Von Neumann Model, ISA, LC-3 and MIPS
 - The Von Neumann Model
-	- Memory
-
+		- Memory
+			- Memory Address Register (MAR)
+			- Memory Data Register MDR)
+		- Processing Unit
+			- Arithmetic and Logic Unit (ALU)
+			- Registers
 
 10. ISA (II), and Assembly Programming
 
