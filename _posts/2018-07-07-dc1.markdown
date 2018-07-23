@@ -24,29 +24,29 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 
 5. Combinational Logic
 - Computer
-- MOS(Metal-Oxide Semicondoctors) Transistors  
-		- n-type, p-type  
-- Logic gates  
-		- CMOS NOT, NAND, AND Gates  
+- MOS(Metal-Oxide Semicondoctors) Transistors
+		- n-type, p-type
+- Logic gates
+		- CMOS NOT, NAND, AND Gates
 - Moores's Law
 - Functional Specification
 - Boolean Algebra
 
 6. Combinational Logics, Hardware Description Lang. & Verilog
-- Two-Level Canonical Forms  
-	- Sum Of Products (SOP)
-	- A Product Of Sums (POS)  
-- Combinational Building Blocks  
-	- Decoder
-	- Multiplexer (MUX)
-	- Full adder
-	- PLA  
-- Karnaugh Maps (K-Maps)  
+- Two-Level Canonical Forms
+		- Sum Of Products (SOP)
+		- A Product Of Sums (POS)  
+- Combinational Building Blocks
+		- Decoder
+		- Multiplexer (MUX)
+		- Full adder
+		- PLA
+- Karnaugh Maps (K-Maps)
 - Hardware Description Languages(HDL)  
-	- Verilog
-	- Implementation  
-		- Structural HDL
-		- Behavioral HDL
+		- Verilog
+		- Implementation
+				- Structural HDL
+				- Behavioral HDL
 
 7. Sequential Logic Design
 - Basic Storage Element  
@@ -92,6 +92,8 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 	- Timing Verification
 
 9. Von Neumann Model, ISA, LC-3 and MIPS
+- The Von Neumann Model
+	- Memory
 
 10. ISA (II), and Assembly Programming
 
