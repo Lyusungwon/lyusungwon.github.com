@@ -28,7 +28,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 		- n-type, p-type 
 - Logic gates
 		- CMOS NOT, NAND, AND Gates  
-- Moores's Law
+	- Moores's Law
 - Functional Specification
 - Boolean Algebra
 
@@ -73,23 +73,23 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 		- contamination delay, propagation delay
 		- output glitches
 			- Avoiding glitches using K-Maps
-- Sequential Circuit Timing  
-	- input timing constraints  
-		- setup time, hold time, aperture time  
-	- output timing constraints  
-		- contamination delay clock-to-q (ccq), Propagation dalay clock-to-q (pcq)  
-	- setup time constraints  
-		- c > pcq + pd + setup  
-	- hold time constraints  
-		- cd > - ccq + hold  
-	- Timing Analysis
-	- Clock skew  
+- Sequential Circuit Timing
+		- input timing constraints
+			- setup time, hold time, aperture time
+		- output timing constraints  
+			- contamination delay clock-to-q (ccq), Propagation dalay clock-to-q (pcq)  
+		- setup time constraints  
+			- c > pcq + pd + setup  
+		- hold time constraints  
+			- cd > - ccq + hold  
+		- Timing Analysis
+		- Clock skew
 - Circuit Verification  
-	- Functional Verification  
-		- device under test (DUT)
-		- Testbench-based functional testing  
-			- Simple, Self-checking, Automatic testbench  
-	- Timing Verification
+		- Functional Verification
+			- device under test (DUT)
+			- Testbench-based functional testing
+				- Simple, Self-checking, Automatic testbench
+		- Timing Verification
 
 9. Von Neumann Model, ISA, LC-3 and MIPS
 - The Von Neumann Model
@@ -99,6 +99,12 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 		- Processing Unit
 			- Arithmetic and Logic Unit (ALU)
 			- Registers
+		- Input and Output
+		- Control Uint
+			- Instruction register (IR)
+			- Program counter (PC)
+- LC-3
+		- 
 
 10. ISA (II), and Assembly Programming
 
