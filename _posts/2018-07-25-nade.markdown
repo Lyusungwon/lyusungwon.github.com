@@ -11,8 +11,8 @@ Estimating the distribution of data can help solving various predictive taskes. 
 
 ## WHAT?
 Autoregressive generative model of data consists of D conditionals. NADE use feed-forward neural network to model each conditionals. First, we assume that x is binary. W anc c are shared. 
-$$p(x) = \prod_{d=1}^D p(x_{O_d}}}|x_{O_{<d}})\\
-p(x_{o_d}}}|x_{o_{<d}}) = sigm(V_{o_d,\cdot},h_d + b_{o_d})\\
+$$p(x) = \prod_{d=1}^D p(x_{O_d})|x_{O_{<d}})\\
+p(x_{o_d})|x_{o_{<d}}) = sigm(V_{o_d,\cdot}h_d + b_{o_d})\\
 h_d = sigm(W_{\cdot, o<d}x_{o<d} + c)
 $$
 Computation cost is O(H) since W and c are shared. 

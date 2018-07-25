@@ -15,7 +15,7 @@ The motivation is almost the same as that of [NICE](https://lyusungwon.github.io
 ![image](/assets/images/realnvp2.png){: .center-image width="50px"}
 $$y_{1:d} = x_{1:d}\\
 y_{d+1:D} = x_{d+1:D}\odot \exp(s(d_{x:d})) + t(x_{1:d})\\
-\frac{\partial y}{\partial x^T} = [\begin{array}{cc} I_d & 0\\\frac{\partial y_{d+1:D}}{\partial x^T_{1:d}} & \diag(\exp[s(x_{1:d})])\end{array} \right]\\
+\frac{\partial y}{\partial x^T} = \left[\begin{array}{cc} I_d & 0\\\frac{\partial y_{d+1:D}}{\partial x^T_{1:d}} & \diag(\exp[s(x_{1:d})]) \end{array} \right]\\
 x_{1:d} = y_{1:d} \\
 x_{d+1:D} = (y_{d+1:D} - t(y_{1:d}))\odot \exp(-s(y_{1:d}))$$
 ![image](/assets/images/realnvp3.png){: .center-image width="50px"}
