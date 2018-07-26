@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Neural Variational Inference and Learning in Belief Networks"
+date:   2018-07-26 11:07:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+Directed latent variable models are known to be difficult to train at large scale because posterior distribution is intractable.
+
+## WHAT?
+This paper suggests way to estimate inference model with feed-forward network. Since exact posterior $$P_{\theta}(h|x)$$ is intractable, we use $$Q_{phi}(h|x)$$ to approximate.
+$$
+\log P_{\theta}(x) = \log\sum_h P_{\theta}(x,h)\\
+\geq \sum_h Q_{\phi}(h|x) log \frac{P_{\theta}(x,g)}{Q_{\phi}(h|x)}\\
+= E_Z[\log P_{\theta}(x, h) - \log Q_{\phi}(h|x)]\\
+= \mathcal{L}(x, \theta, \phi)\\
+\mathcal{L}(x, \theta, \phi) = \log P_\theta(x) - KL(Q_{\phi}(h|x)|P_{\theta}(h|x))
+$$
+Since h is sampled from posterior, it is impossible to get exact gradient of lowerbound wrt parameters. Therefore, Monte-Carlo estimation is used, and score function estimator (REINFORCE) is used to get gradient of lowerbound which include stochastic variable h. 
+$$
+\nabla_{\theta}\mathcal{L}(x) = E_Q[\nabla_{\theta}\log P_{\theta}(x, h)]\\
+\nable_{\phi}\mathcal{L}(x) = E_Q[(\log P_{\theta}(x,h) - \log Q_{\phi}(h|x)) \times \nabla_{\phi}\log Q_{\phi}(h|x)]\\
+\nabla_{\theta}\mathcal{L}(x) \approx \frac{1}{n}\sum^n_{i=1}\nabla_{\theta}\log P_{\theat}(x, h^{(i)})
+\nable_{\phi}\mathcal{L}(x) \approx \frac{1}{n}\sum^n_{i=1}(\log P_{\theta}(x,h^{(i)}) - \log Q_{\phi}(h^{(i)}|x)) \times \nabla_{\phi}\log Q_{\phi}(h^{(i)}|x)\\
+$$
+However, usually the variance of estimation of gradient using score function estimator is high. So variance reduction technique is used to estimate the gradient. c is global baseline that is learned through training, and $$C_{\psi}$$ is used to input-dependent baseline. Input-dependent baseline is also trained to minimize the mse. 
+$$
+\l_{phi}(x, h) = \log P_{\theta}(x,h) - \log Q_{\phi}(h|x)\\
+E_{Q}[(\l_{phi}(x, h) - C_{\psi}(x) - c)^2]\\
+$$
+To make training stable, variance is normalized with running estimate when it is greater than 1. If inference network is structured, we can estimate local learning signal for each factorized conditionals. 
+$$
+\nabla_{\phi_i}\mathcal{L}(x) = E_{Q(h^{1:i-1}|x)}[E_{Q(h^{i:n}|h^{i-1})}[l_{\phi}(x,h)\nabla_{\phi_i}\log Q_{\phi_i}(h^i|h^{i-1})]|h^{i-1}]\\
+\l^i_{phi}(x, h) = \log P_{\theta}(h^{i-1:n}) - \log Q_{\phi}(h^{i:n}|h^{i-1})\\
+$$
+Then, layer-dependent baseline need to be learned.
+
+## So?
+NVIL used in sigmoid belief network (SBN) outperformed SBN using wake-sleep algorithm and other models including DARN, NADE, RBM and MoB in NLL for MNIST. SBN using NVIL showed better performance in document modeling then LDA. 
+
+## Critic
+This seems smart move, but reparameterization of VAE was too strong. This can be used in cases where distribution is impossible to reparamterize.
+
+[Mnih, Andriy, and Karol Gregor. "Neural variational inference and learning in belief networks." arXiv preprint arXiv:1402.0030 (2014).](https://arxiv.org/abs/1402.0030)
