@@ -3,7 +3,7 @@ layout: post
 title:  "Multimodal Unsupervised Image-to-Image Translation"
 date:   2018-04-18 16:28:59
 author: Sungwon Lyu
-categories: Generative models
+categories: Generative-Models
 ---
 
 ## WHY? 

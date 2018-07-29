@@ -3,7 +3,7 @@ layout: post
 title:  "Unsupervised Learning of Disentangled and Interpretable Representations from Sequential Data"
 date:   2018-04-19 10:17:59
 author: Sungwon Lyu
-categories: Generative models
+categories: Generative-Models
 ---
 
 ## WHY? 

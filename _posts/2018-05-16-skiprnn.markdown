@@ -3,7 +3,7 @@ layout: post
 title:  "Skip RNN: Learning to Skip State Updates in Recurrent Neural Networks"
 date:   2018-05-16 9:25:59
 author: Sungwon Lyu
-categories: Natural Language Processing
+categories: Natural-Language-Processing
 ---
 
 ## WHY? 

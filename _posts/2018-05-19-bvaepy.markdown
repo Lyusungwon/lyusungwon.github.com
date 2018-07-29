@@ -3,7 +3,7 @@ layout: post
 title:  "[Pytorch] Beta-VAE"
 date:   2018-05-19 22:17:59
 author: Sungwon Lyu
-categories: Pytorch Implementations
+categories: Pytorch-Implementations
 ---
 
 [Beta-VAE](https://lyusungwon.github.io/dl/2018/02/06/disentang.html)를 이용하여 피카츄 배구 데이터의 disentangling을 Pytorch로 구현

@@ -3,7 +3,7 @@ layout: post
 title:  "[Pytorch] AAE"
 date:   2018-04-25 13:17:59
 author: Sungwon Lyu
-categories: Pytorch Implementations
+categories: Pytorch-Implementations
 ---
 
 [Adversarial Autoencoder](https://lyusungwon.github.io/dl/2018/04/11/aae.html)를 Pytorch로 구현

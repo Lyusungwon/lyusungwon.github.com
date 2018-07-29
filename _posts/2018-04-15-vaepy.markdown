@@ -3,7 +3,7 @@ layout: post
 title:  "[Pytorch] VAE"
 date:   2018-04-15 13:17:59
 author: Sungwon Lyu
-categories: Pytorch Implementations
+categories: Pytorch-Implementations
 ---
 
 [Variational Autoencoder](https://lyusungwon.github.io/dl/2018/02/11/vae.html)를 Pytorch로 구현

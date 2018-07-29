@@ -3,7 +3,7 @@ layout: post
 title:  "Conditional Image Synthesis with Auxiliary Classifier GANs"
 date:   2018-04-13 14:10:59
 author: Sungwon Lyu
-categories: Generative Models
+categories: Generative-Models
 ---
 
 ## WHY? 

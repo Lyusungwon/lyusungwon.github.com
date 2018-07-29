@@ -3,7 +3,7 @@ layout: post
 title:  "Learning Hierarchical Features from Generative models"
 date:   2018-05-23 9:47:59
 author: Sungwon Lyu
-categories: Generative Models
+categories: Generative-Models
 ---
 
 ## WHY? 

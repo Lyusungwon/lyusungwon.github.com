@@ -3,7 +3,7 @@ layout: post
 title:  "Human Performance"
 date:   2018-05-28 23:36:59
 author: Sungwon Lyu
-categories: Study Archive
+categories: Study-Archive
 ---
 
 # 6. Language and communication

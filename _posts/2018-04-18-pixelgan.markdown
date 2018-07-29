@@ -3,7 +3,7 @@ layout: post
 title:  "PixelGAN Autoencoders"
 date:   2018-04-18 10:33:59
 author: Sungwon Lyu
-categories: Generative models
+categories: Generative-Models
 ---
 
 ## WHY? 

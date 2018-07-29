@@ -3,7 +3,7 @@ layout: post
 title:  "Variational Lossy Autoencoders"
 date:   2018-04-11 19:53:59
 author: Sungwon Lyu
-categories: Generative Models
+categories: Generative-Models
 ---
 
 ## WHY? 

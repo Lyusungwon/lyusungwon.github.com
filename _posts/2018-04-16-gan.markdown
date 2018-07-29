@@ -3,7 +3,7 @@ layout: post
 title:  "[Pytorch] GAN"
 date:   2018-04-16 13:17:59
 author: Sungwon Lyu
-categories: Pytorch Implementations
+categories: Pytorch-Implementations
 ---
 
 Generative Adversarial Network를 Pytorch로 구현
