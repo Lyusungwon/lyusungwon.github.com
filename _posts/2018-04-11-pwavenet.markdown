@@ -3,7 +3,7 @@ layout: post
 title:  "Parallel WaveNet: Fast High-Fidelity Speech Synthesis"
 date:   2018-04-11 11:18:59
 author: Sungwon Lyu
-categories: DL
+categories: Generative Models
 ---
 
 ## WHY? 

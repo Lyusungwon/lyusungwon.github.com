@@ -3,7 +3,7 @@ layout: post
 title:  "어떻게 읽을 것인가"
 date:   2016-01-09 10:36:59
 author: Sungwon Lyu
-categories: RV
+categories: Reviews
 ---
 어떻게 읽을 것인가 - 고영성
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Spatial Transformer Networks"
 date:   2018-06-13 11:48:59
 author: Sungwon Lyu
-categories: DL
+categories: Computer Vision
 ---
 
 ## WHY? 

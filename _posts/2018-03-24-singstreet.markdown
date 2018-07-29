@@ -3,7 +3,7 @@ layout: post
 title:  "싱스트리트"
 date:   2018-03-24 21:15:59
 author: Sungwon Lyu
-categories: RV
+categories: Reviews
 ---
 
 평점: 3.5

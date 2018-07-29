@@ -3,7 +3,7 @@ layout: post
 title:  "Understanding Disentangling in Beta-VAE"
 date:   2018-05-03 22:19:59
 author: Sungwon Lyu
-categories: DL
+categories: Generative Models
 ---
 
 ## WHY? 

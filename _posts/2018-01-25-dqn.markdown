@@ -3,7 +3,7 @@ layout: post
 title:  "Human-level control through deep reinforcement learning"
 date:   2018-01-25 12:21:59
 author: Sungwon Lyu
-categories: RL
+categories: Reinforcement Learning
 ---
 ## WHY? 
 기존의 강화학습 agent들은 각 게임마다 다른 feature를 추출하여 state로 사용하였기 때문에 각 게임마다 다른 모델로 학습해야 한다는 한계가 있었다. 

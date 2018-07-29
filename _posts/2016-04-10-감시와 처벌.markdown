@@ -3,7 +3,7 @@ layout: post
 title:  "감시와 처벌"
 date:   2016-04-10 13:06:59
 author: Sungwon Lyu
-categories: RV
+categories: Reviews
 ---
 1부 신체형
 

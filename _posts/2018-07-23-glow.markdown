@@ -3,7 +3,7 @@ layout: post
 title:  "Glow: Generative Flow with Invertible 1x1 Convolutions"
 date:   2018-07-23 19:40:59
 author: Sungwon Lyu
-categories: DL
+categories: Generative Models
 ---
 
 ## WHY? 

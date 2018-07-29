@@ -3,7 +3,7 @@ layout: post
 title:  "Variational Inference with Normalizing Flows"
 date:   2018-03-29 17:44:59
 author: Sungwon Lyu
-categories: DL
+categories: Generative Models
 ---
 
 ## WHY? 

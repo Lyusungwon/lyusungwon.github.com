@@ -3,7 +3,7 @@ layout: post
 title:  "설득의 과학"
 date:   2016-01-20 08:25:59
 author: Sungwon Lyu
-categories: RV
+categories: Reviews
 ---
 https://www.youtube.com/watch?v=kIjI_CaNGxk&app=desktop
 

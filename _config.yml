@@ -9,12 +9,12 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Sungwon's blog
-subtitle: "Personal blog with some machine learning"
+title: Hitchhiker's Guide to Deep Learning
+subtitle: "Don't Panic"
 email: lyusungwon@dm.snu.ac.kr
 name: Sungwon Lyu
 description: >
-  Personal blog with some machine learning.
+  Rejoice in what you learn and spread it
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -48,35 +48,38 @@ ga_tracking_id: 'UA-122319501-1'
 
 # Category descriptions (for archive pages)
 descriptions:
-  - cat: PL
-    desc: "Personal"    
+  - cat: Opinions
+    desc: "My personal opinion"    
 
-  - cat: NLP
-    desc: "Natural Language Processing"
+  - cat: Natural Language Processing
+    desc: "Papers about natural language processing"
 
-  - cat: PGM
-    desc: "Probabilistic Graphical Modeling"
+  - cat: Probabilistic Graphical Modeling
+    desc: "Papers about probabilistic graphical modeling"
 
-  - cat: RL
-    desc: "Reinforcement Learning"
+  - cat: Reinforcement Learning
+    desc: "Papers about reinforcement learning"
 
-  - cat: CV
-    desc: "Computer Vision"    
+  - cat: Computer Vision
+    desc: "Papers about computer vision"    
 
-  - cat: DL
-    desc: "Deep Learning"    
+  - cat: Generative Models
+    desc: "Papers about generative models"    
 
-  - cat: CI
-    desc: "Code Implementation"    
+  - cat: Deep Learning
+    desc: "Papers about overall deep learning"    
 
-  - cat: SW
-    desc: "School Work"    
+  - cat: Pytorch Implementations
+    desc: "Pytorch implementations of deep learning models"    
 
-  - cat: PR
-    desc: "Presentation"    
+  - cat: Study Archive
+    desc: "Brief summaries of what I studied"    
 
-  - cat: RV
-    desc: "Reviews"    
+  - cat: Presentations
+    desc: "Presentation Slides of my presentations"    
+
+  - cat: Reviews
+    desc: "Personal reviews of books and movies"    
 
 # Social icons and sharing options
 #

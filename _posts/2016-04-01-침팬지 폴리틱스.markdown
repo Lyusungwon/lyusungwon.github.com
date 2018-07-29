@@ -3,7 +3,7 @@ layout: post
 title:  "침팬지 폴리틱스"
 date:   2016-04-01 15:33:59
 author: Sungwon Lyu
-categories: RV
+categories: Reviews
 ---
 p40 침팬지는 겁을 먹고 대들때 가장 큰소리로 비명을 지른다.
 

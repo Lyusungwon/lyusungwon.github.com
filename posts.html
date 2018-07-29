@@ -14,8 +14,9 @@ permalink: /posts/
 </ul>
 {% endfor %} -->
 
-{% assign sorted_cats = site.categories | sort %}
-{% for category in sorted_cats %}
+<!-- {% assign sorted_cats = site.categories | sort %} -->
+<!-- {% for category in sorted_cats %} -->
+{% for category in site.categories %}
   {% capture cat %}{{ category | first }}{% endcapture %}
   <h2 id="{{cat}}">{{ cat | capitalize }}</h2>
   {% for desc in site.descriptions %}

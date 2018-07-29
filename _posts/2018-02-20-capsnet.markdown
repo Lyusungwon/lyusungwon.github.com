@@ -3,7 +3,7 @@ layout: post
 title:  "Dynamic Routing Between Capsules"
 date:   2018-02-20 12:31:59
 author: Sungwon Lyu
-categories: DL
+categories: Computer Vision
 ---
 ## WHY? 
 기존 CNN의 문제점은 Max-pooling layer에서 feature의 대략적인 존재여부만 확인하고 정확한 공간정보를 버린다는 것이다. 이 때문에 특징이 어디에 존재하건 존재여부를 확인할 수 있는 invariance한 성질을 가지지만 그 특징이 다른 특징들과 전혀 조화를 이루지 못하더라도 이를 구별하지 못한다. 우리가 원하는 것은 특징의 단순한 존재여부 뿐만 아니라 전체적인 조화까지 고려하는 equivariance의 성질이다.  

@@ -3,7 +3,7 @@ layout: post
 title:  "SCAN: Learning Hierarchical Compositional Visual Concepts"
 date:   2018-05-08 19:01:59
 author: Sungwon Lyu
-categories: DL
+categories: Generative Models
 ---
 
 ## WHY? 

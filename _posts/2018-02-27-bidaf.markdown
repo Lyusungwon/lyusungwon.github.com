@@ -3,7 +3,7 @@ layout: post
 title:  "Bi-Directional Attention Flow for Machine Comprehension"
 date:   2018-02-27 16:04:59
 author: Sungwon Lyu
-categories: NLP
+categories: Natural Language Processing
 ---
 ## WHY? 
 기존 machine comprehension 모델들의 attention은 문맥의 조그마한 부분에 주목하여 문맥을 특정 길이의 벡터로 요약을 하고 어탠션을 단방향적으로, temporal하게 적용하였다. 이러한 기존의 attention 방법은 요약하는 과정에서 정보를 손실하기도 하고 순차적으로 이루어지는 attention간에 의존성이 나타나기 때문에 attention의 역할과 model의 역할이 섞이게 된다. 

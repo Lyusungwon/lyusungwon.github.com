@@ -3,7 +3,7 @@ layout: post
 title:  "Unpaired Image-to-image Translation using Cycle-Consistent Adversarial Network"
 date:   2018-04-05 11:24:59
 author: Sungwon Lyu
-categories: DL
+categories: Generative Models
 ---
 
 ## WHY? 

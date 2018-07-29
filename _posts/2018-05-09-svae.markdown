@@ -3,7 +3,7 @@ layout: post
 title:  "Generating Sentences from a Continuous Space"
 date:   2018-05-09 11:32:59
 author: Sungwon Lyu
-categories: NLP
+categories: Natural Language Processing
 ---
 
 ## WHY? 

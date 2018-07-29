@@ -3,7 +3,7 @@ layout: post
 title:  "node2vec"
 date:   2018-01-06 13:49:59
 author: Sungwon Lyu
-categories: PGM
+categories: Probabilistic Graphical Modeling
 ---
 ## WHY? 
 네트워크의 노드들을 Skipgram과 같이 distributed representation을 통하여 나타내려고 했다. 최근의 이러한 시도들은 노드의 이웃들을 경직되게 정의하여 다양한 네트워크 모양의 패턴을 파악하는데 실패하였다. 

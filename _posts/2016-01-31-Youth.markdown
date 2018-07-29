@@ -3,7 +3,7 @@ layout: post
 title:  "Youth"
 date:   2016-01-31 14:45:59
 author: Sungwon Lyu
-categories: RV
+categories: Reviews
 ---
 장면 장면, 대사 대사가 압권인 영화
 

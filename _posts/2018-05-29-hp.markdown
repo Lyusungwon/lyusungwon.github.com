@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Human Performance (6. Language and communication)"
+title:  "Human Performance"
 date:   2018-05-28 23:36:59
 author: Sungwon Lyu
-categories: SW
+categories: Study Archive
 ---
 
 # 6. Language and communication
@@ -95,6 +95,104 @@ communication에는 음성 말고도 여러가지가 작용한다.
 - 대면 대화와 상체 비디오(tv based video), 얼굴 비디오(web cam를 통한 대화를 비교하였는데 웹캠을 활용한 소통의 이해도가 현저히 낮았다. 비디오는 대면 대화에 비하여 신뢰도가 낮았고 remote work는 고립감을 증가시키고 관계를 악화시켰다. 
 ### 8.6 Crew resource management and team situation awareness
 - 팀원간의 소통에 대한 주의를 기울이기 위하여 crew resource management(CRM)라는 개념이 도입되어 소통의 비언어적 표현을 강조하였다. 이에는 팀원간의 권위(authority gradient: 신참이 고참의 권위로 인하여 말을 잘 못하는)를 감소하는 방법도 포함되었고 피드백이나 모호하지 않은 의사소통이 팀의 성과에 큰 영향을 미치는 것도 밝혀내었다. CRM은 큰 성과를 거두었다. Team Situation Awareness(TSA)이라는 개념도 관심을 받기 시작했는데 이는 팀원들 사이에 공유된 상황판단이 팀의 성과에 얼마나 영향을 미치느냐를 다룬다. 이는 단순히 개인들의 이해의 총합과는 다르다. 
+
+# 8. Decision making
+## 1. Introduction p245
+- 의사 결정은 어떻게 내려질까
+## 2. Classes and features of dm p246
+- 의사결정이란 많은 정보로 부터 몇개의 반응을 도출하는 mapping이다. 의사결정은 다음과 같은 특성을 지닌다. 
+- Uncertainty: 세상은 불확실하기 때문에 정보 또한 불확실하다. 안좋은 결과가 나올 위험은 risk라고 한다.
+- Time: 의사결정의 성격은 내리는 시간에 따라 달라진다. Time pressure가 있다면 의사결정에 크게 영향을 미친다. 
+- Familiarity and Expertise: 익숙한 경험이 있다면 더 빠르게 의사결정을 내릴 수 있다. 의사 결정에는 두가지 작용이 평행하게 일어난다. System1(holistic)은 감에 따라 빠르게 의사결정을 내리고 system2(analytic)은 천천히 분석하며 이성적으로 의사결정을 내린다. 
+- Class of decision-making research: 의사 결정 연구에는 세가지 종류가 있다. Rational, normative decision making은 사람들이 어떤 프레임워크를 통하여 의사결정을 해야 하는지(should)를 다룬다. Cognitive / information processing은 인간 의사결정의 제약과 한계에 대하여 연구한다. Naturalistic decision making은 실제 상황에서 사람들(주로 전문가)이 어떻게 의사결정을 내리는지를 연구한다. 
+## 3. An information processing model of decision making p247
+- 그림 8.1의사 결정 과정 (왼쪽 위는 일반 정보처리)
+- 의사결정은 다음과 같이 이루어진다. 우선 자연으로 부터 Cue를 찾고 여러가지 cue들에 대하여 과거의 경험을 통하여 selective attention을 통하여 cue들을 선택한다. 이 cue들은 상황에 대한 판단(diagnosis)의 기초가 된다. 외부 정보와 장기 기억을 활용하여 Diagnosis를 내리고 이를 통하여 현재, 미래 상황에 대한 가설을 세운다. 많은 의사결정은 iterative하다. 세번째로는 행동을 선택하는 것이다. 행동의 결과 나타날 수 있는 가능한 결과들이 위험을 정의한다. 위험은 확률probability과 값value으로 정의된다. 
+- 이 과정에 더하여 모델에 세 가지 메커니즘이 있다. 1) 의사결정에 드는 노력이나 자원 2) 자신에 대한 판단meta cognition 3) 피드백 순환 feedback loop
+## 4. What is “Good” decision making p249
+- 여러 시각이 있다. 1) 예상 가능한 가치(expected value) 2) 좋은 의사결정은 좋은 결과를 가져오는 것이다(hindsight bias). 3) 전문성expertise: 의사결정을 전문가의 기술처럼 생각하는 것이다. 
+## 5. Diagnosis and situation assessment in decision making p250
+- 좋은 의사결정에 정확한 상황 판단은 필수적이다. 상황 판단에는 네가지가 영향을 미친다. 
+### 5.1 Estimating cues: perception
+- 사람들은 일반적으로 평균과 편차를 잘 예측하는 편이지만 환경의 세가지 특성에 있어서 체계적인 인지적 오류(bias)를 범하는 것으로 나타났다. 
+#### 5.1.1 Proportions
+- 사람들은 중간치의 비율(0.5~0.95)에서는 잘 예측하지만 극치에서는 보수적인 성격을 보인다. 이는 사람의 본연적인 보수적 성향 뿐만 아니라(never say never) 그 사건의 salience에 따라서 판단하는 경향이 있기 때문에 특이한 일은 과대평가하는 경향이 있다. 하지만 이에 대한 예외는 사람들이 극히 드문 사건에 대해서는 설명보다는 자신의 경험을 기반으로 판단하여 일어날 가능성을 과소평가하는 경향이 있다는 것이다. 
+#### 5.1.2 Projections
+- 사람들은 비 선형적인 트렌드를 예측하는데 약하다. 
+#### 5.1.3 Randomness
+_ 사람들은 자연의 무작위성을 인지하는데 약하다. HHH가 나오면 T가 나올 것이라고 생각함
+### 5.2 Evidence Accumulation. Selective attention: cue seeking and hypothesis formation
+- 그림 8.3- 정보를 통합하는 과정
+- cue는 세가지 특성을 지닌다. 1) Cue diagnosticity: cue가 가설에 얼마나 정보를 주느냐(evidence) 2)  Cue reliability / credibility: 특정 cue가 얼마나 믿을만 한다. Diagnosticity와 reliability를 곱하여 정보의 가치(information value)를 구할 수 있다. 3) 물리적 실체(physical feature)를 가진 cue는 더욱 중요시 된다. 
+- 이 특성을 바탕으로 selective attention은 1) cue들의 정보의 가치들을 평가하고, 2) 이 정보의 가치들을 통합하며 3) 이 예상expectancy을 바탕으로 가설을 선택한다. 마지막으로 4) 초기 믿음들을 검증, 재평가한다(testing / retesting). 위와 같이 여러 정보들을 통합하는 것들은 여러 어려움을 가지고 있다.
+#### 5.2.1 Information cues are missing
+- 정보가 완전하지 않을 수 있다. 없는 정보는 memory를 참고한다. 
+#### 5.2.2 Cues are numerous: information overload
+- 정보가 너무 많아도 이를 통합하는데 어려움을 느낀다. 정보가 너무 많으면 좋지 않은 의사결정을 내리게 된다. 그럼에도 불구하고 사람들은 정보를 더 많이 가지려는 경향이 있다. 
+#### 5.2.3 Cues are differentially salient
+- cue들 을 평가할 때 관심을 끌거나 처리하기 쉬운 정보들과 부정적인(salient) 정보들에 대하여 더 중요하게  평가하는 경향이 있다(salience bias - overprocessing). 반대로 해석이 어려운 cue는 저평가 하는 경향이 있다. 또한 cue의 부재에 대해서도 저평가 하는 경향이 있다. 
+#### 5.2.4 Processed cues are not differentially weighted by information value
+- As-if heuristic이란 사람들이 정보를 평가할 때 각 정보들이 같은 가치를 가지고 있는 것 처럼 평가하는 성향이다. 이는 그렇게 하는 것이 인지적으로 편하기 때문에 일어나는 성향이다.
+### 5.3 Expectations in diagnosis: The role of long-term memory
+- cue가 합쳐질 때 memory가 영향을 미친다.
+#### 5.3.1 representativeness (pattern of data)
+- Representative heuristic이란 과거 증상의 기억와 cue들을 correlate하는 것이다(구름이 많고 기압이 낮으면 비가 왔었다). 이는 문제는 없지만 기본적인 확률(base rate)를 고려하지 않고 사용하면 문제가 된다. Accessibility는 salient한 증상을 과대평가 하는 것이다.
+#### 5.3.2 The availability heuristic (estimating frequency of hypothesis)
+- Availability는 흔한 증상을 과대 평가하는 것이다. 과거의 빈번했던 기억들은 더 쉽게 회상된다. 또한 가설이 단순할 때 더 쉽게 회상된다. 
+### 5.4 Belief Changes over time
+- 상황 판단은 시간에 따라 변한다. 
+#### 5.4.1 Anchoring heuristic
+- Anchoring heuristic이란 가설을 평가할 때  초반의 평가에 더욱 의존하는 것이다. 
+#### 5.4.2 The confirmation bias
+- Confirmation bias란 사람들이 자신의 초기 판단을 확증하는 정보를 탐색하는 경향이다. 
+#### 5.4.3 Decision fatigue
+- 판단이 반복되면 사람들은 판단에 피로를 느낀다.
+### 5.5 Implications of biases and heuristics in diagnoses
+- 이러한 사람들의 인지적 한계는 환경적 제약이나 때문에 많이 발생한다. 또한 shortcut을 선호하는 성향은 시간과 에너지 제약으로 부터 비롯된다. Decision research는 어떤 환경에서 이러한 한계를 보완할 수 있는지 연구한다. 
+## 6. Choice of action p264
+- 사람들은 각 결과에 다른 가치를 부여하고 이는 행동에 영향을 미친다.
+### 6.1 Certain choice
+- 그림 8.5 확실한 상황에서 선택
+- 1) 우선 각 특성의 중요도를 평가한다. 2) 각 물건마다 각 특성의 값을 부여한다. 3) 곱해서 더한다. 4) 제일 높은 점수를 선택한다. 이 과정은 compensatory 과정이라고 불린다. 하지만 일상적으로 이루어지는 선택의 과정은 rule of satisficing을 따라 충분히 좋은 선택지를 고른다. Elimination by aspect는 중요한 특성을 고려하고 그 기준에 부합하지 않는 선택지들을 제거하는 것이다. 
+### 6.2 Choice under uncertainty: the expected value model
+- 그림 8.6 불확실한 상황에서 선택
+- 각 상황의 가치과 그 상황이 일어날 확률을 곱하여 선택한다. 
+### 6.3 Heuristics and biases in uncertain choice
+- 불확실한 상황에서는 인지적 한계가 나타난다. 
+#### 6.3.1 Direct retrieval
+- 위험을 생각하지 않고 과거의 경험에 따라 그대로 행동하는 경향이 있다. 
+#### 6.3.2 Distortions of values and costs: loss aversion
+- 그림 8.7 객관적 가치와 주관적 가치의 관계
+- 사람은 손실을 피하려는 경향이 있어서 상황의 가치를 객관적으로 평가하지 못한다. 
+#### 6.3.3 Temporal discounting
+- 사람들은 단기 이익에 더 가치를 두는 경향이 있다. 
+#### 6.3.4 Perception of probability
+- 그림 8.8 확률에 대하여 사람들이 판단하는 경향
+- 실제로 매우 낮은 확률의 사건은 과대평가하고(sluggish beta) 중간 정도의 확률들은 낮게 평가한다. 
+#### 6.3.5 The framing effect
+- 사람들은 같은 선택도 어떤 frame에 담기느냐에 따라 다르게 가치를 둔다. (winning, losing, frame of reference, sunk cost bias)
+### 6.4 The decision to behave safely
+- 사람들이 안전하게 행동하도록 만드는 것은 중요하다. 이를 위하여 framing effect나 temporal discounting과 같은 bias들을 활용하면 효과적이다.  
+## 7. Effort and meta cognition p274
+- 좋은 의사결정에는 두가지가 중요하게 영향을 미친다. 
+### 7.1 Effort
+- 그림 8.9 노력과 의사결정 성과의 관계(performance-resource function)
+- 의사 결정을 할 때에는 effort가 든다. 일상 생활에서는 위 관계에 맞춰 적당히 의사결정을 내린다(Contingent model)
+### 7.2 Meta-cognition and (Over) confidence
+- 그림 8.10 accuracy-confidence calibration space
+- 자기 자신을 인지(meta-cognition)하는 데에는 confidence가 중요하게 작용한다. Confidence 는 1) 문제 상황 진단이나 문제 난이도, 2) 증거 신뢰도 를 판단할 때 영향을 미친다. 3) 정보가 많아질 수록, 4) 정보의 출처가 많아질 수록 confidence가 높아지는 성향이 있다.
+## 8. Experience and expertise in decision making p278
+- 전문가들은 반복된 경험과 훈련에 따라 recognition primed decision making(RPDM)을 내린다(=holistic decision making). 하지만 다른 기술과는 달리 의사결정은 전문가라도 성공이 보장되지 않는다. 그 이유는 1) 피드백이 모호하고 2) 피드백이 지연되는 경우가 있으며 3) 피드백을 선택적으로 받아드리기 때문이다. 
+## 9. Improving decision making p281
+- 의사결정을 개선하기 위하여 무엇을 할 수 있을까
+### 9.1 Training debiasing
+- 사람들에게 인지적 편향(bias)을 알게 하는 것만으로도 이를 회피하는데 효과적인 것으로 나타났다. 여러 실험을 통하여 앞에서 지적되었던 인지적인 편향을 개선할 수 있다는 것이 밝혀졌다. 
+### 9.2 Proceduralization
+- Proceduralization은 의사결정의 질을 높이기 위한 절차의 기술이다. Debiasing과 preoceduralization을 합쳐서 의사결정을 개선할 수 있는 전략을 제시한다(p282).
+### 9.3 Displays
+- 정보들의 효과적인 display는 인간의 selective attention을 도움으로서 의사결정에 크게 도움을 줄 수 있다. 
+### 9.4 Automation and decision support tools
+- 자동화를 통하여 전문가들의 의사결정을 돕는 도구를 사용한다면 의사결정을 크게 향상시킬 수 있다. 
 
 출처: 
 - Wickens, C.D. and Hollands, J. G. 2000. Engineering Psychology and Human Performance, 3rd ed. Prentice Hall. USA. (Sigma press. 323.4845)

@@ -3,7 +3,7 @@ layout: post
 title:  "InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets"
 date:   2018-03-14 21:16:59
 author: Sungwon Lyu
-categories: DL
+categories: Generative Models
 ---
 ## WHY? 
 기존의 GAN을 통하여 이미지를 생성할 때 이미지의 특성에 대한 조건을 부여할 수 없었다. 

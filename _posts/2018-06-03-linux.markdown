@@ -3,7 +3,7 @@ layout: post
 title:  "Linux Basic (Udemy)"
 date:   2018-06-03 17:36:59
 author: Sungwon Lyu
-categories: SW
+categories: Study Archive
 ---
 Few useful notes from [Learn Linux in 5 Days and Level Up Your Career](https://www.udemy.com/learn-linux-in-5-days/learn/v4/content). Highly recommandable course for people who want to start Linux!
 

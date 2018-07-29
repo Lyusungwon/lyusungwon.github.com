@@ -3,7 +3,7 @@ layout: post
 title:  "Improved Variational Inference with Inverse Autoregressive Flow"
 date:   2018-04-04 20:03:59
 author: Sungwon Lyu
-categories: DL
+categories: Generative Models
 ---
 
 ## WHY? 

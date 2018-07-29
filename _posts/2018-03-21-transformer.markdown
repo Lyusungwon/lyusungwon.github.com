@@ -3,7 +3,7 @@ layout: post
 title:  "Attention is all you need"
 date:   2018-03-21 10:15:59
 author: Sungwon Lyu
-categories: NLP
+categories: Natural Language Processing
 ---
 ## WHY? 
 기존의 sequence transduction모델들은 복잡한 RNN이나 CNN을 기반으로 하였고 attention mechanism을 활용하였다. 

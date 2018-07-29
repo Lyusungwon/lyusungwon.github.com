@@ -3,7 +3,7 @@ layout: post
 title:  "Distributed Representations of Sentences and Documents"
 date:   2018-01-04 11:59:59
 author: Sungwon Lyu
-categories: NLP
+categories: Natural Language Processing
 ---
 ## WHY? 
 한 단어의 길이는 정해져 있지만 한 문단이나 문서의 길이는 정해져 있지 않기 때문에 하나의 벡터로 만드는데 어려움이 있다. 이를 극복하기 위해 Paragraph Vector를 제안한다. 

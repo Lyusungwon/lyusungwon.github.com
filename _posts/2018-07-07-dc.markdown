@@ -3,7 +3,7 @@ layout: post
 title:  "Design of Digital Circuits"
 date:   2018-07-07 19:10:59
 author: Sungwon Lyu
-categories: SW
+categories: Study Archive
 ---
 Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/spring2018/doku.php) course by Onur Mutlu in ETH Zurich. Thank you very much for opening up the great lectures and materials for self-learners like me. This course provided me invaluable insight to understand computers.
 

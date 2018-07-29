@@ -3,7 +3,7 @@ layout: post
 title:  "Massively Parallel Methods for Deep Reinforcement Learning"
 date:   2018-06-13 13:27:59
 author: Sungwon Lyu
-categories: RL
+categories: Reinforcement Learning
 ---
 
 ## WHY? 

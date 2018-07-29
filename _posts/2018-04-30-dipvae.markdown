@@ -3,7 +3,7 @@ layout: post
 title:  "Variational Inference of Disentangled Latent Concepts from Unlabeled Observations"
 date:   2018-04-30 11:46:59
 author: Sungwon Lyu
-categories: DL
+categories: Generative Models
 ---
 
 ## WHY? 

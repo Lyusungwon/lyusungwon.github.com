@@ -3,7 +3,7 @@ layout: post
 title:  "Mask R-CNN"
 date:   2018-02-17 15:18:59
 author: Sungwon Lyu
-categories: DL
+categories: Computer Vision
 ---
 ## WHY? 
 기존의 화면에서 사물을 박스치는(Detection) Faster-RCNN에서 한 단계 더 나아가서 특정사물의 영역을 표시하는(Segmentation) 모델을 제안하였다. 

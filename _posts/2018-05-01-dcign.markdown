@@ -3,7 +3,7 @@ layout: post
 title:  "Deep Convolutional Inverse Graphics Network"
 date:   2018-05-01 17:08:59
 author: Sungwon Lyu
-categories: DL
+categories: Generative Models
 ---
 
 ## WHY? 

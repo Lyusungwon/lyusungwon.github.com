@@ -3,7 +3,7 @@ layout: post
 title:  "휘게 라이프"
 date:   2017-02-12 17:53:59
 author: Sungwon Lyu
-categories: RV
+categories: Reviews
 ---
 1장 돈으로 살 수 없는 행복, 휘게
 

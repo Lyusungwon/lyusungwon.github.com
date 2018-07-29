@@ -3,7 +3,7 @@ layout: post
 title:  "Distributed Representations of Words and Phrases and their Compositionality"
 date:   2018-01-05 15:35:59
 author: Sungwon Lyu
-categories: NLP
+categories: Natural Language Processing
 ---
 ## WHY? 
 최근 제시된 Skipgram의 성능을 향상시킬만한 여러 기법을 시행하였다. 
