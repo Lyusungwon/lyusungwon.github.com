@@ -6,7 +6,7 @@ permalink: /about/
 
 <img src="{{ site.baseurl }}/assets/profile.jpg" title="Profile Picture" class="profile">
 
-Welcome! My name is Sungwon Lyu and this is my personal blog for my reviews and summaries of books, movies and papers in machine learning field. I started to post in English since the 1st of July, 2018. I am studying [Datamining]("http://dm.snu.ac.kr") as a graduate student in Seoul National University, South Korea. \\
+Welcome! My name is Sungwon Lyu and this is my personal blog for my reviews and summaries of books, movies and papers in machine learning field. I started to post in English since the 1st of July, so please don't be confused by Korean postings. I am studying [Datamining]("http://dm.snu.ac.kr") as a graduate student in Seoul National University, South Korea. \\
 I'm very interested in deep learning including generative models, reinforcement learning and natural language processing. I also love books, comics, movies and swimming. I occasionally implement machine learning models in Pytorch and upload in [Github](http://github.com/lyusungwon). Any share of ideas, contacts, comments, criticisms, and questions are welcome (lyusungwon@dm.snu.ac.kr). 
 \\
 \\
