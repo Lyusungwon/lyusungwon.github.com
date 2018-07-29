@@ -51,28 +51,28 @@ descriptions:
   - cat: Opinions
     desc: "My personal opinion"    
 
-  - cat: Natural Language Processing
-    desc: "Papers about natural language processing"
+  - cat: Natural-Language-Processing
+    desc: "Papers about natural language processing"    
 
-  - cat: Probabilistic Graphical Modeling
-    desc: "Papers about probabilistic graphical modeling"
+  - cat: Probabilistic-Graphical-Modeling
+    desc: "Papers about probabilistic graphical modeling"    
 
-  - cat: Reinforcement Learning
-    desc: "Papers about reinforcement learning"
+  - cat: Reinforcement-Learning
+    desc: "Papers about reinforcement learning"    
 
-  - cat: Computer Vision
+  - cat: Computer-Vision
     desc: "Papers about computer vision"    
 
-  - cat: Generative Models
+  - cat: Generative-Models
     desc: "Papers about generative models"    
 
-  - cat: Deep Learning
+  - cat: Deep-Learning
     desc: "Papers about overall deep learning"    
 
-  - cat: Pytorch Implementations
+  - cat: Pytorch-Implementations
     desc: "Pytorch implementations of deep learning models"    
 
-  - cat: Study Archive
+  - cat: Study-Archive
     desc: "Brief summaries of what I studied"    
 
   - cat: Presentations
