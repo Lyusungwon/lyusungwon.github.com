@@ -3,8 +3,8 @@ layout: page
 title: "Posts"
 permalink: /posts/
 ---
-{% assign categories = site.categories | sort:"order" %}
-{% for category in categories %}
+{% assign sorted_cat = site.categories | sort%}
+{% for category in sorted_cat %}
   {% capture cat %}{{ category | first }}{% endcapture %}
   <h2 id="{{cat}}">{{ cat | capitalize }}</h2>
   {% for desc in site.descriptions %}
