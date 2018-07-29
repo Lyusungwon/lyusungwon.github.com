@@ -9,8 +9,8 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Hitchhiker's Guide to Deep Learning
-subtitle: "Don't Panic!"
+title: Deep Learning Travels
+subtitle: "Don't panic"
 email: lyusungwon@dm.snu.ac.kr
 name: Sungwon Lyu
 description: >
