@@ -3,7 +3,7 @@ layout: post
 title:  "[Pytorch] Alphachu (Ape-X DQN)"
 date:   2018-07-07 16:45:59
 author: Sungwon Lyu
-categories: Pytorch-Implementation
+categories: Pytorch-Implementations
 ---
 
 피카츄 배구에 대한 [Ape-X DQN](https://lyusungwon.github.io/rl/2018/07/07/apex.html)을 Pytorch로 구현
