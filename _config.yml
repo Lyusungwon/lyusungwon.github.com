@@ -10,11 +10,11 @@ exclude:
 
 # Site settings
 title: Hitchhiker's Guide to Deep Learning
-subtitle: "Don't Panic"
+subtitle: "Don't Panic!"
 email: lyusungwon@dm.snu.ac.kr
 name: Sungwon Lyu
 description: >
-  Rejoice in what you learn and spread it
+  Rejoice in what you learn and spread it!
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
