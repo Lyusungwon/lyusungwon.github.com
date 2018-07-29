@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "A Two-Step Disentanglement Method"
+date:   2018-07-27 17:27:59
+author: Sungwon Lyu
+categories: DL
+---
+
+## WHY? 
+This paper wanted to disentangle the label related and label unrelated information from data. The model of this paper is simpler and more effective than that of [Disentangling Factors of Variation in Deep Representations Using Adversarial Training](https://lyusungwon.github.io/dl/2018/04/12/dfat.html).
+
+## WHAT?
+Let S represents labeled information and Z represents the rest. 
+![image](/assets/images/tsd.png){: .center-image width="50px"}
+The first step is to train the S-encoder with a classifier to classify the label so that S-encoder can extract the information that are related to label.
+In the second step, while the S-encoder is kept fixed, the output of S-encoder and that of Z-encoder are used together for reconstruction. To make sure that Z-encoder does not contain any information of label, another adversarial classifier are train to classify the output of Z-encoder. Z-encoder and decoder is trained together to minimize the loss of reconstruction and the negative of the loss of classifier (maximize the loss of classifier: $$L_{rec} - \lambda * L_{adv}$$).
+
+## So?
+This model showed to clearly disentangle the distribution of unlabeled data while the model of [Disentangling Factors of Variation in Deep Representations Using Adversarial Training](https://lyusungwon.github.io/dl/2018/04/12/dfat.html) showed some entanglement in Z due to its Gaussian distribution assumption. This model showed clean disentanglement in MNIST, Sprites and NORB. Interestingly, this paper used the model to financial data to disentangle the information of market from the price of a specific stock. 
+
+## Critic
+Simple but clean idea to disentangle the labeled information.
+
+[Hadad, Naama, Lior Wolf, and Moni Shahar. "A Two-Step Disentanglement Method." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0473.pdf)
