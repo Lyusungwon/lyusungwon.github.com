@@ -48,49 +48,41 @@ ga_tracking_id: 'UA-122319501-1'
 
 # Category descriptions (for archive pages)
 descriptions:
+  - cat: Best-Courses
+    desc: "Recommendation on courses of readings"    
+
   - cat: Opinions
     desc: "My personal opinion"    
-    order: 1
 
   - cat: Natural-Language-Processing
     desc: "Papers about natural language processing"    
-    order: 2
 
   - cat: Probabilistic-Graphical-Modeling
     desc: "Papers about probabilistic graphical modeling"    
-    order: 3
 
   - cat: Reinforcement-Learning
     desc: "Papers about reinforcement learning"    
-    order: 4
 
   - cat: Computer-Vision
     desc: "Papers about computer vision"    
-    order: 5
 
   - cat: Generative-Models
     desc: "Papers about generative models"    
-    order: 6
 
   - cat: Deep-Learning
     desc: "Papers about overall deep learning"    
-    order: 7
 
   - cat: Pytorch-Implementations
     desc: "Pytorch implementations of deep learning models"    
-    order: 8
 
   - cat: Study-Archive
     desc: "Brief summaries of what I studied"    
-    order: 9
 
   - cat: Presentations
     desc: "Presentation Slides of my presentations"    
-    order: 10
 
   - cat: Reviews
     desc: "Personal reviews of books and movies"    
-    order: 11
 
 # Social icons and sharing options
 #
