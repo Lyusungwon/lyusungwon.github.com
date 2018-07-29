@@ -50,36 +50,47 @@ ga_tracking_id: 'UA-122319501-1'
 descriptions:
   - cat: Opinions
     desc: "My personal opinion"    
+    order: 0
 
   - cat: Natural-Language-Processing
     desc: "Papers about natural language processing"    
+    order: 1
 
   - cat: Probabilistic-Graphical-Modeling
     desc: "Papers about probabilistic graphical modeling"    
+    order: 2
 
   - cat: Reinforcement-Learning
     desc: "Papers about reinforcement learning"    
+    order: 3
 
   - cat: Computer-Vision
     desc: "Papers about computer vision"    
+    order: 4
 
   - cat: Generative-Models
     desc: "Papers about generative models"    
+    order: 5
 
   - cat: Deep-Learning
     desc: "Papers about overall deep learning"    
+    order: 6
 
   - cat: Pytorch-Implementations
     desc: "Pytorch implementations of deep learning models"    
+    order: 7
 
   - cat: Study-Archive
     desc: "Brief summaries of what I studied"    
+    order: 8
 
   - cat: Presentations
     desc: "Presentation Slides of my presentations"    
+    order: 9
 
   - cat: Reviews
     desc: "Personal reviews of books and movies"    
+    order: 10
 
 # Social icons and sharing options
 #
