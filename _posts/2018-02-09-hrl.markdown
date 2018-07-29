@@ -3,7 +3,7 @@ layout: post
 title:  "Hierarchical Deep Reinforcement Learning: Integrating Temporal Abstraction and Intrinsic Motivation"
 date:   2018-02-09 13:57:59
 author: Sungwon Lyu
-categories: Reinforcement Learning
+categories: Reinforcement-Learning
 ---
 ## WHY? 
 기존 DQN의 큰 문제 중 하나는 강화학습 도중 피드백이 sparse하거나 delayed된 경우 충분한 탐색을 하지 못한다는 것이다. 

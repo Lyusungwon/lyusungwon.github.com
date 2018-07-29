@@ -3,7 +3,7 @@ layout: post
 title:  "Ask Me Anything: Dynamic Memory Networks for Natural Language Processing"
 date:   2018-02-15 14:18:59
 author: Sungwon Lyu
-categories: Natural Language Processing
+categories: Natural-Language-Processing
 ---
 ## WHY? 
 기존의 언어 모델들은 특정 문제에만 좋은 성과를 보일 수 있는 구조를 가지고 있지만 일반적인 모든 문제에 적용하기는 힘들다. Dynamic Memory Network는 어떤 자연어 처리 문제도 해결할 수 있는 구조를 가지고 있다. 

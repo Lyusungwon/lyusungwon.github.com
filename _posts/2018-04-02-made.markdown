@@ -3,7 +3,7 @@ layout: post
 title:  "MADE: Masked Autoencoder for Distribution Estimation"
 date:   2018-04-02 17:03:59
 author: Sungwon Lyu
-categories: Generative Models
+categories: Generative-Models
 ---
 
 ## WHY? 

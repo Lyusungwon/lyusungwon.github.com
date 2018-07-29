@@ -3,7 +3,7 @@ layout: post
 title:  "Google's Multilingual Neural Machine Translation System: Enabling Zero-Shot Translation"
 date:   2018-02-20 21:53:59
 author: Sungwon Lyu
-categories: Natural Language Processing
+categories: Natural-Language-Processing
 ---
 ## WHY? 
 기존의 NMT(Neural Machine Translation) 모델들은 특정 source languange에서 특정 target language로만 번역할 수 있었고 이를 위하여 이에 맞는 corpus가 필요하였다. 

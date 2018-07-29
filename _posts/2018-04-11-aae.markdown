@@ -3,7 +3,7 @@ layout: post
 title:  "Adversarial Autoencoders"
 date:   2018-04-11 14:02:59
 author: Sungwon Lyu
-categories: Generative Models
+categories: Generative-Models
 ---
 
 ## WHY? 

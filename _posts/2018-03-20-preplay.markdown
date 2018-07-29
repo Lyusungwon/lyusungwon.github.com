@@ -3,7 +3,7 @@ layout: post
 title:  "Prioritized Experience Replay"
 date:   2018-03-20 18:31:59
 author: Sungwon Lyu
-categories: Reinforcement Learning
+categories: Reinforcement-Learning
 ---
 ## WHY? 
 기존의 DQN은 학습 데이터들 간의 연관관계를 없애기 위하여 데이터들을 Experience Replay에 저장해 두고 랜덤으로 샘플하여 학습하였다. 하지만 모든 경험이 같은 가치를 가지는 것은 아니다. reward가 sparse한 환경의 경우 특정 경험이 더욱 중요한 가치를 가질 수 있다. 

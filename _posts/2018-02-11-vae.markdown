@@ -3,7 +3,7 @@ layout: post
 title:  "Auto-Encoder Variational Bayes"
 date:   2018-02-11 18:18:59
 author: Sungwon Lyu
-categories: Generative Models
+categories: Generative-Models
 ---
 ## Note
 오토인코더는 분포 $$p(x)$$를 축소하여 latent variable z로 요약한 뒤 이를 재구성한 것과 원래의 데이터의 차이를 최소한으로 하도록 인코더와 디코더를 학습한다. 이 결과 z를 통하여 x의 가장 중요한 특징들을 요약하길 바란다.
