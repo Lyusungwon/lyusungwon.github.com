@@ -15,9 +15,9 @@ Matrix norm can be defined in various ways. One of them is p-norm, which can be 
 ## WHAT?
 Spectral norm of A ($$\sigma(A)$$) can be defined as follows.
 $$
-\sigma(A):=max_{h:h\neq 0}\frac{A\mathbb{h}}_2{\mathbb{h}}_2 = max_{\|\mathbb{h}\|\leq 1}\|A\mathbb{h}\|_2\\
- $$
-Given a layer function g : $$\mathbb{h}_{in} \leftarrow \mathbb{h}_{out}$$, Lipschitz norm $$\|g\|_{Lip}$$ is eqal to $$sup_{\mathbb{h}}\sigma(\nabla g(\mathbb{h}))$$. If we assume g as linear layer ($$g(\mathbb{h})=w\mathbb{h}$$), then $$\|g\|_{Lip} = sup_{\mathbb{h}}\sigma(\nabla g(\mathbb{h})) = sup_{\mathbb{h}}\sigma(W) = \sigma(W)$$. Since most of Lipschitz norm of non-linear activation function is bounded to 1, the Lipschitz norm of a discriminator can be bounded as follows. 
+\sigma(A):=max_{h:h\neq 0}\frac{\|A\mathbb{h}\|_2}{\|\mathbb{h}\|_2} = max_{\|\mathbb{h}\|\leq 1}\|A\mathbb{h}\|_2\\
+$$
+Given a layer function g : $$\mathbb{h}_{in} \rightarrow \mathbb{h}_{out}$$, Lipschitz norm $$\|g\|_{Lip}$$ is eqal to $$sup_{\mathbb{h}}\sigma(\nabla g(\mathbb{h}))$$. If we assume g as linear layer ($$g(\mathbb{h})=W\mathbb{h}$$), then $$\|g\|_{Lip} = sup_{\mathbb{h}}\sigma(\nabla g(\mathbb{h})) = sup_{\mathbb{h}}\sigma(W) = \sigma(W)$$. Since most of Lipschitz norm of non-linear activation function is bounded to 1, the Lipschitz norm of a discriminator can be bounded as follows. 
 $$
 \|f\|_{Lip} \leq \prod_{l=1}^{L+1}\sigma(W^l)\\
 $$
