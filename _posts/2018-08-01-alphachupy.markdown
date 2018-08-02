@@ -12,7 +12,7 @@ Training agents to learn how to play Pikachu Volleyball. Architecture is based o
 
 As it sounds, it is complicated. My method seems pretty primitive but it was the only way to train pikachu volleyball.
 
-![img](/assets/images/pika.png)
+![img](/assets/images/alphachu1.png)
 
 ## Before start
  - I tried this in Ubuntu and Mac. 
@@ -58,20 +58,20 @@ You can find demo on [youtube](https://www.youtube.com/watch?v=vSkLegIUD98).
 ### Graphs
 0.99 smoothed graphs for the first 7 days.
 #### Loss
-![img](/assets/images/loss.png)
+![img](/assets/images/alphachu2.png)
 
 #### Action
-![img](/assets/images/action.png)
+![img](/assets/images/alphachu3.png)
 
 #### Frame
-![img](/assets/images/frame.png)
+![img](/assets/images/alphachu4.png)
 
 #### Max Value
-![img](/assets/images/maxv.png)
+![img](/assets/images/alphachu5.png)
 
 #### Reward
-![img](/assets/images/reward.png)
+![img](/assets/images/alphachu6.png)
 
 #### Total reward
 My score - computer score (-15 ~ 15)
-![img](/assets/images/total_reward.png)
+![img](/assets/images/alphachu7.png)
