@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "[Pytorch] VAE-NF"
+date:   2018-07-31 22:09:59
+author: Sungwon Lyu
+categories: Pytorch-Implementations
+---
+
+Pytorch implementation of [Variational Inference with Normalizing Flows](https://lyusungwon.github.io/generative-models/2018/03/29/nf.html).
+
+[https://github.com/Lyusungwon/generative_models_pytorch](https://github.com/Lyusungwon/generative_models_pytorch)
+
+## Reference
+- https://github.com/ex4sperans/variational-inference-with-normalizing-flows
