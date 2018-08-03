@@ -182,9 +182,104 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 		- Performance Analysis
 
 13. Microprogramming
+- Performance Analysis 
+		- {# of instructions} x {Average CPI} x {Clock cycle time}
+		- Single cycle critical path
+			- $$T_c = t_{pcq_PC} + t_{mem} + max(t_{RFread}, t_{sext} + t_{mux}) + t_{ALU} + t_{mem} + t_{mux} + t_{RFsetup}$$
+		- Multi cycle performance
+			- $$T_c = t_{pcq} + t_{mux} + max(t_{ALU} + t_{mux}, t_{mem}) + t_{setup}$$
+- Microprogramming
+		- Microsequencer - control store - microinstruction
+		- Microinstruction
+			- data path, control signals
+		- State machine
+			- node(31 state), arcs(flow)
+		- Datapath
+			- Single-bus datapath
+			- gating, loading
+		- Advantages
+			- Power of Abstraction
 
 14. Pipelining
+- Pipelining Instruction Processing
+		- IF - ID/RF - EX/AG - MEM - WB
+		- Pipeline Registers
+		- Control Signals
+- Issues in Pipeline Design
+		- Balancing work in pipeline stages
+		- Keeping the pipeline correct, moving, and full in the presence of events that disrupt pipeline flow
+		- Handling excpetions, interrupts
+		- Minimizing stalls
+- Dependences
+		- Resource contention
+		- Data Dependences
+			- Flow dependence (RAW)
+			- Output dependence (WAW)
+			- Anti dependence (WAR)
+		- Contol dependences
+- Data dependence handling
+		- Five fundamental ways
+			- Detect and wait until value is abailable in register file
+			- Detect and forward/bypass data to dependent instruction
+			- Detect and eliminate the dependence at the software level
+			- Predict the needed value, execute "spexulatively"
+			- Do something else
+		- Interlocking
+			- Detect
+				- Scoreboarding
+				- Combinational dependence check logic
+			- Data Forwarding / Bypassing
+		- Control dependence
+		- Implementation
+			- nops, bubbles
+			- Hazard Unit, forwardAE, forwardBE
 
 15. Pipelining Issues
+- Control dependence handling
+		- Early Branch Resolution
+		- Control Forwarding
+- Hardware vs software based scheduling
+- Precise Exceptions
+		- Exceptions vs Interrupts
+		- Handling exceptions in pipelining
+- Reorder Buffer (ROB)
+		- Valid bits
+		- Random Access Memory vs Content Addressable Memory
+		- Indirection
+- Register Renaming
 
 16. Out-of-Order Execution
+- Out-of-Order Execution (Dynamic Instruction Scheduling)
+		- Register Renaming
+		- Tomasulo's Algorithm
+		- Register Alias Table (RAT)
+		- Reservation Stations
+- Dataflow Graph
+
+17. Out-of-Order, DataFlow, Superscalar Execution
+- Out-of-Order Execution
+		- Frontend register file (RAT)
+		- Architectural register file 
+		- Restricted Dataflow
+			- instruction window
+- Memory Dependence Handling
+		- Memory disambiguation problem
+			- Conservative
+			- Aggressive
+			- Intelligent
+		- Data Forwarding
+			- Load queue (LQ), store queue (SQ)
+			- store-to-load forwarding logic
+- Data Flow (at ISA level)
+- Superscalar Execution
+
+18. Branch Prediction
+19. Branch Prediction II, VLIW, Fine-Grained Multithreading
+20. SIMD Processors
+21. SIMD Processors II and Graphics Processing Units
+22. GPU Programming
+23. Systolic Arrays and Beyond
+23. Memory Organization and Memory Technology
+24. Memory Hierarchy and Caches
+25. More Caches
+25. Virtual Memory
