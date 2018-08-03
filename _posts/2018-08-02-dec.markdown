@@ -3,25 +3,29 @@ layout: post
 title:  "Unsupervised Deep Embedding for Clustering Analysis"
 date:   2018-08-02 13:41:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: Deep-Learning
 ---
 
 ## WHY? 
 There had been little study on learning representation that focus on clustering.
 
 ## WHAT?
-Deep Embedding Clustering(DEC) consists of two phases: parameter initialization with a deep autodncoder and (2) parameter optimization. This paper first describe the send 
-
-
+Deep Embedding Clustering(DEC) consists of two phases: parameter initialization with a deep autoencoder and (2) parameter optimization. This paper first describe the second phase. Assume encoder and inital cluster centroids are given, two steps are alternated to improve clustering: 1) compute soft assignment of embedded points to centroids, and 2) update encoder and refine centroids.\\
+![image](/assets/images/dec1.png){: .center-image width="50px"}
+Student's t-distriution is used as kernel for soft assignment. An auxiliary distribution p is designed to help learn from high confidence assignments. KL-divergence between soft assignment and auxiliary distribution is minimize by updating encoder and centroids. 
 $$
-q_{ij} = \frac{(1+\|z_i - \mu_j\|^2/\alpha)^{-\frac{\alpha+1}{2}}}{\sum_{j'}(1+\|z_i - \mu_j\|^2/\alpha)^{-\frac{\alpha+1}{2}}}
+q_{ij} = \frac{(1+\|z_i - \mu_j\|^2/\alpha)^{-\frac{\alpha+1}{2}}}{\sum_{j'}(1+\|z_i - \mu_j\|^2/\alpha)^{-\frac{\alpha+1}{2}}}\\
+p_{ij} = \frac{q_{ij}^2/f_j}{\sum_{j'}q_{ij'}^2/f_{j'}}, f_j = \sum_i q_{ij}\\
+L = KL(P\|Q) = \sum_i \sum_j p_ij \log \frac{p_{ij}}{q_{ij}}
 $$
-![image](/assets/images/tsd.png){: .center-image width="50px"}
+Trained Stacked Autoencoder(SAE) with denoising autoencoder for each layer is used to initialize the embeddings. Initial centroids are determined by k-means clustering  of initial embeddings. 
 
 ## So?
-This model showed to clearly disentangle the distribution of unlabeled data while the model of [Disentangling Factors of Variation in Deep Representations Using Adversarial Training](https://lyusungwon.github.io/dl/2018/04/12/dfat.html) showed some entanglement in Z due to its Gaussian distribution assumption. This model showed clean disentanglement in MNIST, Sprites and NORB. Interestingly, this paper used the model to financial data to disentangle the information of market from the price of a specific stock. 
+DEC outperformed many clustering methods including k-means, LDMGI, and SEC in unsupervised clustering task of MNIST, STL-10, and Reuters. 
+![image](/assets/images/dec2.png){: .center-image width="50px"}
+Visualization verified that embeddings are well separated.
 
 ## Critic
-Simple but clean idea to disentangle the labeled information.
+I like the idea to learn representation jointly with clustering, auxiliary target distribution seems like quite aritrary to me. 
 
-[Hadad, Naama, Lior Wolf, and Moni Shahar. "A Two-Step Disentanglement Method." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0473.pdf)
+[Xie, Junyuan, Ross Girshick, and Ali Farhadi. "Unsupervised deep embedding for clustering analysis." International conference on machine learning. 2016.](http://proceedings.mlr.press/v48/xieb16.pdf)
