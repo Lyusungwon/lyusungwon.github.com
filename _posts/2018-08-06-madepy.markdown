@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "[Pytorch] MADE"
+date:   2018-08-06 22:29:59
+author: Sungwon Lyu
+categories: Pytorch-Implementations
+---
+
+Pytorch implementation of [MADE: Masked Autoencoder for Distribution Estimation](https://lyusungwon.github.io/generative-models/2018/04/02/made.html).
+
+[https://github.com/Lyusungwon/generative_models_pytorch](https://github.com/Lyusungwon/generative_models_pytorch)
+
+## Reference
+- https://github.com/karpathy/pytorch-made
+
+## Note 
+- Masking gradient was tricky
