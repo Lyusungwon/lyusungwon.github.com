@@ -17,7 +17,7 @@ $$L(x_{t_1}, x_{t_2}, W) = \begin{array}{lr}D(x_{t_1}, x_{t_2}) & if |t_1 - t_2|
 
 ## So?
 This paper proved its concept by validating elementary features learned with MNIST with translation. And then, the model learned elementary features using the dataset of KITTI and SF. 
-![image](/assets/images/lsm1.png){: .center-image width="50px"}
+![image](/assets/images/lsm2.png){: .center-image width="50px"}
 The pretrained model showed comparable result to that of AlexNet from scratch, or features learned with SFA in Scene Recognition, Object Recognition, Intra-class keypoint matching and Visual Odometry. 
 Learnt feature may differ by the datasets used for training. 
 
