@@ -13,7 +13,10 @@ Feature learning in Convolution Neural Network requires many hand labeled data. 
 This paper tried to prove that the elementary features learned by egomotion is as useful as the one learned with labeled data by comparing the performance of models that have been pre-trained with each. To learn the features with egomotion, this paper suggests two stram architecture that consists of Base-CNN(BCNN) and Top-CNN(TCNN) and trained to classify the type of transformation.
 ![image](/assets/images/lsm1.png){: .center-image width="50px"}
 This paper suggest Slow Feature Analysis(SFA) as baseline. Based on the principle that useful features change slowly in time, following contrastive loss make the model learn the features that change slowly. 
-$$L(x_{t_1}, x_{t_2}, W) = \left\{ \begin{array}{lr}D(x_{t_1}, x_{t_2}) & if |t_1 - t_2| \leq T \\ 1 - max(0, m - D(x_{t_1}, x_{t_2})) & if |t_1 - t_2| > T \end{array} \right$$
+$$L(x_{t_1}, x_{t_2}, W) = \begin{array}{lr}D(x_{t_1}, x_{t_2}) & if |t_1 - t_2| \leq T \\ 1 - max(0, m - D(x_{t_1}, x_{t_2})) & if |t_1 - t_2| > T \end{array}$$
+$$L(x_{t_1}, x_{t_2}, W) = \left\{ \begin{array}D(x_{t_1}, x_{t_2}) & if |t_1 - t_2| \leq T \\ 1 - max(0, m - D(x_{t_1}, x_{t_2})) & if |t_1 - t_2| > T \end{array} \right$$
+$$L(x_{t_1}, x_{t_2}, W) = \left\{ \begin{array}{lr}D(x_{t_1}, x_{t_2}) & if |t_1 - t_2| \leq T \\ 1 - max(0, m - D(x_{t_1}, x_{t_2})) & if |t_1 - t_2| > T \end{array} $$
+$$L(x_{t_1}, x_{t_2}, W) = \left{ \begin{array}{lr}D(x_{t_1}, x_{t_2}) & if |t_1 - t_2| \leq T \\ 1 - max(0, m - D(x_{t_1}, x_{t_2})) & if |t_1 - t_2| > T \end{array} \right$$
 
 ## So?
 This paper proved its concept by validating elementary features learned with MNIST with translation. And then, the model learned elementary features using the dataset of KITTI and SF. 
