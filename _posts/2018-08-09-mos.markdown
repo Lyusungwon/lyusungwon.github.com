@@ -13,7 +13,7 @@ This paper first prove that the expresiveness of a language model is restricted 
 The last part of language models usuallt consist of softmax layer applied on a product of context vector(h) and a word embedding w.\\
 $$
 P_{\theta}(x|c) = \frac{\exp\mathbf{h}_c^t\mathbf{w}_x}{\sum_{x'}\exp \mathbf{h}_c^t\mathbf{w}_x}
-$$
+$$\\
 This paper formulate language modeling as language factorization problem. To do this, three matrices can be defined: context vectors, word embedding, and log probabilities of the true data distribution. 
 $$
 \mathbf{H}_{\theta} = 
@@ -42,7 +42,7 @@ $$
 $$
 Also, we can define a set of matrices formed by applying row-wise shift to A.
 $$
-F(\mathbf{A}) = \{\mathbf{A} + \mathbf{\Lambda}\mathbf{J}_{N,M}\mathbf{\Lambda}$$is diagonal and $$\mathbf{\Lambda} \in \mathbb{R}^{N \times N}\}
+F(\mathbf{A}) = \{\mathbf{A} + \mathbf{\Lambda}\mathbf{J}_{N,M}\mathbf{\Lambda} is diagonal and \mathbf{\Lambda} \in \mathbb{R}^{N \times N}\}
 $$
 We can derive two property of this set: F(A) is all possible logits of the true data distribution, and all matrices in F(A) have similar rank, with the maximum rank difference being 1. If we want HW to be in F(A), HW must have rank as large as A. However, the rank of HW is strictly upperbounded by the embedding size d. 
 $$
