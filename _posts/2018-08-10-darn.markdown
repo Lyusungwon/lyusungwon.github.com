@@ -11,9 +11,10 @@ Learning directed generative model is difficult.
 
 ## WHAT?
 Deep AutoRegressive Network(DARN) models images with hierarchical, autoregressive hidden layers.
+
 ![image](/assets/images/darn.png){: .center-image width="50px"}
 
-DARN has three components: a encoder q(H|X), a decoder prior p(H), and a decoder conditional p(X|H). We consider all the latent variables (h) in this model are binary. The decoder prior is an autoregressive model. The conditional probabilities can be modeled with simple logistic regressions.
+DARN has three components: a encoder $$q(H|X)$$, a decoder prior p(H), and a decoder conditional $$p(X|H)$$. We consider all the latent variables (h) in this model are binary. The decoder prior is an autoregressive model. The conditional probabilities can be modeled with simple logistic regressions.
 
 $$
 p(h) = \prod_{j=1}^{n_h}p(h_j|h_{1:j-1})\\
@@ -30,7 +31,7 @@ $$
 p(H^{(l)}|H^{(l+1)}) = \prod_{j=1}^{n_h^{(l)}} p(H_j^{(l)}|H_{1:j-1}^{(l)}, H^{(l+1)})\\
 q(H^{(k)}|H^{(k-1)}) = \prod_{j=1}^{n_h^{(k)}} q(H_j^{(k)}|H_{1:j-1}^{(k)}, H^{(k-1)})\\
 d^{l} = tanh(Uh^{(l+1)})\\
-p(H_j^{l} = 1|h^{(l)}^{1:j-1}, h^{(l+1)}) = \sigma(W_j^(H)\cdot (h_{1:j-1}^{(l)},d^{l}) + b_j^{H})
+p(H_j^{l} = 1 | h^{(l)}_{1:j-1}, h^{(l+1)}) = \sigma(W_j^(H)\cdot (h^{(l)}_{1:j-1},d^{l}) + b_j^{H})
 $$
 
 The cost function is defined with minimum description length (MDL), which is equivalent to Helmholtz variational free energy.
