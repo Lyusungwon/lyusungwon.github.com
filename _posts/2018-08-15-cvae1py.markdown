@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "[Pytorch] Convolutional VAE"
+date:   2018-04-15 13:17:59
+author: Sungwon Lyu
+categories: Pytorch-Implementations
+---
+
+Pytorch implementation of [Variational Autoencoder](https://lyusungwon.github.io/dl/2018/02/11/vae.html) with convolutional encoder/decoder.
+
+[https://github.com/Lyusungwon/generative_models_pytorch](https://github.com/Lyusungwon/generative_models_pytorch)
+
+## Note 
+- Divided encoder and decoder
+
+## Results
+### Config
+- model: 180823222128_cvae_5000_200_1e-05_28_28_1_64_16_1
+- epochs 5000 batch-size 200 lr 1e-5 filter-num 64 (32, 128) latent-size 16 L 1
+
+### Train
+![image](/assets/images/cvae1py1.png){: .center-image width="50px"}
+- 32: KLD 27.08 Recon 74.22 Train loss 101.2
+- 64: KLD 26.76 Recon 69.90 Test loss 96.66
+- 128: KLD 27.03 Recon 66.04 Train loss 93.08
+- VAE: KLD 24.13 Recon 76.11 Train loss 100.2
+
+### Test
+![image](/assets/images/cvae1py2.png){: .center-image width="50px"}
+- 32: KLD 26.96 Recon 67.90 Test loss 94.81
+- 64: KLD 26.6 Recon 65.98 Test loss 92.58
+- 128: KLD 26.59 Recon 66.33 Test loss 92.92
+- VAE: KLD 24.08 Recon 69.89 Test loss 93.87
+
+### Reconstruction
+![image](/assets/images/cvae1py3.png){: .center-image width="50px"}
+
+### Sampling
+![image](/assets/images/cvae1py4.png){: .center-image width="50px"}

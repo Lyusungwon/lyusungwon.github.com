@@ -15,3 +15,22 @@ Pytorch implementation of [Variational Autoencoder](https://lyusungwon.github.io
 
 ## Note 
 - Divided encoder and decoder
+
+## Results
+### Config
+- model: 180824083213_vae_5000_200_1e-05_28_28_400_16_1
+- epochs 5000 batch-size 200 lr 1e-5 hidden-size 400 latent-size 16 L 1
+
+### Train
+![image](/assets/images/vaepy1.png){: .center-image width="50px"}
+- KLD 24.13 Recon 76.11 Train loss 100.2
+
+### Test
+![image](/assets/images/vaepy2.png){: .center-image width="50px"}
+- KLD 24.08 Recon 69.89 Test loss 93.87
+
+### Reconstruction
+![image](/assets/images/vaepy3.png){: .center-image width="50px"}
+
+### Sampling
+![image](/assets/images/vaepy4.png){: .center-image width="50px"}

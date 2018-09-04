@@ -14,4 +14,17 @@ Pytorch implementation of [MADE: Masked Autoencoder for Distribution Estimation]
 - https://github.com/karpathy/pytorch-made
 
 ## Note 
-- Masking gradient was tricky
+- Autoregressive sampling was tricky
+
+## Results
+### Config
+- model: 180817182411_made_1000_200_0.001_28_28_1000_2_1_False
+- epochs 1000 batch-size 200 lr 1e-3 hidden-size 1000 layer-size 2 mask-num 1 start-sample 394 random-order False
+
+### Test loss
+![image](/assets/images/madepy1.png){: .center-image width="50px"}
+
+### Samples
+![image](/assets/images/madepy2.png){: .center-image width="50px"}
+- Original - Reconstruction - Inpainting input - Inpainting output
+

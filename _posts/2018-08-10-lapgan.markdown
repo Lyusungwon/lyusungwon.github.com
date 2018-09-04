@@ -14,12 +14,13 @@ Laplacian Pyramid Framework is used for restoring compressed image. When a image
 
 ## WHAT?
 Laplacian Generative Adversarial Network (LAPGAN) generate high resolution image by generating residuals with a series of generators.
-![image](/assets/images/lapgan.png){: .center-image width="50px"}
+![image](/assets/images/lapgan1.png){: .center-image width="50px"}
 
 $$
 \tilde{I}_k = u(\tilde{I}_{k+1}) + \tilde{h}_k = u(\tilde{I}_{k+1}) + G_k(z_k, u(\tilde{I}_{k+1}))
 $$
 
+![image](/assets/images/lapgan2.png){: .center-image width="50px"}
 Generators at each stage take coarse image from previous stage and z as input and try to predict residuals. On the other hand, discriminators try to distinguish generated residuals and real residuals. Generators and discriminators can be conditioned with label vectors.
 
 ## So?

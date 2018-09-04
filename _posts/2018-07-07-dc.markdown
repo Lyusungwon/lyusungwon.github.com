@@ -274,12 +274,235 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 - Superscalar Execution
 
 18. Branch Prediction
+- Control dependence handling
+		- Stall
+		- Brach prediction
+		- Branch delay slot
+		- Fine-grained multithreading
+		- Predicated execution
+		- Multipath execution
+- Branch Prediction
+		- Misprediction penalty
+		- Always Guess NextPC = PC + 4
+			- predicate combining
+			- predicated execution
+		- Branch Target Buffer (BTB)
+		- Compile time (static)
+			- Always not taken
+			- Always taken
+			- Backward taken, forward not taken
+			- Profile based
+			- Program Analysis based
+			- Programmer-based
+				- Progmas
+		- Run time (dynamic)
+			- Last time prediction
+			- Two-bit counter based prediction
+			- Two-level prediction
+				- global branch correlation
+					- global history register (GHR) / pattern history table (PHT)
+				- local branch correlation
+					- local history register
+			- Hybrid
+			- Advanced algorithms
+
 19. Branch Prediction II, VLIW, Fine-Grained Multithreading
+- Branch Prediction
+		- Advanced algorithms
+			- Loop branch dector and predictor
+			- Perceptron branch predictor
+			- Hybrid history length based predictor
+			- Branch confidence estimation
+- Branch Delay Slot
+		- Delayed branching with squashing
+- Predicated Combining
+- Predicated execution
+- Multipath execution
+- Call and Return Prediction
+		- Indirect branch prediction
+			- Return Address Stack
+- VLIW (Very Long Instruction Word)
+		- RISC (Reduced Instruction Set Computer)
+		- Superblock
+- Fine-Grained Multithreading
+		- Modern GPUs
+
 20. SIMD Processors
+- SIMD Processing (Single Instruction Multiple Data)
+		- SISD, SIMD, MISD, MIMD
+		- Array Processor
+		- Vector Processor
+			- Vector registers
+			- Vector length register (VLEN)
+			- Vector stride register (VSTR)
+			- Vector mask register (VMASK)
+			- Vector functional units
+			- Memory Banking
+			- Vector Memory System
+			- Vector Chaining
+			- Multiple memory ports
+			- Vector stripmining
+			- Gather / Scatter operation
+			- Masked vector instruction
+				- simple implementation, density-time implementation
+
 21. SIMD Processors II and Graphics Processing Units
+- SIMD processing
+		- Vector instruction execution
+			- Vector unit structure
+			- Automatic code vectorization
+- SIMD operations in modern ISA
+		- Image overlaying
+- GPUs (Graphics Processing Units)
+		- Programming model
+			- SPMD (Single Program Multiple Data)
+		- Harware execution model
+			- SIMT (Single Instruction Multiple Thread)
+		- Fine-Grained Multithreading
+			- Warp (Wavefront)
+			- Dynamic warp formation, merging
+
 22. GPU Programming
-23. Systolic Arrays and Beyond
-23. Memory Organization and Memory Technology
+- GPU Programming
+		- Thread / Block / Grid
+		- Memory Hierarchy
+		- CUDA / OpenCL
+			- Traditional Program Structure in CUDA
+			- CUDA programming language
+				- Memory allocation, memory copy, kernel launch, memory deallocation, explicit synchronization
+				- Memory access
+- GPU Architecture
+		- Streaming Processor array
+		- Streaming Multiprocessors (SM)
+		- Straming Processors (SP)
+- Performance Consideration
+		- Global memory acces
+		- CPU-GPU data transfers
+		- Memory Access
+			- Latency hiding
+				- Occupancy
+			- Memory coalescing
+			- Array of Structures (AoS) / Structure of Arrays (SoA)
+			- Data Reuse
+				- Tiling
+				- Shared memory
+					- Memory Bank Conflicts
+		- SIMD Utilization
+			- Intra-warp divergence, Divergence-free execution
+			- Vector reduction
+				- Divergence-free mapping
+		- Atomic Operations
+			- Atomic Conflicts
+			- Histogram Calculation
+				- Privatization
+		- Data Transfer between CPU and GPU
+			- Synchronous and asynchronous transfer
+			- Streams
+
+23a. Systolic Arrays and Beyond
+- Systolic Arrays
+		- Systolic Architectures
+		- Systolic Computation
+		- Two-Dimensional systolic array
+		- Combinations
+		- Pipeline-parallelism
+			- Stage
+		- WARP Computer
+		- TPU (Tensor Processor Unit)
+- Decoupled Access / Execute (DAE)
+
+23b. Memory Organization and Memory Technology
+- A Computing System 
+		- Computation, communication, storage/memory
+- Memory Organization
+		- Memory array
+			- Address / data
+		- Interleaving (Banking)
+- Memory Technology
+		- DRAM (Dynamic Random Access Memory)
+		- SRAM (Static Random Access Memory)
+
+			- 
+		- Flip-Flops (Latches), Static RAM, Dynamic RAM, Other storage technology
 24. Memory Hierarchy and Caches
-25. More Caches
-25. Virtual Memory
+- Memory Hierarchy
+		- SRAM, DRAM, Hard Disk, Flash memory, PC-RAM, MRAM, RRAM
+		- Locality
+			-Temporal / Spatial
+		- Cache hierarchy
+		- Manual / Automatic management
+		- Hierarchical letency analysis
+			- Ti = ti + mi * Ti+1
+- Cache
+		- Block
+		- Design decisions
+			- Placement
+			- Replacement
+			- Granularity of management
+			- Write policy
+			- Instructions / data
+		- Tag store / data store
+		- Average memory access time (AMAT)
+			- (hit-rate * hit-latency) + (miss-rate * miss-latency)
+		- Hardware Cache Design
+			- Degree of associativity
+			- Direct-Mapped Cache, Set / Higher / Full Associativity
+		- Issues in set-associative caches
+			- Insertion
+			- Promotion 
+			- Eviction / replacement policy
+				- LRU (Least recently used)
+				- Not MRU (Most recently used)
+				- Hierarchical LRU
+				- Victim-NextVictim Replacement
+				- Random
+				- Set thrashing
+				- Belady's OPT
+
+25a. More Caches
+- Cache
+		- Handling Writes
+			- Write back, write back
+			- Write mis
+			- Subblock Cache
+		- Instruction / Data caches
+			- Separate / Unified
+		- Multilevel Caching
+			- Serial / parallel access to tag / data store
+- Cache Performance
+		- Cache size
+			- Working set
+		- Block size
+			- Subblocking
+		- Associativity
+		- Cache misses
+			- Compulsory miss, Capacity miss, Conflict miss
+		- Improve cache performance
+			- Reduce miss rate
+			- Reduce miss latency or miss cost
+			- Reduce hit latency or hit cost
+		- Software approaches
+			- Restructuring data access patterns
+				- Loop interchange
+				- Blocking (Tiling)
+			- Restructuring data layout
+				- Data structure separation / merging
+- Multi-Core Issues in Caching
+		- Private / Shared cache
+			- Resource Sharing
+		- Cache Coherence
+
+25b. Virtual Memory
+- Physical memory
+- Virtual Memory
+		- Indirection 
+		- Virtual pages / Physical frames
+		- Definitions
+			- Demand paging
+			- Page size
+			- Address Translation
+			- Virtual page number (VPN), Physical page number (PPN)
+			- Page table
+				- Valid bit, PPN, Replacement policy, Dirty bits
+		- Physical memory as a cache
+		- Translation Lookaside Buffer (TLB)
