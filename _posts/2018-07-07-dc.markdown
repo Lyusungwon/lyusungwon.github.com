@@ -399,7 +399,7 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 			- Synchronous and asynchronous transfer
 			- Streams
 
-23a. Systolic Arrays and Beyond
+23. Systolic Arrays and Beyond & Memory Organization and Memory Technology
 - Systolic Arrays
 		- Systolic Architectures
 		- Systolic Computation
@@ -410,8 +410,6 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 		- WARP Computer
 		- TPU (Tensor Processor Unit)
 - Decoupled Access / Execute (DAE)
-
-23b. Memory Organization and Memory Technology
 - A Computing System 
 		- Computation, communication, storage/memory
 - Memory Organization
@@ -457,50 +455,48 @@ Summary of [Design of Digital Circuits](https://safari.ethz.ch/digitaltechnik/sp
 				- Set thrashing
 				- Belady's OPT
 
-25a. More Caches
+25. More Caches & Virtual Memory
 - Cache
-	- Handling Writes
-		- Write back, write back
-		- Write mis
-		- Subblock Cache
-	- Instruction / Data caches
-		- Separate / Unified
-	- Multilevel Caching
-		- Serial / parallel access to tag / data store
+		- Handling Writes
+			- Write back, write back
+			- Write mis
+			- Subblock Cache
+		- Instruction / Data caches
+			- Separate / Unified
+		- Multilevel Caching
+			- Serial / parallel access to tag / data store
 - Cache Performance
-	- Cache size
-		- Working set
-	- Block size
-		- Subblocking
-	- Associativity
-	- Cache misses
-		- Compulsory miss, Capacity miss, Conflict miss
-	- Improve cache performance
-		- Reduce miss rate
-		- Reduce miss latency or miss cost
-		- Reduce hit latency or hit cost
-	- Software approaches
-		- Restructuring data access patterns
-			- Loop interchange
-			- Blocking (Tiling)
-		- Restructuring data layout
-			- Data structure separation / merging
+		- Cache size
+			- Working set
+		- Block size
+			- Subblocking
+		- Associativity
+		- Cache misses
+			- Compulsory miss, Capacity miss, Conflict miss
+		- Improve cache performance
+			- Reduce miss rate
+			- Reduce miss latency or miss cost
+			- Reduce hit latency or hit cost
+		- Software approaches
+			- Restructuring data access patterns
+				- Loop interchange
+				- Blocking (Tiling)
+			- Restructuring data layout
+				- Data structure separation / merging
 - Multi-Core Issues in Caching
-	- Private / Shared cache
-		- Resource Sharing
-	- Cache Coherence
-
-25b. Virtual Memory
+		- Private / Shared cache
+			- Resource Sharing
+		- Cache Coherence
 - Physical memory
 - Virtual Memory
-	- Indirection 
-	- Virtual pages / Physical frames
-	- Definitions
-		- Demand paging
-		- Page size
-		- Address Translation
-		- Virtual page number (VPN), Physical page number (PPN)
-		- Page table
-			- Valid bit, PPN, Replacement policy, Dirty bits
-	- Physical memory as a cache
-	- Translation Lookaside Buffer (TLB)
+		- Indirection 
+		- Virtual pages / Physical frames
+		- Definitions
+			- Demand paging
+			- Page size
+			- Address Translation
+			- Virtual page number (VPN), Physical page number (PPN)
+			- Page table
+				- Valid bit, PPN, Replacement policy, Dirty bits
+		- Physical memory as a cache
+		- Translation Lookaside Buffer (TLB)

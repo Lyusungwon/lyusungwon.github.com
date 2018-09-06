@@ -32,7 +32,8 @@ If we assume that auxiliary inference distribution also has a Markov structure,
 
 $$
 r(z_0, ... z_{t-1}|x, z_T) = \prod^T_{t=1}r_t(z_{t-1}|x, z_t)\\
-\log p(x) \leq \mathbb{E}_z[\log p(x, z_T) - \log q(z_0, ..., z_T|x) + \log r(z_0, ... z_{t-1}|x, z_T)] = \mathbb{E}_q[log[p(x, z_T)/q(z_0|x)] + \sum_{t=1}^T\log[r_t(z_{t-1}|x, z_t)/q_t(z_t|x,z_{t-1})]]\\
+\log p(x) \leq \mathbb{E}_z[\log p(x, z_T) - \log q(z_0, ..., z_T|x) + \log r(z_0, ... z_{t-1}|x, z_T)]\\
+ = \mathbb{E}_q[log[p(x, z_T)/q(z_0|x)] + \sum_{t=1}^T\log[r_t(z_{t-1}|x, z_t)/q_t(z_t|x,z_{t-1})]]
 $$
 
 Since auxiliary variational lowerbound cannot be calculated analytically, we estimate MCMC lowerbound by sampling from transitions($$q_t$$) and inverse model($$r_t$$).
