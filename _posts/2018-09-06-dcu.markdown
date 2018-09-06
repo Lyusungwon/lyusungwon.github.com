@@ -20,7 +20,7 @@ $$
 
 The problem of complex-valued mask is that the values can range from -$$\infty$$ to $$\infty$$(Unbounded mask). Unbounded mask may capture any form of appropriate mask, but empirically proved that the good optimization is difficult. 
 
-![image](/assets/images/dcu1.png){: .center-image width="50px"}
+![image](/assets/images/dcu2.png){: .center-image width="50px"}
 
 Previous work suggested sigmoid activation for each of real and imaginary part. However, seeing the distribution of appropriate mask, this activation can capture very limited area. DCU suggest polar-coordinate-wise masking to keep the mask bounded in a unit-circle in complex-space. 
 
@@ -33,8 +33,8 @@ Since former MSE losses(Spectrogram-MSE, Wave-MSE) did not correlated with evalu
 
 $$
 max_{\hat{y}} SDR(y, \hat{y}) := max_{\hat{y}} \frac{<y, \hat{y}>^2}{\|y\|^2\|\hat{y}\|^2 - <y, \hat{y}>^2}\\
-\prop min_{\hat{y}}\frac{\|y\|^2\|\hat{y}\|^2}{<y, \hat{y}>^2} - frac{<y, \hat{y}>^2}{<y, \hat{y}>^2}\\
-\prop min_{\hat{y}}\frac{\|\hat{y}\|^2}{<y, \hat{y}>^2}
+\propto min_{\hat{y}}\frac{\|y\|^2\|\hat{y}\|^2}{<y, \hat{y}>^2} - frac{<y, \hat{y}>^2}{<y, \hat{y}>^2}\\
+\propto min_{\hat{y}}\frac{\|\hat{y}\|^2}{<y, \hat{y}>^2}
 $$
 
 To prevent the zero division and bound the loss to -1 to 1, weighted-SDR loss is proposed.
