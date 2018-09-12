@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "Mesos: A Platform for Fine-Grained Resource Sharing in the Data Center"
+date:   2018-09-10 10:43:59
+author: Sungwon Lyu
+categories: Distributed-Processing
+---
+
+## Summary
+Mesos is a platform that provides cross-framework resource allocation. The greatest challenge for cross-framework resource sharing is that various kinds of frameworks may have their own different scheduling. Mesos overcome this problem by adopting two-level scheduling mechanism called resource offers. 
+
+### Framework of Mesos
+![image](/assets/images/mesos1.png){: .center-image width="50px"}
+
+### Resource offer process
+![image](/assets/images/mesos2.png){: .center-image width="50px"}
+
+### Mesos API function for schedulers and executors.
+![image](/assets/images/mesos3.png){: .center-image width="50px"}
+
+## Strengths
+Using Mesos is especially useful when there are needs for different frameworks including various versions of them. Since Mesos is designed to interfere as least as possible, even new framework can be tested easily. This paper reported Mesos works surprisingly well on fine-grained tasks. 
+
+## Weaknesses
+Mesos  implemented several methods to keep its robustness such as revoke or rescinds. These methods seem naive compared to resource allocation within a framework. In other words, decentralized scheduler may not reach global optimum. 
+
+## New things I learned
+I didn't know cross-framework resource sharing is possible.
+
+## Discussion topics
+In which area would Mesos be especially useful?
+
+[Hindman, Benjamin, et al. "Mesos: A Platform for Fine-Grained Resource Sharing in the Data Center." NSDI. Vol. 11. No. 2011. 2011.](http://static.usenix.org/events/nsdi11/tech/full_papers/Hindman_new.pdf)
