@@ -24,16 +24,16 @@ $$
 \mathbf{f} = \mathbf{P}^T((\mathbf{U}^T\mathbf{x} + \mathbf{b}_x)\circ(\mathbf{V}_i^T\mathbf{y}+ \mathbf{b}_y)) + \mathbf{b}\\
 \mathbf{f} = \mathbf{P}^T(\sigma(\mathbf{U}_i^T\mathbf{x})\circ\sigma(\mathbf{V}_i^T\mathbf{y})) + \mathbf{b}\\
 \mathbf{f} = \mathbf{P}^T(\sigma(\mathbf{U}_i^T\mathbf{x}\circ\mathbf{V}_i^T\mathbf{y})) + \mathbf{b}\\
-\mathbf{f} = \mathbf{P}^T(\sigma(\mathbf{U}_i^T\mathbf{x})\circ\sigma(\mathbf{V}_i^T\mathbf{y})) + h_x(\mathbb{x}) + h_y(\mathbb{y}) + \mathbf{b}\\
+\mathbf{f} = \mathbf{P}^T(\sigma(\mathbf{U}_i^T\mathbf{x})\circ\sigma(\mathbf{V}_i^T\mathbf{y})) + h_x(\mathbf{x}) + h_y(\mathbf{y}) + \mathbf{b}\\
 $$
 
 These mechanism can be used to extract information in visual question-answering. This model capture multimodal attention in each layers. Assume q as question embedding and F as image features. 
 
 $$
-\alpha = softmax(\mathbb{P}^T_{\alpha}(\sigma(\mathbb{U}^T_{\mathbb{q}}\mathbb{q}\cdot\mathcal{1}^T)\odot\sigma(\mathbb{V}^T_{\mathbb{F}}\mathbb{F})))\\
-\hat{\mathbb{v}} = \parallel_{g = 1}^{G}\sum^{S^2}_{s=1}\alpha_{g,s}\mathbb{F}_s\\
-p(a|\mathbb{q}, \mathbb{F}; \Theta) = softmax(\mathbb{P}^T_{O}(\sigma(\mathbb{W}^T_{\mathbb{q}}\mathbb{q})\odot\sigma(\mathbb{V}^T_{\hat{\mathbb{v}}}\hat{\mathbb{v}})))\\
-\hat{a} = argmax p(a|\mathbb{q}, \mathbb{F}; \Theta)
+\alpha = softmax(\mathbf{P}^T_{\alpha}(\sigma(\mathbf{U}^T_{\mathbf{q}}\mathbf{q}\cdot\mathbb{1}^T)\odot\sigma(\mathbf{V}^T_{\mathbf{F}}\mathbf{F})))\\
+\hat{\mathbf{v}} = \parallel_{g = 1}^{G}\sum^{S^2}_{s=1}\alpha_{g,s}\mathbf{F}_s\\
+p(a|\mathbf{q}, \mathbf{F}; \Theta) = softmax(\mathbf{P}^T_{O}(\sigma(\mathbf{W}^T_{\mathbf{q}}\mathbf{q})\odot\sigma(\mathbf{V}^T_{\hat{\mathbf{v}}}\hat{\mathbf{v}})))\\
+\hat{a} = argmax p(a|\mathbf{q}, \mathbf{F}; \Theta)
 $$
 
 This model is called Multimodal Low-rank Bilinear Attention Networks(MLB). With residual connection, it is called Multimodal Attention Residual Networks(MARN).
