@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "Hadamard Product for Low-rank Bilinear Pooling"
+date:   2018-09-19 11:15:59
+author: Sungwon Lyu
+categories: Deep-Learning
+---
+
+## WHY? 
+Bilinear model can caputure rich relation of two vectors. However, the computational complexity of bilinear model is huge due to its high dimensionality. To make bilinear model more applicable, this paper suggests low-rank bilinear pooling using Hadamard product. 
+
+## WHAT?
+Bilinear model have huge matrix W of N x M. Instead of huge matrix W, decomposed matrix U and V can be used to reduce computation. Also, instead of making a model for a feature, matrix P can be used to capture multiple features.
+
+$$
+f_i = \sum^N_{j=1}\sum^M_{k=1} w_{ijk}x_j y_k + b_i = \mathbf{x}^T\mathbf{W}_i\mathbf{y} + b_i\\
+= \mathbf{x}^T\mathbf{U}_i\mathbf{V}_i^T\mathbf{y} + b_i = \mathbb{1}(\mathbf{U}_i^T\mathbf{x}\circ\mathbf{V}_i^T\mathbf{y}) + b_i\\
+\mathbf{f} = \mathbf{P}^T(\mathbf{U}_i^T\mathbf{x}\circ\mathbf{V}_i^T\mathbf{y}) + \mathbf{b}
+$$
+
+Full model includes bias vectors for each linear projections. Also, non-linear activation functions can increase representativeness. Activation can be either right after linear mapping or after Hadamard product. Finally, shorcut connection can be applied as residual learning. Applying these technique after low-rank bilinear model is generalized form of [MRN]()
+
+$$
+\mathbf{f} = \mathbf{P}^T((\mathbf{U}^T\mathbf{x} + \mathbf{b}_x)\circ(\mathbf{V}_i^T\mathbf{y}+ \mathbf{b}_y)) + \mathbf{b}\\
+\mathbf{f} = \mathbf{P}^T(\sigma(\mathbf{U}_i^T\mathbf{x})\circ\sigma(\mathbf{V}_i^T\mathbf{y})) + \mathbf{b}\\
+\mathbf{f} = \mathbf{P}^T(\sigma(\mathbf{U}_i^T\mathbf{x}\circ\mathbf{V}_i^T\mathbf{y})) + \mathbf{b}\\
+\mathbf{f} = \mathbf{P}^T(\sigma(\mathbf{U}_i^T\mathbf{x})\circ\sigma(\mathbf{V}_i^T\mathbf{y})) + h_x(\mathbb{x}) + h_y(\mathbb{y}) + \mathbf{b}\\
+$$
+
+These mechanism can be used to extract information in visual question-answering. This model capture multimodal attention in each layers. Assume q as question embedding and F as image features. 
+
+$$
+\alpha = softmax(\mathbb{P}^T_{\alpha}(\sigma(\mathbb{U}^T_{\mathbb{q}}\mathbb{q}\cdot\mathcal{1}^T)\odot\sigma(\mathbb{V}^T_{\mathbb{F}}\mathbb{F})))\\
+\hat{\mathbb{v}} = \parallel_{g = 1}^{G}\sum^{S^2}_{s=1}\alpha_{g,s}\mathbb{F}_s\\
+p(a|\mathbb{q}, \mathbb{F}; \Theta) = softmax(\mathbb{P}^T_{O}(\sigma(\mathbb{W}^T_{\mathbb{q}}\mathbb{q})\odot\sigma(\mathbb{V}^T_{\hat{\mathbb{v}}}\hat{\mathbb{v}})))\\
+\hat{a} = argmax p(a|\mathbb{q}, \mathbb{F}; \Theta)
+$$
+
+This model is called Multimodal Low-rank Bilinear Attention Networks(MLB). With residual connection, it is called Multimodal Attention Residual Networks(MARN).
+
+## So?
+MARN achieved SOTA results in VQA. 
+
+## Critic
+Apllying multimodality in attention seems creative. Visualization of attention would be nice. 
+
+[Kim, Jin-Hwa, et al. "Hadamard product for low-rank bilinear pooling." arXiv preprint arXiv:1610.04325 (2016).](https://arxiv.org/abs/1610.04325)
