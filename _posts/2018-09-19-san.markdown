@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "Stacked Attention Networks for Image Question Answering"
+date:   2018-09-19 10:40:59
+author: Sungwon Lyu
+categories: Deep-Learning
+---
+
+## WHY? 
+Visual question answering task is answering natural language questions based on images. To solve questions that require multi-step reasoning, stacked attention networks(SANs) stacks several layers of attention on parts of images based on query.
+
+## WHAT?
+![image](/assets/images/san1.png){: .center-image width="50px"}
+
+Image model extracts feature map from image with VGGNet structure.
+
+![image](/assets/images/san2.png){: .center-image width="50px"}
+
+Question model uses the final layer of LSTM to encode question. 
+
+![image](/assets/images/san3.png){: .center-image width="50px"}
+
+Question can also be encoded through CNN based question model. 
+
+![image](/assets/images/san4.png){: .center-image width="50px"}
+
+Using the extracted features of images($$v_I$$) and texts($$v_Q$$), attention is applied to image. Several layers of attentions can be stacked to progressively pay attention. 
+
+$$
+h_A = tanh(W_{I,A}v_I\oplus(W_{Q,A}v_Q + b_A))\\
+p_I = softmax(W_P h_A + b_P)\\
+\tilde{v}_I = \sum_i p_i v_i\\
+u = \tilde{v}_I + v_Q\\
+
+h_A^k = tanh(W^k_{I,A}v_I\oplus(W^k_{Q,A}u^{k-1} + b^k_A))\\
+p^k_I = softmax(W^k_P h^k_A + b^k_P)\\
+\tilde{v}^k_I = \sum_i p^k_i v_i\\
+u^k = \tilde{v}^k_I + u^{k-1}\\
+p_{ans} = softmax(W_u u^K + b_u)
+$$
+
+## So?
+![image](/assets/images/san5.png){: .center-image width="50px"}
+
+SAN achieved SOTA results in DAQUAR-ALL, DAQUAR-REDUCED, COCO-QA and VQA. Also, the learned layers of attention showed progressive focusing of important part of image.
+
+## Critic
+Fundamental paper in VQA area. 
+
+[Yang, Zichao, et al. "Stacked attention networks for image question answering." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016.](https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Yang_Stacked_Attention_Networks_CVPR_2016_paper.html)
