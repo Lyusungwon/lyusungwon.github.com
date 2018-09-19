@@ -18,7 +18,7 @@ f_i = \sum^N_{j=1}\sum^M_{k=1} w_{ijk}x_j y_k + b_i = \mathbf{x}^T\mathbf{W}_i\m
 \mathbf{f} = \mathbf{P}^T(\mathbf{U}_i^T\mathbf{x}\circ\mathbf{V}_i^T\mathbf{y}) + \mathbf{b}
 $$
 
-Full model includes bias vectors for each linear projections. Also, non-linear activation functions can increase representativeness. Activation can be either right after linear mapping or after Hadamard product. Finally, shorcut connection can be applied as residual learning. Applying these technique after low-rank bilinear model is generalized form of [MRN]()
+Full model includes bias vectors for each linear projections. Also, non-linear activation functions can increase representativeness. Activation can be either right after linear mapping or after Hadamard product. Finally, shorcut connection can be applied as residual learning. Applying these technique after low-rank bilinear model is generalized form of [MRN](https://lyusungwon.github.io/deep-learning/2018/09/18/mrn.html).
 
 $$
 \mathbf{f} = \mathbf{P}^T((\mathbf{U}^T\mathbf{x} + \mathbf{b}_x)\circ(\mathbf{V}_i^T\mathbf{y}+ \mathbf{b}_y)) + \mathbf{b}\\
