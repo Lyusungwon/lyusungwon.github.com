@@ -13,14 +13,14 @@ Word embedding using neural network([Skipgram](https://lyusungwon.github.io/natu
 Traditional method of word representation is count-based representation (bag-of-contexts). This method is counting the cooccurance of two words within a certain window forming sparse matrix M with row of vocabulary and column of context. The popular measure of assiciation is pointwise mutual information(PMI). To solve the problem of negative values in PMI, modified positive PMI(PPMI) is widely used. 
 
 $$
-PMI(w, c) = \log\frac{\hat{P}(w,c)}{\hat{P}(w)\hat{P}(c)} = \log\frac{#(w,c)\cdot|D|}{#(w)\cdot#(c)}\\
+PMI(w, c) = \log\frac{\hat{P}(w,c)}{\hat{P}(w)\hat{P}(c)} = \log\frac{\#(w,c)\cdot|D|}{\#(w)\cdot\#(c)}\\
 PPMI(w,x) = max(PMI(w,c), 0)
 $$
 
 Since word representation of count-based model can be too sparse, Singular Value Decomposition(SVD) is used on PPMI matrix to reduce the dimension. 
 
 $$
-M_d = U_d\cdot\Sigma_d\cdotV_d^T\\
+M_d = U_d\cdot\Sigma_d\cdot V_d^T\\
 W^{SVD} = U_d\cdot\Sigma_d\\
 C^{SVD} = V_d
 $$

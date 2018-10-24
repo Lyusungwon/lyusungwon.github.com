@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Dependency-Based Word Embeddings"
+date:   2018-10-24 11:40:59
+author: Sungwon Lyu
+categories: Natural-Language-Processing
+---
+
+## WHY? 
+Traditional continuous word embeddings based on linear contexts. In other words, word embeddings considered only surrounding words as context. 
+
+## WHAT?
+This paper introduces dependency based word embedding to capture more meaningful context. The result of dependency parsing of sentences is used as context instead of surrounding words.
+![image](/assets/images/dbwe1.png){: .center-image width="50px"}
+
+## So?
+![image](/assets/images/dbwe2.png){: .center-image width="50px"}
+While previous BoW reflect the domain aspect, dependency based embedding capture semantic type of the target word. In other words, while BoW find words that associate with w, Deps find words that behave like w. 
+
+## Critic
+Inspirational work for word embedding.
+
+[Levy, Omer, and Yoav Goldberg. "Dependency-based word embeddings." Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers). Vol. 2. 2014.](https://www.transacl.org/ojs/index.php/tacl/article/view/570)
