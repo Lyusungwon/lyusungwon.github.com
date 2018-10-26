@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "Neural Word Embedding as Implicit Matrix Factorization"
+date:   2018-10-25 13:49:59
+author: Sungwon Lyu
+categories: Natural-Language-Processing
+---
+
+## WHY? 
+[Skip-Gram Negative Sampling(SGNS)](https://lyusungwon.github.io/natural-language-processing/2018/01/05/skipgram2.html) showed amazing performance compared to traditional word embedding methods. However, it was not clear where SGNS converge to. 
+
+## WHAT?
+This paper proved that minimizing the loss function of SGNS is equivalent to factorizing the word-context matrix with association measure of shifted [PMI](https://lyusungwon.github.io/natural-language-processing/2018/10/01/ids.html). 
+
+The loss function of SGNS can be factorized into a loss function of a specific (w, c) pair while k being the number of negative samples. 
+
+$$
+l = \sum_{w\in V_W}\sum_{c\in V_C}\#(w,c)(\log \sigma(\vec{w}\cdot\vec{c}) + k\cdot\mathcal{E}_{c_N\sim P_D}[\log\sigma(-\vec{w}\cdot\vec{c_N})])\\
+\mathcal{E}_{c_N\sim P_D}[\log\sigma(-\vec{w}\cdot\vec{c_N})] = \frac{\#(c)}{|D|}\log(\sigma(-\vec{w}\cdot\vec{c})) + \sum_{c_N \in V_C\backslash\{c\}}\frac{\#(c_N)}{|D|}\log(\sigma(-\vec{w}\cdot\vec{c_N}))\\
+l(w,c) = \#(w,c)\log \sigma(\vec{w}\cdot\vec{c_N}) + k\cdot\#(w)\cdot\frac{\#(c)}{|D|}\log(\sigma(-\vec{w}\cdot\vec{c})
+$$
+
+In order to get the minimum of local loss function, we can differentiate the loss function with regard to x($$=\vec{w}\cdot\vec{c}$$).
+
+$$
+\frac{\partial l}{\partial x} = \#(w,c)\cdot\sigma(-x) - k\cdot\#(w)\cdot\frac{\#(c)}{|D|}\sigma(x)\\
+e^x = -1 or = \frac{\#(w,c)\cdot|D|}{\#(w)\cdot\#(c)}\cdot\frac{1}{k}\\
+\vec{w}\cdot\vec{c} = \log(\frac{\#(w,c)\cdot|D|}{\#(w)\cdot\#(c)}) - \log k\\
+M_{ij}^{SGNS} = W_i\cdot C_j = PMI(w_i, c_j) - \log k
+$$
+
+We can see that SGNS converge to shifted PMI given enough dimension to reconstruct the full matrix. This paper also points out that SGNS is a kind of weighted matrix factorization that focus more on frequent pairs. Based on this observation, the author propose an alternative word representation whose association metric is Shifted PPMI(SPPMI) with symmetric SVD. 
+
+## So?
+On word similarity task, SVD and SPPMI achieved better results thatn SGNS. However, SGNS still performed better in symentic analogy task. The author conjecture that this is due to the weighted nature of SGNS.
+
+## Critic
+Unveiling another mystery of SGNS.
+
+[Levy, Omer, and Yoav Goldberg. "Neural word embedding as implicit matrix factorization." Advances in neural information processing systems. 2014.](http://papers.nips.cc/paper/5477-neural-word-embedding-as-implicit-matrix-factorization)
