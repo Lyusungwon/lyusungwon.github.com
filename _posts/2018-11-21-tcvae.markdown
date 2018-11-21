@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "Isolating Sources of Disentanglement in VAEs"
+date:   2018-11-21 15:04:59
+author: Sungwon Lyu
+categories: Generative-Models
+---
+
+## WHY? 
+[$$\bete$$-VAE](https://lyusungwon.github.io/generative-models/2018/02/06/disentang.html) is known to disentangle latent variables. 
+
+## WHAT?
+This paper further decomposed the KL divergence term in b-VAE (TC-Decomposition). 
+
+$$
+\mathcal{L}_{\beta} = \frac{1}{N}\sum_{n=1}^N(\mathbb{E}_q[\logp(x_n|z)]-\beta KL(q(z|x_n)\|p(z)))\\
+\mathbb{E}_{p(n)}[KL(q(z|n)\|p(z))] = KL(q(z, n)\|q(z)p(n)) + KL(q(z)\|\prod_j q(z_j)) + \sum_j KL(q(z_j)\|p(z_j))
+$$
+
+The first term of the right hand side is referred to as the index-code mutual information(MI) which is the mutual information between data and latent variable. The second term is referred to as the total correlation(TC) which measure statistical dependency between variables. The third term is dimension-wise KL which is complexity penalty from diagonal Gaussian. Disentangling is mostly affected by the second term(TC) but is is hard to decompose due to q(z).\\
+Evaluation of $$q(z) = \mathbb{E}_{p(N)}[q(z|n)]$$ require statistics of entire dataset. Instead of getting statistics of the dataset, that of mini-batch can be use to approximate it. 
+
+$$
+mathcal{E}_{q(z)}[\logq(z)]\sim \frac{1}{M} \sum_{i=1}^{M}[\log\frac{1}{NM}\sum_{j=1}^Mq(z(n_i)|n_j)]
+$$
+
+Therefore, the objective function of $$\beta$$-TCVAE is as follows.
+
+$$
+\mathcal{L}_{\beta-TC} = \mathbb{E}_{q(z|n)p(n)}[\logp(n|z)] - \alpha I_q(z;n) - \beta KL(q(z)\|\prod_j q(z_j)) - \gamma \sum_jKL(q(z_j)\|p(z_j))
+$$
+
+Increasing the beta while fixing alpha and gamma to 1 leads to better disentanglement. 
+
+## So?
+![image](/assets/images/tcvae.png){: .center-image width="50px"}
+According to disentanglement measure(Mutual Information Gap:MIG) this paper suggested, beta-TCVAE showed better performance than beta-vae.
+
+## Critic
+Great improvement with simple modification and clean theoratical backup.
+
+[Chen, Tian Qi, et al. "Isolating Sources of Disentanglement in Variational Autoencoders." arXiv preprint arXiv:1802.04942 (2018).](https://arxiv.org/pdf/1802.04942.pdf)

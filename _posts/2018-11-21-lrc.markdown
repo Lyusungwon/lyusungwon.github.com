@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Linguistic Regularities in Continuous Space Word Representations"
+date:   2018-11-21 10:39:59
+author: Sungwon Lyu
+categories: Natural-Language-Processing
+---
+
+## WHY? 
+Vector space word representations capture syntactic and semantic regularities in language well. 
+
+## WHAT?
+To test how continuous word representation capture regularities, this paper introduce relation-specific vector offset method. All the analogy tasks can be formulated as "a is to b as c is to __". Synthetic test asks gramatical regularities such as base-comparative or singular-plural. Symantic test asks semantic regularities like "clothing is to shirt as dis is to bowl". 
+
+![image](/assets/images/lrc.png){: .center-image width="50px"}
+
+To answer analogy question, vector offset method can be used to find the answer.
+
+$$
+y = x_b - x_a + x_c\\
+w* = argmax_w\frac{x_w y}{\|x_w\|\|y\|}
+$$
+
+## So?
+RNNLM performed best in word analogy task. 
+
+## Critic
+Symantic test can be subjective.
+
+[Mikolov, Tomas, Wen-tau Yih, and Geoffrey Zweig. "Linguistic regularities in continuous space word representations." Proceedings of the 2013 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2013.](http://www.aclweb.org/anthology/N13-1090)

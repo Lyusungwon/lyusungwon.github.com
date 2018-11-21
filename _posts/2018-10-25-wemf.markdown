@@ -15,8 +15,9 @@ This paper proved that minimizing the loss function of SGNS is equivalent to fac
 The loss function of SGNS can be factorized into a loss function of a specific (w, c) pair while k being the number of negative samples. 
 
 $$
-l = \sum_{w\in V_W}\sum_{c\in V_C}\#(w,c)(\log \sigma(\vec{w}\cdot\vec{c}) + k\cdot\mathcal{E}_{c_N\sim P_D}[\log\sigma(-\vec{w}\cdot\vec{c_N})])\\
-\mathcal{E}_{c_N\sim P_D}[\log\sigma(-\vec{w}\cdot\vec{c_N})] = \frac{\#(c)}{|D|}\log(\sigma(-\vec{w}\cdot\vec{c})) + \sum_{c_N \in V_C\backslash\{c\}}\frac{\#(c_N)}{|D|}\log(\sigma(-\vec{w}\cdot\vec{c_N}))\\
+l = \sum_{w\in V_W}\sum_{c\in V_C}\#(w,c)(\log \sigma(\vec{w}\cdot\vec{c}) + k\cdot\mathbb{E}_{c_N\sim P_D}[\log\sigma(-\vec{w}\cdot\vec{c_N})])\\
+\
+{E}_{c_N\sim P_D}[\log\sigma(-\vec{w}\cdot\vec{c_N})] = \frac{\#(c)}{|D|}\log(\sigma(-\vec{w}\cdot\vec{c})) + \sum_{c_N \in V_C\backslash\{c\}}\frac{\#(c_N)}{|D|}\log(\sigma(-\vec{w}\cdot\vec{c_N}))\\
 l(w,c) = \#(w,c)\log \sigma(\vec{w}\cdot\vec{c_N}) + k\cdot\#(w)\cdot\frac{\#(c)}{|D|}\log(\sigma(-\vec{w}\cdot\vec{c})
 $$
 

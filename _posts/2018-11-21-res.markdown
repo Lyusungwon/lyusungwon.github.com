@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Relationships from Entity Stream"
+date:   2018-11-21 11:42:59
+author: Sungwon Lyu
+categories: Computer-Vision
+---
+
+## WHY? 
+[Relational Network](https://lyusungwon.github.io/deep-learning/2018/05/06/rn.html) showed great performance in relational reasoning, but calculations and memory consumption grow quadratically with the number of the objects due to fully connected pairing process.
+
+## WHAT?
+![image](/assets/images/res.png){: .center-image width="50px"}
+Using the last layer of CNN as objects is the same as RN. Instead of pairing this objects, RNN is used to find entity among thest objects(Entity Finder). Question embedding is used as initial hidden layer of RNN. The output of EF rnn is used as query for attention and each object is split into key and value. The values of the objects are weighted summed by inner product of query and key. The resulting value is used as next input for EF RNN. All the resulted values of EF RNN is called entity steam. Entity stream is fed to another RNN(Relationship Finder) to answer the question. Hard attention can be used instead of soft attention.
+
+## So?
+This model(RFS) showed comparable performance as relational network while huge decrease in calculation and model size. 
+
+## Critic
+How long should RNN be? I wish there are more experiments with complicated dataset(CLEVR).
+
+[Andrews, Martin, Red Dragon AI, and Sam Witteveen. "Relationships from Entity Stream."](http://www.redcatlabs.com/downloads/research/2017-12-08_nips2017_ViGIL-workshop_mdda.pdf)
