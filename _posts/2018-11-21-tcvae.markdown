@@ -7,13 +7,13 @@ categories: Generative-Models
 ---
 
 ## WHY? 
-[$$\bete$$-VAE](https://lyusungwon.github.io/generative-models/2018/02/06/disentang.html) is known to disentangle latent variables. 
+[$$\beta$$-VAE](https://lyusungwon.github.io/generative-models/2018/02/06/disentang.html) is known to disentangle latent variables. 
 
 ## WHAT?
 This paper further decomposed the KL divergence term in b-VAE (TC-Decomposition). 
 
 $$
-\mathcal{L}_{\beta} = \frac{1}{N}\sum_{n=1}^N(\mathbb{E}_q[\logp(x_n|z)]-\beta KL(q(z|x_n)\|p(z)))\\
+\mathcal{L}_{\beta} = \frac{1}{N}\sum_{n=1}^N(\mathbb{E}_q[\log p(x_n|z)]-\beta KL(q(z|x_n)\|p(z)))\\
 \mathbb{E}_{p(n)}[KL(q(z|n)\|p(z))] = KL(q(z, n)\|q(z)p(n)) + KL(q(z)\|\prod_j q(z_j)) + \sum_j KL(q(z_j)\|p(z_j))
 $$
 
@@ -21,13 +21,13 @@ The first term of the right hand side is referred to as the index-code mutual in
 Evaluation of $$q(z) = \mathbb{E}_{p(N)}[q(z|n)]$$ require statistics of entire dataset. Instead of getting statistics of the dataset, that of mini-batch can be use to approximate it. 
 
 $$
-mathcal{E}_{q(z)}[\logq(z)]\sim \frac{1}{M} \sum_{i=1}^{M}[\log\frac{1}{NM}\sum_{j=1}^Mq(z(n_i)|n_j)]
+mathcal{E}_{q(z)}[\log q(z)]\sim \frac{1}{M} \sum_{i=1}^{M}[\log\frac{1}{NM}\sum_{j=1}^Mq(z(n_i)|n_j)]
 $$
 
 Therefore, the objective function of $$\beta$$-TCVAE is as follows.
 
 $$
-\mathcal{L}_{\beta-TC} = \mathbb{E}_{q(z|n)p(n)}[\logp(n|z)] - \alpha I_q(z;n) - \beta KL(q(z)\|\prod_j q(z_j)) - \gamma \sum_jKL(q(z_j)\|p(z_j))
+\mathcal{L}_{\beta-TC} = \mathbb{E}_{q(z|n)p(n)}[\log p(n|z)] - \alpha I_q(z;n) - \beta KL(q(z)\|\prod_j q(z_j)) - \gamma \sum_jKL(q(z_j)\|p(z_j))
 $$
 
 Increasing the beta while fixing alpha and gamma to 1 leads to better disentanglement. 

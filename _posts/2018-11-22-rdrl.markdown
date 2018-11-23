@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Relational Deep Reinforcement Learning"
+date:   2018-11-22 10:43:59
+author: Sungwon Lyu
+categories: Reinforcement-Learning
+---
+
+## WHY? 
+Relational information is important in some reinforcement learning tasks.
+
+## WHAT?
+![image](/assets/images/rdrl1.png){: .center-image width="50px"}
+Relational information can be important source for high scores in reinforcement learning. To provide inductive bias for relational information, this paper appied self-attention(MHDPA) to the last layer of the convolution network that encode the state. Another multilayer perceptron($$f_\theta$$) is applied in parallel to each self-attended objects. 
+
+## So?
+The agent achieved state-of-the-art result in Box-World and StarCrat2 Minigame.
+
+## Critic
+Good inductive bias for relational information which is useful for agent.
+
+[Zambaldi, Vinicius, et al. "Relational Deep Reinforcement Learning." arXiv preprint arXiv:1806.01830 (2018).](https://arxiv.org/pdf/1806.01830.pdf)
