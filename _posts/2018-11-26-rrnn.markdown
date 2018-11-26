@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Relational recurrent neural networks"
+date:   2018-11-26 14:18:59
+author: Sungwon Lyu
+categories: Deep-Learning
+---
+
+## WHY? 
+Memory augmented neural network is widely used for task that require long-term memory, but is is not suited for complex relational reasoning. 
+
+## WHAT?
+
+![image](/assets/images/rrnn.png){: .center-image width="50px"}
+
+In memory augmented neural network, context vector is replaced with memory vector in LSTM module. Each row of memory is considered as a memory slot that can be retrieved, updated, or deleted. This paper suggests to augment memory with self-attention(MHDPA) to encode relational and contextual information to each of the memory slot. This module is called Relational Memory Core(RMC).
+
+## So?
+RCM achieved good performance in illustrative supervised tasks(Nth furthest, program evaluation), reinforcement learning and language modeling. 
+
+## Critic
+I'm not sure improved performance is worth more compuation of self-attention. Also, the performance gain seems not interpretable.
+
+[Santoro, Adam, et al. "Relational recurrent neural networks." arXiv preprint arXiv:1806.01822 (2018).](https://arxiv.org/abs/1806.01822)
