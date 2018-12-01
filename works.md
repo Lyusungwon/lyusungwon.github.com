@@ -1,13 +1,57 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Works
+permalink: /works/
 ---
 
-<img src="{{ site.baseurl }}/assets/profile.jpg" title="Profile Picture" class="profile">
+# Publications
 
-Welcome! My name is Sungwon Lyu and this is my personal blog for my reviews and summaries of books, movies and papers in machine learning field. I started to post in English since the 1st of July, so please don't be confused by Korean postings. I am studying [Datamining]("http://dm.snu.ac.kr") as a graduate student in Seoul National University, South Korea. \\
-I'm very interested in deep learning including generative models, reinforcement learning and natural language processing. I also love books, comics, movies and swimming. I occasionally implement machine learning models in Pytorch and upload in [Github](http://github.com/lyusungwon). Any share of ideas, contacts, comments, criticisms, and questions are welcome (lyusungwon@dm.snu.ac.kr). 
-\\
-\\
-안녕하세요. 서울대학교 산업공학대학원 [데이터마이닝 연구실]("http://dm.snu.ac.kr")에서 석사과정중인 류성원입니다. 딥러닝 전반에 대하여 공부를 하며 배운 것을 본 블로그에 간략히 기록 중입니다. 진행 프로젝트들은 [깃허브](http://github.com/lyusungwon)에서 확인하실 수 있습니다. 궁금한 점 있으시면 언제든 lyusungwon@dm.snu.ac.kr 으로 연락바랍니다. 
+- ["SARN: Relational Reasoning through Sequential Attention", Jinwon An, Sungwon Lyu, Sungzoon Cho, 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada]()
+
+- ["Dynamic Vehicle Traffic Control Using Deep Reinforcement Learning in Automated Material Handling System", Younkook Kang, Sungwon Lyu, Jeeyung Kim, Bongjoon Park, Sungzoon Cho, AAAI-19 Student Abstract and Poster Program, January 27 – February 1, 2019, Honolulu, Hawaii, USA]()
+
+- ["급변하는 여론동향 파악을 위한 텍스트 분산 임베딩 방법", 류성원, 조성준, 한국BI데이터마이닝학회 2018 추계학술대회 특별세션.]()
+
+- ["속보 문서 분류를 위한 RNN 기반의 단어 임베딩", 김지영, 조성준, 한국BI데이터마이닝학회 2018 추계학술대회 특별세션.]()
+
+- ["방산주 주가를 활용한 안보 위기 모니터링 index 구축", 최민, 류성원, 조성준, 한국BI데이터마이닝학회 2018 추계학술대회 ]()특별세션.
+
+# Presentations
+
+- ["SARN: Relational Reasonning Through Sequential Attention", 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada]((/assets/presentation/20181204_SARN)
+
+- ["급변하는 여론동향 파악을 위한 텍스트 분산 임베딩 방법", 한국BI데이터마이닝학회 2018 추계학술대회 특별세션, 2018년 11월 30일, 서울대학교](/assets/presentation/20181130_DistributedStreamingTextEmbeddingMethod)
+
+- ["How To Represent Relations", Naver Tech Talk, November 14, 2018, Naver Green Factory](/assets/presentation/20181114_HowToRepresentRelations_SungwonLyu)
+
+- ["Two Step Disentanglement Method", Datamining Lab Seminar, August 6, 2018](/assets/presentation/20180806_TwoStepDisentanglementMethod_SungwonLyu)
+
+- ["Engineering Reinforcement Learning", Deepest Hosting, July 28, 2018](/assets/presentation/20180728_EngineeringReinforcementLearning_SungwonLyu)
+
+- ["Disentangling Sequential Data", Datamining Lab Seminar, June 18, 2018](/assets/presentation/20180618_DisentanglingSequentialData_SungwonLyu)
+
+- ["Ask The Right Question", Datamining Lab Seminar, Febuary 26, 2018](/assets/presentation/20180226_AskTheRIghtQuestion_SungwonLyu)
+
+# Personal Projects
+
+- [VQA](https://github.com/Lyusungwon/relational_network_pytorch): RN, SARN, FILM
+
+- [Word Embedding](https://github.com/jeeyung/word_embedding): SGNS, RNN-SGNS
+
+- [Generative Model Zoo](https://github.com/Lyusungwon/generative_models_pytorch): AAE, Beta-VAE, Convolutional VAE, DCGAN, GAN, Introspective VAE, MADE, VAE, VAE-IAF, VAE-NF, VQVAE, WGAN
+
+- [Alphachu](https://github.com/Lyusungwon/apex_dqn_pytorch): APE-X
+
+- [Multimodal Unsupervised Image-to-Image Translation](https://github.com/Lyusungwon/munit_pytorch)
+
+- [Neural Machine Translator](https://github.com/Lyusungwon/nmt)
+
+- [Udacity Data Analyst Nano-degree](https://github.com/Lyusungwon/Udacity_Data_Analyst)
+
+- [IAML Music Projects](https://github.com/Lyusungwon/IAML_music_projects)
+
+- [Stanford CS231 Assignments](https://github.com/Lyusungwon/cs231n)
+
+# Corporate Projects
+
+- Machine-learning based Overhead Hoist Transfer Optimization (Samsung), 2018.01 ~ 2018.12
