@@ -18,19 +18,19 @@ permalink: /works/
 
 # Presentations
 
-- ["SARN: Relational Reasonning Through Sequential Attention", 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada]((/assets/presentation/20181204_SARN)
+- ["SARN: Relational Reasonning Through Sequential Attention", 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada](/assets/presentation/20181204_SARN_SungwonLyu.pdf)
 
-- ["급변하는 여론동향 파악을 위한 텍스트 분산 임베딩 방법", 한국BI데이터마이닝학회 2018 추계학술대회 특별세션, 2018년 11월 30일, 서울대학교](/assets/presentation/20181130_DistributedStreamingTextEmbeddingMethod)
+- ["급변하는 여론동향 파악을 위한 텍스트 분산 임베딩 방법", 한국BI데이터마이닝학회 2018 추계학술대회 특별세션, 2018년 11월 30일, 서울대학교](/assets/presentation/20181130_DistributedStreamingTextEmbeddingMethod_SungwonLyu.pdf)
 
 - ["How To Represent Relations", Naver Tech Talk, November 14, 2018, Naver Green Factory](/assets/presentation/20181114_HowToRepresentRelations_SungwonLyu)
 
-- ["Two Step Disentanglement Method", Datamining Lab Seminar, August 6, 2018](/assets/presentation/20180806_TwoStepDisentanglementMethod_SungwonLyu)
+- ["Two Step Disentanglement Method", Datamining Lab Seminar, August 6, 2018](/assets/presentation/20180806_TwoStepDisentanglementMethod_SungwonLyu.pdf)
 
-- ["Engineering Reinforcement Learning", Deepest Hosting, July 28, 2018](/assets/presentation/20180728_EngineeringReinforcementLearning_SungwonLyu)
+- ["Engineering Reinforcement Learning", Deepest Hosting, July 28, 2018](/assets/presentation/20180728_EngineeringReinforcementLearning_SungwonLyu.pdf)
 
-- ["Disentangling Sequential Data", Datamining Lab Seminar, June 18, 2018](/assets/presentation/20180618_DisentanglingSequentialData_SungwonLyu)
+- ["Disentangling Sequential Data", Datamining Lab Seminar, June 18, 2018](/assets/presentation/20180618_DisentanglingSequentialData_SungwonLyu.pdf)
 
-- ["Ask The Right Question", Datamining Lab Seminar, Febuary 26, 2018](/assets/presentation/20180226_AskTheRIghtQuestion_SungwonLyu)
+- ["Ask The Right Question", Datamining Lab Seminar, Febuary 26, 2018](/assets/presentation/20180226_AskTheRIghtQuestion_SungwonLyu.pdf)
 
 # Personal Projects
 
