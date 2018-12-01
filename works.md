@@ -4,25 +4,23 @@ title: Works
 permalink: /works/
 ---
 
-<img src="{{ site.baseurl }}/assets/profile.jpg" title="Profile Picture" class="profile">
-
 # Publications
 
 - ["SARN: Relational Reasoning through Sequential Attention"]({{https://lyusungwon.github.io}}/assets/publications/1811.00246.pdf), Jinwon An, Sungwon Lyu, Sungzoon Cho, 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada
 
 - ["Dynamic Vehicle Traffic Control Using Deep Reinforcement Learning in Automated Material Handling System"]({{https://lyusungwon.github.io}}/assets/publications/AAAI19_AbstractPaper_Kang_201801112.pdf), Younkook Kang, Sungwon Lyu, Jeeyung Kim, Bongjoon Park, Sungzoon Cho, AAAI-19 Student Abstract and Poster Program, January 27 – February 1, 2019, Honolulu, Hawaii, USA
 
-- ["급변하는 여론동향 파악을 위한 텍스트 분산 임베딩 방법"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_류성원.pdf), 류성원, 김지영, 김누리, 이지훈, 조성준, 한국BI데이터마이닝학회 2018 추계학술대회 특별세션
+- ["Distributed Streaming Text Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_류성원.pdf), Sungwon Lyu, Jeeyung Kim, Noori Kim, Jihoon Lee, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
 
-- ["속보 문서 분류를 위한 RNN 기반의 단어 임베딩"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_김지영.pdf), 김지영, 류성원, 이형욱, 선지민, 조성준, 한국BI데이터마이닝학회 2018 추계학술대회 특별세션
+- ["RNN Based Word Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_김지영.pdf), Jeeyung Kim, Sungwon Lyu, Hyunguk Lee, Jimin Sun, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
 
-- ["방산주 주가를 활용한 안보 위기 모니터링 index 구축"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_최민.pdf), 최민, 류성원, 조성준, 한국BI데이터마이닝학회 2018 추계학술대회 특별세션
+- ["Clustering National Security Threats Using Two-Step Disentanglement Method On Stock Prices"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_최민.pdf), Minh Choi, Sungwon Lyu, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
 
 # Presentations
 
 - ["SARN: Relational Reasonning Through Sequential Attention"]({{https://lyusungwon.github.io}}/assets/presentation/20181204_SARN_SungwonLyu.pdf), 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada
 
-- ["급변하는 여론동향 파악을 위한 텍스트 분산 임베딩 방법"]({{https://lyusungwon.github.io}}/assets/presentation/20181130_DistributedStreamingTextEmbeddingMethod_SungwonLyu.pdf), 한국BI데이터마이닝학회 2018 추계학술대회 특별세션, 2018년 11월 30일, 서울대학교
+- ["Distributed Streaming Text Embedding Method"]({{https://lyusungwon.github.io}}/assets/presentation/20181130_DistributedStreamingTextEmbeddingMethod_SungwonLyu.pdf), Korea Data Mining Society 2018 Fall Conference, Special Session, November 30, 2018, Seoul National University
 
 - ["How To Represent Relations"]({{https://lyusungwon.github.io}}/assets/presentation/20181114_HowToRepresentRelations_SungwonLyu.pdf), Naver Tech Talk, November 14, 2018, Naver Green Factory
 
