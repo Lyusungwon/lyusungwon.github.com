@@ -18,7 +18,7 @@ permalink: /works/
 
 # Presentations
 
-- ["SARN: Relational Reasonning Through Sequential Attention", 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada]({{https://lyusungwon.github.io/}}/assets/presentation/20181204_SARN_SungwonLyu.pdf)
+- ["SARN: Relational Reasonning Through Sequential Attention", 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada]({{https://lyusungwon.github.io}}/assets/presentation/20181204_SARN_SungwonLyu.pdf)
 
 - ["급변하는 여론동향 파악을 위한 텍스트 분산 임베딩 방법", 한국BI데이터마이닝학회 2018 추계학술대회 특별세션, 2018년 11월 30일, 서울대학교](/assets/presentation/20181130_DistributedStreamingTextEmbeddingMethod_SungwonLyu.pdf)
 
