@@ -10,14 +10,10 @@ categories: Deep-Learning
 While the effect of batch normalization was widely proven empirically, the exact mechanism of it is yet been understood. Commonly known explanation for this was internal covariance shift(ICS) meaning the change in the distribution of layer inputs caused by updates to the preceeding layers. 
 
 ## WHAT?
-This paper disapproves the ICS theory by comparing the performance of a model, a model with batch normalization and a model with batch normalization and noise inserted to each activation. 
-![image](/assets/images/wm1.png){: .center-image width="50px"}
-Even though inserted noise did confused the distribution of layers, the performance was still better than the standard model. Also, with certain experiment, this paper shows that batch normalization does not always reduced the ICS.\\
+
 
 ## Critic
-The model achieved state of the art result in CarRacing of Atari and VizDoom.
 
 ## So?
-Idea of incorporating prediction of the future into rl model seems great. Though I'm not very familiar with evolution strategy, I think there would be ways to corporate this model to traditional rl model.
 
 [Ha, David, and Jürgen Schmidhuber. "World Models." arXiv preprint arXiv:1803.10122 (2018).](https://arxiv.org/abs/1803.10122)

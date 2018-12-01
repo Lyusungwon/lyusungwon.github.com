@@ -4,6 +4,8 @@ title: Works
 permalink: /works/
 ---
 
+<img src="{{ site.baseurl }}/assets/profile.jpg" title="Profile Picture" class="profile">
+
 # Publications
 
 - ["SARN: Relational Reasoning through Sequential Attention"]({{https://lyusungwon.github.io}}/assets/publications/1811.00246.pdf), Jinwon An, Sungwon Lyu, Sungzoon Cho, 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada
@@ -18,19 +20,19 @@ permalink: /works/
 
 # Presentations
 
-- ["SARN: Relational Reasonning Through Sequential Attention", 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada]({{https://lyusungwon.github.io}}/assets/presentation/20181204_SARN_SungwonLyu.pdf)
+- ["SARN: Relational Reasonning Through Sequential Attention"]({{https://lyusungwon.github.io}}/assets/presentation/20181204_SARN_SungwonLyu.pdf), 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada
 
-- ["급변하는 여론동향 파악을 위한 텍스트 분산 임베딩 방법", 한국BI데이터마이닝학회 2018 추계학술대회 특별세션, 2018년 11월 30일, 서울대학교]({{https://lyusungwon.github.io}}/assets/presentation/20181130_DistributedStreamingTextEmbeddingMethod_SungwonLyu.pdf)
+- ["급변하는 여론동향 파악을 위한 텍스트 분산 임베딩 방법"]({{https://lyusungwon.github.io}}/assets/presentation/20181130_DistributedStreamingTextEmbeddingMethod_SungwonLyu.pdf), 한국BI데이터마이닝학회 2018 추계학술대회 특별세션, 2018년 11월 30일, 서울대학교
 
-- ["How To Represent Relations", Naver Tech Talk, November 14, 2018, Naver Green Factory]({{https://lyusungwon.github.io}}/assets/presentation/20181114_HowToRepresentRelations_SungwonLyu.pdf)
+- ["How To Represent Relations"]({{https://lyusungwon.github.io}}/assets/presentation/20181114_HowToRepresentRelations_SungwonLyu.pdf), Naver Tech Talk, November 14, 2018, Naver Green Factory
 
-- ["Two Step Disentanglement Method", Datamining Lab Seminar, August 6, 2018]({{https://lyusungwon.github.io}}/assets/presentation/20180806_TwoStepDisentanglementMethod_SungwonLyu.pdf)
+- ["Two Step Disentanglement Method"]({{https://lyusungwon.github.io}}/assets/presentation/20180806_TwoStepDisentanglementMethod_SungwonLyu.pdf), Datamining Lab Seminar, August 6, 2018
 
-- ["Engineering Reinforcement Learning", Deepest Hosting, July 28, 2018]({{https://lyusungwon.github.io}}/assets/presentation/20180728_EngineeringReinforcementLearning_SungwonLyu.pdf)
+- ["Engineering Reinforcement Learning"]({{https://lyusungwon.github.io}}/assets/presentation/20180728_EngineeringReinforcementLearning_SungwonLyu.pdf), Deepest Hosting, July 28, 2018
 
-- ["Disentangling Sequential Data", Datamining Lab Seminar, June 18, 2018]({{https://lyusungwon.github.io}}/assets/presentation/20180618_DisentanglingSequentialData_SungwonLyu.pdf)
+- ["Disentangling Sequential Data"]({{https://lyusungwon.github.io}}/assets/presentation/20180618_DisentanglingSequentialData_SungwonLyu.pdf), Datamining Lab Seminar, June 18, 2018
 
-- ["Ask The Right Question", Datamining Lab Seminar, Febuary 26, 2018]({{https://lyusungwon.github.io}}/assets/presentation/20180226_AskTheRIghtQuestion_SungwonLyu.pdf)
+- ["Ask The Right Question"]({{https://lyusungwon.github.io}}/assets/presentation/20180226_AskTheRIghtQuestion_SungwonLyu.pdf), Datamining Lab Seminar, Febuary 26, 2018
 
 # Personal Projects
 
