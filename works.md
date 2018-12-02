@@ -12,9 +12,9 @@ permalink: /works/
 
 - ["Distributed Streaming Text Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_류성원.pdf), Sungwon Lyu, Jeeyung Kim, Noori Kim, Jihoon Lee, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
 
-- ["RNN Based Word Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_김지영.pdf), Jeeyung Kim, Sungwon Lyu, Hyunguk Lee, Jimin Sun, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
+- ["Clustering National Security Threats Using Two-Step Disentanglement Method On Stock Prices"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_최민.pdf), Minh Choi, Sungwon Lyu, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session Best Paper
 
-- ["Clustering National Security Threats Using Two-Step Disentanglement Method On Stock Prices"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_최민.pdf), Minh Choi, Sungwon Lyu, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
+- ["RNN Based Word Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_김지영.pdf), Jeeyung Kim, Sungwon Lyu, Hyunguk Lee, Jimin Sun, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
 
 # Presentations
 
