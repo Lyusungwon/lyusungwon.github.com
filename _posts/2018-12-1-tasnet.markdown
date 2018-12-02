@@ -33,7 +33,7 @@ $$
 Separation network uses LSTM and FC for masks($$m_i$$) generation. With w and m found above, d can be found with decoder. The scale-invariant source-to-noise ratio(SI-SNR) is used for loss.  
 
 ## So?
-![image](/assets/images/tasnet1.png){: .center-image width="50px"}
+![image](/assets/images/tasnet2.png){: .center-image width="50px"}
 TasNet not only showed comparable performance in WSJ0-2mix dataset, but also showen to find its own basis. 
 
 [Luo, Yi, and Nima Mesgarani. "Tasnet: time-domain audio separation network for real-time, single-channel speech separation." 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2018.](https://ieeexplore.ieee.org/abstract/document/8462116/)
