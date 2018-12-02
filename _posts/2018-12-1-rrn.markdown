@@ -22,7 +22,7 @@ l^t = -\sum_{i=1}^I \log o_i^t[y_i]
 $$
 
 ## So?
-![image](/assets/images/rrn1.png){: .center-image width="50px"}
+![image](/assets/images/rrn2.png){: .center-image width="50px"}
 This module showed stablly better performance in bAbI task. RRN showed good performance in the newly defined Pretty-CLEVER task. This paper also showed this network solving Sudoku well. 
 
 ## Critic
