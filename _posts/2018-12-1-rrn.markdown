@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Recurrent Relational Networks"
+date:   2018-12-01 18:22:59
+author: Sungwon Lyu
+categories: Deep-Learning
+---
+
+## WHY? 
+Some tasks such as Sudoku require serial steps of relational inference.
+
+## WHAT?
+![image](/assets/images/rrn1.png){: .center-image width="50px"}
+Recurrent relational network operates on a graph representation of objects. Message passing method is used to pass the relational information to neighbor nodes to solve the task. The loss is minimized at every step.
+
+$$
+m_{ij}^t = f(h_i^{t-1}, h_j^{t-1})\\
+m_j^t = \sum_{i\in N(j)}m^t_{ij}\\
+h_j^t = g(h_j^{t-1}, x_j, m_j^t)\\
+o_i^t = r(h_i^t)\\
+l^t = -\sum_{i=1}^I \log o_i^t[y_i]
+$$
+
+## So?
+![image](/assets/images/rrn1.png){: .center-image width="50px"}
+This module showed stablly better performance in bAbI task. RRN showed good performance in the newly defined Pretty-CLEVER task. This paper also showed this network solving Sudoku well. 
+
+## Critic
+It is clever to use message passing algorithm to solve relational tasks, but I think traing data is the issue(requires sequential answers for the task).
+
+[Palm, Rasmus Berg, Ulrich Paquet, and Ole Winther. "Recurrent Relational Networks for Complex Relational Reasoning." arXiv preprint arXiv:1711.08028 (2017).](https://arxiv.org/abs/1806.01822)
