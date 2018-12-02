@@ -25,7 +25,7 @@ $$
 FiLM generator takes questions as input and output betas and gammas for each ResBlocks. Each ResBlock contains FiLM after convolution and BN layer. Several ResBlocks with FiLM stacks to form FiLM-ed network. 
 
 ## So?
-![image](/assets/images/film.png){: .center-image width="50px"}
+![image](/assets/images/film3.png){: .center-image width="50px"}
 FiLM not only achieved the state of the art result in CLEVR, but also showen to conditionally focus on the image based on queries. 
 
 [Perez, Ethan, et al. "Film: Visual reasoning with a general conditioning layer." arXiv preprint arXiv:1709.07871 (2017).](https://arxiv.org/pdf/1709.07871.pdf/)
