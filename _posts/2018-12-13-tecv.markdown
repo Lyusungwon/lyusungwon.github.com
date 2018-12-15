@@ -29,9 +29,6 @@ $$
 
 With the learned colorizing model, segments or keypoints can be tracked with the labels on the reference frame which is formulated as categorization. 
 
-![image](/assets/images/tecv3.png){: .center-image width="50px"}
-
-
 ## So?
 ![image](/assets/images/tecv4.png){: .center-image width="50px"}
 ![image](/assets/images/tecv5.png){: .center-image width="50px"}
