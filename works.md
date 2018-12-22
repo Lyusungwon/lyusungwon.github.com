@@ -10,13 +10,13 @@ permalink: /works/
 
 - ["Dynamic Vehicle Traffic Control Using Deep Reinforcement Learning in Automated Material Handling System"]({{https://lyusungwon.github.io}}/assets/publications/AAAI19_AbstractPaper.pdf), Younkook Kang, Sungwon Lyu, Jeeyung Kim, Bongjoon Park, Sungzoon Cho, AAAI-19 Student Abstract and Poster Program, January 27 – February 1, 2019, Honolulu, Hawaii, USA
 
-- ["Distributed Deep Learning Training Overview"]({{https://lyusungwon.github.io}}/assets/publications/DistributedDeepLearningTrainingOverview.pdf), Sungwon Lyu [KOR]
+- [KOR]["Distributed Deep Learning Training Overview"]({{https://lyusungwon.github.io}}/assets/publications/DistributedDeepLearningTrainingOverview.pdf), Sungwon Lyu 
 
-- ["Distributed Streaming Text Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_류성원.pdf), Sungwon Lyu, Jeeyung Kim, Noori Kim, Jihoon Lee, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
+- [KOR]["Distributed Streaming Text Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_류성원.pdf), Sungwon Lyu, Jeeyung Kim, Noori Kim, Jihoon Lee, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
 
-- ["Clustering National Security Threats Using Two-Step Disentanglement Method On Stock Prices"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_최민.pdf), Minh Choi, Sungwon Lyu, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session Best Paper [KOR]
+- [KOR]["Clustering National Security Threats Using Two-Step Disentanglement Method On Stock Prices"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_최민.pdf), Minh Choi, Sungwon Lyu, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session Best Paper 
 
-- ["RNN Based Word Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_김지영.pdf), Jeeyung Kim, Sungwon Lyu, Hyunguk Lee, Jimin Sun, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session [KOR]
+- [KOR]["RNN Based Word Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_김지영.pdf), Jeeyung Kim, Sungwon Lyu, Hyunguk Lee, Jimin Sun, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
 
 # Presentations
 
