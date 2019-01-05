@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Inferring and Executing Programs for Visual Reasoning"
+date:   2018-12-15 09:45:59
+author: Sungwon Lyu
+categories: Computer-Vision
+---
+
+## WHY? 
+[Neural modular networks]() do not generalize well to new questions since their performance rely on syntactic parser. 
+
+## WHAT?
+
+![image](/assets/images/iep1.png){: .center-image width="50px"}
+
+Instead of parsing questions into universal dependency representation, this paper used LSTM to generate a sequence of functions to form a program. Function modules are generic: unary module, binary module and scene module. The program generator is trained in semi-supervised manner. First it is trained with few ground truth labels and fine tuned with REINFORCE algorithm. 
+
+## So?
+
+![image](/assets/images/iep2.png){: .center-image width="50px"}
+
+Stongly supervised model whoed near-perfect performance on CLEVR, and semi-supervised model showed better performance than any other baselines. 
+
+![image](/assets/images/iep3.png){: .center-image width="50px"}
+
+This program showed to attend the right place of the image. 
+
+[Johnson, Justin, et al. "Inferring and Executing Programs for Visual Reasoning." ICCV. 2017.](http://openaccess.thecvf.com/content_ICCV_2017/papers/Johnson_Inferring_and_Executing_ICCV_2017_paper.pdf)

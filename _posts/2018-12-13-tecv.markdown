@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Tracking Emerges by Colorizing Videos"
+date:   2018-12-13 09:05:59
+author: Sungwon Lyu
+categories: Computer-Vision
+---
+
+## WHY? 
+Segmenting objects in videos is difficult without manual labels.
+
+## WHAT?
+
+![image](/assets/images/tecv1.png){: .center-image width="50px"}
+
+This paper suggests to learn segmenting the objects in video sequence with model trained with self-supervised colorizing task. 
+
+![image](/assets/images/tecv2.png){: .center-image width="50px"}
+
+Given reference frames and a grayscale input frame, the model tries to learn the color of the grayscale input frame from reference frames. To do this, model gets embeddings of each of pixels in frames with convolutional neural network. The model estimates the color of a pixel in input frame with the sum of colors of reference frames weighted by similarity of embedding. Colors are quantized with k-means to formulate the estimation as categorization. 
+
+$$
+y_j = \sum_i A_{ij}c_i\\
+A_{ij} = \frac{exp(f_i^T f_j)}{\sum_k exp(f_k^T f_j)}\\
+min_{\theta}\sum_j\mathcal{L}(y_j, c_j)
+$$
+
+![image](/assets/images/tecv3.png){: .center-image width="50px"}
+
+With the learned colorizing model, segments or keypoints can be tracked with the labels on the reference frame which is formulated as categorization. 
+
+## So?
+![image](/assets/images/tecv4.png){: .center-image width="50px"}
+![image](/assets/images/tecv5.png){: .center-image width="50px"}
+This model showed good performance on the segmentation and pose tracking. 
+
+[Vondrick, Carl, et al. "Tracking emerges by colorizing videos." arXiv preprint arXiv:1806.09594 2.3 (2018): 9.](http://openaccess.thecvf.com/content_ECCV_2018/papers/Carl_Vondrick_Self-supervised_Tracking_by_ECCV_2018_paper.pdf)

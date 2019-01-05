@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "BERT: Pretraining of Deep Bidirectional Transformers for Language Understanding"
+date:   2019-01-02 09:00:59
+author: Sungwon Lyu
+categories: Natural-Language-Processing
+---
+
+## WHY? 
+Former [Transformer](https://lyusungwon.github.io/natural-language-processing/2018/03/21/transformer.html) was unidirectional language model. 
+
+## WHAT?
+
+![image](/assets/images/bert1.png){: .center-image width="50px"}
+
+BERT is multi-layer bidirectional Transformer encoder.
+
+![image](/assets/images/bert2.png){: .center-image width="50px"}
+
+A sequence of input representation can be either a single text sentence or a pair of text sentences. The first token of every sequence is a classification token and sentences in a sequence are separated by a separation token. Each token in the sequence is the sum of three components: Token embeddings, segment embeddings and position embeddings. Two sentences in a sequence is differentiated again by segment embeddings. 
+
+Two kinds of pretraining tasks are used for BERT. Since BERT is bidirectional, masked language modeling task is used. Mased LM randomly choose words in the corpus and replace with mask token and the hidden vector of the mask token is used for the softmax. BERT randomly choose 15% of the tokens. 80% of the chosen words are turn into mask tokens. 10% are replaced with a random word and the rest 10% are kept unchanged. The second task is next sentence prediction task. The training loss is the sum of the mean masked LM likelihood and mean next sentence prediction likelihood. 
+
+![image](/assets/images/bert3.png){: .center-image width="50px"}
+
+Fine-tuning for each task can be differ. Sentence level classification task only need a W matrix that can be multiplied to classification token. Start and end vector is trained to estimate the span in question answering task. A classifier is trained to classify each token in named entity recognition task. 
+
+## So?
+BERT achieved State-Of-The-Art result in nearly every language task including GLUE datasets, SQUAD dataset, named-entity recognition task, and SWAG dataset with a single model. Broad ablation study is conducted to prove the effectiveness of BERT.
+
+## Critic
+No argument on the incredible result, but I'm not sure what BERT is doing. Works on interpretability can be useful to examine whether BERT is actually solving the task. 
+
+[Devlin, Jacob, et al. "Bert: Pre-training of deep bidirectional transformers for language understanding." arXiv preprint arXiv:1810.04805 (2018).](https://arxiv.org/abs/1810.04805)

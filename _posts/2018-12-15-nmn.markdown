@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Deep Compositional Question Answering with Neural Module Networks"
+date:   2018-12-15 09:02:59
+author: Sungwon Lyu
+categories: Computer-Vision
+---
+
+## WHY? 
+Visual question answering task is compositional in nature. 
+
+## WHAT?
+
+![image](/assets/images/nmn1.png){: .center-image width="50px"}
+
+This paper tries to solve VQA by composing modeules to construct a network architecture based on a given question. Primitive modules that can be composed into any configuration of questions are defined: attention, re-attention, combination, classification, and measurement. The key component of the modules is attention mechanism that allow model to focus on the parts of the given image. A question is parsed to form an universal dependency representation which can be map into a network layout. Embedded question is combined to the end of network to capture subtle differences. The composed model is trained end-to-end. 
+
+## So?
+
+![image](/assets/images/nmn2.png){: .center-image width="50px"}
+
+This model achieved the best performance on VQA and SHAPES datasets. 
+
+[Andreas, Jacob, et al. "Neural module networks." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016.](https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Andreas_Neural_Module_Networks_CVPR_2016_paper.html)
