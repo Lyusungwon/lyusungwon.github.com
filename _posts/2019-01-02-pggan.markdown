@@ -18,9 +18,9 @@ A pair of generator and discriminator are trained with low scale real and fake i
 
 ![image](/assets/images/pggan2.png){: .center-image width="50px"}
 
-New layer is added smoothly to preserve previously learned layers. Doubling and halving the image is implemented wtih nearest neighbot filtering and average pooling. Weight $$\alpha$$ increases linearly from 0 to 1. \\
+New layer is added smoothly to preserve previously learned layers. Doubling and halving the image is implemented wtih nearest neighbot filtering and average pooling. Weight $$\alpha$$ increases linearly from 0 to 1.
 
-To increase the variation, the average of standard variation of minibatch is replicated to all spatial location and used as an additional feature map at the end of discriminator.\\
+To increase the variation, the average of standard variation of minibatch is replicated to all spatial location and used as an additional feature map at the end of discriminator.
 
 In order to reduce unhealthy competition between generator and discriminator, this paper suggest two methods. First is to scale the weights at runtime with per-layer normalization constant from He's initializer(c). Compared to adaptive SGD methods, this method allows to apply equalized learning rate across all weights. Second method is to normalize the feature vector in each pixel to unit length in the generator after each conv layer using "local response normalization". This prevents the excessive escalation of magnitudes of both network. 
 

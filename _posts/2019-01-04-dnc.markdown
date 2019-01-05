@@ -16,7 +16,7 @@ Reading and writing in DNC are implemented with differentiable attention mechani
 
 ![image](/assets/images/dnc1.png){: .center-image width="50px"}
 
-The controller of DNC is an variant of LSTM architecture that takes an input vector($$x_t$$) and a set of read vectors($$r_{t-1}^1,...,r_{t-1}^R) as input(concatenated). Concatenated input and hidden vectors from both previous timestep($$h_{t-1}^l$$) and from previous layer($$h_t^{l-1}$$) are concatenated again to be used as input for LSTM to produce next hidden vector($$h_t^l$$). Hidden vectors from all layers at a timestep are concatenated to emit an output vector($$\upsilon_t$$) and an interface vector($$\xi_t$$). The output vector($$y_t$$) is the sum of $$\upsilon_t$$ and read vectors of the current timestep.
+The controller of DNC is an variant of LSTM architecture that takes an input vector($$x_t$$) and a set of read vectors($$r_{t-1}^1,...,r_{t-1}^R$$) as input(concatenated). Concatenated input and hidden vectors from both previous timestep($$h_{t-1}^l$$) and from previous layer($$h_t^{l-1}$$) are concatenated again to be used as input for LSTM to produce next hidden vector($$h_t^l$$). Hidden vectors from all layers at a timestep are concatenated to emit an output vector($$\upsilon_t$$) and an interface vector($$\xi_t$$). The output vector($$y_t$$) is the sum of $$\upsilon_t$$ and read vectors of the current timestep.
 
 $$
 v_t = W_y[h_t^1;...;h_t^L]\\
