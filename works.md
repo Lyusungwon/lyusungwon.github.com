@@ -8,15 +8,19 @@ permalink: /works/
 
 - ["SARN: Relational Reasoning through Sequential Attention"]({{https://lyusungwon.github.io}}/assets/publications/1811.00246.pdf), Jinwon An, Sungwon Lyu, Sungzoon Cho, 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada
 
-- ["Dynamic Vehicle Traffic Control Using Deep Reinforcement Learning in Automated Material Handling System"]({{https://lyusungwon.github.io}}/assets/publications/AAAI19_AbstractPaper_Kang_201801112.pdf), Younkook Kang, Sungwon Lyu, Jeeyung Kim, Bongjoon Park, Sungzoon Cho, AAAI-19 Student Abstract and Poster Program, January 27 – February 1, 2019, Honolulu, Hawaii, USA
+- ["Dynamic Vehicle Traffic Control Using Deep Reinforcement Learning in Automated Material Handling System"]({{https://lyusungwon.github.io}}/assets/publications/AAAI19_AbstractPaper.pdf), Younkook Kang, Sungwon Lyu, Jeeyung Kim, Bongjoon Park, Sungzoon Cho, AAAI-19 Student Abstract and Poster Program, January 27 – February 1, 2019, Honolulu, Hawaii, USA
 
-- ["Distributed Streaming Text Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_류성원.pdf), Sungwon Lyu, Jeeyung Kim, Noori Kim, Jihoon Lee, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
+- [KOR]["Distributed Deep Learning Training Overview"]({{https://lyusungwon.github.io}}/assets/publications/DistributedDeepLearningTrainingOverview.pdf), Sungwon Lyu 
 
-- ["Clustering National Security Threats Using Two-Step Disentanglement Method On Stock Prices"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_최민.pdf), Minh Choi, Sungwon Lyu, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session Best Paper
+- [KOR]["Distributed Streaming Text Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_류성원.pdf), Sungwon Lyu, Jeeyung Kim, Noori Kim, Jihoon Lee, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
 
-- ["RNN Based Word Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_김지영.pdf), Jeeyung Kim, Sungwon Lyu, Hyunguk Lee, Jimin Sun, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
+- [KOR]["Clustering National Security Threats Using Two-Step Disentanglement Method On Stock Prices"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_최민.pdf), Minh Choi, Sungwon Lyu, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session Best Paper 
+
+- [KOR]["RNN Based Word Embedding Method"]({{https://lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_김지영.pdf), Jeeyung Kim, Sungwon Lyu, Hyunguk Lee, Jimin Sun, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
 
 # Presentations
+
+- ["Distributed Training With Pytorch"]({{https://lyusungwon.github.io}}/assets/presentation/20181218_DistributedTrainingWithPytorch.pdf), 2018-2 Big Data and Deep Learning, December 18, 2018, Seoul National University
 
 - ["SARN: Relational Reasonning Through Sequential Attention"]({{https://lyusungwon.github.io}}/assets/presentation/20181204_SARN_SungwonLyu.pdf), 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada
 
@@ -34,13 +38,15 @@ permalink: /works/
 
 # Personal Projects
 
-- [VQA](https://github.com/Lyusungwon/relational_network_pytorch): RN, SARN, FILM
+- [SARN](https://github.com/Lyusungwon/relational_network_pytorch): Baseline, RN, SARN, FILM
 
-- [Word Embedding](https://github.com/jeeyung/word_embedding): SGNS, RNN-SGNS
+- [Distributed Training of Word Embedding](https://github.com/Lyusungwon/sgns_pytorch): SGNS, RNN based-SGNS
 
-- [Generative Model Zoo](https://github.com/Lyusungwon/generative_models_pytorch): AAE, Beta-VAE, Convolutional VAE, DCGAN, GAN, Introspective VAE, MADE, VAE, VAE-IAF, VAE-NF, VQVAE, WGAN
+- [Generative Models](https://github.com/Lyusungwon/generative_models_pytorch): AAE, Beta-VAE, Convolutional VAE, DCGAN, GAN, Introspective VAE, MADE, VAE, VAE-IAF, VAE-NF, VQVAE, WGAN (Work in progress)
 
-- [Alphachu](https://github.com/Lyusungwon/apex_dqn_pytorch): APE-X
+- [Two-Step Disentanglement Method on Financial Data](https://github.com/cham310/fin_disentanglement)
+
+- [Alphachu](https://github.com/Lyusungwon/apex_dqn_pytorch): APE-X DQN
 
 - [Multimodal Unsupervised Image-to-Image Translation](https://github.com/Lyusungwon/munit_pytorch)
 
