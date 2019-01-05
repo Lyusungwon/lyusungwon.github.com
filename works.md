@@ -38,7 +38,7 @@ permalink: /works/
 
 # Personal Projects
 
-- [SARN](https://github.com/Lyusungwon/relational_network_pytorch): Baseline, RN, SARN, FILM
+- [Visual Reasoning Models](https://github.com/Lyusungwon/relational_network_pytorch): Baseline, RN, SARN, FILM
 
 - [Distributed Training of Word Embedding](https://github.com/Lyusungwon/sgns_pytorch): SGNS, RNN based-SGNS
 
@@ -60,4 +60,4 @@ permalink: /works/
 
 # Corporation Projects
 
-- Machine-learning based Overhead Hoist Transfer Optimization (Samsung), 2018.01 ~ 2018.12
+- Reinforcement-learning based Overhead Hoist Transfer Optimization (Samsung), 2018.01 ~ 2018.12
