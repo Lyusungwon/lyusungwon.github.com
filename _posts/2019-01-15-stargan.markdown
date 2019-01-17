@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation"
+date:   2019-01-15 09:01:59
+author: Sungwon Lyu
+categories: Generative-Models
+---
+
+## WHY? 
+![image](/assets/images/stargan1.png){: .center-image width="50px"}
+
+[CycleGAN](https://lyusungwon.github.io/generative-models/2018/04/05/cyclegan.html) has been used in image-to-image translation effectively. However, handling more than two domains was difficult. This paper StarGAN to handle multiple domains with a single model. 
+
+## WHAT?
+StarGAN can be considered as an domain conditioned version of CycleGAN. 
+
+![image](/assets/images/stargan2.png){: .center-image width="50px"}
+
+The discriminator of StarGAN not only classify real and fake, but also domain labels. The loss function of StarGAN consists of three terms: adversarial loss, domain classification loss, and reconstruction loss. 
+
+$$
+\mathcal{L}_{adv} = \mathbb{E}_x[\log D_{src}(x)] + \mathbb{E}_{x,c}[\log(1-D_{src}(G(x,c)))]\\
+\mathcal{L}_{cls}^r = \mathbb{E}_{x, c'}[-log D_{cls}(c'|x)]\\
+\mathcal{L}_{cls}^f = \mathbb{E}_{x, c}[-log D_{cls}(c|G(x, c))]\\
+\mathcal{L}_{rec} = \mathbb{E}_{x, c, c'}[\|x - G(G(x, c), c')\|_1]\\
+\mathcal{L}_D = -\mathcal{L}_{adv} + \lambda_{cls}\mathcal{L}_{cls}^r\\
+\mathcal{L}_G = \mathcal{L}_{adv} + \lambda_{cls}\mathcal{L}_{cls}^f + \lambda_{rec}\mathcal{L}_{rec}
+$$
+
+$$\lambda_{cls} = 1, \lambda_{rec} = 10$$ in all of the experiment. To enable StarGAN in multiple domain in datasets with different label information, mask vector is introduced as conditional information. 
+
+$$
+\tilde{c} = [c_1,...,c_n, m]
+$$
+
+Model architecture is adopted from CycleGAN. WGAN-GP objective is used as loss function. 
+
+## So?
+![image](/assets/images/stargan3.png){: .center-image width="50px"}
+StarGAN successfully generated images conditioned on labels from differnt domains with a single model.
+
+## Critic
+I think the key point in StarGAN is effective conditioning of labels. Recent methods from PGGAN or BigGAN or AdaIN from SB-GAN seem to be effective in this setting. 
+
+[Choi, Yunjey, et al. "Stargan: Unified generative adversarial networks for multi-domain image-to-image translation." arXiv preprint 1711 (2017).](https://arxiv.org/abs/1711.09020)
