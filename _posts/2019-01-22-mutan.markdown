@@ -32,11 +32,11 @@ $$
 We can control the sparsity and expressiveness of bilinear model by controlling the rank of a slice of $$\mathbf{\tau}_c$$. If we impose the rank of a slice of the core matrix to be R, then each slice can be represented with the sum of R rank one matrices. 
 
 $$
-\mathbf{z}[k] = \mathbf{\tilde{q}}}^{\top}\mathbf{\tau}_c[:,:,k]\mathbf{\tilde{v}}\\
+\mathbf{z}[k] = \tilde{\mathbf{q}}^{\top}\mathbf{\tau}_c[:,:,k]\tilde{\mathbf{v}}\\
 \mathbf{\tau}_c[:,:,k] = \sum_{r=1}^R \mathbf{m}_r^k \otimes \mathbf{n}_r^{k\top}\\
-\mathbf{z}[k] = \sum_{r=1}^R(\mathbf{\tilde{q}}}^{\top}\mathbf{m}_r^k)(\mathbf{\tilde{v}}^{\top}\mathbf{n}_r^k)\\
+\mathbf{z}[k] = \sum_{r=1}^R(\tilde{\mathbf{q}}^{\top}\mathbf{m}_r^k)(\tilde{\mathbf{v}}^{\top}\mathbf{n}_r^k)\\
 \mathbf{z} = \sum_{r=1}^R \mathbf{z}_r\\
-\mathbf{z}_r = (\mathbf{\tilde{q}}}^{\top}\mathbf{M}_r)*(\mathbf{\tilde{v}}^{\top}\mathbf{N}_r)
+\mathbf{z}_r = (\tilde{\mathbf{q}}}^{\top}\mathbf{M}_r)*(\tilde{\mathbf{v}}^{\top}\mathbf{N}_r)
 $$
 
 ![image](/assets/images/mutan2.png){: .center-image width="50px"}
