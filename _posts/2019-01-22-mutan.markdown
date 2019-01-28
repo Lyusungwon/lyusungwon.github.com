@@ -10,7 +10,7 @@ categories: Visual-Question-Answering
 While bilinear model is an effective method for capturing the relationship between two spaces, often the number of parameters is intractable. This paper suggests to reduce the number of parameters by controlling the rank of the matrix with Turker decomposition. 
 
 ## Note
-With $$\times_i## denotes the i-mode product between a tensor and a matrix, Tucker decomposition of a tensor $$\tau$$ is as follows. 
+With $$\times_i$$ denotes the i-mode product between a tensor and a matrix, Tucker decomposition of a tensor $$\tau$$ is as follows. 
 
 $$
 \mathbf{\tau} \in \mathbb{R}^{d_q \times d_v \times |\mathcal{A}|}\\
