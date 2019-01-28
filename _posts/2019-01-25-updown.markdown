@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering"
+date:   2019-01-25 09:11:59
+author: Sungwon Lyu
+categories: Visual-Question-Answering
+---
+
+## WHY? 
+In image captioning or visual question answering, the features of an image are extracted by the spatial output layer of pretrained CNN model.
+
+## WHAT?
+This paper suggests bottom-up attention using object detection model for extracting image features. 
+
+![image](/assets/images/updown1.png){: .center-image width="50px"}
+
+Faster R-CNN in conjunction with ResNet101 is used followed by non-maximum supression using IOU threshold and the mean-pooling. The model was pretrained with ImageNet to classify object classes and trained additionally to predict the attribute classes.
+
+![image](/assets/images/updown2.png){: .center-image width="50px"}
+
+The VQA model of this paper is rather simple. This model utilizes the 'gated tanh' layer for non-linear transformation. 
+
+$$
+f_a(x) = \tilde{y}\circ g\\
+\tilde{y} = tanh(Wx + b)\\
+g = \sigma(W'x + b')\\
+
+a_i = \mathbf{w}_a^{\top} f_a(\[\mathbf{v}_i, \mathbf{q}\])\\
+\mathbf{h} = f_q(\mathbf{q})\circ f_v(\hat{\mathbf{h}})\\
+p(y) = \sigma(W_o f_o(\mathbf{h}))
+
+$$
+
+## So?
+
+![image](/assets/images/updown3.png){: .center-image width="50px"}
+
+Bottm-up attention is shown to be useful than former methods. 
+
+![image](/assets/images/updown4.png){: .center-image width="50px"}
+
+Up-Down model showed competitive results compared to other models in leader board of VQA 2.0 challenge (ensemble). 
+
+[Anderson, Peter, et al. "Bottom-up and top-down attention for image captioning and visual question answering." CVPR. Vol. 3. No. 5. 2018.](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1163.pdf)
+
