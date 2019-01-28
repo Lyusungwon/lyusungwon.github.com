@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "MobileNet: Efficient Convolutional Neural Networks for Mobile Vision Applications"
+date:   2019-01-15 09:59:59
+author: Sungwon Lyu
+categories: Deep-Learning
+---
+
+## WHY? 
+Recent neural network models are getting bigger to increase the performance to the limit. This paper suggests MobileNet to reduce the size of neural network small enough to deploy on mobile devices. 
+
+## WHAT?
+Several techniques are used for MobileNet.
+
+[image](/assets/images/mbnet1.png){: .center-image width="50px"}
+
+The most important component of MobileNet is depthwise separable convolution. Assume a feature map of $$D_F\cdot D_F \cdot M$$. Standard convolution filters consists of N number of filters of size $$D_K\cdot D_K \cdot M$$. Instead, depthwise separable convolution replace this with M number of depthwise convolution of size $$D_f\cdot D_f\cdot 1$$, and N number of pointwise convolution of size $$1\cdot 1 \cdot M$$.
+
+[image](/assets/images/mbnet2.png){: .center-image width="50px"}
+
+New efficient architecture based on this method not only reduce the number of multi-add, but also concentrate the computation on pointwise convolution layer which is one of the most efficient operation by general matrix multiply(GEMM). 
+
+Mobilenet introduced two additional hyperparameters to reduce the computation. Width multiplier $$\alpha$$ is used to reduce the number of channels on each layer. Resolution multiplier $$\rho$$ is used to reduce the height and width on each layer. The number of computation is reduced from
+
+$$
+D_K \cdot D_K \cdot M \cdot N \cdot D_F \cdot D_F
+$$
+
+to
+
+$$
+D_k \cdot D_k \cdot \alpha M \cdot\rho D_F \cdot\rho D_F + \alpha M \cdot\alpha N \cdot\rho D_F \rho D_F 
+$$
+
+## So?
+[image](/assets/images/mbnet3.png){: .center-image width="50px"}
+MobileNet decreased the number of parameters and computations dramatically with slight decrease in performance on various tasks including classification and detection.
+
+## Critic
+It is amazing that the convolution filters can be represented with depthwise convolution and pointwise convolution while preserving much of its representational power. Could there be similar method of RNN series?
+
+[Howard, Andrew G., et al. "Mobilenets: Efficient convolutional neural networks for mobile vision applications." arXiv preprint arXiv:1704.04861 (2017).](https://arxiv.org/abs/1704.04861)

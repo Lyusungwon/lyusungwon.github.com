@@ -36,7 +36,7 @@ $$
 \mathbf{\tau}_c[:,:,k] = \sum_{r=1}^R \mathbf{m}_r^k \otimes \mathbf{n}_r^{k\top}\\
 \mathbf{z}[k] = \sum_{r=1}^R(\tilde{\mathbf{q}}^{\top}\mathbf{m}_r^k)(\tilde{\mathbf{v}}^{\top}\mathbf{n}_r^k)\\
 \mathbf{z} = \sum_{r=1}^R \mathbf{z}_r\\
-\mathbf{z}_r = (\tilde{\mathbf{q}}}^{\top}\mathbf{M}_r)*(\tilde{\mathbf{v}}^{\top}\mathbf{N}_r)
+\mathbf{z}_r = (\tilde{\mathbf{q}}^{\top}\mathbf{M}_r)*(\tilde{\mathbf{v}}^{\top}\mathbf{N}_r)
 $$
 
 ![image](/assets/images/mutan2.png){: .center-image width="50px"}

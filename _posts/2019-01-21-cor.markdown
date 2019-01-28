@@ -35,7 +35,7 @@ Relations of objects are calculated with guidance conditioned on question. Objec
 $$
 G_l = \sigma(relu(QW_{l_1})W_{l_2}), G_r = \sigma(relu)QW_{r_1})W_{r_2}\\
 R_{ij}^{t} = (O_i^{t}\odot G_l) \oplus (O_j^{(1)}\odot G_r)\\
-O_j^{(t+1) = \sum_{i=1}^m \alpha_i^{t} R_{ij}^{t}
+O_j^{t+1} = \sum_{i=1}^m \alpha_i^t R_{ij}^t
 $$
 
 Decisions are made with all the objects from each step.

@@ -24,7 +24,7 @@ The second model is the neural arithmetic logic unit(NALU) which can perform mul
 
 $$
 \mathbf{g} = \sigma(\mathbf{G}\mathbf{x})\\
-\mathbf{m) = \exp \mathbf{W}(\log(|\mathbf{x}|+\epsilon))\\
+\mathbf{m} = \exp \mathbf{W}(\log(|\mathbf{x}|+\epsilon))\\
 \mathbf{y} = \mathbf{g}\cdot\mathbf{a} + (1 - \mathbf{g})\cdot \mathbf{m}
 $$
 

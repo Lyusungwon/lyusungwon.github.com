@@ -14,6 +14,7 @@ A caption of an image can be generated with attention based model by aligning a 
 A convolution neural network extracts features from raw images resulting a series of feature vectors. In order to generate a series of words as a caption, LSTM with attention model is used. Generated feature vectors are used as annotation vectors for attention. Previous word, previous hidden vector and current context vector is concatenated and projected to the dimension of hidden vector to be used as inputs for gates. Deep output layer is used for output word probability distribution. 
 
 ![image](/assets/images/nicg2.png){: .center-image width="50px"}
+
 $$
 e_{ti} = f_{att}(\mathbf{a_i}, \mathbf{h_{t-1}})\\
 \alpha_{ti} = \frac{\exp(e_{ti})}{\sum_{k=1}^L \exp(e_{tk})}\\

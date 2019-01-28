@@ -25,7 +25,7 @@ f_a(x) = \tilde{y}\circ g\\
 \tilde{y} = tanh(Wx + b)\\
 g = \sigma(W'x + b')\\
 
-a_i = \mathbf{w}_a^{\top} f_a(\[\mathbf{v}_i, \mathbf{q}\])\\
+a_i = \mathbf{w}_a^{\top} f_a([\mathbf{v}_i, \mathbf{q}])\\
 \mathbf{h} = f_q(\mathbf{q})\circ f_v(\hat{\mathbf{h}})\\
 p(y) = \sigma(W_o f_o(\mathbf{h}))
 

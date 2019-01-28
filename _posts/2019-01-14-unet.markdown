@@ -14,7 +14,7 @@ This paper suggests U-net architecture which is a modified version of fully conv
 
 ![image](/assets/images/unet1.png){: .center-image width="50px"}
 
-Unet consists of a contracting path and an expansive path. The contracting path is repeated application of two 3x3 convolutions, ReLU, and 2x2 max pooling with doubled channels. The expansive path is somewhat symmetric to the contracting path: two 3x3 convolutions, ReLU and 2x2 up-convolution with halved channels. After upsampling, the output of corresponding contracting layer is cropped and added to provide contextual information. This symmetric pathes form U shape structure. 
+Unet consists of a contracting path and an expansive path. The contracting path is repeated application of two 3x3 convolutions, ReLU, and 2x2 max pooling with doubled channels. The expansive path is somewhat symmetric to the contracting path: two 3x3 convolutions, ReLU and 2x2 up-convolution with halved channels. After upsampling, the output of corresponding contracting layer is cropped and added to provide contextual information. These symmetric pathes form U shape structure. 
 
 ![image](/assets/images/unet2.png){: .center-image width="50px"}
 
@@ -28,6 +28,6 @@ To separate the touching objects, weighted loss on the sepatation border is used
 U-net achieved good results on various medical image segmentation tasks with small amount of data.
 
 ## Critic
-It would be better if the paper focus only on U-net structure or efficient training with data augmentation. The contribution of the methods are not clear on the experiment results. 
+It would be better if the paper focus only on U-net structure or efficient training with data augmentation. Each contribution of the methods are not clear on the experiment results. 
 
 [Ronneberger, Olaf, Philipp Fischer, and Thomas Brox. "U-net: Convolutional networks for biomedical image segmentation." International Conference on Medical image computing and computer-assisted intervention. Springer, Cham, 2015.](https://arxiv.org/abs/1505.04597)

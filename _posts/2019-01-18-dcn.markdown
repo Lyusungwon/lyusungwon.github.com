@@ -3,7 +3,7 @@ layout: post
 title:  "Deformable Convolutional Networks"
 date:   2019-01-18 09:02:59
 author: Sungwon Lyu
-categories: Computer Vision
+categories: Computer-Vision
 ---
 
 ## WHY? 

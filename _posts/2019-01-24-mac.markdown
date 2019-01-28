@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Compositional Attention Networks for Machine Reasoning"
+date:   2019-01-24 13:11:59
+author: Sungwon Lyu
+categories: Visual-Question-Answering
+---
+
+## WHY? 
+Previous methods for visual reasoning were not interpretable. This paper suggests MAC network which is fully differentiable and interpretable by design.
+
+## WHAT?
+MAC network consists of three parts: the input unit, the MAC cells, and the read unit. The input unit encodes the question and the image. The word embeddings of question is processed by d-dimensional biLSTM. The hidden states of the model are contextual representation for each word. The concatenation of the last hidden state of backward, and forward LSTM is used as a question representation. This question representaion is linearly projected to position aware vector for each reasoning step. For image features, the conv4 layer output of pretrained ResNet101 is used.\\
+
+Recurrent Memory, Attention, and Composition cell(MAC cell) is newly designed recurrent cell for reasoning operation. p number of MAC cells are stacked to perform multiple reasoning steps. MAC cell has two hidden states: control($$c_i$$) and memory($$m_i$$). The control state represents the reasoning operation and the memory state holds intermediate information. 
+
+![image](/assets/images/mac1.png){: .center-image width="50px"}
+
+The control unit updates the control state. New control state is a soft attention-based weighted average of the question words based on the question vector for each step. 
+
+![image](/assets/images/mac1.png){: .center-image width="50px"}
+
+The read unit extracts information from memory. 
+
+## So?
+
+![image](/assets/images/coatt3.png){: .center-image width="50px"}
+
+Co-attention model with pretrained image feature achieved good result on VQA dataset.
+
+[Lu, Jiasen, et al. "Hierarchical question-image co-attention for visual question answering." Advances In Neural Information Processing Systems. 2016.](http://papers.nips.cc/paper/6202-hierarchical-question-image-co-attention-for-visual-question-answering)
+
