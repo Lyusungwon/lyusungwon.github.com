@@ -26,7 +26,7 @@ I[C, A_t; q_t, a_{1:t-1}, q_{1:t-1}]\\
 p(c|a_{1:t}, q_{1:t}) \propto p(c)\prod_{j=1}^t p(a_j|c, q_j, a_{1:j-1}, q_{1:j-1})
 $$
 
-Since getting posterior requires the answer distribution of the answerer($$p(a_t|c, q_t, a_{1:t-1}, q_{1:t-1})$$), the questioner approximate the answerer's answer distribution($$\tilde{p}(a_t|c, q_t, a_{1:t-1}, q_{1:t-1})$$).
+Since getting posterior requires the answer distribution of the answerer, $$p(a_t|c, q_t, a_{1:t-1}, q_{1:t-1})$$, the questioner approximate the answerer's answer distribution, $$\tilde{p}(a_t|c, q_t, a_{1:t-1}, q_{1:t-1})$$.
 
 $$
 \hat{p}(a_t|c, q_t, a_{1:t-1}, q_{1:t-1}) \propto \tilde{p}'(c)\prod_{j=1}^t \tilde{p}(a_j|c, q_j, a_{1:j-1}, q_{1:j-1})
