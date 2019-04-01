@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Visual Reasoning by Progressive Module Networks"
+date:   2019-02-15 09:01:59
+author: Sungwon Lyu
+categories: Visual-Question-Answering
+---
+
+## WHY? 
+Some tasks need to make use of informations from other tasks in order to solve the tasks. This paper suggest Progressive Module Networks(PMN) which enable the communication between main task module and the sub-modules of other task in message passing manners. 
+
+## WHAT?
+
+![image](/assets/images/pmn.png){: .center-image width="50px"}
+
+To solve complex tasks such as VQA, PMN design hierarchy of tasks. Upper module can utilize information compositionally from lower modules. Information from lower modules are modularized with soft-gating mechanism.
+
+There are two kinds of modules in PMN: Terminal modules that do not require information from lower modules and compositional modules that do. Terminal modules are implemented with simple neural networks that takes input query q to output o, $$o = M_l(q)$$. Compositional modules keep a ordered list of sub-modules to call, $$\mathcal{L}_n = [M_m,...,M_l]$$ (The list of the modules is hand-designed). Compositional modules also have their own terminal nodes $$\Delta_n$$ for residual reasoning, and $$\Omega_n$$ for soft-attention. 
+
+
+## So?
+N2NMN showed better result than NMN on SHAPES, CLEVR and VQA. The expert policies of SHAPES and CLEVER are provided in the dataset, and stanford parser is used for VQA.
+
+![image](/assets/images/n2nmn4.png){: .center-image width="50px"}
+
+The layout policy is shown to learn the appropriate policy. Learning from expert policy is shown to be even better than cloning the expert policy.
+
+![image](/assets/images/n2nmn5.png){: .center-image width="50px"}
+
+[Hu, Ronghang, et al. "Learning to reason: End-to-end module networks for visual question answering." CoRR, abs/1704.05526 3 (2017).](http://openaccess.thecvf.com/content_ICCV_2017/papers/Hu_Learning_to_Reason_ICCV_2017_paper.pdf)
+

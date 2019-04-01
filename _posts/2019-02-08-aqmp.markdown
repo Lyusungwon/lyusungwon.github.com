@@ -18,7 +18,7 @@ AQM+ is sampling based approximation to AQM algorithm. AQM+ is different from AQ
 $$
 \tilde{I}_{topk}[C, A_t; q_t, h_{t-1}] = \sum_{a_t\in \mathbf{A}_{t, topk}}
 = \sum_{a_t\in \mathbf{A}_{t, topk}(q_t)}\sum_{c\in \mathbf{C}_{t, topk}} \hat{p}_{reg}(c|h_{t-1})\tilde{p}_{reg}(a_t|c, q_t, h_{t-1}) \ln \frac{\tilde{p}_{reg}(a_t|c, q_t, h_{t-1})}{\tilde{p}_{reg}'(a_t|q_t, h_{t-1})}\\
-\hat{p}_{reg}(c|h_{t-1}) = \frac{\hat{p(c|h_{t-1})}{\sum_{c\in \mathbf{C}_{t, topk}}p(c|h_{t-1})}\\
+\hat{p}_{reg}(c|h_{t-1}) = \frac{\hat{p}(c|h_{t-1})}{\sum_{c\in \mathbf{C}_{t, topk}}p(c|h_{t-1})}\\
 \tilde{p}_{reg}(a_t|c, q_t, h_{t-1}) = \frac{\tilde{p}(a_t|c, q_t, h_{t-1})}{\sum_{a_t\in \mathbf{A}_{t, topk}(q_t)}\tilde{p}(a_t|c, q_t, h_{t-1})}\\
 \tilde{p}_{reg}'(a_t|q_t, h_{t-1}) = \sum_{c\in \mathbf{C}_{t, topk}}\hat{p}_{reg}(c|h_{t-1})\cdot\tilde{p}_{reg}(a_t|c, q_t, h_{t-1})
 $$

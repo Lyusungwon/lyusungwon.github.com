@@ -20,7 +20,7 @@ MCB utilizes Count Sketch projection function for compact encoding of vector. Wh
 It has been proven that the Count Sketches of the outer product of two vectors can be expressed as convolution of two Count Sketches. Also, convolutino in the time domain is equivalent to element-wise product in frequency domain. 
 
 $$
-\Psi(x\otimesq, h, s) = \Psi(x, h, s) \ast \Psi(q, h, s)\\
+\Psi(x\otimes q, h, s) = \Psi(x, h, s) \ast \Psi(q, h, s)\\
 x' \ast q' = FFT^{-1}(FFT(x')\odot FFT(q'))
 $$
 
