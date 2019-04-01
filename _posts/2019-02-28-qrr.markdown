@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Task-Oriented Query Reformulation with Reinforcement Learning
+title:  Task-Oriented Query Reformulation with Reinforcement Learning
 date:   2019-02-28 09:38:59
 author: Sungwon Lyu
 categories: Natural-Language-Processing
