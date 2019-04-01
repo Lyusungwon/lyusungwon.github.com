@@ -14,7 +14,7 @@ subtitle: "Don't panic"
 email: lyusungwon@dm.snu.ac.kr
 name: Sungwon Lyu
 description: >
-  Rejoice in what you learn and spread it!
+  Rejoice in what you learn and spray it!
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -53,6 +53,12 @@ descriptions:
 
   - cat: Opinions
     desc: "My personal opinion"    
+
+  - cat: Audio
+    desc: "Papers about audio"    
+
+  - cat: Distributed-processing
+    desc: "Papers about distributed-processing"    
 
   - cat: Natural-Language-Processing
     desc: "Papers about natural language processing"    
