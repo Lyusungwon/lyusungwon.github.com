@@ -27,7 +27,7 @@ In order to benefit from the other task, weights are shared between two processe
 Since two processes are cyclic, duality regularizer is used to promote consistency. Two losses from both tasks(multinomial classification loss for VQA and sequence generation loss for VQG) and two regularizers are jointly trained in dual training manner. 
 
 $$
-Loss = L_{(VQA)}(a, a*) + L_{(VQG)}(q, q*) + smooth_{L1)}(\mathbf{q} - \hat{\mathbf{q}}) + smooth_{L1)}(\mathbf{a} - \hat{\mathbf{a}}) 
+Loss = L_{(VQA)}(a, a*) + L_{(VQG)}(q, q*) + smooth_{L1}(\mathbf{q} - \hat{\mathbf{q}}) + smooth_{L1}(\mathbf{a} - \hat{\mathbf{a}}) 
 $$
 
 Yes/no or number questions are filtered out. 

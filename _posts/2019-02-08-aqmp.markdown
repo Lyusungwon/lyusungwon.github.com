@@ -23,7 +23,7 @@ $$
 \tilde{p}_{reg}'(a_t|q_t, h_{t-1}) = \sum_{c\in \mathbf{C}_{t, topk}}\hat{p}_{reg}(c|h_{t-1})\cdot\tilde{p}_{reg}(a_t|c, q_t, h_{t-1})
 $$
 
-$$\mathbf{C}_{t, topk}$$ refers to top-K posterior test images from Qpost $$\hat{p}_{reg}(c|h_{t-1})$$. $$\mathbf{Q}_{t, topk}$$ refers to top-K likelihood questions using beam search from Qgen $$p(q_t|h_{t-1})$$. $$\mathbf{A}_{t, topk}(q_t)$$ refers to top-1 generated answers for each question and each class from aprxAgen $$\tilde{p}(a_t|c, q_t, h_{t-1})$$. Similar to AQM, approximation of the answer generator can be either indA or depA. 
+$$\mathbf{C}_{t, topk}$$ refers to top-K posterior test images from Qpost $$\hat{p}_{reg}(c\|h_{t-1})$$. $$\mathbf{Q}_{t, topk}$$ refers to top-K likelihood questions using beam search from Qgen $$p(q_t\|h_{t-1})$$. $$\mathbf{A}_{t, topk}(q_t)$$ refers to top-1 generated answers for each question and each class from aprxAgen $$\tilde{p}(a_t\|c, q_t, h_{t-1})$$. Similar to AQM, approximation of the answer generator can be either indA or depA. 
 
 ## So?
 
