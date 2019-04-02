@@ -31,8 +31,8 @@ $$
 The sequence of modules from decoder is mapped into a syntax tree using Reverse Polish Notation(the post-order traversal). Since the layout policy is not fully differentiable, REINFORCE algorithm is used to approximate the gradient. Entropy regularization(0.005) is used to encourage exploration.
 
 $$
-L(\theta) = E_{l\sim p(l|q;\theat)}[\tilde{L}(\theta, l; q, I)]\\
-\nabla L \approx \frac{1}{M}\sum_{m=1}^M ([\tilde{L}(\theta, l_m) - b]\nabla_{\theta}log p(l_m|q;\theta) + \nabla_{\theta}\tilde{L}(\theata, l_m))
+L(\theta) = E_{l\sim p(l|q;\theta)}[\tilde{L}(\theta, l; q, I)]\\
+\nabla L \approx \frac{1}{M}\sum_{m=1}^M ([\tilde{L}(\theta, l_m) - b]\nabla_{\theta}log p(l_m|q;\theta) + \nabla_{\theta}\tilde{L}(\theta, l_m))
 $$
 
 Since learning the layout from the scratch is challenging, additional knowledge(expert policy) can be provided for initialization. KL-divergence between layout policy and expert policy is added to loss function. 
