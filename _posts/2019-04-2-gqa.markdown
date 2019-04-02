@@ -1,0 +1,40 @@
+---
+layout: post
+title:  Generative Question Answering: Learning to Answer the Whole Question
+date:   2019-04-02 09:47:59
+author: Sungwon Lyu
+categories: Visual-Question-Answering
+---
+
+## WHY? 
+
+Discriminative question answering often overfit to datasets by catching any kinds of clue that leads to answer.  
+
+## WHAT?
+
+This paper suggests Generative Question Answering model(GQA) to generate both questions and answers given contexts. Though this paper applied the model on both QA and VQA tasks, following explanation would only focus on VQA task. The model uses Bayes' rule to minimize the NLL of joint distribtion of questions and answers given context(images).  
+
+$$
+\mathcal{L} = -\log p(q,a|c) = -\log p(a|c) - \sum_t \log p(q_t|a, c, q_{0 ... t-1})
+$$
+
+c is encoded through pretrained convolution model(Resnet101) with 32-dimension positional encoding. Answer prior($$p(a\|c)$$) is simply calculated with fc on image features. The likelihood of the question($$p(q\|a, c)$$) is modeled with conditional language model. Language model(question decoder) is modeled with several blocks of residual self attentive LSTM layers and GLU on the top. 
+
+![image](/assets/images/gqa1.png){: .center-image width="50px"}
+
+At inference time, the answer maximizing the posterior($$p(q,a\|c)$$) is returned which requires calculation of likelihood given all possible answers.
+
+$$
+a^* = argmax_a p(q|a,c)p(a|c)
+$$
+
+## So?
+
+![image](/assets/images/gqa2.png){: .center-image width="50px"}
+
+GQA showed comparable performance to other VQA models while showing interpretable attention map and word probabilities on the last layer.
+
+![image](/assets/images/gqa3.png){: .center-image width="50px"}
+
+[Lewis, Mike, and Angela Fan. "Generative Question Answering: Learning to Answer the Whole Question." (2018).](https://openreview.net/forum?id=Bkx0RjA9tX)
+
