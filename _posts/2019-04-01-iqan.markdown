@@ -1,0 +1,39 @@
+---
+layout: post
+title:  Visual Question Generation as Dual Task of Visual Question Answering
+date:   2019-04-01 09:27:59
+author: Sungwon Lyu
+categories: Visual-Question-Answering
+---
+
+## WHY? 
+
+Visual question answering and visual question generation are complementary tasks. Learning one task may benefit the other. 
+
+## WHAT?
+
+![image](/assets/images/iqan1.png){: .center-image width="50px"}
+
+This paper suggests Invertible Question Answering Network(iQAN) that is trained on two tasks sharing pipline in reverse order. 
+
+![image](/assets/images/iqan2.png){: .center-image width="50px"}
+
+VQA model of iQAN is [MUTAN fusion module](https://lyusungwon.github.io/visual-question-answering/2019/01/22/mutan.html), and another MUTAN-based attention module is used for VQG. 
+
+![image](/assets/images/iqan3.png){: .center-image width="50px"}
+
+In order to benefit from the other task, weights are shared between two processes. Dual MUTAN shares core tensor and projection matrices of two MUTAN modules. In addition, input answer projection matrix of VQG model and linear classifier matrix of VQA model are shared. While two RNN for VQG and VQA may not share the parameter, word embedding matrices are shared.  
+
+Since two processes are cyclic, duality regularizer is used to promote consistency. Two losses from both tasks(multinomial classification loss for VQA and sequence generation loss for VQG) and two regularizers are jointly trained in dual training manner. 
+
+$$
+Loss = L_{(VQA)}(a, a*) + L_{(VQG)}(q, q*) + smooth_{L1}(\mathbf{q} - \hat{\mathbf{q}}) + smooth_{L1}(\mathbf{a} - \hat{\mathbf{a}}) 
+$$
+
+Yes/no or number questions are filtered out. 
+
+## So?
+iQAN showed comparable result in VQA2 and CLEVR dataset.
+
+[Li, Yikang, et al. "Visual question generation as dual task of visual question answering." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.](http://openaccess.thecvf.com/content_cvpr_2018/html/Li_Visual_Question_Generation_CVPR_2018_paper.html)
+
