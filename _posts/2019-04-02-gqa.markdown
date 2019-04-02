@@ -25,7 +25,7 @@ c is encoded through pretrained convolution model(Resnet101) with 32-dimension p
 At inference time, the answer maximizing the posterior($$p(q,a\|c)$$) is returned which requires calculation of likelihood given all possible answers.
 
 $$
-a^* = argmax_a p(q|a,c)p(a|c)
+a* = argmax_a p(q|a,c)p(a|c)
 $$
 
 ## So?
