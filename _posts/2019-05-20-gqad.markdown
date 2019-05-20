@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "GQA: A New Dataset for Real-World Visual Reasoning ans compositional Question Answering"
+date:   2019-05-20 10:39:59
+author: Sungwon Lyu
+categories: Visual-Question-Answering
+---
+
+## WHY? 
+
+There were some problems in previous VQA dataset. Strong language prior, non-compositional language and variablility in language were key obstacles for model to learn proper concepts and logics from VQA dataset. Synthetically generated CLEVR dataset solved these problems to some extent but lacked realisticity by remaining in relatively simple domain. 
+
+## WHAT?
+
+![image](/assets/images/gqad1.png){: .center-image width="50px"}
+
+GQA dataset enhanced the VQA dataset by adopting the methodology of CLEVR dataset. GQA dataset starts with Visual Genome scene graphs dataset. This paper augments the VG scene graph by cleaning up the language of graphs, pruning the edge of graphs and utilizing the object detector. Question engine build questions from scene graph with 274 structural patterns, object references and decoys by traversing the graphs. Each question pattern is related with a functional representation. With semantic program, the questions are balanced in two granulaity levels. Through these process, GQA dataset resulted 113,018 images with 22,669,678 questions in total with vocab size of 3097 for questions, and 1878 for answers. Also this dataset provide additional metrics other than accuracy such as consistency, validity, plausibility and distribution. 
+
+## So?
+
+![image](/assets/images/gqad2.png){: .center-image width="50px"}
+
+This dataset provided reasonable criteria for visual reasoning models which reflects reality. 
+
+[Hudson, Drew A., and Christopher D. Manning. "GQA: a new dataset for compositional question answering over real-world images." arXiv preprint arXiv:1902.09506 (2019).](https://arxiv.org/abs/1902.09506)
+
