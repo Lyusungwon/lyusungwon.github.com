@@ -2,7 +2,9 @@
 layout: page
 title: "Posts"
 permalink: /posts/
+main_nav: true
 ---
+
 {% assign sorted_cat = site.categories | sort%}
 {% for category in sorted_cat %}
   {% capture cat %}{{ category | first }}{% endcapture %}
