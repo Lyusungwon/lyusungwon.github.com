@@ -5,7 +5,11 @@ permalink: /works/
 main_nav: true
 ---
 
+### [[Download resume]]({{lyusungwon.github.io}}/assets/resume/SungwonLyu_Resume.pdf)
+
 # Publications
+
+- ["Multimodal Self-Attention Network for Visual Reasoning"]({{lyusungwon.github.io}}/assets/publications/190617_MasterPaper_SungwonLyu.pdf), Sungwon Lyu, Master Thesis
 
 - ["SARN: Relational Reasoning through Sequential Attention"]({{lyusungwon.github.io}}/assets/publications/1811.00246.pdf), Jinwon An, Sungwon Lyu, Sungzoon Cho, 2018 NIPS Workshop on Visually-Grounded Interaction and Language (ViGIL) / Relational Representation Learning, December 8, 2018, Montréal, Canada
 
@@ -18,6 +22,16 @@ main_nav: true
 - [KOR]["Clustering National Security Threats Using Two-Step Disentanglement Method On Stock Prices"]({{lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_최민.pdf), Minh Choi, Sungwon Lyu, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session Best Paper 
 
 - [KOR]["RNN Based Word Embedding Method"]({{lyusungwon.github.io}}/assets/publications/[2018추계]서울대학교_산업공학과_김지영.pdf), Jeeyung Kim, Sungwon Lyu, Hyunguk Lee, Jimin Sun, Sungzoon Cho, Korea Data Mining Society 2018 Fall Conference, Special Session
+
+# Personal Projects
+
+- [Visual Reasoning Models](github.com/Lyusungwon/relational_network_pytorch): Baseline, RN, SARN, FILM
+
+- [Generative Models](github.com/Lyusungwon/generative_models_pytorch): AAE, Beta-VAE, Convolutional VAE, DCGAN, GAN, Introspective VAE, MADE, VAE, VAE-IAF, VAE-NF, VQVAE, WGAN (Work in progress)
+
+- [Two-Step Disentanglement Method on Financial Data](github.com/cham310/fin_disentanglement)
+
+- [Alphachu](github.com/Lyusungwon/apex_dqn_pytorch): APE-X DQN
 
 # Presentations
 
@@ -36,29 +50,3 @@ main_nav: true
 - ["Disentangling Sequential Data"]({{lyusungwon.github.io}}/assets/presentation/20180618_DisentanglingSequentialData_SungwonLyu.pdf), Datamining Lab Seminar, June 18, 2018
 
 - ["Ask The Right Question"]({{lyusungwon.github.io}}/assets/presentation/20180226_AskTheRIghtQuestion_SungwonLyu.pdf), Datamining Lab Seminar, Febuary 26, 2018
-
-# Personal Projects
-
-- [Visual Reasoning Models](github.com/Lyusungwon/relational_network_pytorch): Baseline, RN, SARN, FILM
-
-- [Distributed Training of Word Embedding](github.com/Lyusungwon/sgns_pytorch): SGNS, RNN based-SGNS
-
-- [Generative Models](github.com/Lyusungwon/generative_models_pytorch): AAE, Beta-VAE, Convolutional VAE, DCGAN, GAN, Introspective VAE, MADE, VAE, VAE-IAF, VAE-NF, VQVAE, WGAN (Work in progress)
-
-- [Two-Step Disentanglement Method on Financial Data](github.com/cham310/fin_disentanglement)
-
-- [Alphachu](github.com/Lyusungwon/apex_dqn_pytorch): APE-X DQN
-
-- [Multimodal Unsupervised Image-to-Image Translation](github.com/Lyusungwon/munit_pytorch)
-
-- [Neural Machine Translator](github.com/Lyusungwon/nmt)
-
-- [Udacity Data Analyst Nano-degree](github.com/Lyusungwon/Udacity_Data_Analyst)
-
-- [IAML Music Projects](github.com/Lyusungwon/IAML_music_projects)
-
-- [Stanford CS231 Assignments](github.com/Lyusungwon/cs231n)
-
-# Corporation Projects
-
-- Reinforcement-learning based Overhead Hoist Transfer Optimization (Samsung), 2018.01 ~ 2018.12
