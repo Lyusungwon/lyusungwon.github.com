@@ -3,7 +3,8 @@ layout: post
 title:  "Wasserstein GAN"
 date:   2018-03-12 19:40:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
 ## WHY? 
 기존의 대표적인 Generation Model로 VAE와 GAN이 있다. VAE는 목적 분포를 직접 구하는 대신 계산 가능한 다른 분포를 가정하고 이와 목적 분포와의 거리(KL Divergence)를 최소화 함으로써 간접적으로 목적 분포를 구하였다. 하지만 KL Divergence는 두 함수의 support가 같은 영역에서 정의가 되어있어야 한다는 한계가 있다. 또한 GAN은 목적 분포를 직접 구하지 않고도 Discriminator loss를 통하여 표본을 생성하지만 discriminator와 generator간의 학습 비율이 중요하고 섬세하여 학습이 어렵다는 단점이 있다. 

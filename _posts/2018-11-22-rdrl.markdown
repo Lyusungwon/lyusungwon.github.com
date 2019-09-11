@@ -3,9 +3,9 @@ layout: post
 title:  "Relational Deep Reinforcement Learning"
 date:   2018-11-22 10:43:59
 author: Sungwon Lyu
-categories: Reinforcement-Learning
+categories: studies
+tags: deep-learning reinforcement-learning
 ---
-
 ## WHY? 
 Relational information is important in some reinforcement learning tasks.
 

@@ -3,9 +3,9 @@ layout: post
 title:  "Curriculum Learning"
 date:   2018-05-22 9:14:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 사람은 특정 일을 학습할 때 쉬운 일 부터 배운 후에 점차 어려운 일을 배운다. 
 

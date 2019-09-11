@@ -3,9 +3,9 @@ layout: post
 title:  "Markov Chain Monte Carlo and Variational Inference: Bridging the Gap"
 date:   2018-09-04 08:56:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Two approximation methods, Variational inference and MCMC, have different advantages: usually, variational inference is fast while MCMC is more accurate. 
 

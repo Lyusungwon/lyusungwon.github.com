@@ -3,15 +3,13 @@ layout: post
 title:  "Latent Alignment and Variational Attention"
 date:   2018-12-01 19:47:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 Even though attention is being widely used, it is hard to be considered as probabilistic model as the attention does not marginalize. 
 
 ## WHAT?
-
-
 This paper formulated source separation task as getting mixture meight vector of multiple sources in wave form.
 
 $$

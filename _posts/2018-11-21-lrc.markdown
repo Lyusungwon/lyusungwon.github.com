@@ -3,9 +3,9 @@ layout: post
 title:  "Linguistic Regularities in Continuous Space Word Representations"
 date:   2018-11-21 10:39:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
-
 ## WHY? 
 Vector space word representations capture syntactic and semantic regularities in language well. 
 

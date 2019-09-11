@@ -3,9 +3,9 @@ layout: post
 title:  "Matching Networks for One Shot Learning"
 date:   2018-05-16 11:15:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 현실에서 방대한 데이터와 그에 맞는 label을 구할 수 없기 때문에 몇 가지의 데이터에 대한 label로 좋은 성과를 내는 semi-supervised learning은 중요하다.
 

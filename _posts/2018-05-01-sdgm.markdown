@@ -3,9 +3,9 @@ layout: post
 title:  "Semi-supervised Learning with Deep Generative Models"
 date:   2018-05-01 11:46:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Semi-supervised learning이란 적은 양의 labeled 데이터로 부터 정보를 효과적으로 generalize하여 많은 양의 unlabeled 데이터의 정보를 활용하고 이를 통하여 모델의 성능을 향상시키는 학습을 말한다. 
 

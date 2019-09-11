@@ -3,14 +3,13 @@ layout: post
 title:  "Tips and Tricks for Visual Question Answering: Learnings from the 2017 Challenge"
 date:   2019-02-11 09:03:59
 author: Sungwon Lyu
-categories: Visual-Question-Answering
+categories: studies
+tags: deep-learning visual-question-answering
 ---
-
 ## WHY? 
 This paper describe several tips and tricks for VQA challenge with the first place model in 2017 VQA challenge. Also, this paper conducts comprehensive experiment for ablation of each trick. 
 
 ## WHAT?
-
 ![image](/assets/images/tt1.png){: .center-image width="50px"}
 
 The architecture of this model is rather simple. As question embedding, GRU(512) with pretrained GloVe word vector(300) is used as initialization. Maximum length of thq question is timmed to 14. As image feature, this paper tries 2 methods: the output of pretrained Resnet resized to 7 x 7 with average pooling, and bottom-up attention with Faster R-CNN (K=60). This paper used only one glimpse of image attention instead of many glimpse of attention. Multi-modal fusion is implemented with Hadamard product. 
@@ -20,7 +19,6 @@ This paper elaborates 6 major tricks for VQA challenge. First, instead of single
 ![image](/assets/images/tt2.png){: .center-image width="50px"}
 
 ## So?
-
 ![image](/assets/images/tt3.png){: .center-image width="50px"}
 
 This paper achieved the best result on 2017 VQA challenge.

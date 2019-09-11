@@ -3,9 +3,9 @@ layout: post
 title:  "A Disentangled Recognition and Nonlinear Dynamics Model for Unsupervised Learning"
 date:   2018-07-05 17:37:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 This paper wanted to catch non-linear dynamics of the object in video. 
 

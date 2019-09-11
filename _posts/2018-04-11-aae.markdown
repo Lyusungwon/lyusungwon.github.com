@@ -3,9 +3,9 @@ layout: post
 title:  "Adversarial Autoencoders"
 date:   2018-04-11 14:02:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 기존의 [VAE](https://lyusungwon.github.io/dl/2018/02/11/vae.html)는 latent variable들의 aggregated posterior를 특정 분포를 따르게 하기 위하여 KL Divergence의 regularizer를 사용한다.  
 

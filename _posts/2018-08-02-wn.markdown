@@ -3,9 +3,9 @@ layout: post
 title:  "Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks"
 date:   2018-08-02 10:04:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 Batch normalization is known as a good method to stablize the optimization of neural network by reducing internal covariate shift. However, batch normalization inheritantly depends on minibatch which impeding the use in recurrent models. 
 

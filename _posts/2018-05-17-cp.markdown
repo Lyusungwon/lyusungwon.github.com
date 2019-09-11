@@ -3,9 +3,9 @@ layout: post
 title:  "The Consciousness Prior"
 date:   2018-05-17 10:47:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 consciousness를 특정 순간의 awareness라고 한다면 여러 저차원 concept들의 조합이라고 생각할 수 있다. 이러한 저차원 개념(thought vector)들은 현실에 대한 사실이거나 결정을 내리는데 유용한 명제(statement)로 구성될 수 있다. 이러한 의식을 통하여 미래에 대한 예측을 하고 의사결정을 내릴 수 있다. 기존에는 감각으로 부터 오는 데이터(sensory data)로 부터 직접 의사결정을 한다고 간주되어 왔지만 consciousness prior는 agent가 고층위 abstract space에서 예측 및 의사결정을 내릴 수 있게 해준다. 이러한 conciousness prior는 복잡한 의식으로 부터 단순화된 언어를 통하여 표현하는 자연어 발화 과정에도 부합한다. consciousnes는 agent가 현재에 유용한 표현을 만들기 위하여 abstract concept들 중에서 몇몇의 concept에 주목하여 구성된다는 점에서 착안하여 attentive awareness 라고도 볼 수 있다. 
 

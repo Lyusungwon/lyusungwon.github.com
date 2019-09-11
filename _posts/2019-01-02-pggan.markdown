@@ -3,9 +3,9 @@ layout: post
 title:  "Progressive Growing of GANs for improved Quality, Stability, and Variation"
 date:   2019-01-02 11:31:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Training GAN on high-resolution images is known to be difficult.
 
@@ -25,7 +25,6 @@ To increase the variation, the average of standard variation of minibatch is rep
 In order to reduce unhealthy competition between generator and discriminator, this paper suggest two methods. First is to scale the weights at runtime with per-layer normalization constant from He's initializer(c). Compared to adaptive SGD methods, this method allows to apply equalized learning rate across all weights. Second method is to normalize the feature vector in each pixel to unit length in the generator after each conv layer using "local response normalization". This prevents the excessive escalation of magnitudes of both network. 
 
 ## So?
-
 ![image](/assets/images/pggan3.png){: .center-image width="50px"}
 
 This paper suggests using sliced Wasserstein distance(SWD) over MS-SSIM as metric. PGGAN produced better high-resolution images than previous methods in terms of quantitative and qualitative measure.

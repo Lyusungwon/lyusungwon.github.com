@@ -3,9 +3,9 @@ layout: post
 title:  "PixelGAN Autoencoders"
 date:   2018-04-18 10:33:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 기존의 implicit generative model(VAE)들은 hierarchical latent codes를 통하여 데이터의 statistics를 학습할 수 있지만 decoder를 통한 sampling만 가능하고 likelihood function은 tractable하지 않다. 반대로 likelihood function을 학습할 수 있는 autoregressive neural networks(NADE, MADE, PixelCNN)들은 likelihood function을 학습할 수 있는 대신 latent codes를 활용하지 못한다. 
 

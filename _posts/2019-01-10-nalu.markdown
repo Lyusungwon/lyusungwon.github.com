@@ -3,14 +3,13 @@ layout: post
 title:  "Neural Arithmetic Logit Units"
 date:   2019-01-10 14:58:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 Neural network was poor at manipulating numerical information outside the range of training set.
 
 ## WHAT?
-
 ![image](/assets/images/nalu.png){: .center-image width="50px"}
 
 This paper suggests two models that learn to manipulate and extrapolate numbers. The first model is the neural accumulator(NAC) which accumulate the quantities in rows additively. This model is a relaxed version of linear matrix multiplication with W which consists of -1, 0 or 1. 

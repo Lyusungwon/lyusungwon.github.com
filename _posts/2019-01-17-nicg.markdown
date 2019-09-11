@@ -3,9 +3,9 @@ layout: post
 title:  "Show, Attend and Tell: Neural Image Caption Generation with Visual Attention"
 date:   2019-01-17 10:32:59
 author: Sungwon Lyu
-categories: Visual-Question-Answering
+categories: studies
+tags: deep-learning visual-question-answering
 ---
-
 ## WHY? 
 A caption of an image can be generated with attention based model by aligning a word to a part of image. 
 

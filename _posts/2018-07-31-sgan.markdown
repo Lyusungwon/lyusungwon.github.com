@@ -3,9 +3,9 @@ layout: post
 title:  "Spectral Normalization for Generative Adversarial Networks"
 date:   2018-07-31 08:06:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 The largest drawback of training Generative Adversarial Network (GAN) is its instability. Especially, the power of discriminator greatly affect the performance of GAN. This paper suggests to weaken the discriminator by restricting the functional space of it to stablize the training. 
 

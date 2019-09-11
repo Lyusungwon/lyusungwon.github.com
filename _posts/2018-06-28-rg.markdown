@@ -3,9 +3,9 @@ layout: post
 title:  "Understanding deep learning requires rethinking generalization"
 date:   2018-06-28 11:34:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 Traditional explanation for generalization of a machine learning model was primarily concerned with tradeoff between model capacity and overfitting. If capacity of a model is too large, you must contrain the capacity to prevent overfitting. Choosing appropriate level of capacity of model has been seen as a key to generalized performance.
 

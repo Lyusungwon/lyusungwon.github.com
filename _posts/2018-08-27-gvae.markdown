@@ -3,9 +3,9 @@ layout: post
 title:  "Grammar Variational Autoencoder"
 date:   2018-08-27 10:36:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Generative models of discrete data with particular structure (grammar) often result invalid outputs. Grammar Variational Autoencoder(GVAE) forces the decoder of VAE to result only valid outputs. 
 

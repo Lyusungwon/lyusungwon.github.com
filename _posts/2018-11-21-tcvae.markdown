@@ -3,9 +3,9 @@ layout: post
 title:  "Isolating Sources of Disentanglement in VAEs"
 date:   2018-11-21 15:04:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 [$$\beta$$-VAE](https://lyusungwon.github.io/generative-models/2018/02/06/disentang.html) is known to disentangle latent variables. 
 

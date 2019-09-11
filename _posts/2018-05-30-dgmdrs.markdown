@@ -3,9 +3,9 @@ layout: post
 title:  "A Deep Generative Model for Disentangled Representations of Sequential Data"
 date:   2018-05-30 11:05:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Video나 Audio와 같은 sequential data로 부터 time-dependent feature(dynamics)와 time independent feature(content)를 구분하는데 성공하였다. 
 

@@ -3,9 +3,9 @@ layout: post
 title:  "Neural Autoregressive Distribution Estimation"
 date:   2018-07-25 10:50:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Estimating the distribution of data can help solving various predictive taskes. Approximately three approaches are available: Directed graphical models, undirected graphical models, and density estimation using autoregressive models and feed-forward neural network (NADE).
 

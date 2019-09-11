@@ -3,9 +3,9 @@ layout: post
 title:  "Wavenet: A Generative Model For Raw Audio"
 date:   2018-03-22 10:15:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 [PixelRNN](https://lyusungwon.github.io/dl/2018/03/21/pixelrnn.html)에서는 LSTM을 활용하여 distribution으로부터 auto-regressive한 구조를 추출할 수 있었다. 
 

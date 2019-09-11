@@ -3,9 +3,9 @@ layout: post
 title:  "Fixing a Broken ELBO"
 date:   2018-06-29 12:04:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Most of deep directed latent variable models including VAE try to maximize the marginal likelihood by maximizing the Evidence Lower Bound(ELBO). However, marginal likelihood is not sufficient to represent the performance of the model. 
 

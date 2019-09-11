@@ -3,9 +3,9 @@ layout: post
 title:  "Phase-aware Speech Enhancement with Deep Complex U-net"
 date:   2018-09-06 08:17:59
 author: Sungwon Lyu
-categories: Audio
+categories: studies
+tags: deep-learning audio
 ---
-
 ## WHY? 
 For audio source separation task, traditional approach only utilized magnitude part ignoring phase part. Previously deep complex network provided complex arithmetics via convolution. 
 ![image](/assets/images/dcu1.png){: .center-image width="50px"}

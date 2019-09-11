@@ -3,9 +3,9 @@ layout: post
 title:  "Deep Recurrent Q-Learning for Partially Observable MDPs"
 date:   2018-06-04 10:06:59
 author: Sungwon Lyu
-categories: Reinforcement-Learning
+categories: studies
+tags: deep-learning reinforcement-learning
 ---
-
 ## WHY? 
 기존의 DQN은 MDP설정을 따르기 때문에 현재의 상태가 과거의 모든 정보를 포함하고 있다고 전제한다. 
 

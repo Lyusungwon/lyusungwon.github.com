@@ -3,9 +3,9 @@ layout: post
 title:  "IntroVAE: Introspective Variational Autoencoders for Photographic Image Synthesis"
 date:   2018-08-13 12:31:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 VAE can learn useful representation while GAN can sample sharp images.
 

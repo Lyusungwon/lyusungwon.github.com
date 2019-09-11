@@ -1,73 +1,130 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- =============== -->
+<!-- META            -->
+<!-- =============== -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="naver-site-verification" content="22c5b4ef3bfda7fc6100671413989219de7a4ac8"/>
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:type" content="article">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  {% if site.name %}
-  <meta name="author" content="{{ site.name }}">
-  <meta name="copyright" content="&copy; {{ site.name }} {{ site.time | date: '%Y' }}">
+
+{% for tag_slug in page.tags %}
+  {% unless tag.header-img %}
+    {% assign tag = site.featured_tags | where: "slug", tag_slug | first %}
+  {% endunless %}
+{% endfor %}
+
+{% if page.header-img %}
+  <meta property="og:image" content="{{ site.url }}/assets/{{ page.header-img }}">
+  <br/>
+{% elsif tag.header-img %}
+  <meta property="og:image" content="{{ site.url }}/assets/{{ tag.header-img }}">
+  <br/>
+{% else %}
+  <meta property="og:image" content="{{ site.url }}/assets/img/logo.png">
+{% endif %}
+
+<meta property="og:image:width" content="640" />
+<meta property="og:image:height" content="360" />
+{% capture title %}
+  {% if page.url == "/" %}
+    {{ site.title }} &middot; {{ site.tagline }}
+  {% elsif page.title.size > 0 %}
+    {{ page.title }} &middot; {{ site.title }}
+  {% else %}
+    {{ site.title }}
   {% endif %}
+{% endcapture %}
 
-  <!-- External libraries -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/{{ site.highlightjs_theme }}.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+{% unless page.redirect %}
+  <title>{{ title | strip }}</title>
+{% else %}
+  <meta http-equiv="refresh" content="0; url={{ page.redirect.to }}">
+  <title>Redirecting...</title>
+{% endunless %}
 
-  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
-  <link rel="shortcut icon" href="{{ "/assets/icons/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
-  <link rel="icon" href="{{ "/assets/icons/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="57x57" href="{{ "/assets/icons/apple-icon-57x57.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="60x60" href="{{ "/assets/icons/apple-icon-60x60.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="72x72" href="{{ "/assets/icons/apple-icon-72x72.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ "/assets/icons/apple-icon-76x76.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="114x114" href="{{ "/assets/icons/apple-icon-114x114.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="120x120" href="{{ "/assets/icons/apple-icon-120x120.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="144x144" href="{{ "/assets/icons/apple-icon-144x144.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="152x152" href="{{ "/assets/icons/apple-icon-152x152.png" | prepend: site.baseurl }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/icons/apple-icon-180x180.png" | prepend: site.baseurl }}">
-  <link rel="icon" type="image/png" sizes="192x192"  href="{{ "/assets/icons/android-icon-192x192.png" | prepend: site.baseurl }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/icons/favicon-32x32.png" | prepend: site.baseurl }}">
-  <link rel="icon" type="image/png" sizes="96x96" href="{{ "/assets/icons/favicon-96x96.png" | prepend: site.baseurl }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/icons/favicon-16x16.png" | prepend: site.baseurl }}">
-  <link rel="manifest" href="{{ "/assets/icons/manifest.json" | prepend: site.baseurl }}">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="{{ "/assets/icons/ms-icon-144x144.png" | prepend: site.baseurl }}">
-  <meta name="theme-color" content="#ffffff">
+{% if page.description.size > 0 %}
+  {% assign description = page.description | markdownify %}
+{% elsif page.excerpt.size > 0 %}
+  {% assign description = page.excerpt %}
+{% else %}
+  {% assign description = site.description | markdownify %}
+{% endif %}
+<meta name="description" content="{{ description | strip_html | truncatewords:50 }}">
+<meta property="og:description" content="{{ description | strip_html | truncatewords:50 }}">
 
-  {% if site.protocols.fb_image %}
-  <!-- Facebook OGP cards -->
-  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:url" content="{% if page.url %}{{ site.url }}{{ page.url }}{% else %}{{ site.url }}{% endif %}">
-  <meta property="og:site_name" content="{{ site.title }}" />
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="{% if page.cover %}{{ page.cover | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.protocols.fb_image | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
-  <meta property="og:image:type" content="{{ site.protocols.fb_image_type }}" />
-  <meta property="og:image:width" content="{{ site.protocols.fb_image_width }}" />
-  <meta property="og:image:height" content="{{ site.protocols.fb_image_height }}" />
-  {% endif %}
+{% if site.keywords or page.keywords %}
+  <meta name="keywords" content="{{ site.keywords | default: page.keywords | join:',' }}">
+{% endif %}
 
-  {% if site.protocols.twitter_image %}
-  <!-- Twitter: card tags -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:image" content="{% if page.cover %}{{ page.cover | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.protocols.twitter_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-  <meta name="twitter:url" content="{% if page.url %}{{ site.url }}{{ page.url }}{% else %}{{ site.url }}{% endif %}">
-  {% endif %}
+<!-- =============== -->
+<!-- LINKS           -->
+<!-- =============== -->
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
 
-  {% if protocols.os_repo and protocols.os_rcs_type and protocols.os_src %}
-  <!-- Open Source Protocol -->
-  <link rel="profile" href="http://osprotocol.com" />
-  <meta property="os:repo" content="{{ protocols.os_repo }}" />
-  <meta property="os:rcs_type" content="{{ protocols.os_rcs_type }}" />
-  <meta property="os:src" content="{{ protocols.os_src }}" />
-  {% endif %}
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ site.feed.path | default:'feed.xml' | absolute_url }}">
 
-  <!-- Site styles -->
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-</head>
+{% if page.previous %}
+  <link rel="prev" href="{{ page.previous.url | absolute_url }}">
+{% endif %}
+
+{% if page.next %}
+  <link rel="next" href="{{ page.next.url | absolute_url }}">
+{% endif %}
+
+<link rel="apple-touch-icon" href="{{ 'apple-touch-icon.png' | absolute_url }}">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+<!-- Place favicon.ico in the root directory -->
+
+<!-- =============== -->
+<!-- SCRIPTS         -->
+<!-- =============== -->
+<script>
+  {% include scripts/load-js-deferred.min.js %}
+  {% include scripts/loadCSS.min.js %}
+  {% include scripts/cssrelpreload.min.js %}
+  window.disablePushState = {{ site.disable_push_state | default:false}};
+  window.disableDrawer = {{ site.disable_drawer | default:false}};
+</script>
+
+<!--[if lt IE 9]>
+<script src="https://unpkg.com/html5shiv/dist/html5shiv.min.js"></script>
+<![endif]-->
+
+<!-- =============== -->
+<!-- STYLES          -->
+<!-- =============== -->
+<!--[if gt IE 8]><!---->
+<style>
+  {% capture include_to_scssify %}
+  {% include styles/inline.scss %}
+  {% endcapture %}
+  {{ include_to_scssify | scssify }}
+</style>
+
+{% capture style_url %}{% link assets/css/hydejack.css %}?v=6.4.0{% endcapture %}
+<link rel="preload" href="{{ style_url | absolute_url }}" as="style" onload="this.rel='stylesheet'">
+
+{% include page-style.html %}
+
+<noscript>
+  <link rel="stylesheet" href="{{ style_url | absolute_url }}">
+  {% assign font = site.font | default:"'Sans-serif'" %}
+  {% assign font_heading = site.font_heading | default:"'E' %}
+  {% assign google_fonts = site.google_fonts | default:"Roboto+Slab:700|Noto+Serif:400,400i,700,700i" %}
+
+  {% unless site.no_google_fonts %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ google_fonts }}">
+    <style>
+      html { font-family: {{ font }} }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: {{ font_heading }} }
+    </style>
+  {% endunless %}
+
+  {% capture icons_url %}{% link assets/icomoon/style.css %}{% endcapture %}
+  <link rel="stylesheet" href="{{ icons_url | absolute_url }}">
+</noscript>
+<!--<![endif]-->

@@ -3,9 +3,9 @@ layout: post
 title:  "Improved Variational Inference with Inverse Autoregressive Flow"
 date:   2018-04-04 20:03:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 [Normializing flow](https://lyusungwon.github.io/dl/2018/03/29/nf.html)는 posterior를 유연하게 가정하기 위하여 x를 변환시킨다. 이때 변환은 가역적이어야 하고 determinant를 구하기 쉬워야 한다. 
 

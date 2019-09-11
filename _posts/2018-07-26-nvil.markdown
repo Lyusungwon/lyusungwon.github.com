@@ -3,9 +3,9 @@ layout: post
 title:  "Neural Variational Inference and Learning in Belief Networks"
 date:   2018-07-26 11:07:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Directed latent variable models are known to be difficult to train at large scale because posterior distribution is intractable.
 

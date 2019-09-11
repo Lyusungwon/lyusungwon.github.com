@@ -3,9 +3,9 @@ layout: post
 title:  "MobileNet: Efficient Convolutional Neural Networks for Mobile Vision Applications"
 date:   2019-01-15 09:59:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 Recent neural network models are getting bigger to increase the performance to the limit. This paper suggests MobileNet to reduce the size of neural network small enough to deploy on mobile devices. 
 

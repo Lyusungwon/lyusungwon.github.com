@@ -3,14 +3,13 @@ layout: post
 title:  "Tracking Emerges by Colorizing Videos"
 date:   2018-12-13 09:05:59
 author: Sungwon Lyu
-categories: Computer-Vision
+categories: studies
+tags: deep-learning computer-vision
 ---
-
 ## WHY? 
 Segmenting objects in videos is difficult without manual labels.
 
 ## WHAT?
-
 ![image](/assets/images/tecv1.png){: .center-image width="50px"}
 
 This paper suggests to learn segmenting the objects in video sequence with model trained with self-supervised colorizing task. 

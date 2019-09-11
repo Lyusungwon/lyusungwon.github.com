@@ -3,14 +3,13 @@ layout: post
 title:  "Modularity Matters: Learning Invariant Relational Reasoning Tasks"
 date:   2018-11-26 11:07:59
 author: Sungwon Lyu
-categories: Computer-Vision
+categories: studies
+tags: deep-learning computer-vision
 ---
-
 ## WHY? 
 Former CNN models fully activate(filly distributed features) for a single input showing poor performance on invariant relational reasoning. 
 
 ## WHAT?
-
 ![image](/assets/images/rmn.png){: .center-image width="50px"}
 
 The reason former CNN models are poor at invariant reasoning is interference problem that learning each pattern interfere with each other while a model try to learn many patterns. To minimize this problem, this paper suggest mixture of experts architecture(MoE). MoE architecture consists of two parts: Individual expert networks($$E_1, ... E_n$$) and Gater network(G) that weight the output of each expert network. 

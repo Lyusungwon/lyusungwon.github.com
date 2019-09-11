@@ -3,9 +3,9 @@ layout: post
 title:  "Variational Inference with Normalizing Flows"
 date:   2018-03-29 17:44:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Variational Inference를 할때 다루기 쉬운 형태의 posterior함수 q를 가정하고 이를 실제 분포에 근사한다. 하지만 posterior를 쉬운 형태로 가정하기 때문에 실제 분포에 잘 근사되지 않는 것과 같은 한계가 존재한다. 
 

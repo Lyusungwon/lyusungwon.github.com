@@ -3,9 +3,9 @@ layout: post
 title:  "Categorical Reparameterization with Gunbel-Softmax"
 date:   2018-07-17 09:45:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 The same motivation with [Concrete](https://lyusungwon.github.io/dl/2018/07/16/cd.html). 
 

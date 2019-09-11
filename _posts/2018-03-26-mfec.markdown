@@ -3,9 +3,9 @@ layout: post
 title:  "Model-Free Episodic Control"
 date:   2018-03-26 16:08:59
 author: Sungwon Lyu
-categories: Reinforcement-Learning
+categories: studies
+tags: deep-learning reinforcement-learning
 ---
-
 ## WHY? 
 인간은 어떤 환경에서 한번 보상을 보게 되면 그에 대해 빠르게 학습한다. 
 [DQN](https://lyusungwon.github.io/rl/2018/01/25/dqn.html)은 환경을 학습하기 위하여 그 상태와 행동의 가치를 근사하지만 환경 전체를 알기 위해서는 아주 오래걸린다. 

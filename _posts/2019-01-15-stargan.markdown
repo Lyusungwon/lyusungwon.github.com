@@ -3,9 +3,9 @@ layout: post
 title:  "StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation"
 date:   2019-01-15 09:01:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 ![image](/assets/images/stargan1.png){: .center-image width="50px"}
 

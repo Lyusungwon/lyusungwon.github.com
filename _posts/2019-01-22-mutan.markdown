@@ -3,9 +3,9 @@ layout: post
 title:  "MUTAN: Multimodal Tucker Fusion for Visual Question Answering"
 date:   2019-01-22 09:03:59
 author: Sungwon Lyu
-categories: Visual-Question-Answering
+categories: studies
+tags: deep-learning visual-question-answering
 ---
-
 ## WHY? 
 While bilinear model is an effective method for capturing the relationship between two spaces, often the number of parameters is intractable. This paper suggests to reduce the number of parameters by controlling the rank of the matrix with Turker decomposition. 
 
@@ -18,7 +18,6 @@ $$
 $$
 
 ## WHAT?
-
 ![image](/assets/images/mutan1.png){: .center-image width="50px"}
 
 The Tucker decomposition showed that a tensor can be represented with a limited number of parameters. The bilinear relationship between question vectors and image vectors can be represented in a Tucker Fusion form. 
@@ -44,7 +43,6 @@ $$
 MCB and MLB can be represented with a generalized form of MUTAN.
 
 ## So?
-
 ![image](/assets/images/mutan3.png){: .center-image width="50px"}
 
 MUTAN can represent rich multimodal representation. Achieved SOTA results on VQA dataset.

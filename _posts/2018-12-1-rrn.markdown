@@ -3,9 +3,9 @@ layout: post
 title:  "Recurrent Relational Networks"
 date:   2018-12-01 18:22:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 Some tasks such as Sudoku require serial steps of relational inference.
 

@@ -3,9 +3,9 @@ layout: post
 title:  "Unsupervised Learning of Disentangled and Interpretable Representations from Sequential Data"
 date:   2018-04-19 10:17:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 이미지에 대한 unsupervised disentangling의 시도는 많았지만 오디오와 같은 sequential data에서의 unsupervised disentangling의 시도는 많지 않았다. 
 

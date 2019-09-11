@@ -3,9 +3,9 @@ layout: post
 title:  "Relational Recurrent Neural Network"
 date:   2018-09-07 10:07:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 While conventional deep learning models have performed well on inference regarding individual entities, few models have been proposed focusing on inference regarding the relations among entities. [Relational network](https://lyusungwon.github.io/deep-learning/2018/05/06/rn.html) aimed to capture relational information from images. In this paper, relational recurrent neural network tried to improve former [memory augmented neural network models](https://lyusungwon.github.io/deep-learning/2018/06/06/ntm.html) to capture relations among memories.
 

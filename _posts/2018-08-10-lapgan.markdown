@@ -3,9 +3,9 @@ layout: post
 title:  "Deep Generative Image Models using a Laplacian Pyramid of Adversarial Network"
 date:   2018-08-10 11:30:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 GAN had troble modeling the entire image.
 

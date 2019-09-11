@@ -3,14 +3,13 @@ layout: post
 title:  "Chain of Reasoning for Visual Question Answering"
 date:   2019-01-21 09:03:59
 author: Sungwon Lyu
-categories: Visual-Question-Answering
+categories: studies
+tags: deep-learning visual-question-answering
 ---
-
 ## WHY? 
 Previous methods for visual question answering performed one-step or static reasoning while some questions requires chain of reasonings. 
 
 ## WHAT?
-
 ![image](/assets/images/cor1.png){: .center-image width="50px"}
 
 Chain of reasoning(CoR) model alternatively updates the objects and their relations to solve questions that require chain of reasoning.  
@@ -47,7 +46,6 @@ H = \sum_{k=1}^K(O^* W_{O^*, k})\odot(QW_{q', k})\\
 $$
 
 ## So?
-
 ![image](/assets/images/cor4.png){: .center-image width="50px"}
 
 CoR achieved the best result on various VQA tasks including VQA 1.0, VQA 2.0, COCO-QA, and TDIUC. Visualization shows CoR performs appropriate reasoning.

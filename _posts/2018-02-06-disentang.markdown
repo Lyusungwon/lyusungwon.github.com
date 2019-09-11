@@ -3,7 +3,8 @@ layout: post
 title:  "Early Visual Concept Learning with Unsupervised Deep Learning"
 date:   2018-02-06 12:21:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
 ## WHY? 
 이미지의 피쳐를 추출할 때, 한 피쳐 값이 이미지에 대하여 우리가 인지할 수 있는 특성을 나타낸다면 이 값을 조정하여 이미지를 의도적으로 생성할 수 있을 것이다. 이렇게 이미지의 feature를 우리가 의도한 방식으로 추출하는 것을 disentangling이라고 한다. 이러한 disentangled factors는 이미지의 특성 및 추상화된 개념을 나타내게 된다. 

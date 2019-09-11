@@ -3,9 +3,9 @@ layout: post
 title:  "Highway Network"
 date:   2018-06-05 08:58:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 일반적으로 뉴럴 네트워크의 층이 깊어지면 성능이 향상되지만 그만큼 학습하기는 더욱 어려워진다. 
 

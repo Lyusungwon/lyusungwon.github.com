@@ -3,9 +3,9 @@ layout: post
 title:  "Neural Turing Machine"
 date:   2018-06-06 13:02:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 기존의 Turing Machine, 혹은 Von Neumann architecture 구조를 가진 컴퓨터들은 elementary operations, logical flow control, external memory라는 근본 메커니즘을 가진다. 기존의 machine learning 기법들은 이 세가지 메커니즘 중 첫번째에 집중해왔다. 최근 나온 RNN구조는 Turing complete하여 이를 활용하여 Neural Truing Machine을 만들 수 있다. 기존 Turing machine과는 다르게 NTM은 gradient descent로 학습이 가능하다. 
 

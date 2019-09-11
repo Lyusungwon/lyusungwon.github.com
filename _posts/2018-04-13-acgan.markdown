@@ -3,9 +3,9 @@ layout: post
 title:  "Conditional Image Synthesis with Auxiliary Classifier GANs"
 date:   2018-04-13 14:10:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 기존의 conditional gan에서는 hidden representation에 class의 정보를 concate하고 그에 맞는 이미지가 형성되길 바라는 방법 밖에 없었다. 이 방법은 단순한 이미지를 형성할 때는 괜찮지만 복잡한 이미지를 만들기는 힘들었다. 
 

@@ -3,7 +3,8 @@ layout: post
 title:  "GloVe: Global Vectors for Word Representation"
 date:   2018-01-08 21:48:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
 ## WHY? 
 기존의 Skipgram과 CBOW는 일정 window 내의 정보만 반영할 뿐 global한 frequency정보는 반영하지 못한다. 

@@ -3,9 +3,9 @@ layout: post
 title:  "A simple neural network module for relational reasoning"
 date:   2018-05-06 14:21:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 관계적 추론(relation reasoning)은 중요한 지능 중 하나지만 neural net은 이를 학습하지 못하였다. 그리하여 관계를 묻는 문제에 답하는 일에 대해서는 좋은 성과를 거두지 못하고 있었다. 
 

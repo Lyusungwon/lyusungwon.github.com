@@ -3,9 +3,9 @@ layout: post
 title:  "Unpaired Image-to-image Translation using Cycle-Consistent Adversarial Network"
 date:   2018-04-05 11:24:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 이미지들 간의 style을 뽑아내기 위해서는 같은 모습에 대하여 다른 스타일이 적용되어 있는 이미지들이 pairing되어야 한다. 
 

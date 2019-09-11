@@ -3,9 +3,9 @@ layout: post
 title:  "Large Scale Distributed Deep Networks"
 date:   2018-10-23 10:55:59
 author: Sungwon Lyu
-categories: Distributed-Processing
+categories: studies
+tags: computer-science distributed-processing
 ---
-
 ## WHY? 
 Models with huge number of parameters or huge amount of data do not fit in GPU memory of a machine. 
 

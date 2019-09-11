@@ -3,9 +3,9 @@ layout: post
 title:  "Continuous Control with Deep Reinforcement Learning"
 date:   2018-03-28 10:44:59
 author: Sungwon Lyu
-categories: Reinforcement-Learning
+categories: studies
+tags: deep-learning reinforcement-learning
 ---
-
 ## WHY? 
 DQN은 각 상황과 행동에 대한 가치를 평가하는 함수인 Q function을 근사하여 이에 따라 때문에 action space가 discrete할 수 밖에 없다. 
 

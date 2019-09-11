@@ -3,15 +3,13 @@ layout: post
 title:  "Hybrid computing using a neural network with dynamic external memory"
 date:   2019-01-04 09:01:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 Using external memory as modern computer enable neural net the use of extensible memory. This paper suggests Differentible Neural Computer(DNC) which is an advanced version of [Neural Turing Machine](https://lyusungwon.github.io/deep-learning/2018/06/06/ntm.html). 
 
 ## WHAT?
-
-
 Reading and writing in DNC are implemented with differentiable attention mechanism. 
 
 ![image](/assets/images/dnc1.png){: .center-image width="50px"}
@@ -40,7 +38,6 @@ $$
 Memory are addressed with content-based addressing and dynamic memory allocation. Contesnt-based addressing is basically the same as attention mechanism. Dynamic memory allocation is designed to clear memory as analogous to free list memory allocation scheme. 
 
 ## So?
-
 ![image](/assets/images/dnc1.png){: .center-image width="50px"}
 
 DNC showed good result on bAbI task, and Graph tasks. 

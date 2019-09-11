@@ -3,9 +3,9 @@ layout: post
 title:  "Variational Lossy Autoencoders"
 date:   2018-04-11 19:53:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 기존의 neural autoregressive model(RNN, MADE, PixelRNN/CNN)들은 VAE의 decoder로서 부적합하다고 여겨져왔다. 왜냐하면 이 모델들의 표현력이 너무 강력해서 종종 latent variable들을 무시하고 이미지를 생성했기 때문이다. 
 

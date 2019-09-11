@@ -3,7 +3,8 @@ layout: post
 title:  "Importance Weighted Autoencoders"
 date:   2018-06-04 14:52:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
 ## Note
 - Importance Sampling

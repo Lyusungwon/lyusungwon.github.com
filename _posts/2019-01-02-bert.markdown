@@ -3,14 +3,13 @@ layout: post
 title:  "BERT: Pretraining of Deep Bidirectional Transformers for Language Understanding"
 date:   2019-01-02 09:00:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
-
 ## WHY? 
 Former [Transformer](https://lyusungwon.github.io/natural-language-processing/2018/03/21/transformer.html) was unidirectional language model. 
 
 ## WHAT?
-
 ![image](/assets/images/bert1.png){: .center-image width="50px"}
 
 BERT is multi-layer bidirectional Transformer encoder.

@@ -3,9 +3,9 @@ layout: post
 title:  "Improving Distributional Similarity with Lessons Learned from Wrod Embeddings"
 date:   2018-10-1 10:49:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
-
 ## WHY? 
 Word embedding using neural network([Skipgram](https://lyusungwon.github.io/natural-language-processing/2018/01/05/skipgram2.html)) seems to outperform traditional count-based distributional model. However, this paper points out that current superiority of word2vec is not because of the algorithm itself, but because of system design choices and hyperparameter optimizations. 
 

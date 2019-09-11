@@ -3,14 +3,13 @@ layout: post
 title:  "Glow: Generative Flow with Invertible 1x1 Convolutions"
 date:   2018-07-23 19:40:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 The motivation is almost the same as that of [NICE](https://lyusungwon.github.io/dl/2018/07/17/nice.html), and [RealNVP](https://lyusungwon.github.io/dl/2018/07/18/realnvp.html). 
 
 ## WHAT?
-
 The architecture of generative flow(Glow) is almost the same as multi-scale architecture of [RealNVP](https://lyusungwon.github.io/dl/2018/07/18/realnvp.html).
 ![image](/assets/images/glow1.png){: .center-image width="50px"}
 A step of flow of Glow uses act-norm instead of batch-norm and uses invertible 1x1 convolution instead of reverse ordering. Act-norm performs channel-wise normalization as Instance Normalization (IN). Since channel-wise masking keep the half of the channels unchanged, permutation of input is need to ensure all the inputs are used. Instead of revsersing the order of channels, 1x1 convolution can be used as channel-wise permutation. However, getting the determinant of W(channel to channel: c x c) is not easy. Thus, we can initialize W by first sampling a random rotation matrix whose log-determinant is 0. Next, perform LU decomposition to W to get P, L(lower triangular matrix) and U(Upper triangular matrix). Then, getting the determinant of W becomes much easier.

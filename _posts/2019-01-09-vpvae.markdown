@@ -3,9 +3,9 @@ layout: post
 title:  "VAE with a VampPrior"
 date:   2019-01-09 09:35:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Choosing an appropriate prior is important for VAE. This paper suggests two-layered VAE with flexible VampPrior.
 

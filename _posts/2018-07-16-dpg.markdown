@@ -3,9 +3,9 @@ layout: post
 title:  "Deterministic Policy Gradient Algorithms"
 date:   2018-07-16 16:12:59
 author: Sungwon Lyu
-categories: Reinforcement-Learning
+categories: studies
+tags: deep-learning reinforcement-learning
 ---
-
 ## WHY? 
 Policy gradient usually requires integral over all the possible actions.
 

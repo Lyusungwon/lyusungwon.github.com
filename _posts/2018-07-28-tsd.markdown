@@ -3,9 +3,9 @@ layout: post
 title:  "A Two-Step Disentanglement Method"
 date:   2018-07-27 17:27:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 This paper wanted to disentangle the label related and label unrelated information from data. The model of this paper is simpler and more effective than that of [Disentangling Factors of Variation in Deep Representations Using Adversarial Training](https://lyusungwon.github.io/dl/2018/04/12/dfat.html).
 

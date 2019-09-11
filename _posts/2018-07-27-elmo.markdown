@@ -3,9 +3,9 @@ layout: post
 title:  "Deep Contextualized Word Representations"
 date:   2018-07-26 12:51:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
-
 ## WHY? 
 Former word representations such as Word2Vec or GloVe didn't contained linguistic context. 
 

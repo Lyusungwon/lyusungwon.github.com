@@ -3,9 +3,9 @@ layout: post
 title:  "Bilinear Attention Networks"
 date:   2019-01-07 09:55:59
 author: Sungwon Lyu
-categories: Computer-Vision
+categories: studies
+tags: deep-learning computer-vision
 ---
-
 ## WHY? 
 Representing bilinear relationship of two inputs is expensive. [MLB](https://lyusungwon.github.io/deep-learning/2018/09/19/mlb.html) efficiently reduced the number of parameters by substituting bilinear operation with Hadamard product operation. This paper extends this idea to capture bilinear attention between two multi-channel inputs. 
 
@@ -63,7 +63,6 @@ $$
 Memory are addressed with content-based addressing and dynamic memory allocation. Contesnt-based addressing is basically the same as attention mechanism. Dynamic memory allocation is designed to clear memory as analogous to free list memory allocation scheme. 
 
 ## So?
-
 ![image](/assets/images/dnc1.png){: .center-image width="50px"}
 
 DNC showed good result on bAbI task, and Graph tasks. 

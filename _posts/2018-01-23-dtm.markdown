@@ -3,7 +3,8 @@ layout: post
 title:  "Dynamic Topic Model"
 date:   2018-01-23 20:38:59
 author: Sungwon Lyu
-categories: Probabilistic-Graphical-Modeling
+categories: studies
+tags: statistics probabilistic-graphical-modeling
 ---
 ## WHY? 
 LDA를 통하여 토픽 모델링을 할 때 시간적으로 토픽과 그에 대한 단어 분포가 변화하는 정보를 반영하지 못한다. 

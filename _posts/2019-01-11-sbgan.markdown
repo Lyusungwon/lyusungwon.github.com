@@ -3,9 +3,9 @@ layout: post
 title:  "A Style-Based Generator Architecture for Generative Adversarial Networks"
 date:   2019-01-11 09:01:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 High quality disentangled generation of images has been the goal for all the generative models. This paper suggests style-based generator architecture for GAN with techniques borrowed from the field of style transfer.
 

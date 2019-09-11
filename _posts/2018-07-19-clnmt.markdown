@@ -3,9 +3,9 @@ layout: post
 title:  "A Character-Level Decoder without Explicit Segmentation for Neural Machine Translation"
 date:   2018-07-18 17:21:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
-
 ## WHY? 
 All the previous neural machine translators are based on word-level translation. Word-level translators has critical problem of out-of-vocabulary error. 
 

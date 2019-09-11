@@ -3,9 +3,9 @@ layout: post
 title:  "Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering"
 date:   2019-01-25 09:11:59
 author: Sungwon Lyu
-categories: Visual-Question-Answering
+categories: studies
+tags: deep-learning visual-question-answering
 ---
-
 ## WHY? 
 In image captioning or visual question answering, the features of an image are extracted by the spatial output layer of pretrained CNN model.
 
@@ -32,7 +32,6 @@ p(y) = \sigma(W_o f_o(\mathbf{h}))
 $$
 
 ## So?
-
 ![image](/assets/images/updown3.png){: .center-image width="50px"}
 
 Bottm-up attention is shown to be useful than former methods. 

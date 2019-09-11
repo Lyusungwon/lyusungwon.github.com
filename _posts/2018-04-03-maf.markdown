@@ -3,9 +3,9 @@ layout: post
 title:  "Masked Autoregressive Flow for Density Estimation"
 date:   2018-04-03 17:37:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 [MADE](https://lyusungwon.github.io/dl/2018/04/02/made.html)나 [PixelCNN/RNN](https://lyusungwon.github.io/dl/2018/03/21/pixelrnn.html)과 같은 autoregressive한 neural density estimator들은 좋은 성과를 보여왔다.\\
 [Normalizing Flow](https://lyusungwon.github.io/dl/2018/03/29/nf.html)를 사용하면 Planar/radial flow나 [inverse Autoregressive Flow](https://lyusungwon.github.io/dl/2018/04/04/iaf.html)와 같은 특정한 변환에 한해서는 빠르게 Density evaluation을 할 수 있어 variational inference에 유용하게 사용되었다. 하지만 새로운 데이터들에 대해서는 효율적으로 계산하기가 어렵기 때문에 density estimation에는 적합하지 않았다. 

@@ -3,9 +3,9 @@ layout: post
 title:  "Neural Word Embedding as Implicit Matrix Factorization"
 date:   2018-10-25 13:49:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
-
 ## WHY? 
 [Skip-Gram Negative Sampling(SGNS)](https://lyusungwon.github.io/natural-language-processing/2018/01/05/skipgram2.html) showed amazing performance compared to traditional word embedding methods. However, it was not clear where SGNS converge to. 
 

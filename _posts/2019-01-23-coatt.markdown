@@ -3,9 +3,9 @@ layout: post
 title:  "Hierarchical Question-Image Co-Attention for Visual Question Answering"
 date:   2019-01-23 09:05:59
 author: Sungwon Lyu
-categories: Visual-Question-Answering
+categories: studies
+tags: deep-learning visual-question-answering
 ---
-
 ## WHY? 
 Previous works achieved successful results in VQA by modeling visual attention. This paper suggests co-attention model for VQA to pay attention to both images (where to look) and words (what words to listen to). 
 
@@ -44,7 +44,6 @@ $$
 $$
 
 ## So?
-
 ![image](/assets/images/coatt3.png){: .center-image width="50px"}
 
 Co-attention model with pretrained image feature achieved good result on VQA dataset.

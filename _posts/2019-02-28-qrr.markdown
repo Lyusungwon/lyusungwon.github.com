@@ -3,15 +3,13 @@ layout: post
 title:  Task-Oriented Query Reformulation with Reinforcement Learning
 date:   2019-02-28 09:38:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
-
 ## WHY? 
-
 Information retrieval from search engine becomes difficult when the query is incomplete or too complex. This paper suggests a query reformulation system  that rewrite the query to maximize the probability of relevant documents returned. 
 
 ## WHAT?
-
 ![image](/assets/images/qrr1.png){: .center-image width="50px"}
 
 Since the output of query reformulator is discrete, REINFORCE algorithm is used to train the model.

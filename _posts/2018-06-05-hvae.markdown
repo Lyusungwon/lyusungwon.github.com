@@ -3,9 +3,9 @@ layout: post
 title:  "Hierarchical Variational Autoencoders for Music"
 date:   2018-06-05 09:17:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 VAE의 구조의 latent variable을 사용하여 sequence를 reconstruct하려는 시도는 많았다. 하지만 decoder가 너무 강력해서 latent variable을 무시하는 'Posterior Collapse'현상이 많이 일어나서 긴 sequence의 정보를 가진 latent variable을 구성하긴 힘들었다. 
 

@@ -3,9 +3,9 @@ layout: post
 title:  "Disentangling Factors of Variation in Deep Representations Using Adversarial Training"
 date:   2018-04-12 09:28:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 한 이미지가 가진 정보에서 label이 가지는 정보와 그 외의 정보로 나뉠 수 있다. 이 두 정보를 분리하여 추출할 때 이에 대한 supervision이 있다면 추출하기가 쉽겠지만 현실 데이터에서는 한계가 있다. 
 

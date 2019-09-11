@@ -3,14 +3,13 @@ layout: post
 title:  "On the Dimensionality of Word Embedding"
 date:   2018-12-16 09:17:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
-
 ## WHY? 
 Dimension of word embedding is usually determined with heuristic. 
 
 ## WHAT?
-
 This paper suggests new metric to evaluate the quality of word embedding and uses it to find its optimal dimensionality. Word embedding algorithms are shown to converge to [implicitly factorized PMI matrix](https://lyusungwon.github.io/natural-language-processing/2018/10/25/wemf.html). However, L2 loss of embedding and factorized matrix cannot be used since word embedding has unitary-invariance property which indicate word embedding is invariant to rotation. So this paper suggests Pairwise Inner Product(PIP) loss which measure relative position shifts between embeddings. 
 
 $$

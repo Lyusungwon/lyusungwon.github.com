@@ -3,15 +3,13 @@ layout: post
 title:  Visual Question Generation as Dual Task of Visual Question Answering
 date:   2019-04-01 09:27:59
 author: Sungwon Lyu
-categories: Visual-Question-Answering
+categories: studies
+tags: deep-learning visual-question-answering
 ---
-
 ## WHY? 
-
 Visual question answering and visual question generation are complementary tasks. Learning one task may benefit the other. 
 
 ## WHAT?
-
 ![image](/assets/images/iqan1.png){: .center-image width="50px"}
 
 This paper suggests Invertible Question Answering Network(iQAN) that is trained on two tasks sharing pipline in reverse order. 

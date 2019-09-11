@@ -3,9 +3,9 @@ layout: post
 title:  "Parallel WaveNet: Fast High-Fidelity Speech Synthesis"
 date:   2018-04-11 11:18:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 기존의 [WaveNet](https://lyusungwon.github.io/dl/2018/03/22/wavenet.html)은 음성 데이터의 학습은 빠른 반면 Sampling(Generation)은 순차적으로 이루어져야 하기 때문에 매우 속도가 느렸다. 
 

@@ -3,9 +3,9 @@ layout: post
 title:  "Eigenvalues of the Hessian in Deep Learning: Singularity and Beyond"
 date:   2018-08-08 11:05:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 Gradient descent methods depend on the first order gradient of a loss function wrt parameters. However, the second order gradient(Hessian) is often neglected.  
 

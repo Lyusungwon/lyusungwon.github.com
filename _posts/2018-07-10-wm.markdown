@@ -3,9 +3,9 @@ layout: post
 title:  "World Models"
 date:   2018-07-10 17:32:59
 author: Sungwon Lyu
-categories: Reinforcement-Learning
+categories: studies
+tags: deep-learning reinforcement-learning
 ---
-
 ## WHY? 
 Instead of instantly responding to incoming stimulus, having a model of environment to make some level of prediction would help perform in reinforcement learning.
 

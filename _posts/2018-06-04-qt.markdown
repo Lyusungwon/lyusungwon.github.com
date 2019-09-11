@@ -3,9 +3,9 @@ layout: post
 title:  "An Efficient Framework for Learning Sentence Representations"
 date:   2018-06-04 09:42:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
-
 ## WHY? 
 Sentence를 vector representation으로 나타내는 것은 쉽지 않고 특히 Unlabeled data로 부터 만드는 것은 더욱 어렵다. 
 

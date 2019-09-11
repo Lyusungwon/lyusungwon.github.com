@@ -3,7 +3,8 @@ layout: post
 title:  "SearchQA: A New Q&A Dataset Augmented with Context from a Search Engine"
 date:   2018-02-23 16:52:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
 ## WHY? 
 기존의 MC(Machine Comprehension)의 데이터셋들(CNN/DailyMail/SQuAD)은 제시문과 그에 직접적인 질문들이 주어진다. 하지만 인간이 정보 검색을 할때의 환경은 훨씬 노이즈가 심하다. 

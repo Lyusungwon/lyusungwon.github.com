@@ -3,14 +3,13 @@ layout: post
 title:  "Compositional Attention Networks for Machine Reasoning"
 date:   2019-01-24 13:11:59
 author: Sungwon Lyu
-categories: Visual-Question-Answering
+categories: studies
+tags: deep-learning visual-question-answering
 ---
-
 ## WHY? 
 Previous methods for visual reasoning lacked interpretability. This paper suggests MAC network which is fully differentiable and interpretable attention based visual reasoning model.
 
 ## WHAT?
-
 ![image](/assets/images/mac1.png){: .center-image width="50px"}
 
 MAC network consists of three parts: the input unit, the MAC cells, and the read unit. The input unit encodes the question and the image. The word embeddings of question is processed by d-dimensional biLSTM. The hidden states of the model are contextual representation for each word. The concatenation of the last hidden state of backward, and forward LSTM is used as a question representation. This question representaion is linearly projected to vectors for each reasoning step. For image features, the conv4 layer output of pretrained ResNet101 is used. Image features are called knowledge base in this paper. 
@@ -36,7 +35,6 @@ The memory unit is updated based on the retrieved read unit and previous memory.
 The question representation(q) and the final memory state($$m_p$$) are used as input for 2-layer-fc softmax classifier to result the answer. 
 
 ## So?
-
 ![image](/assets/images/mac7.png){: .center-image width="50px"}
 
 MAC showed the state-of-the-art result on both Clevr and Clevr-Humans without using information about data generation.

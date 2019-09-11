@@ -3,9 +3,9 @@ layout: post
 title:  "Noisy Network for Exploration"
 date:   2018-08-06 11:02:59
 author: Sungwon Lyu
-categories: Reinforcement-Learning
+categories: studies
+tags: deep-learning reinforcement-learning
 ---
-
 ## WHY? 
 Efficient exploration of agent in reinforcement learning is an important issue. Conventional exploration heuristics includes $$\epsilon$$-greedy for DQN and entropy reward for A3C. 
 

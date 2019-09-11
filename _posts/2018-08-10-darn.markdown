@@ -3,9 +3,9 @@ layout: post
 title:  "Deep AutoRegressive Networks"
 date:   2018-08-10 11:56:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Learning directed generative model is difficult. 
 

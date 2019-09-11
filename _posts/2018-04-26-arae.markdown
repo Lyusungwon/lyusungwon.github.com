@@ -3,9 +3,9 @@ layout: post
 title:  "Adversarially Regularized Autoencoders"
 date:   2018-04-26 21:17:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 기존의 autoencoder는 이미지나 음성과 같은 연속형 데이터에 대한 latent structure를 잘 잡았지만 텍스트와 같은 discrete한 데이터의 latent structure를 잡는 것은 어려웠다. 
 

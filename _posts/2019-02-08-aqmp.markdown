@@ -3,14 +3,13 @@ layout: post
 title:  "Large-Scale Answerer in Questioner's Mind for Visual Dialog Question Generation"
 date:   2019-02-08 10:01:59
 author: Sungwon Lyu
-categories: Visual-Question-Answering
+categories: studies
+tags: deep-learning visual-question-answering
 ---
-
 ## WHY? 
 [AQM]() solves visual dialogue tasks with information theoratic approach. However, the information gain by each candidate question needs to be calculated explicitly which leads to lack of scalability. This paper suggests AQM+ to solve large-scale problem.   
 
 ## WHAT?
-
 ![image](/assets/images/aqmp1.png){: .center-image width="50px"}
 
 AQM+ is sampling based approximation to AQM algorithm. AQM+ is different from AQM in 3 ways. First, instead of Q-sampler, candidate questions are sampled using beam search. Second, while the answerer model of AQM was a binary classifier, that of AQM+ is an RNN generator. Third, a portion of answer candidates and labels(top k) are used to approximate information gain.
@@ -26,7 +25,6 @@ $$
 $$\mathbf{C}_{t, topk}$$ refers to top-K posterior test images from Qpost $$\hat{p}_{reg}(c\|h_{t-1})$$. $$\mathbf{Q}_{t, topk}$$ refers to top-K likelihood questions using beam search from Qgen $$p(q_t\|h_{t-1})$$. $$\mathbf{A}_{t, topk}(q_t)$$ refers to top-1 generated answers for each question and each class from aprxAgen $$\tilde{p}(a_t\|c, q_t, h_{t-1})$$. Similar to AQM, approximation of the answer generator can be either indA or depA. 
 
 ## So?
-
 ![image](/assets/images/aqmp2.png){: .center-image width="50px"}
 
 Instead of GuessWhat, AQM+ is applied to GuessWhich which is more complicated version of GuessWhat. The key differences of GuessWhich are that the questioner has to guess one image out of 9628 images by asking questions and that the answers of answerer are not limited to binary. Since there are much more labels in this task, analytic computation of information gain is almost intractable in AQM. AQM+ performed better than SL-Q and RL-QA in various settings. 

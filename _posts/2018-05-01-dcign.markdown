@@ -3,9 +3,9 @@ layout: post
 title:  "Deep Convolutional Inverse Graphics Network"
 date:   2018-05-01 17:08:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Image의 representation을 interpretable하게 만든다면 원하는 이미지를 생성해낼 수 있을 것이다.
 

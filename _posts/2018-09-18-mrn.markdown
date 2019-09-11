@@ -3,9 +3,9 @@ layout: post
 title:  "Multimodal Residual Learning for Visual QA"
 date:   2018-09-18 10:09:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 Visual question answering task is to answer to natural language question based on images requiring extraction of information from both images and texts. [Stacked Attention Networks(SAN)](https://lyusungwon.github.io/deep-learning/2018/09/19/san.html) stacked several layers of attention to answer to complicated questions that requires reasoning. Multimodal Residual Network (MRN) points out weighted averaging of attention layers in SAN works as a bottleneck restricting the information of interaction between questions and images. 
 

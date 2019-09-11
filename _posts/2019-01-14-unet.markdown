@@ -3,9 +3,9 @@ layout: post
 title:  "U-net: Convolutional Networks for Biomedical Image Segmentation"
 date:   2019-01-14 09:01:59
 author: Sungwon Lyu
-categories: Computer-Vision
+categories: studies
+tags: deep-learning computer-vision
 ---
-
 ## WHY? 
 Image segmentation requires a lot of annotated images. This paper suggests efficient training of image segmentation using data augmentation and new structure. 
 

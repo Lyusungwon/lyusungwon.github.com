@@ -3,14 +3,13 @@ layout: post
 title:  "Multimodal Compact Bilinear Pooling for Visual Question Answering and Visual Grounding"
 date:   2019-01-26 09:01:59
 author: Sungwon Lyu
-categories: Visual-Question-Answering
+categories: studies
+tags: deep-learning visual-question-answering
 ---
-
 ## WHY? 
 Former methods used element-wise sum, product or concatenation to represent the relation of two vectors. Bilinear model(outer prodct) of two vectors is more sophisticated way of representing relation, but usually dimensionality become too big. This paper suggests multimodal compact bilinear pooling(MCB) to represent compact and sophisticated relations. 
 
 ## WHAT?
-
 ![image](/assets/images/mcb1.png){: .center-image width="50px"}
 
 MCB utilizes Count Sketch projection function for compact encoding of vector. When projecting a vector v of size n to a vector y of size d(n > d), CS algorithm first initalize two vectors $$s \in \{-1, 1\}^n$$, and $$h\in {1,...,d}^n$$. h indicate the indexes where the values of vector v can be projected to. The algorithm is as follows.
@@ -29,7 +28,6 @@ $$
 In VQA architecture, MCB pooling is used between image features and text feature to get attention weight, and attened image feature and text feature to make prediction. 
 
 ## So?
-
 ![image](/assets/images/mcb4.png){: .center-image width="50px"}
 
 MCB achieved the good results on VQA tasks. 

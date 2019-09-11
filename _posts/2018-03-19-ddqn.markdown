@@ -3,7 +3,8 @@ layout: post
 title:  "Deep Reinforcement Learning with Double Q-learning"
 date:   2018-03-19 09:20:59
 author: Sungwon Lyu
-categories: Reinforcement-Learning
+categories: studies
+tags: deep-learning reinforcement-learning
 ---
 ## WHY? 
 기존의 DQN은 특정 지점에서의 action-value function을 그 state에서 action을 취했을 때 즉각적으로 얻는 reward와 그 다음 상태의 가치를 discount한 값을 더한 것으로 근사한다. 조금 더 근사를 효율적으로 하기 위하여 target 네트워크를 사용하는데 이때 다음 state의 가치를 최선의 action을 한 결과로 판단하기 때문에 낙관하는(overoptimistic) 결과가 나타난다. 이러한 낙관적인 예측은 점진적으로 suboptimal한 policy에 수렴하도록 유도할 수 있다. 

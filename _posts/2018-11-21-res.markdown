@@ -3,9 +3,9 @@ layout: post
 title:  "Relationships from Entity Stream"
 date:   2018-11-21 11:42:59
 author: Sungwon Lyu
-categories: Computer-Vision
+categories: studies
+tags: deep-learning computer-vision
 ---
-
 ## WHY? 
 [Relational Network](https://lyusungwon.github.io/deep-learning/2018/05/06/rn.html) showed great performance in relational reasoning, but calculations and memory consumption grow quadratically with the number of the objects due to fully connected pairing process.
 

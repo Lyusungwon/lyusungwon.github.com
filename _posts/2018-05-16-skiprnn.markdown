@@ -3,9 +3,9 @@ layout: post
 title:  "Skip RNN: Learning to Skip State Updates in Recurrent Neural Networks"
 date:   2018-05-16 9:25:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
-
 ## WHY? 
 RNN계열의 sequence model들은 언어모델에 효과적이지만 추론이 느리고 gradient가 사라지거나 long-term dependency를 잡지 못하는 등의 문제점이 있다. 
 

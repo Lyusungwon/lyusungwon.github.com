@@ -3,9 +3,9 @@ layout: post
 title:  "Disentangling Controllable and Uncontrollable Factors of Variation by Interacting with the World"
 date:   2018-05-23 10:32:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 [Independently Controllable Factors](https://lyusungwon.github.io/rl/2018/05/21/icf.html)에서는 agent가 environment와의 상호작용을 통하여 control가능한 factor들을 학습할 수 있었다. 하지만 uncontrollable한 factor는 인식하지 못한다는 단점이 있었다. 
 

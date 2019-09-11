@@ -3,9 +3,9 @@ layout: post
 title:  "Rogue One (2016)"
 date:   2018-06-13 09:04:59
 author: Sungwon Lyu
-categories: Reviews
+categories: writings
+tags: reviews
 ---
-
 평점: 4
 
 서사는 5점 캐릭터는 3점. 스타'워즈' 시리즈중 가장 전쟁 영화 같았지만 단편이라 캐릭터들을 살릴 새가 없었던 것이 아쉬움.

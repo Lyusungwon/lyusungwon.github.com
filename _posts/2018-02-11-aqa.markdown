@@ -3,7 +3,8 @@ layout: post
 title:  "Ask the Right Questions: Active Question Reformulation with Reinforcement Learning"
 date:   2018-02-11 22:53:59
 author: Sungwon Lyu
-categories: Natural-Language-Processing
+categories: studies
+tags: deep-learning natural-language-processing
 ---
 ## WHY? 
 QA의 정확도를 올리기 위하여 QA모델의 성능만 올릴 필요는 없다. 좀더 정확한 답을 얻기 위하여 각 QA모델에게 적합하도록 질문을 재구성하는 방법을 고안하였다. 

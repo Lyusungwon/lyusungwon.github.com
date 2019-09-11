@@ -3,9 +3,9 @@ layout: post
 title:  "Ladder Variational Autoencoders"
 date:   2018-05-21 16:10:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 VAE는 generation에 상당히 강력한 도구이지만 conditional stochastic variable을 통하여 생성하기 때문에 계층적인 특징을 학습하는 깊은 모델을 만들기 어렵다. 
 

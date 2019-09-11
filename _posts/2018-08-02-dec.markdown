@@ -3,9 +3,9 @@ layout: post
 title:  "Unsupervised Deep Embedding for Clustering Analysis"
 date:   2018-08-02 13:41:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 There had been little study on learning representation that focus on clustering.
 

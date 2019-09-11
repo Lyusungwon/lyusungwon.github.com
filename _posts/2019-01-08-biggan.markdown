@@ -3,9 +3,9 @@ layout: post
 title:  "Large Scale GAN Training for High Fidelity Natural Image Synthesis"
 date:   2019-01-08 14:53:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Generating a high resolution image with GAN is difficult despite of recent advances. This paper suggests BigGAN which adds few tricks on previous model to generate large scale images without [progressively growing the network](https://lyusungwon.github.io/generative-models/2019/01/02/pggan.html).
 

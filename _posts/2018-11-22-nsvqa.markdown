@@ -3,9 +3,9 @@ layout: post
 title:  "Neural-Symbolic VQA: Disentangling Reasoning from Vision and Language Understanding"
 date:   2018-11-22 10:15:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 Most VQA reasoning algorithms are not transparent in their reasoning and not robust to complex reasoning.
 

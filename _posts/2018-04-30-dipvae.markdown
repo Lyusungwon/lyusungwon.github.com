@@ -3,9 +3,9 @@ layout: post
 title:  "Variational Inference of Disentangled Latent Concepts from Unlabeled Observations"
 date:   2018-04-30 11:46:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Disentanling과정은 기본적으로 x내에서 독립적인 요소를 찾아 각각 다른 z로 나누는 작업이다. 이를 위하여 z의 prior를 independent Gaussian(N(1,0))로 간주하여 근사하거나([Beta-VAE]()) Batch내의 z의 값을 permutation하여 adversarial training하는 방법으로 독립을 유도하였다([FVAE]()). 하지만 Beta-VAE는 모든 관측치의 분포를 N(1,0)으로 강제하여 관측치의 차이에 덜 민감하게 만들어 reconstruction의 성능이 떨어진다.  
 

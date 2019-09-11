@@ -3,15 +3,13 @@ layout: post
 title:  "Generative Question Answering: Learning to Answer the Whole Question"
 date:   2019-04-02 09:47:59
 author: Sungwon Lyu
-categories: Visual-Question-Answering
+categories: studies
+tags: deep-learning visual-question-answering
 ---
-
 ## WHY? 
-
 Discriminative question answering often overfit to datasets by catching any kinds of clue that leads to answer.  
 
 ## WHAT?
-
 This paper suggests Generative Question Answering model(GQA) to generate both questions and answers given contexts. Though this paper applied the model on both QA and VQA tasks, following explanation would only focus on VQA task. The model uses Bayes' rule to minimize the NLL of joint distribtion of questions and answers given context(images).  
 
 $$
@@ -29,7 +27,6 @@ a* = argmax_a p(q|a,c)p(a|c)
 $$
 
 ## So?
-
 ![image](/assets/images/gqa2.png){: .center-image width="50px"}
 
 GQA showed comparable performance to other VQA models while showing interpretable attention map and word probabilities on the last layer.

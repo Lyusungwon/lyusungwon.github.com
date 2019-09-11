@@ -3,9 +3,9 @@ layout: post
 title:  "Gradient Estimation Using Stochastic Computation Graphs"
 date:   2018-07-09 15:43:59
 author: Sungwon Lyu
-categories: Probabilistic-Graphical-Modeling
+categories: studies
+tags: statistics probabilistic-graphical-modeling
 ---
-
 ## WHY? 
 Many machine learning problems involves loss function that contains random variables. To perform backpropagation, estimating gradient of the loss function is required. 
 

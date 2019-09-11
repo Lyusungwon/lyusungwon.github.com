@@ -3,9 +3,9 @@ layout: post
 title:  "Hadamard Product for Low-rank Bilinear Pooling"
 date:   2018-09-19 11:15:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 Bilinear model can caputure rich relation of two vectors. However, the computational complexity of bilinear model is huge due to its high dimensionality. To make bilinear model more applicable, this paper suggests low-rank bilinear pooling using Hadamard product. 
 

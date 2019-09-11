@@ -3,17 +3,13 @@ layout: post
 title:  "How Does Batch Normalization Help Optimization? (No, It Is Not About Internal Covariate Shift"
 date:   2018-07-11 13:05:59
 author: Sungwon Lyu
-categories: Deep-Learning
+categories: studies
+tags: deep-learning deep-learning
 ---
-
 ## WHY? 
 While the effect of batch normalization was widely proven empirically, the exact mechanism of it is yet been understood. Commonly known explanation for this was internal covariance shift(ICS) meaning the change in the distribution of layer inputs caused by updates to the preceeding layers. 
 
 ## WHAT?
-
-
 ## Critic
-
 ## So?
-
 [Ha, David, and Jürgen Schmidhuber. "World Models." arXiv preprint arXiv:1803.10122 (2018).](https://arxiv.org/abs/1803.10122)

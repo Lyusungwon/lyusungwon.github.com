@@ -3,9 +3,9 @@ layout: post
 title:  "Disentangling by Factorising"
 date:   2018-04-27 16:27:59
 author: Sungwon Lyu
-categories: Generative-Models
+categories: studies
+tags: deep-learning generative-models
 ---
-
 ## WHY? 
 Beta-VAE에서는 q(z|x)와 p(z)의 KL divergence에 추가적인 penalty를 줌으로서 z간의 독립성을 유도하여 disentangling을 이루었다. 하지만 기존의 vae보다 reconstruction 성능이 떨어지는 결과가 나타났다. 
 
