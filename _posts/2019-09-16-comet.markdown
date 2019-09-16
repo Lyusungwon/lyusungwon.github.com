@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "COMET: Commonsense Transformers for Automatic Knowledge Graph Construction"
+date:   2019-09-16 20:47:59
+author: Sungwon Lyu
+categories: studies
+tags: deep-learning natural-language-processing knowledge-graph
+---
+## Commonsense Knowledge Graph
+Knowledge graph is graph representation of knowledge. Entities are represented as nodes and relations between entities are represented as edges. Commonsense knowledge graph stores commonsense knowledge in form of graphs. Two of common dataset for commonsense knowledge graph are ATOMIC and ConceptNet.
+
+## WHY? 
+![image](/assets/images/comet1.png){: .center-image}
+Commonsense knowledge graph is inevitably far from perfect since infinite number of facts can be considered as commonsense. COMET tried to transfer implicit commonsense knowledge from pretrained language model to explicit knowledge graph. More precisely, the model of COMET completes the object entity given subject entity and a relation. 
+
+## WHAT?
+![image](/assets/images/comet2.png){: .center-image}
+COMET uses one of the most popular pretrained language model: GPT. Along with BERT, GPT pretrained with huge amount of data is one of the most succuessful natural language backbones based on self-attention mechanism that can be fine-tuned for various other tasks. COMET fine-tunes GPT on entity completion task.
+
+![image](/assets/images/comet3.png){: .center-image}
+The input structure changes a little based on dataset, but basically arranged tokens in order of subject entity, relation, and object entity with mask token between them. The goal is to output object entity given subject entity and a relation. 
+
+$$
+\mathcal{L} = - \sum_{t=|s|+|r|}^{|s|+|r|+|o|} \log P(x_t|x_{<t})
+$$
+
+## So?
+Using pretrained GPT turned out to be effective in relation completion task. The outputs are not only evaluated natural to human, but also are novel. Some of interesting outputs are shown below.
+![image](/assets/images/comet4.png){: .center-image}
+
+[Bosselut, Antoine, et al. "COMET: Commonsense Transformers for Automatic Knowledge Graph Construction." arXiv preprint arXiv:1906.05317 (2019).](https://arxiv.org/abs/1906.05317)
+
