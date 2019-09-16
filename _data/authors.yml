@@ -8,9 +8,7 @@ lyusungwon:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    I love learning. \\
-    I want to positive impact on people with what I learned. \\
-    Now, I am training to be the best machine trainer.
+    I love learning and I want to make people happy with what I learned. Now I'm studying natural language processing using deep learning. I'm also interested in computer science, productivity, and all kinds of stories. 
 
   # This photo will be used in the about section
   picture:
