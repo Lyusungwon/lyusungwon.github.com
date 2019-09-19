@@ -10,11 +10,11 @@ tags: deep-learning natural-language-processing knowledge-graph
 Knowledge graph is graph representation of knowledge. Entities are represented as nodes and relations between entities are represented as edges. Commonsense knowledge graph stores commonsense knowledge in form of graphs. Two of common dataset for commonsense knowledge graph are ATOMIC and ConceptNet.
 
 ## WHY? 
-![image](/assets/images/comet1.png){: .center-image}
+![image](/assets/images/comet1.png){:  .centered-product}
 Commonsense knowledge graph is inevitably far from perfect since infinite number of facts can be considered as commonsense. COMET tried to transfer implicit commonsense knowledge from pretrained language model to explicit knowledge graph. More precisely, the model of COMET completes the object entity given subject entity and a relation. 
 
 ## WHAT?
-![image](/assets/images/comet2.png){: .center-image}
+![image](/assets/images/comet2.png){: .head-image}
 COMET uses one of the most popular pretrained language model: GPT. Along with BERT, GPT pretrained with huge amount of data is one of the most succuessful natural language backbones based on self-attention mechanism that can be fine-tuned for various other tasks. COMET fine-tunes GPT on entity completion task.
 
 ![image](/assets/images/comet3.png){: .center-image}
