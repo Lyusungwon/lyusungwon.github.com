@@ -58,6 +58,16 @@
     object-fit: contain;
 }
 
+.body-image{
+  max-height:250px;
+  display: flex;
+  justify-content: center;
+}
+
+.body-image img {
+    object-fit: contain;
+}
+
 .markdown-body p {
   word-break: break-word;
 }
