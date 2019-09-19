@@ -22,11 +22,11 @@ Using PIP loss, optimal dimensionality can be found that maximize the quality of
 ## So?
 Using given facts, this paper provides two discovery. 
 
-![image](/assets/images/odwe1.png){: .center-image width="50px"}
+![image](/assets/images/odwe1.png){: .body-image}
 
 Suppose $$E = U_{\cdot,1:d}D_{1:d,1:d}^{\alpha}$$, larger $$\alpha$$ leads to robustness to over-fitting. 
 
-![image](/assets/images/odwe2.png){: .center-image width="50px"}
+![image](/assets/images/odwe2.png){: .body-image}
 
 Also, optimal dimensionality can be found that minimize the PIP loss by balancing bias-variance trade-off.
 

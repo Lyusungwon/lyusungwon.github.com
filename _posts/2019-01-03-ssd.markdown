@@ -11,11 +11,11 @@ Object box proposal process is complicated and slow in object detection process.
 
 
 ## WHAT?
-![image](/assets/images/ssd1.png){: .center-image width="50px"}
+![image](/assets/images/ssd1.png){: .body-image}
 
 SSD prodeces fixed-size collection of bounding boxes and scores the presence of class objects in the boxes. 
 
-![image](/assets/images/ssd2.png){: .center-image width="50px"}
+![image](/assets/images/ssd2.png){: .body-image}
 
 The front of SSD is standard classification model with truncated classification layer(base network). After the base network, convolution layers added to decrease the size progressively. These progressively decreasing feature layers represent multiple granuality of bounding boxes. For each feature map, multiple scale(k) classifiers are applied to 3 x 3 area to compute scores of c class labels and 4 relative offsets. For m x n feature map, 3 x 3 filter with k x (c + 4) channel classfiers are applied to produce (c + 4)kmn outputs. 
 
@@ -40,7 +40,7 @@ $$
 With feature map of differnt granuality and aspect ratios, SSD can a wide range of boxes. 
 
 ## So?
-![image](/assets/images/ssd3.png){: .center-image width="50px"}
+![image](/assets/images/ssd3.png){: .body-image}
 
 SSD achieved better result on PASCAL VOC2007, 2012 and COCO than Fast and Faster R-CNN. 
 

@@ -10,7 +10,7 @@ tags: deep-learning computer-vision
 There are some architectures for relational reasoning but lacks general-purpose components for relational reasoning and visual question answering.
 
 ## WHAT?
-![image](/assets/images/film1.png){: .center-image width="50px"}
+![image](/assets/images/film1.png){: .body-image}
 
 This paper propose Feature-wise Linear Modulation(FiLM) to conditionally focus on the image. By linearly transforming the output of convolution filter, FiLM conditionally choose certain filters. 
 
@@ -20,12 +20,12 @@ $$
 FiLM(F_{i,c}|\gamma_{i,c}, \beta_{i,c}) = \gamma_{i,c} F_{i,c} + \beta_{i,c}
 $$
 
-![image](/assets/images/film2.png){: .center-image width="50px"}
+![image](/assets/images/film2.png){: .body-image}
 
 FiLM generator takes questions as input and output betas and gammas for each ResBlocks. Each ResBlock contains FiLM after convolution and BN layer. Several ResBlocks with FiLM stacks to form FiLM-ed network. 
 
 ## So?
-![image](/assets/images/film3.png){: .center-image width="50px"}
+![image](/assets/images/film3.png){: .body-image}
 FiLM not only achieved the state of the art result in CLEVR, but also showen to conditionally focus on the image based on queries. 
 
 [Perez, Ethan, et al. "Film: Visual reasoning with a general conditioning layer." arXiv preprint arXiv:1709.07871 (2017).](https://arxiv.org/pdf/1709.07871.pdf/)

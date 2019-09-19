@@ -14,7 +14,7 @@ tags: deep-learning generative-models
 $$L(\Phi, \Theta, \Psi) = \Sigma_i \hat{R}_i(\Phi, \Theta) - \lambda S_i(\phi_c, \Psi)\\
 \hat{R}_i(\Phi, \Theta) = \|x_i - [g_c(f_c(x_i)) + g_u(f_u(x_i))]\|^2$$
 이렇게 하면 충분히 잘 될 것 같지만 어떤것이 controllable하고 어떤 것이 uncontrollable한 object인지 구분하기가 어렵다고 한다. 그렇기 때문에 pretrained된 모델에 DNN을 추가한다면 그 DNN은 uncontrollable한 object를 학습할 것이다. 
-![image](/assets/images/dcuf.png){: .center-image width="50px"}
+![image](/assets/images/dcuf.png){: .body-image}
 
 ## So?
 Obstacle을 피해야 하는 task가 있을 때 ICF의 모델이 uncontrollable한 feature를 학습하지 못하여 점수가 낮았는데 반하여 이 모델은 uncontrollable한 obstacle을 잘 피하여 점수가 높았다. 

@@ -12,7 +12,7 @@ Gaussian process has several advantages. Based on robust statistical assumptions
 ## WHAT?
 Neural process satisfy two condtions of stochastic process: exchageability and consistency. To represent GP with neural network, stochastic process F can be parameterised by random vector z.  
 
-![image](/assets/images/np1.png){: .center-image width="50px"}
+![image](/assets/images/np1.png){: .body-image}
 
 $$
 F(x) = g(x, z)\\
@@ -26,7 +26,7 @@ $$
 \mathbb{E}_{q(z|x_{1:n},y_{1:n})}[\sum^n_{i=m+1}\log p(y_i|z, x_i) + \log\frac{q(z|x_{1:m}, y_{1:m})}{q(z|x_{1:n},y_{1:n})}]
 $$
 
-![image](/assets/images/np2.png){: .center-image width="50px"}
+![image](/assets/images/np2.png){: .body-image}
 
 To train this model to represent the distribution of functions, dataset have to be divided into context points and target points. Encoder parameterized with a neural network takes pairs of context points($$x_i, y_i$$) and produce each representation $$r_i$$. In order to represent order-invariant global representation r, aggregator takes means of each representation.
 

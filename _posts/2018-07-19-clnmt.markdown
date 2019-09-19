@@ -11,17 +11,17 @@ All the previous neural machine translators are based on word-level translation.
 
 ## WHAT?
 This paper suggest Bi-Scale recurrent neural network with attention to model character level translator. Input are encoded into BPE.
-![image](/assets/images/clnmt1.png){: .center-image width="50px"}
+![image](/assets/images/clnmt1.png){: .body-image}
 Slower layer carries information of word and faster layer carries information of character. Architecturally, slower layer can update only faster layer finish a word, resulting slower layer updates slower. $$h^1$$ is faster layer and $$h^2$$ is slower layer.
-![image](/assets/images/clnmt2.png){: .center-image}
-![image](/assets/images/clnmt3.png){: .center-image}
-![image](/assets/images/clnmt4.png){: .center-image}
-![image](/assets/images/clnmt5.png){: .center-image}
-![image](/assets/images/clnmt6.png){: .center-image}
-![image](/assets/images/clnmt7.png){: .center-image}
+![image](/assets/images/clnmt2.png){: .body-image}
+![image](/assets/images/clnmt3.png){: .body-image}
+![image](/assets/images/clnmt4.png){: .body-image}
+![image](/assets/images/clnmt5.png){: .body-image}
+![image](/assets/images/clnmt6.png){: .body-image}
+![image](/assets/images/clnmt7.png){: .body-image}
 
 ## So?
-![image](/assets/images/clnmt8.png){: .center-image}
+![image](/assets/images/clnmt8.png){: .body-image}
 CL nmt showed better result than traditional non-neural translator and showed attention functioning properly. 
 
 ## Critic

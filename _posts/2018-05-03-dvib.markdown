@@ -26,7 +26,7 @@ $$J_{IB} = \frac{1}{N}\Sigma^{N}_{n=1} E_{\epsilon \sim p(\epsilon)} [-log q(y_n
 
 ## So?
 이 모델로 classifier를 학습할 경우 적당한 숫자의 $$\beta$$를 주는 것 만으로 왠만한 regularization(dropout/cp)이 주는 성능 향상을 얻을 수 있다. 이 모델에서 $$\beta$$의 값을 변화하며 여러 현상을 관찰 할 수 있는데 가장 인상적이었던 부분은 regularization이었다. 
-![image](/assets/images/dvib.png){: .center-image width="50px"}
+![image](/assets/images/dvib.png){: .body-image}
 작은 $$\beta$$값의 의미는 X와 Z의 정보를 크게 줄이지 않겠다는 것이다. 그리하여 overfit이 일어나고 Y에만 집중하여 우리가 가정한 prior에 크게 벗어나게 된다. 너무 큰 $$\beta$$값은 우리가 제시한 prior에 너무 모이게 되어 모델의 성능을 저하한다. 하지만 적당한 값의 $$\beta$$는 각 class별로 적당한 분포를 만들어 모인다. 이를 보면 알 수 있듯이 좋은 $$\beta$$를 사용하면 Adversarial attck에 크게 robust해진다.
 
 ## Critic

@@ -10,11 +10,11 @@ tags: deep-learning natural-language-processing
 Information retrieval from search engine becomes difficult when the query is incomplete or too complex. This paper suggests a query reformulation system  that rewrite the query to maximize the probability of relevant documents returned. 
 
 ## WHAT?
-![image](/assets/images/qrr1.png){: .center-image width="50px"}
+![image](/assets/images/qrr1.png){: .body-image}
 
 Since the output of query reformulator is discrete, REINFORCE algorithm is used to train the model.
 
-![image](/assets/images/qrr2.png){: .center-image width="50px"}
+![image](/assets/images/qrr2.png){: .body-image}
 
 The query and the candidate term vectors are converted to a fixed-sized vector using CNN with max pooling or RNN. To generate a reformulated query sequentially, LSTM is used.
 

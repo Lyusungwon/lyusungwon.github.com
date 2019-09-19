@@ -10,15 +10,15 @@ tags: deep-learning visual-question-answering
 Previous methods for visual question answering performed one-step or static reasoning while some questions requires chain of reasonings. 
 
 ## WHAT?
-![image](/assets/images/cor1.png){: .center-image width="50px"}
+![image](/assets/images/cor1.png){: .body-image}
 
 Chain of reasoning(CoR) model alternatively updates the objects and their relations to solve questions that require chain of reasoning.  
 
-![image](/assets/images/cor2.png){: .center-image width="50px"}
+![image](/assets/images/cor2.png){: .body-image}
 
 Cor consists of three parts: Data embedding, chain of reasoning and decision making. Data embedding encodes images and questions into vecors with Faster-RCNN and GRU respectively. 
 
-![image](/assets/images/cor3.png){: .center-image width="50px"}
+![image](/assets/images/cor3.png){: .body-image}
 
 Chain of reasoning step consists of a series of sub-chains that perform relational reasoning and object refining. Given that objects of image denoted by $$O^{(t)}$$, output is calculated as follows. 
 
@@ -46,7 +46,7 @@ H = \sum_{k=1}^K(O^* W_{O^*, k})\odot(QW_{q', k})\\
 $$
 
 ## So?
-![image](/assets/images/cor4.png){: .center-image width="50px"}
+![image](/assets/images/cor4.png){: .body-image}
 
 CoR achieved the best result on various VQA tasks including VQA 1.0, VQA 2.0, COCO-QA, and TDIUC. Visualization shows CoR performs appropriate reasoning.
 

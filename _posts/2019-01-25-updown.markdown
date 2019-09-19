@@ -12,11 +12,11 @@ In image captioning or visual question answering, the features of an image are e
 ## WHAT?
 This paper suggests bottom-up attention using object detection model for extracting image features. 
 
-![image](/assets/images/updown1.png){: .center-image width="50px"}
+![image](/assets/images/updown1.png){: .body-image}
 
 Faster R-CNN in conjunction with ResNet101 is used followed by non-maximum supression using IOU threshold and the mean-pooling. The model was pretrained with ImageNet to classify object classes and trained additionally to predict the attribute classes.
 
-![image](/assets/images/updown2.png){: .center-image width="50px"}
+![image](/assets/images/updown2.png){: .body-image}
 
 The VQA model of this paper is rather simple. This model utilizes the 'gated tanh' layer for non-linear transformation. 
 
@@ -32,11 +32,11 @@ p(y) = \sigma(W_o f_o(\mathbf{h}))
 $$
 
 ## So?
-![image](/assets/images/updown3.png){: .center-image width="50px"}
+![image](/assets/images/updown3.png){: .body-image}
 
 Bottm-up attention is shown to be useful than former methods. 
 
-![image](/assets/images/updown4.png){: .center-image width="50px"}
+![image](/assets/images/updown4.png){: .body-image}
 
 Up-Down model showed competitive results compared to other models in leader board of VQA 2.0 challenge (ensemble). 
 

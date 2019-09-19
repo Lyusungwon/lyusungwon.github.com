@@ -20,9 +20,9 @@ $$\mathbf{z}_t = \mathbf{\mu}_t + \mathbf{\sigma}_t \odot \mathbf{z}_{t-1}$$\\
 determinant도 단순하기 때문에 likelihood는 다음과 같이 구할 수 있다.\\
 $$log q(\mathbf{z}_t|\mathbf{x}) = -\Sigma^D_{i=1}\left(\frac{1}{2}\epsilon^2_i + \frac{1}{2}log(2\pi) + \Sigma^T_{t=0}log \sigma_{t,i}\right)$$\\
 여기에 일정한 게이트를 추가하여 z를 업데이트 하는 모듈을 만들어 다음과 같은 구조를 가지게 된다.
-![image](/assets/images/iaf.png){: .center-image width="50px"}
+![image](/assets/images/iaf.png){: .body-image}
 알고리즘은 다음과 같다. 
-![image](/assets/images/iaf2.png){: .center-image width="50px"}
+![image](/assets/images/iaf2.png){: .body-image}
 
 ## So?
 이를 통하여 posterior를 유연하게 변화하면서도 간편하게 샘플링할 수 있게 되어 VAE성능을 향상시킬 수 있게 되었다.  

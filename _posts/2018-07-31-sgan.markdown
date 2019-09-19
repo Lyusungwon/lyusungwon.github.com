@@ -31,7 +31,7 @@ $$
 \tilde{\mathbb{u}} \leftarrow \frac{W^T \tilde{\mathbb{v}}}{\|W^T\tilde{\mathbb{v}}\|_2}\\
 \sigma(W)\approx \tilde{\mathbb{u}}^T W \tilde{\mathbb{v}}
 $$
-![image](/assets/images/sgan.png){: .center-image width="50px"}
+![image](/assets/images/sgan.png){: .body-image}
 If we analyze the gradient of spectrally normlized weights, we can see that the gradient is penalized when gradient of W is close to the first singular components, preventing gradient from too focusing on single direction. 
 
 ## So?

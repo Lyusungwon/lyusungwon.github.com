@@ -10,12 +10,12 @@ tags: deep-learning deep-learning
 Constructing 3D shape from a single image is challenging. Training end-to-end to predict 3D shape from 2D image often end up overfitting while not generalizing well to other shapes. 
 
 ## WHAT?
-![image](/assets/images/genre1.png){: .center-image width="50px"}
+![image](/assets/images/genre1.png){: .body-image}
 This paper suggests Generalizable Reconstruction(GenRe) algorithm to construct 3D shape with class-agnostic shape prior. Instead of training neural network model to construct 3D shape from an image end-to-end, GenRe iteratively use geometric projection algorithms with NN module to decrease the burden of neural network.\\
 There are 3 network modules(Single-View Depth Estimator, Spherical Map Inpainting Network and Voxel Refinement Network) and 3 geometric projection. Single-View Depth Estimator estimates the depth from a single image making 2D to 2.5D. First geometric projection project 2.5D image into partial spherical map. Spherical maps are surface representations definced on the UV coordinates of a unit sphere. Spherical Map Inpainting Network inpaints the partial spherical map to construct 3D shape from incomplete 2.5D. Second geomeric projection construct voxels from spherical Map and third projection construct voxels from 2.5D. From two constructed voxels, voxel refinement network finalize 3D image with U-net structure. Except for the first projection, the other two projections are designed to be fully differentiable (See paper for more details).
 
 ## So?
-![image](/assets/images/genre2.png){: .center-image width="50px"}
+![image](/assets/images/genre2.png){: .body-image}
 This method not only achieved state-of-the-art score on reconstruction error(CD), but also showed qualitatively amazing works.
 
 ## Critic

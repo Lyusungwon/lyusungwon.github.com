@@ -11,14 +11,14 @@ Gradient descent methods depend on the first order gradient of a loss function w
 
 ## WHAT?
 This paper explored exact Hessian prodect of neural network (after convergence) and discovered that the eigenvalue of Hessian is separated into two groups: 0s and large, positive values (singular). 
-![image](/assets/images/eh1.png){: .center-image width="50px"}
+![image](/assets/images/eh1.png){: .body-image}
 This property did not depend on the loss function, or the choice of initial points.
 Varying the parameters of models and datas, this paper observed that the bulk of the eigenvalues depend on the architecture while top discrete eigenvalues depend on data.
-![image](/assets/images/eh2.png){: .center-image width="50px"}
-![image](/assets/images/eh3.png){: .center-image width="50px"}
+![image](/assets/images/eh2.png){: .body-image}
+![image](/assets/images/eh3.png){: .body-image}
 
 ## So?
-![image](/assets/images/eh4.png){: .center-image width="50px"}
+![image](/assets/images/eh4.png){: .body-image}
 The property of Hessian provides useful information about landscape.
 
 ## Critic

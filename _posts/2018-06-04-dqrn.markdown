@@ -11,7 +11,7 @@ tags: deep-learning reinforcement-learning
 
 ## WHAT?
 기존의 DQN에서 과거를 반영하기 위하여 마지막 n장면을 각 채널로 하여 convolution하였다. DRQN(Deep Recurrent Q-Network)에서는 한 frame씩 CNN으로 학습하고 마지막 벡터를 LSTM의 input으로 넣고 마지막 hidden state에 fc를 하여 Q-function을 도출한다. 
-![image](/assets/images/drqn.png){: .center-image width="50px"}
+![image](/assets/images/drqn.png){: .body-image}
 업데이트 방식은 두 가지가 있을 수 있다. 1) Bootstrapped Sequential Updates는 replay memory로부터 특정 episode를 random 추출하고 이를 처음부터 에피소드 끝까지 학습하는 방식이다. 2) Bootstrapped Random Updates는 replay memory로부터 특정 episode를 random 추출하고 random point에서 시작하여 unrol iteration timestep만큼만 진행하여 학습한다. 
 
 ## So?

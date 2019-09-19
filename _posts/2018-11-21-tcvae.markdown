@@ -33,7 +33,7 @@ $$
 Increasing the beta while fixing alpha and gamma to 1 leads to better disentanglement. 
 
 ## So?
-![image](/assets/images/tcvae.png){: .center-image width="50px"}
+![image](/assets/images/tcvae.png){: .body-image}
 According to disentanglement measure(Mutual Information Gap:MIG) this paper suggested, beta-TCVAE showed better performance than beta-vae.
 
 ## Critic

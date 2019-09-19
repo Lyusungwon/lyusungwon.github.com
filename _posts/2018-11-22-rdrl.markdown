@@ -10,7 +10,7 @@ tags: deep-learning reinforcement-learning
 Relational information is important in some reinforcement learning tasks.
 
 ## WHAT?
-![image](/assets/images/rdrl.png){: .center-image width="50px"}
+![image](/assets/images/rdrl.png){: .body-image}
 Relational information can be important source for high scores in reinforcement learning. To provide inductive bias for relational information, this paper appied self-attention(MHDPA) to the last layer of the convolution network that encode the state. Another multilayer perceptron($$f_\theta$$) is applied in parallel to each self-attended objects. 
 
 ## So?

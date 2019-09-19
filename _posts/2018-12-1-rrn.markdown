@@ -10,7 +10,7 @@ tags: deep-learning deep-learning
 Some tasks such as Sudoku require serial steps of relational inference.
 
 ## WHAT?
-![image](/assets/images/rrn1.png){: .center-image width="50px"}
+![image](/assets/images/rrn1.png){: .body-image}
 Recurrent relational network operates on a graph representation of objects. Message passing method is used to pass the relational information to neighbor nodes to solve the task. The loss is minimized at every step.
 
 $$
@@ -22,7 +22,7 @@ l^t = -\sum_{i=1}^I \log o_i^t[y_i]
 $$
 
 ## So?
-![image](/assets/images/rrn2.png){: .center-image width="50px"}
+![image](/assets/images/rrn2.png){: .body-image}
 This module showed stablly better performance in bAbI task. RRN showed good performance in the newly defined Pretty-CLEVER task. This paper also showed this network solving Sudoku well. 
 
 ## Critic

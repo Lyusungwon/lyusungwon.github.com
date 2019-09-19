@@ -12,7 +12,7 @@ Visual question answering task is to answer to natural language question based o
 ## WHAT?
 To address the bottleneck issue, MRN increased expressiveness of interaction between question and image by performing elementwise product instead of attention mechanism.
 
-![image](/assets/images/mrn.png){: .center-image width="50px"}
+![image](/assets/images/mrn.png){: .body-image}
 
 $$
 H_0 = \mathbf{q}\\

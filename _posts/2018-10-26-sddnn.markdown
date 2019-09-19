@@ -12,11 +12,11 @@ Synchronization is an important issue is distributed SGD. Too few synchoronizati
 ## WHAT?
 This paper tried to reduce the communication cost of distributed SGD drastically by compression. This paper suggests two points. First is that many techniques that accelerate the SGD utilize delayed weights update including mini-batching. Second is that sub-gradients are usually very small.
 
-![image](/assets/images/sddnn1.png){: .center-image width="50px"}
+![image](/assets/images/sddnn1.png){: .body-image}
 
 Based on the observations, sub-gradients can be compressed drastically by thresholding absolute value of the gradient. Then, the number of parameters that need to be updated is small enough to keep them in key-value pair. In addition, gradients that does not exceed the threshold are not abandoned, but rather accmulated as gradient residual. The gradient information can be further compressed with 1-bit quantization. By reducing the cost of communication dramatically, all nodes can communicate with all other nodes which enable fast synchronication without the need for parameter server. This method can be used for both model-parallelizaion and data-parallelizaion. Pseudo-code is as follows. 
 
-![image](/assets/images/sddnn2.png){: .center-image width="50px"}
+![image](/assets/images/sddnn2.png){: .body-image}
 Source: [Skymid](https://blog.skymind.ai/distributed-deep-learning-part-1-an-introduction-to-distributed-training-of-neural-networks/)
 
 ## So?

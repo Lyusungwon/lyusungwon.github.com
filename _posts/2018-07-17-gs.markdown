@@ -11,9 +11,9 @@ The same motivation with [Concrete](https://lyusungwon.github.io/dl/2018/07/16/c
 
 ## WHAT?
 Gumbel-Softmax distribution is the same as [Concrete distribution](https://lyusungwon.github.io/dl/2018/07/16/cd.html). GS distribution appoaches to on-hot as temperature goes 0. 
-![image](/assets/images/gs1.png){: .center-image width="50px"}
+![image](/assets/images/gs1.png){: .body-image}
 However, GS samples are not exactly the same as categorical samples resulting bias. This GS estimator becomes close to unbiased but the variance of gradient increase (trade-off). If we do not replace categorical variables with GS variables, we can estimate the gradient with Straight-Through GS estimator.
-![image](/assets/images/gs2.png){: .center-image width="50px"}
+![image](/assets/images/gs2.png){: .body-image}
 (3) is score function estimator, (4) is Straight-Through estimator and (5) is GS estimator (pathwise derivative).
 
 ## So?

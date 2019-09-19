@@ -10,13 +10,13 @@ tags: computer-science distributed-processing
 Mesos is a platform that provides cross-framework resource allocation. The greatest challenge for cross-framework resource sharing is that various kinds of frameworks may have their own different scheduling. Mesos overcome this problem by adopting two-level scheduling mechanism called resource offers. 
 
 ### Framework of Mesos
-![image](/assets/images/mesos1.png){: .center-image width="50px"}
+![image](/assets/images/mesos1.png){: .body-image}
 
 ### Resource offer process
-![image](/assets/images/mesos2.png){: .center-image width="50px"}
+![image](/assets/images/mesos2.png){: .body-image}
 
 ### Mesos API function for schedulers and executors.
-![image](/assets/images/mesos3.png){: .center-image width="50px"}
+![image](/assets/images/mesos3.png){: .body-image}
 
 ## Strengths
 Using Mesos is especially useful when there are needs for different frameworks including various versions of them. Since Mesos is designed to interfere as least as possible, even new framework can be tested easily. This paper reported Mesos works surprisingly well on fine-grained tasks. 

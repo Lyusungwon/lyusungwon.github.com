@@ -18,7 +18,7 @@ $$
 $$
 
 ## WHAT?
-![image](/assets/images/mutan1.png){: .center-image width="50px"}
+![image](/assets/images/mutan1.png){: .body-image}
 
 The Tucker decomposition showed that a tensor can be represented with a limited number of parameters. The bilinear relationship between question vectors and image vectors can be represented in a Tucker Fusion form. 
 
@@ -38,12 +38,12 @@ $$
 \mathbf{z}_r = (\tilde{\mathbf{q}}^{\top}\mathbf{M}_r)*(\tilde{\mathbf{v}}^{\top}\mathbf{N}_r)
 $$
 
-![image](/assets/images/mutan2.png){: .center-image width="50px"}
+![image](/assets/images/mutan2.png){: .body-image}
 
 MCB and MLB can be represented with a generalized form of MUTAN.
 
 ## So?
-![image](/assets/images/mutan3.png){: .center-image width="50px"}
+![image](/assets/images/mutan3.png){: .body-image}
 
 MUTAN can represent rich multimodal representation. Achieved SOTA results on VQA dataset.
 

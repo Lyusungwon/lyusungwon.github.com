@@ -21,7 +21,7 @@ Using the pretrained biLM, we can make 2L+1 representations for each word in tas
 
 ## So?
 ELBO achieved state-of-the-art result in nealy all possible NLP task including QA, textual entailment, semantic role labeling, coreference resolution, named entity extraction and sentimant analysis. 
-![image](/assets/images/elmo.png){: .center-image width="50px"}
+![image](/assets/images/elmo.png){: .body-image}
 Since word representation can be differ in context, ELMo have effect of word sense disambiguation and contain information of POS tagging. Also, training model using ELMo was much faster(98%) to achieve SOTA results. 
 
 ## Critic

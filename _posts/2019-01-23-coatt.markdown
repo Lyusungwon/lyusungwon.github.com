@@ -12,7 +12,7 @@ Previous works achieved successful results in VQA by modeling visual attention. 
 ## WHAT?
 Co-attention model in this paper pay attention to the images and question in three level: word level, phrase level and question level. Embedding matrix is used for word level, 1D convolution with 3 window sizes(1-3) and max polling are used for phrase level, LSTM is used to encode question level vector. 
 
-![image](/assets/images/coatt1.png){: .center-image width="50px"}
+![image](/assets/images/coatt1.png){: .body-image}
 
 Two methods for co-attention are suggested: parallel co-attention and alternating co-attention. Parallell co-attention first form bilinear affinity matrix to capture the relationship between images and words and result attened visual and word features. 
 
@@ -32,7 +32,7 @@ $$
 \hat{\mathbf{x}} = \sum a_i^x \mathbf{x}_i
 $$
 
-![image](/assets/images/coatt2.png){: .center-image width="50px"}
+![image](/assets/images/coatt2.png){: .body-image}
 
 Co-attention is performed at various level of hierarchy of question. Various level of attended features are recursively encoded with MLP. 
 
@@ -44,7 +44,7 @@ $$
 $$
 
 ## So?
-![image](/assets/images/coatt3.png){: .center-image width="50px"}
+![image](/assets/images/coatt3.png){: .body-image}
 
 Co-attention model with pretrained image feature achieved good result on VQA dataset.
 

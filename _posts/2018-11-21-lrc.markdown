@@ -12,7 +12,7 @@ Vector space word representations capture syntactic and semantic regularities in
 ## WHAT?
 To test how continuous word representation capture regularities, this paper introduce relation-specific vector offset method. All the analogy tasks can be formulated as "a is to b as c is to __". Synthetic test asks gramatical regularities such as base-comparative or singular-plural. Symantic test asks semantic regularities like "clothing is to shirt as dis is to bowl". 
 
-![image](/assets/images/lrc.png){: .center-image width="50px"}
+![image](/assets/images/lrc.png){: .body-image}
 
 To answer analogy question, vector offset method can be used to find the answer.
 

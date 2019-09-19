@@ -21,20 +21,20 @@ $$\frac{\partial}{\partial\theta}\mathbb{E}_x[f(x)] = \mathbb{E}_z[\frac{\partia
 If $$\theta$$ appear both in the probability distribution and inside expectation, \\
 $$\frac{\partial}{\partial\theta}\mathbb{E}_{z\sim p(\cdot;\theta)}[f(x(z,\theta))] = \mathbb{E}_{z\sim p(\cdot;\theta)} [\frac{\partial}{\partial\theta}f(x(z,\theta)) + (\frac{\partial}{\partial\theta}\log p(z;\theta))f(x(z,\theta))]$$\\
 To formallize this with directed acyclic graph, this paper represent deterministic nodes with squares and stochastic nodes with circles. 
-![image](/assets/images/gescg1.png){: .center-image width="50px"}
+![image](/assets/images/gescg1.png){: .body-image}
 Some example can be shown as below. 
-![image](/assets/images/gescg2.png){: .center-image width="50px"}
+![image](/assets/images/gescg2.png){: .body-image}
 Further notation can be defined as below.
-![image](/assets/images/gescg3.png){: .center-image width="25px"}
+![image](/assets/images/gescg3.png){: .body-image}
 Given differentiability requirements hold, the gradient of sum of costs can be represented as two equivalent equations.
-![image](/assets/images/gescg4.png){: .center-image width="50px"}
+![image](/assets/images/gescg4.png){: .body-image}
 This paper suggest surrogate loss function which convert the stochastic graphs to deterministic graphs from equation above. \\
 $$\frac{\partial}{\partial\theta}\mathbb{E}[\Sigma_{c\in C}c] = E[\frac{\partial}{\partial\theta} L(\Theta, S)]\\
 L(\Theta,S) := \Sigma_w\log p(w|DEPS_w)\hat{Q}_w + \Sigma_{c\in C}c(DEPS_c)$$
 To reduce the variance of score function estimator we can subtract the baseline estimate of the function. 
-![image](/assets/images/gescg5.png){: .center-image width="50px"}
+![image](/assets/images/gescg5.png){: .body-image}
 Algorithm is as below. 
-![image](/assets/images/gescg6.png){: .center-image width="50px"}
+![image](/assets/images/gescg6.png){: .body-image}
 
 ## Critic
 Great summary and clean formalation of getting gradient of function with stochatic variables. 

@@ -11,7 +11,7 @@ Sentence를 vector representation으로 나타내는 것은 쉽지 않고 특히
 
 ## WHAT?
 Distributional hypothesis에 기반하여 한 Sentence를 그 주위에 있는 context sentence를 예측하는 방식으로 sentence representation을 학습한다. 기존의 Skip Thought보다 빠르고 간편하다는 점에서 Quick Thought이라고 이름 붙였다. \\
-![image](/assets/images/qt1.png){: .center-image width="50px"}
+![image](/assets/images/qt1.png){: .body-image}
 center encoder f는 RNN계열의 함수로 벡터화 하고자 하는 문장을 인코딩하여 vector representation을 output한다. context encoder g는 그 주위에 있을 문장들을 마찬가지로 인코딩하여 vector를 output한다. Candidate sentences는 negative 방식으로 실제 context vector와 그 외의 문장들 중 일부를 sampling하여 구성된다. classifier는 candidate sentence중에서 context sentence의 scoring이 최고가 되도록 분류한다. 여기서 scoring은 간단하게 inner product를 따른다. 
 $$p(s_{cand}|s, S_{cand}) = \frac{exp[c(f(s), g(s_{cand}))]}{\Sigma_{s'\in S_{cand}}exp[c(f(s), g(s'))]}\\
 \Sigma_{s\in D}\Sigma_{s_{ctxt}\in S_{xtxt}}log p(s_{ctxt}|s, S_{cand})\\

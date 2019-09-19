@@ -7,14 +7,14 @@ categories: studies
 tags: deep-learning generative-models
 ---
 ## WHY? 
-![image](/assets/images/stargan1.png){: .center-image width="50px"}
+![image](/assets/images/stargan1.png){: .body-image}
 
 [CycleGAN](https://lyusungwon.github.io/generative-models/2018/04/05/cyclegan.html) has been used in image-to-image translation effectively. However, handling more than two domains was difficult. This paper StarGAN to handle multiple domains with a single model. 
 
 ## WHAT?
 StarGAN can be considered as an domain conditioned version of CycleGAN. 
 
-![image](/assets/images/stargan2.png){: .center-image width="50px"}
+![image](/assets/images/stargan2.png){: .body-image}
 
 The discriminator of StarGAN not only classify real and fake, but also domain labels. The loss function of StarGAN consists of three terms: adversarial loss, domain classification loss, and reconstruction loss. 
 
@@ -36,7 +36,7 @@ $$
 Model architecture is adopted from CycleGAN. WGAN-GP objective is used as loss function. 
 
 ## So?
-![image](/assets/images/stargan3.png){: .center-image width="50px"}
+![image](/assets/images/stargan3.png){: .body-image}
 StarGAN successfully generated images conditioned on labels from differnt domains with a single model.
 
 ## Critic

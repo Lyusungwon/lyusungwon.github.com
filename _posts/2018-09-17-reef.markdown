@@ -8,11 +8,11 @@ tags: computer-science distributed-processing
 ---
 ## Summary
 Resource managers successfully support distributed computing framework by allocating jobs to nodes in a cluster. Though this RMs are good at utilizing the resources in a cluster, the process of implementation remains quite bothersome dealing the same tasks repetitively for every RMs and applications. 
-![image](/assets/images/reef1.png){: .center-image width="50px"}
+![image](/assets/images/reef1.png){: .body-image}
 Retainable Evaluator Execution Framework(REEF) is a meta framework between RMs and applications which not only marginalize repetitive trivial works but also enable container and state reuse across different frameworks. 
-![image](/assets/images/reef2.png){: .center-image width="50px"}
+![image](/assets/images/reef2.png){: .body-image}
 REEF contains few key concepts. Driver allocates resources and schedule tasks. Evaluator is a runtime environment that executes tasks. Context is a state management environment in a evaluator that that retain state. Servie is a library in a evaluator that contains frequently used functionalities.
-![image](/assets/images/reef3.png){: .center-image width="50px"}
+![image](/assets/images/reef3.png){: .body-image}
 REEF provides higher abstraction on top of RM framework letting developers bypassing trivial implementations.
 
 ## Strengths

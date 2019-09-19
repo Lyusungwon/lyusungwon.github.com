@@ -12,7 +12,7 @@ While conventional deep learning models have performed well on inference regardi
 ## WHAT?
 Assume that we have memory matrix M. To capture interaction among these memories, Multi-Head Dot Product Attention(MHDPA) is used (also known as [self-attention](https://lyusungwon.github.io/natural-language-processing/2018/03/21/transformer.html)).  
 
-![image](/assets/images/rrnn1.png){: .center-image width="50px"}
+![image](/assets/images/rrnn1.png){: .body-image}
 
 Linear projections are used to make queries(Q), keys(K) and values(V) for each memory. Dot product of queries and keys are normalized to gain attention weights. Weighted average of values are used as next memory.
 
@@ -25,7 +25,7 @@ $$
 
 This composes one head of MHDPA. Assuming h is the number of head in MHDPA, F dimensional memories are projected to F/h dimension for each head, and heads are concatnated to represent next memory. New inputs for memory can be encoded easily without adding more parameters.
 
-![image](/assets/images/rrnn2.png){: .center-image width="50px"}
+![image](/assets/images/rrnn2.png){: .body-image}
 
 $$
 \tilde{M} = softmax(\frac{MW^q([M;x]W^k)^T}{\sqrt{d^k}})[M;x]W^v
@@ -33,7 +33,7 @@ $$
 
 Resulted memory can be used as memory cell in LSTM. row-wise MLP with layer normalization is used for $$g_{\psi}$$.
 
-![image](/assets/images/rrnn3.png){: .center-image width="50px"}
+![image](/assets/images/rrnn3.png){: .body-image}
 
 $$
 s_{i,t} = (h_{i,t-1}, m_{i,t-1})\\

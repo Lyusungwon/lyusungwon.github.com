@@ -28,12 +28,12 @@ $$
 ## WHAT?
 Author compared PPMI, SVD, SGNS(Skip-gram with negative sampling), and GloVe varing different hyperparameters. This paper defined three kinds of parameters: pre-processing hyperparameters, association metric hyperparameters, and post-processing hyperparameters. Dynamic context window(dyn), subsampling(sub), and deleting rare words(del) are included as pre-processing hyperparameters. Shifted PMI(neg) and context distribution smoothing(cds) are association metric hyperparameters. Adding context vectors(w+c), eigenvalue weighting(eig) and vector normalization(nrm) are post-processing hyperparameters. The space of hyperparameters are as follows.
 
-![image](/assets/images/ids1.png){: .center-image width="50px"}
+![image](/assets/images/ids1.png){: .body-image}
 
 This paper enumerated all the possible hyperparameter space for each embedding method. The quality of embedding was tested on the two kinds of task. Word similarity was tested on WordSim Similarity, WordSim  Relatedness, MEN, Mechanical Turk, Rare Words, and SimLex-999 dataset. Word analogy was tested on MSR and Google's analogy dataset on two different measures: 3CosAdd and 3CosMul.
 
 ## So?
-![image](/assets/images/ids2.png){: .center-image width="50px"}
+![image](/assets/images/ids2.png){: .body-image}
 The most important result was that no single algorithm outperformed the others. The performance was varied by datasets and hyperparameter configuration. Beneficial configurations and practical recommendations were given in the paper. 
 
 ## Critic

@@ -38,11 +38,11 @@ $$
 
 Since auxiliary variational lowerbound cannot be calculated analytically, we estimate MCMC lowerbound by sampling from transitions($$q_t$$) and inverse model($$r_t$$).
 
-![image](/assets/images/mcvi1.png){: .center-image width="50px"}
+![image](/assets/images/mcvi1.png){: .body-image}
 
 The gradient of resulted MCMC lowerbound can be calculated via remarameterization trick.
 
-![image](/assets/images/mcvi2.png){: .center-image width="50px"}
+![image](/assets/images/mcvi2.png){: .body-image}
 
 One of the efficient methods of MCMC is Hamiltonian Monte Carlo (HMC). Hamiltonian MC introduce auxiliary variables v with the same dimension as z. 
 
@@ -51,7 +51,7 @@ H(v, z) = 0.5 v^T M^{-1}v - \log p(x,z)\\
 v_t' \sim q(v_t'|x, z_{t-1})\\
 $$
 
-![image](/assets/images/mcvi3.png){: .center-image width="50px"}
+![image](/assets/images/mcvi3.png){: .body-image}
 
 ## So?
 Convolutional VAE with Hamiltonian Variational Inference (HVI) with 16 leapfrog step and 800 hidden nodes achieve slightly worse result than that of DRAW. 

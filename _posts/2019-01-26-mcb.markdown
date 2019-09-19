@@ -10,11 +10,11 @@ tags: deep-learning visual-question-answering
 Former methods used element-wise sum, product or concatenation to represent the relation of two vectors. Bilinear model(outer prodct) of two vectors is more sophisticated way of representing relation, but usually dimensionality become too big. This paper suggests multimodal compact bilinear pooling(MCB) to represent compact and sophisticated relations. 
 
 ## WHAT?
-![image](/assets/images/mcb1.png){: .center-image width="50px"}
+![image](/assets/images/mcb1.png){: .body-image}
 
 MCB utilizes Count Sketch projection function for compact encoding of vector. When projecting a vector v of size n to a vector y of size d(n > d), CS algorithm first initalize two vectors $$s \in \{-1, 1\}^n$$, and $$h\in {1,...,d}^n$$. h indicate the indexes where the values of vector v can be projected to. The algorithm is as follows.
 
-![image](/assets/images/mcb2.png){: .center-image width="50px"}
+![image](/assets/images/mcb2.png){: .body-image}
 
 It has been proven that the Count Sketches of the outer product of two vectors can be expressed as convolution of two Count Sketches. Also, convolutino in the time domain is equivalent to element-wise product in frequency domain. 
 
@@ -23,12 +23,12 @@ $$
 x' \ast q' = FFT^{-1}(FFT(x')\odot FFT(q'))
 $$
 
-![image](/assets/images/mcb3.png){: .center-image width="50px"}
+![image](/assets/images/mcb3.png){: .body-image}
 
 In VQA architecture, MCB pooling is used between image features and text feature to get attention weight, and attened image feature and text feature to make prediction. 
 
 ## So?
-![image](/assets/images/mcb4.png){: .center-image width="50px"}
+![image](/assets/images/mcb4.png){: .body-image}
 
 MCB achieved the good results on VQA tasks. 
 

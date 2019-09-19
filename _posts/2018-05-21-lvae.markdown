@@ -10,7 +10,7 @@ tags: deep-learning generative-models
 VAE는 generation에 상당히 강력한 도구이지만 conditional stochastic variable을 통하여 생성하기 때문에 계층적인 특징을 학습하는 깊은 모델을 만들기 어렵다. 
 
 ## WHAT?
-![image](/assets/images/lvae1.png){: .center-image width="50px"}
+![image](/assets/images/lvae1.png){: .body-image}
 기존의 VAE와 LVAE의 generative model은 같다. 
 $$p_{\theta}(z) = p_{\theta(z_L)}\Pi_{i=1}^{L-1}p_{\theta}(z_i|z_{i+1})\\
 p_{\theta}(z_i|z_{i+1}) = N(z_i|\mu_{p,i}(z_{i+1}), \sigma^2_{p,i}(z_{i+1})), p_{\theta}(z_L) = N(z_L|0, I)\\
@@ -22,7 +22,7 @@ $$q_{\phi}(z|x) = q_{\phi}(z_L|x)\Pi_{i=1}^{L-1}q_{\phi}(z_i|z_{i+1})\\
 q_{\phi}(z_i|\cdot)=N(z_i|\mu_{q,i}, \sigma^2_{q,i})$$
 
 ## So?
-![image](/assets/images/lvae2.png){: .center-image width="50px"}
+![image](/assets/images/lvae2.png){: .body-image}
 MNIST, OMINGLOT, NORB데이터들에 대하여 높은 log-liklihood score를 얻었을 뿐 만 아니라 여러 층의 latent variable들이 의미를 골고루 포함하고 있는 것을 볼 수 있다. 
 
 ## Critic

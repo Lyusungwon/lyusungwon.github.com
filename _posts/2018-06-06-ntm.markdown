@@ -10,7 +10,7 @@ tags: deep-learning deep-learning
 기존의 Turing Machine, 혹은 Von Neumann architecture 구조를 가진 컴퓨터들은 elementary operations, logical flow control, external memory라는 근본 메커니즘을 가진다. 기존의 machine learning 기법들은 이 세가지 메커니즘 중 첫번째에 집중해왔다. 최근 나온 RNN구조는 Turing complete하여 이를 활용하여 Neural Truing Machine을 만들 수 있다. 기존 Turing machine과는 다르게 NTM은 gradient descent로 학습이 가능하다. 
 
 ## WHAT?
-![image](/assets/images/ntm1.png){: .center-image width="50px"}
+![image](/assets/images/ntm1.png){: .body-image}
 NTM의 기본 구조는 그림과 같다. Controller는 input과 output을 통하여 외부와 interaction하고 Head(TM 구조에 있는 명칭)를 통하여 읽고 쓴다. 하지만 정확히 메모리를 읽고 쓰는 TM과는 달리 NTM은 attentional focus를 통하여 'blurry' 읽기와 쓰기 작업을 한다.\\
 메모리에 대한 읽기와 쓰기는 다음과 같이 이루어진다. 우선 $$\mathbf{M}_t$$을 t시점의 N x M사이즈를 가진 memory matrix라고 할 떄 N은 memory location, M은 memory의 vector size로 정의된다. $$w_t$$는 N개의 메모리에 주의를 기울이는 weighting이다. 이 가중치로 메모리를 읽은 결과 M차원의 read vector $$r_t$$가 도출된다.
 $$ \Sigma_i w_t(i) = 1\\
@@ -18,7 +18,7 @@ r_t \leftarrow \Sigma_i w_t(i)M_t(i)$$
 쓰기는 지우기와 더하기 두 가지로 구성되어있다. $$e_t$$는 erase vector, $$a_t$$는 add vector이며 이를 통하여 메모리에 수정을 가한다.
 $$\mathbf{\tilde{M}}_t(i)\leftarrow \mathbf{M}_{t-1}(i)[\mathbf{1} - w_t(i)\mathbf{e}_t]\\
 \mathbf{M}_t(i)\leftarrow \mathbf{\tilde{M}}_{t-1}(i) + w_t(i)\mathbf{a}_t$$
-![image](/assets/images/ntm2.png){: .center-image width="50px"}
+![image](/assets/images/ntm2.png){: .body-image}
 메모리에 대하여 읽고 쓸 때 활용하는 w는 Addressing mechanism을 통하여 도출된다. Addressing mechanism은 focusing by content와 focusing by location으로 구성된다. Content Addressing에서는 내용간의 유사도를 확인하는 방법으로 cosine similarity를 사용한다.
 $$w_t^c(i) \leftarrow \frac{exp(\beta_t K[\mathbf{k}_t, \mathbf{M}_t(i)])}{\Sigma_j exp(\beta_t K[\mathbf{k}_t, \mathbf{M}_t(j)])}\\
 K[\mathbf{u}, \mathbf{v}] = \frac{\mathbf{u}\cdot \mathbf{v}}{\|\mathbf{u}\|\cdot\|\mathbf{v}\|}$$
@@ -27,7 +27,7 @@ $$w_t^g \leftarrow g_t w_t^c + (1- g_t)w_{t-1}\\
 \tilde{w}_t(i) \leftarrow \Sigma_{j=0}^{N-1} w_t^g(j)s_t(i-j)\\
 w_t(i) \leftarrow \frac{\tilde{w}_t(i)^{\gamma t}}{\Sigma_j\tilde{w}_t(i)^{\gamma t}}$$
 shift weighting의 식이 익숙하지 않을 수 있는데 기본적으로 다음과 같이 weighting의 회전이동의 식이라고 생각하면 된다. 
-![image](/assets/images/ntm3.png){: .center-image width="50px"}
+![image](/assets/images/ntm3.png){: .body-image}
 Controller Network는 LSTM 혹은 FC로 구성할 수 있다. 
 
 ## So?

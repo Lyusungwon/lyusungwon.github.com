@@ -18,7 +18,7 @@ $$
 
 c is encoded through pretrained convolution model(Resnet101) with 32-dimension positional encoding. Answer prior($$p(a\|c)$$) is simply calculated with fc on image features. The likelihood of the question($$p(q\|a, c)$$) is modeled with conditional language model. Language model(question decoder) is modeled with several blocks of residual self attentive LSTM layers and GLU on the top. 
 
-![image](/assets/images/gqa1.png){: .center-image width="50px"}
+![image](/assets/images/gqa1.png){: .body-image}
 
 At inference time, the answer maximizing the posterior($$p(q,a\|c)$$) is returned which requires calculation of likelihood given all possible answers.
 
@@ -27,11 +27,11 @@ a* = argmax_a p(q|a,c)p(a|c)
 $$
 
 ## So?
-![image](/assets/images/gqa2.png){: .center-image width="50px"}
+![image](/assets/images/gqa2.png){: .body-image}
 
 GQA showed comparable performance to other VQA models while showing interpretable attention map and word probabilities on the last layer.
 
-![image](/assets/images/gqa3.png){: .center-image width="50px"}
+![image](/assets/images/gqa3.png){: .body-image}
 
 [Lewis, Mike, and Angela Fan. "Generative Question Answering: Learning to Answer the Whole Question." (2018).](https://openreview.net/forum?id=Bkx0RjA9tX)
 

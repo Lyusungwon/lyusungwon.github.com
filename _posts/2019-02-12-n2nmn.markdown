@@ -10,11 +10,11 @@ tags: deep-learning visual-question-answering
 Former [neural module network for VQA](https://lyusungwon.github.io/computer-vision/2018/12/15/nmn.html) depends on a naive semantic parser to unroll the layout of the network. This paper suggests End-to-End Module Networks(N2NMN) to directly learn the layout from the data. 
 
 ## WHAT?
-![image](/assets/images/n2nmn1.png){: .center-image width="50px"}
+![image](/assets/images/n2nmn1.png){: .body-image}
 
 Layout policy select one of the predefined modules.
 
-![image](/assets/images/n2nmn2.png){: .center-image width="50px"}
+![image](/assets/images/n2nmn2.png){: .body-image}
 
 Instead of using semantic parser to get the layout for the modules from question, N2NMN use encoder-decoder structure to train them. RNN is used for question encoder and another RNN(with attention) is used for layout policy. Beam search is used to get the layout of the maximum probability.
 
@@ -25,7 +25,7 @@ c_t = \sum_{i=1}^T \alpha_{ti} h_i\\
 p(m^{(t)}|m^{(1)},...,m^{(t-1)}, q) = softmax(W_3 h_t + W_4 c_t) 
 $$
 
-![image](/assets/images/n2nmn3.png){: .center-image width="50px"}
+![image](/assets/images/n2nmn3.png){: .body-image}
 
 The sequence of modules from decoder is mapped into a syntax tree using Reverse Polish Notation(the post-order traversal). Since the layout policy is not fully differentiable, REINFORCE algorithm is used to approximate the gradient. Entropy regularization(0.005) is used to encourage exploration.
 
@@ -39,11 +39,11 @@ Since learning the layout from the scratch is challenging, additional knowledge(
 ## So?
 N2NMN showed better result than NMN on SHAPES, CLEVR and VQA. The expert policies of SHAPES and CLEVER are provided in the dataset, and stanford parser is used for VQA.
 
-![image](/assets/images/n2nmn4.png){: .center-image width="50px"}
+![image](/assets/images/n2nmn4.png){: .body-image}
 
 The layout policy is shown to learn the appropriate policy. Learning from expert policy is shown to be even better than cloning the expert policy.
 
-![image](/assets/images/n2nmn5.png){: .center-image width="50px"}
+![image](/assets/images/n2nmn5.png){: .body-image}
 
 [Hu, Ronghang, et al. "Learning to reason: End-to-end module networks for visual question answering." CoRR, abs/1704.05526 3 (2017).](http://openaccess.thecvf.com/content_ICCV_2017/papers/Hu_Learning_to_Reason_ICCV_2017_paper.pdf)
 

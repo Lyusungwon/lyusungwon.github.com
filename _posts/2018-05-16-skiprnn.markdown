@@ -16,7 +16,7 @@ s_t = u_t \cdot S(s_{t-1}, x_t) + (1 - u_t)\cdot s_{t-1}\\
 \delta \tilde{u_t} = \sigma(W_p s_t + b_p)\\
 \tilde{u_{t+1}} = u_t \cdot \delta \tilde{u_{t+1}} + (1 - u_t) \cdot (\tilde{u_{t+1}} + min(\delta\tilde{u_{t+1}}, 1 - \tilde{u_{t+1}}))$$
 여기서 $$f_{binarize}$$는 rounding으로 구현한다. skip이  일정 간격으로 되도록 스킵을 하지 않으면 델타가 축적된다. 
-![image](/assets/images/skiprnn.png){: .center-image width="50px"}
+![image](/assets/images/skiprnn.png){: .body-image}
 rounding은 gradient가 전파되지 않기 때문에 straight-through estimator를 사용하여 x의 gradient를 1로 근사한다. 또한 task에 따라 skip의 허용 정도가 달라지기 때문에 새로운 term에서 cost per sample term(lambda)를 통하여 조절한다.\\
 $$L_{budget} = \lambda\cdot \Sigma_{t=1}^T u_t$$
 

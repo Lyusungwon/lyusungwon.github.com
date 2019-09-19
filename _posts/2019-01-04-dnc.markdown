@@ -12,7 +12,7 @@ Using external memory as modern computer enable neural net the use of extensible
 ## WHAT?
 Reading and writing in DNC are implemented with differentiable attention mechanism. 
 
-![image](/assets/images/dnc1.png){: .center-image width="50px"}
+![image](/assets/images/dnc1.png){: .body-image}
 
 The controller of DNC is an variant of LSTM architecture that takes an input vector($$x_t$$) and a set of read vectors($$r_{t-1}^1,...,r_{t-1}^R$$) as input(concatenated). Concatenated input and hidden vectors from both previous timestep($$h_{t-1}^l$$) and from previous layer($$h_t^{l-1}$$) are concatenated again to be used as input for LSTM to produce next hidden vector($$h_t^l$$). Hidden vectors from all layers at a timestep are concatenated to emit an output vector($$\upsilon_t$$) and an interface vector($$\xi_t$$). The output vector($$y_t$$) is the sum of $$\upsilon_t$$ and read vectors of the current timestep.
 
@@ -38,7 +38,7 @@ $$
 Memory are addressed with content-based addressing and dynamic memory allocation. Contesnt-based addressing is basically the same as attention mechanism. Dynamic memory allocation is designed to clear memory as analogous to free list memory allocation scheme. 
 
 ## So?
-![image](/assets/images/dnc1.png){: .center-image width="50px"}
+![image](/assets/images/dnc1.png){: .body-image}
 
 DNC showed good result on bAbI task, and Graph tasks. 
 

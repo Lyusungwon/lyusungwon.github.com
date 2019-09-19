@@ -21,13 +21,13 @@ h_1 = sigm(a_1), where a_1 = c\\
 h_d = sigm(a_d), where a_d = W_{\cdot, o_{<d}}x_{o_{<d}} + c = W_{\cdot, o_{d-1}}x_{o_{d-1}} + a_{d-1}
 $$
 NADE can be trained by maximum likelihood. Algorithm is as follows.
-![image](/assets/images/nade1.png){: .center-image width="50px"}
+![image](/assets/images/nade1.png){: .body-image}
 We can extend NADE with other options. RNADE extends binary value x to real value, estimating rhe conditionals as Gaussian mixture. 
-![image](/assets/images/nade2.png){: .center-image width="50px"}
+![image](/assets/images/nade2.png){: .body-image}
 Orderless deep Nade mix the order of input using binary mask and concatenate mask as input to get conditionals. 
-![image](/assets/images/nade3.png){: .center-image width="50px"}
+![image](/assets/images/nade3.png){: .body-image}
 ConvNADE use convolution filters as W and stacks L layers. 
-![image](/assets/images/nade4.png){: .center-image width="50px"}
+![image](/assets/images/nade4.png){: .body-image}
 We can combine ConvNADE with deep NADE.
 
 ## So?

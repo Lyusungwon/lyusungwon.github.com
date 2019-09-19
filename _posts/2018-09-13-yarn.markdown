@@ -8,7 +8,7 @@ tags: computer-science distributed-processing
 ---
 ## Summary
 Apache Hadoop is widely used not only for MapReduce jobs but also any kinds of data processing. The first version of Hadoop had 3 critical drawbacks. First, the framework is hard-coded to MapReduce only. Second, the slots for map and reduce functions are static limiting utilization. Third, JobTracker managed all the task processes so that the framework is not scaleable and vulnerable to failure of JobTracker. Apach Hadoop YARN is a new resource manager that separates resource managing and task scheduling. 
-![image](/assets/images/yarn1.png){: .center-image width="50px"}
+![image](/assets/images/yarn1.png){: .body-image}
 Resource Manager(RM) receives jobs from client and allocate leases of resources(containers). RM comminicates with Node Manager(NM) which manage the resources of a particular node. Accepted jobs are managed by scheduler inside RM, and RM assigns Application Manager(AM) in a node to coordinate application's execution in the cluster. RM and AM also communicates through heartbeat protocol.
  
 ## Strengths

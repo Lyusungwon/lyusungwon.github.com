@@ -17,9 +17,9 @@ $$\mathbf{h}(\mathbf{x}) = \mathbf{g}(\mathbf{b} + \mathbf{W}\odot\mathbf{M}^\ma
 $$M_{k,d}^\mathbf{W} = 1_{m(k)\geq d}\\
 M_{d,k}^\mathbf{V} = 1_{d\geq m(k)}$$
 인코더를 여러층 쌓아서 Deep MADE를 만들 수 있다. 
-![image](/assets/images/made.png){: .center-image width="50px"}
+![image](/assets/images/made.png){: .body-image}
 output의 순서는 다소 바뀌지만 모두 conditional distribution으로 바뀌어 있다는 것을 알 수 있다. 알고리즘은 다음과 같다. 
-![image](/assets/images/made2.png){: .center-image width="50px"}
+![image](/assets/images/made2.png){: .body-image}
 
 
 ## So?

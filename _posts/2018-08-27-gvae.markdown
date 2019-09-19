@@ -16,14 +16,14 @@ $$
 G = (V, \Sigma, R, S)
 $$
 
-![image](/assets/images/gvae1.png){: .center-image width="50px"}
+![image](/assets/images/gvae1.png){: .body-image}
 Encoder uses the knowledge of rules explicitly. 1) Explicit rules of data are defined. 2) Data can be represented as parse tree and rules in data can be extracted. 3) Rules can be converted into 1-hot vectors. 4) Data represented with 1-hot vectors of rules can be map to latent space with convolution neural network.
 
-![image](/assets/images/gvae2.png){: .center-image width="50px"}
+![image](/assets/images/gvae2.png){: .body-image}
 Decoder is a recurrent neural network to output sequences of discrete tokens. 1) Decoder sequentially output logits of grammar. 2) A stack(last-in first-out) is used to keep track of parsing of data (starts with start token). 3) Following the order of stack, put masks on the logit with unmasked part strictly follow the grammar. Masking process ensures decoder to only result gramatically valid output. 4) Reconstruct data from parse tree. Detailed algorithm is as follows. 
 
-![image](/assets/images/gvae3.png){: .center-image width="50px"}
-![image](/assets/images/gvae4.png){: .center-image width="50px"}
+![image](/assets/images/gvae3.png){: .body-image}
+![image](/assets/images/gvae4.png){: .body-image}
 Training phase is the same as that of variational autoencoder with described encoder and decoder.
 
 ## So?

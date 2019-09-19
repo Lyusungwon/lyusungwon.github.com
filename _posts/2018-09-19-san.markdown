@@ -10,19 +10,19 @@ tags: deep-learning deep-learning
 Visual question answering task is answering natural language questions based on images. To solve questions that require multi-step reasoning, stacked attention networks(SANs) stacks several layers of attention on parts of images based on query.
 
 ## WHAT?
-![image](/assets/images/san1.png){: .center-image width="50px"}
+![image](/assets/images/san1.png){: .body-image}
 
 Image model extracts feature map from image with VGGNet structure.
 
-![image](/assets/images/san2.png){: .center-image width="50px"}
+![image](/assets/images/san2.png){: .body-image}
 
 Question model uses the final layer of LSTM to encode question. 
 
-![image](/assets/images/san3.png){: .center-image width="50px"}
+![image](/assets/images/san3.png){: .body-image}
 
 Question can also be encoded through CNN based question model. 
 
-![image](/assets/images/san4.png){: .center-image width="50px"}
+![image](/assets/images/san4.png){: .body-image}
 
 Using the extracted features of images($$v_I$$) and texts($$v_Q$$), attention is applied to image. Several layers of attentions can be stacked to progressively pay attention. 
 
@@ -40,7 +40,7 @@ p_{ans} = softmax(W_u u^K + b_u)
 $$
 
 ## So?
-![image](/assets/images/san5.png){: .center-image width="50px"}
+![image](/assets/images/san5.png){: .body-image}
 
 SAN achieved SOTA results in DAQUAR-ALL, DAQUAR-REDUCED, COCO-QA and VQA. Also, the learned layers of attention showed progressive focusing of important part of image.
 

@@ -10,15 +10,15 @@ tags: deep-learning visual-question-answering
 Visual question answering and visual question generation are complementary tasks. Learning one task may benefit the other. 
 
 ## WHAT?
-![image](/assets/images/iqan1.png){: .center-image width="50px"}
+![image](/assets/images/iqan1.png){: .body-image}
 
 This paper suggests Invertible Question Answering Network(iQAN) that is trained on two tasks sharing pipline in reverse order. 
 
-![image](/assets/images/iqan2.png){: .center-image width="50px"}
+![image](/assets/images/iqan2.png){: .body-image}
 
 VQA model of iQAN is [MUTAN fusion module](https://lyusungwon.github.io/visual-question-answering/2019/01/22/mutan.html), and another MUTAN-based attention module is used for VQG. 
 
-![image](/assets/images/iqan3.png){: .center-image width="50px"}
+![image](/assets/images/iqan3.png){: .body-image}
 
 In order to benefit from the other task, weights are shared between two processes. Dual MUTAN shares core tensor and projection matrices of two MUTAN modules. In addition, input answer projection matrix of VQG model and linear classifier matrix of VQA model are shared. While two RNN for VQG and VQA may not share the parameter, word embedding matrices are shared.  
 

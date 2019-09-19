@@ -10,11 +10,11 @@ tags: deep-learning computer-vision
 Hard attention is relatively less explored than soft attention.
 
 ## WHAT?
-![image](/assets/images/han1.png){: .center-image width="50px"}
+![image](/assets/images/han1.png){: .body-image}
 
 This paper showed that hard attention can be competitive and efficient as soft attention by bootstraping hard attention. In constrast to soft attention, hard attention discretely choose the point to attend.
 
-![image](/assets/images/han2.png){: .center-image width="50px"}
+![image](/assets/images/han2.png){: .body-image}
 
 The key idea is to use L2-Norm of the activations of each objects. Vanila Hard Attention Network(HAN) chooses top-k object with the largest L2-Norm. On the other hand, AdaHAN make a threshold $$\tau$$ to select objects. \\
 Self-attention can be applied to the end of the objects to provide inductive bias for relational reasoning. 

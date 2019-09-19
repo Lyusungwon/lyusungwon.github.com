@@ -12,15 +12,15 @@ Image segmentation requires a lot of annotated images. This paper suggests effic
 ## WHAT?
 This paper suggests U-net architecture which is a modified version of fully convolutional network. 
 
-![image](/assets/images/unet1.png){: .center-image width="50px"}
+![image](/assets/images/unet1.png){: .body-image}
 
 Unet consists of a contracting path and an expansive path. The contracting path is repeated application of two 3x3 convolutions, ReLU, and 2x2 max pooling with doubled channels. The expansive path is somewhat symmetric to the contracting path: two 3x3 convolutions, ReLU and 2x2 up-convolution with halved channels. After upsampling, the output of corresponding contracting layer is cropped and added to provide contextual information. These symmetric pathes form U shape structure. 
 
-![image](/assets/images/unet2.png){: .center-image width="50px"}
+![image](/assets/images/unet2.png){: .body-image}
 
 Overlap-tile strategy is used to predict segmentaion of arbitrarily large images. For efficient use of data, various kinds of data augmentations including shift and rotation invariance, elastic deformations and gray value variations is used. 
 
-![image](/assets/images/unet3.png){: .center-image width="50px"}
+![image](/assets/images/unet3.png){: .body-image}
 
 To separate the touching objects, weighted loss on the sepatation border is used. 
 

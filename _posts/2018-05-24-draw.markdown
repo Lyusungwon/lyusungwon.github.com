@@ -11,7 +11,7 @@ tags: deep-learning generative-models
 
 ## WHAT?
 DRAW는 기본적으로 VAE의 구조를 가지고 있다. 하지만 encoder와 decoder를 모두 rnn을 사용한다. 그래서 encoder와 decoder는 code의 sequence를 주고 받을 뿐만 아니라 encoder가 전시점의 decoder의 output에도 의존한다. 또한 한번에 그림의 픽셀을 결정하는 것이 아니라 부분을 지속적으로 더하여 최종 그림을 도출한다. 마지막으로 attention machanism을 활용하여 encoder에 들어가는 input region과 decoer에 의해 변화하는 output region을 결정한다. 즉, 무엇을 쓸지 뿐만이 아니라 어디를 읽을지, 어디에 쓸지도 함께 결정하는 것이다. 
-![image](/assets/images/draw1.png){: .center-image width="50px"}
+![image](/assets/images/draw1.png){: .body-image}
 모델 구조는 인코더와 디코더 모두 LSTM을 사용하였다. 
 $$\hat{x}_t = x - \sigma(c_{t-1})\\
 r_t = read(x_t, \hat{x}_t, h_{t-1}^{dec})\\
@@ -35,7 +35,7 @@ F_X[i, b] = \frac{1}{Z_Y} exp(-\frac{(b - \mu^i_Y)^2}{2\sigma^2})\\
 g_X \frac{A + 1}{2}(\tilde{g}_X + 1)\\
 g_Y \frac{B + 1}{2}(\tilde{g}_Y + 1)\\
 \delta = \frac{max(A, B) - 1}{N - 1}\tilde{\delta}$$
-![image](/assets/images/draw2.png){: .center-image width="50px"}
+![image](/assets/images/draw2.png){: .body-image}
 여기서 filter weight를 조정하며 attention을 자유자재로 움직일 수 있다. Loss function은 다음과 같다. 
 $$L^x = -log D(x|c_T)\\
 L^z = \Sigma_{t=1}^T KL(Q(Z_t|h_t^{enc})\|P(Z_t))\\

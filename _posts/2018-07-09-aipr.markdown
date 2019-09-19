@@ -11,9 +11,9 @@ Former studies on probabilistic reasoning assume that reasoning is memoryless, w
 
 ## WHAT?
 This paper tried to prove that probabilistic reasoning process of human is a amortized inference. When some queries are parts of complex queries, brain memorize or cache the sub-inference in order to solve complex query. 
-![image](/assets/images/aipr1.png){: .center-image width="50px"}
+![image](/assets/images/aipr1.png){: .body-image}
 In this bayesian network, the result of the first query can be used for the second query saving time and computation. This means that individual difference in the answer of the simple query can propagate to the complex query. 
-![image](/assets/images/aipr2.png){: .center-image width="50px"}
+![image](/assets/images/aipr2.png){: .body-image}
 This paper conducted an experiment of performing a series of inference tasks to decide whether or not a soldier is loyal or defector. The order of the tasks were different among two groups. The difference in order intend to provide the first group a chance to reuse the information from task C to solve task E. 
 
 ## So?

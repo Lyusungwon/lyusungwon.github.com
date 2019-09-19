@@ -10,7 +10,7 @@ tags: deep-learning natural-language-processing
 Hierarchical recurrent encoder-decoder model(HRED) that aims to capture hierarchical structure of sequential data tends to fail because model is encouraged to capture only local structure and LSTM often has vanishing gradient effect. 
 
 ## WHAT?
-![image](/assets/images/vhred.png){: .center-image width="50px"}
+![image](/assets/images/vhred.png){: .body-image}
 Latent Variable Hierarchical Recurrent Encoder-Decoder(VHRED) tried to improve HRED by forcing to learn z with variational inference. Generative process output z from previous w, and inference process infer z through next w. 
 
 $$

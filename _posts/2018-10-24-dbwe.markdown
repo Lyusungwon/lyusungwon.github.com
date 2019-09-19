@@ -11,10 +11,10 @@ Traditional continuous word embeddings based on linear contexts. In other words,
 
 ## WHAT?
 This paper introduces dependency based word embedding to capture more meaningful context. The result of dependency parsing of sentences is used as context instead of surrounding words.
-![image](/assets/images/dbwe1.png){: .center-image width="50px"}
+![image](/assets/images/dbwe1.png){: .body-image}
 
 ## So?
-![image](/assets/images/dbwe2.png){: .center-image width="50px"}
+![image](/assets/images/dbwe2.png){: .body-image}
 While previous BoW reflect the domain aspect, dependency based embedding capture semantic type of the target word. In other words, while BoW find words that associate with w, Deps find words that behave like w. 
 
 ## Critic

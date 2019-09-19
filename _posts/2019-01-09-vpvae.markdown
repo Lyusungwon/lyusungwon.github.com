@@ -32,7 +32,7 @@ $$
 
 In order to prevent inactive stochastic units problem, this paper suggests two-layered VAE.
 
-![image](/assets/images/vpvae.png){: .center-image width="50px"}
+![image](/assets/images/vpvae.png){: .body-image}
 
 $$
 q_{\phi}(z_1|x, z_2) q_{\psi}(z_2|x)\\

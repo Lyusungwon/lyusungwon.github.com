@@ -11,9 +11,9 @@ Image의 representation을 interpretable하게 만든다면 원하는 이미지�
 
 ## WHAT?
 이를 위하여 Variational Autoencoder모델에 encoder와 decoder를 각각 convolution과 transpose convolution으로 구성하여 학습한다. 
-![image](/assets/images/dcign1.png){: .center-image width="50px"}
+![image](/assets/images/dcign1.png){: .body-image}
 학습 방법은 다음과 같다. 
-![image](/assets/images/dcign2.png){: .center-image width="50px"}
+![image](/assets/images/dcign2.png){: .body-image}
 1. 우리가 학습하려는 특성에 대응하는 $$z_{train}$$을 고른다.
 2. 우리가 학습하려는 특성의 변화만 가지고 있는 데이터로부터 샘플링한다.
 3. 데이터를 인코더에 통과시켜 z를 구한다.

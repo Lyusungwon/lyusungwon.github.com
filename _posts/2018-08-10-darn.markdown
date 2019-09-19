@@ -12,7 +12,7 @@ Learning directed generative model is difficult.
 ## WHAT?
 Deep AutoRegressive Network(DARN) models images with hierarchical, autoregressive hidden layers.DARN has three components: a encoder q(H|X), a decoder prior p(H), and a decoder conditional p(X|H). We consider all the latent variables (h) in this model are binary. The decoder prior is an autoregressive model. The conditional probabilities can be modeled with simple logistic regressions.
 
-![image](/assets/images/darn.png){: .center-image width="50px"}
+![image](/assets/images/darn.png){: .body-image}
 
 $$
 p(h) = \prod_{j=1}^{n_h}p(h_j|h_{1:j-1})\\

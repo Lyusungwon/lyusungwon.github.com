@@ -13,7 +13,7 @@ tags: deep-learning deep-learning
 RN(Relation Network)의 가장 기본적인 구성은 다음과 같다.
 $$RN(O) = f_{\phi}(\Sigma_{ij}g_{\theta}(o_i, o_j))\\$$
 o를 우리가 상정한 object라고 하고 g의 output을 relation이라고 한다. 관계적 유추를 할 수 있는 RN은 한가지 모델로 모든 관계를 유추한다는 점에서 데이터 효율적이고 순서에 구애받지 않아 한가지 집합에 대하여 같은 결과를 가져온다. Data에 따라 object가 달라지는데 이미지의 경우에는 CNN마지막 레이어의 각 픽셀이 한 object가 된다. 관계의 의미는 질문에 따라 달라지기 때문에 질문을 LSTM의 마지막 hidden layer로 축약하여 모든 관계에 condition해준다. 각 object의 pair와 질문을 concate한 후 g(MLP)를 거쳐 관계에 대한 결과가 나오고 모든 pair에 대한 결과를 모두 더하여 f(MLP)를 거친 결과로 문제의 답을 찾는다.
-![image](/assets/images/rn.png){: .center-image width="50px"}
+![image](/assets/images/rn.png){: .body-image}
 
 ## So?
 성질 비교, 갯수 비교와 같이 관계적 추론을 요하는 문제에서 인간을 초월하는 성능을 보였다. 

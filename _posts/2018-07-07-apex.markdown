@@ -11,9 +11,9 @@ tags: deep-learning reinforcement-learning
 
 ## WHAT?
 Ape-X architecture only consists of two parts: many actors and one learner. Given a model from model, many actors generate experience simultaneously. The learner collects all the experience from actors to a centralized experience replay and train the model constantly with experience sampled from experience replay.
-![image](/assets/images/apex1.png){: .center-image width="50px"}
+![image](/assets/images/apex1.png){: .body-image}
 Among huge amount of experience to learn from, Ape-X prioritizes the samples with td-error. Since actors calculate the possible max value for a state when selecting a action, td-errors can be calculated from actors without any additional computation. In Ape-X DQN, actors with different $$\epsilon$$-greedy policy would collect differet kinds of experience. Algorithm is as follows.
-![image](/assets/images/apex2.png){: .center-image width="50px"}
+![image](/assets/images/apex2.png){: .body-image}
 
 ## So?
 The efficiency of training scaled with actors resulting enormous improvement in both result and speed. 

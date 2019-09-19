@@ -11,7 +11,7 @@ Efficient exploration of agent in reinforcement learning is an important issue. 
 
 ## WHAT?
 NoisyNet is a neural network whose parameters are replaced with a parametric function of the noise. 
-![image](/assets/images/nn1.png){: .center-image width="50px"}
+![image](/assets/images/nn1.png){: .body-image}
 $$
 \theta =^{def} \mu + \Sigma \odot \epsilon\\
 y =^{def} (\mu^w + \sigma^w \odot \epsilon^w)x + \mu^b = \sigma^b \odot \epsilon^b\\
@@ -24,7 +24,7 @@ $$
 
 ## So?
 NoisyNet-DQN/Dueling/A3C showed overall improved performance over models without noise. 
-![image](/assets/images/nn2.png){: .center-image width="50px"}
+![image](/assets/images/nn2.png){: .body-image}
 The evolution of $$\sigma$$ differed significantly by the tasks. 
 
 ## Critic

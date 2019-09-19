@@ -18,7 +18,7 @@ $$\mathcal{L}(\theta, \phi; \mathcal{D}, \mathcal{D}^{sup}) = \Sigma_{n=1}^{N} \
 w^{m, s} := \frac{q_{\phi}(\mathbf{y}^m), \mathbf{z}^{m, s}|\mathbf{x}^m}{q_{\phi}(\mathbf{z}^{m, s}|\mathbf{x}^m}\\
 \mathcal{L}^{sup}(\theta, \phi; \mathbf{x}^m, \mathbf{y}^m) := \frac{1}{S}\Sigma^S_{s=1} \frac{w^{m, s}}{Z^m}log\frac{p_{\theta}(\mathbf{x}^m, \mathbf{y}^m, \mathbf{z}^{m,s})}{q_{\phi}(\mathbf{y}^m), \mathbf{z}^{m, s}|\mathbf{x}^m} + (1+\alpha) log q_{\phi}(\mathbf{y}^m|\mathbf{x}^m)$$
 주의할 부분은 이 목적식은 어떠한 conditional dependency구조를 가지고 있던 간에 관계없이 사용할 수 있다는 점이다. 이를 확률그래프로 나타내면 다음과 같이 나타낼 수 있다.
-![image](/assets/images/ssdgm.png){: .center-image width="50px"}
+![image](/assets/images/ssdgm.png){: .body-image}
 위 그림에는 fully supervised variable x와 unobserbed variable z, partially observed variable y를 중심으로 각각의 분포 $$\lambda$$, q, p, 그리고 그의 파라미터 $$\phi, \theta, \eta$$로 구성되어 있고 reparamerization trick이 사용되었다. 
 
 ## So?

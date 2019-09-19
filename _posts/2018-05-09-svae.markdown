@@ -11,7 +11,7 @@ tags: deep-learning natural-language-processing
 
 ## WHAT?
 이 논문에서는 문장의 정보를 함축한 latent representation을 나타내기 위하여 인코더, 디코더에 sequential model을 활용한 VAE를 사용한다.
-![image](/assets/images/svae.png){: .center-image width="50px"}
+![image](/assets/images/svae.png){: .body-image}
 하지만 종종 sequential model을 디코더로 사용할 경우 디코더가 문장의 정보를 함축한 latent representation을 활용하지 않는 posterior collapse현상이 일어난다. 이를 극복하기 위하여 두 가지 트릭을 사용하는데 첫번째는 KL cost annealing으로 KL에 주어진 가중치를 0으로 부터 시작하여 점점 올리는 방법을 사용한다. 이를 통하여 encoder가 좀더 풍부한 정보를 담도록 유도할 수 있다. 두번째는 word dropout과 historyless decoding방법으로 decoder를 약화시키는 방법이다. 보통 학습할 때 ground truth데이터를 활용하는데 word dropout은 이 데이터의 일부를 임의로 제거하는 방법이다. 이를 통하여 decoder가 강제로 latent variable에 의존하도록 만든다. 
 
 ## So?

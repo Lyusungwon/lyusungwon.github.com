@@ -7,20 +7,20 @@ categories: studies
 tags: deep-learning generative-models
 ---
 ## WHY? 
-![image](/assets/images/realnvp1.png){: .center-image width="50px"}
+![image](/assets/images/realnvp1.png){: .body-image}
 The motivation is almost the same as that of [NICE](https://lyusungwon.github.io/dl/2018/07/17/nice.html). This papaer suggest more elaborate transformation to represent complex data.
 
 ## WHAT?
 [NICE](https://lyusungwon.github.io/dl/2018/07/17/nice.html) suggested coupling layers with tractable Jacobian matrix. This paper suggest flexible bijective function while keeping the property of coupling layers. Affine coupling layers scale and translate the x, its Jacobian is easy to compute and invertible. In this paper, s and t are used as rectified convolution layer.
-![image](/assets/images/realnvp2.png){: .center-image width="50px"}
+![image](/assets/images/realnvp2.png){: .body-image}
 $$y_{1:d} = x_{1:d}\\
 y_{d+1:D} = x_{d+1:D}\odot \exp(s(d_{x:d})) + t(x_{1:d})\\
 \frac{\partial y}{\partial x^T} = \left[\begin{array}{cc} I_d & 0\\\frac{\partial y_{d+1:D}}{\partial x^T_{1:d}} & diag(\exp[s(x_{1:d})]) \end{array} \right]\\
 x_{1:d} = y_{1:d} \\
 x_{d+1:D} = (y_{d+1:D} - t(y_{1:d}))\odot \exp(-s(y_{1:d}))$$
-![image](/assets/images/realnvp3.png){: .center-image width="50px"}
+![image](/assets/images/realnvp3.png){: .body-image}
 This paper suggested two ways for partition. First is spatial checkerboard patterns and second is channel-wise masking (above). 
-![image](/assets/images/realnvp4.png){: .center-image width="50px"}
+![image](/assets/images/realnvp4.png){: .body-image}
 To build up this components into a multiscale architecture, squeezing operation is used to divide a channel into four (above). A scale in architecture consists of three coupling layers with checkerboard masks, squeezing operation and three more coupling layers with alternating channel-wise masking. 
 $$h^{(0)} = x\\
 (z^{(i+1)}, h^{(i+1)}) = f^{(i+1)}(h^{(i)})\\
@@ -30,7 +30,7 @@ Batch normalization is use whose Jacobian matrix is also tractable.
 $$\left(\prod)_i(\tilde{\sigma}_i^2 + \epsilon)\right)^{-\frac{1}{2}}\\$$
 
 ## So?
-![image](/assets/images/realnvp5.png){: .center-image width="50px"}
+![image](/assets/images/realnvp5.png){: .body-image}
 Real NVP showed competitive performance in generation in CIFAR10, Imagenet, CelebA, and LSUN in terms of quality and log likelihood. 
 
 ## Critic

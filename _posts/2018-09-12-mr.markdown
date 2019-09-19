@@ -8,9 +8,9 @@ tags: computer-science distributed-processing
 ---
 ## Summary
 MapReduce is a programming model that parallelize the computation on large data. 
-![image](/assets/images/mr1.png){: .center-image width="50px"}
+![image](/assets/images/mr1.png){: .body-image}
 The computation consists of two functions: a map and a reduce function. First, input data are partitioned into M splits. Map function takes a partition of inputs and produce a set of intermediate key/value pairs. By partitioning the key space(hash(key mod R)), the result can be split into R pieces. Intermediate pairs can be stored in R regions of local disk. Reduce function accesses the local disks of the map workers and groups intermediate pairs with the same key. The master coordinate the location and size of intermediate file regions.
-![image](/assets/images/mr2.png){: .center-image width="50px"}
+![image](/assets/images/mr2.png){: .body-image}
 
 ## Strengths
 Massively parallellized computation is possible. 

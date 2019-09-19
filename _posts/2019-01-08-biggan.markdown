@@ -12,7 +12,7 @@ Generating a high resolution image with GAN is difficult despite of recent advan
 ## WHAT?
 BigGAN is made by a series of tricks over baseline model. Self-Attention GAN(SA-GAN) which uses self-attention modules on both generator and discriminator and hindge loss. Class information is provided with class-conditional BatchNorm to generator and with projection to discriminator. [Spectral Norm](https://lyusungwon.github.io/generative-models/2018/07/31/sgan.html) on generator is used. On the top of this baseline model, five major tricks are used. 
 
-![image](/assets/images/biggan1.png){: .center-image width="50px"}
+![image](/assets/images/biggan1.png){: .body-image}
 
 1) Simply increasing the batch size (by a factor of 8: 256 to 2048) greatly improved the performance(46% is IS score). 2) Increasing the capacity by increasing the number of channels(by 50%) in every layer improved the performance(21% is IS score). 3) Shared embedding which is linearly projected to each BatchNorm layer and 4) a variant of hierarchical latent space further improved the performance. 
 
@@ -26,7 +26,7 @@ $$
 ## So?
 After comprehensive analysis on the training of the model, this paper concluded that stability comes from interaction between discriminator and generator so that reasonable conditioning and relaxing constraints to allow collapse at the later stage are helpful to achieve good results.
 
-![image](/assets/images/biggan2.png){: .center-image width="50px"}
+![image](/assets/images/biggan2.png){: .body-image}
 
 BigGAN was able to generate high quality large scale images in quantitative and qualitative measures.
 

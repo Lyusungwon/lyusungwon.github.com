@@ -10,7 +10,7 @@ tags: deep-learning computer-vision
 [Relational Network](https://lyusungwon.github.io/deep-learning/2018/05/06/rn.html) showed great performance in relational reasoning, but calculations and memory consumption grow quadratically with the number of the objects due to fully connected pairing process.
 
 ## WHAT?
-![image](/assets/images/res.png){: .center-image width="50px"}
+![image](/assets/images/res.png){: .body-image}
 Using the last layer of CNN as objects is the same as RN. Instead of pairing this objects, RNN is used to find entity among thest objects(Entity Finder). Question embedding is used as initial hidden layer of RNN. The output of EF rnn is used as query for attention and each object is split into key and value. The values of the objects are weighted summed by inner product of query and key. The resulting value is used as next input for EF RNN. All the resulted values of EF RNN is called entity steam. Entity stream is fed to another RNN(Relationship Finder) to answer the question. Hard attention can be used instead of soft attention.
 
 ## So?

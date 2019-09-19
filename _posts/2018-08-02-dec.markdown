@@ -11,7 +11,7 @@ There had been little study on learning representation that focus on clustering.
 
 ## WHAT?
 Deep Embedding Clustering(DEC) consists of two phases: parameter initialization with a deep autoencoder and (2) parameter optimization. This paper first describe the second phase. Assume encoder and inital cluster centroids are given, two steps are alternated to improve clustering: 1) compute soft assignment of embedded points to centroids, and 2) update encoder and refine centroids.\\
-![image](/assets/images/dec1.png){: .center-image width="50px"}
+![image](/assets/images/dec1.png){: .body-image}
 Student's t-distriution is used as kernel for soft assignment. An auxiliary distribution p is designed to help learn from high confidence assignments. KL-divergence between soft assignment and auxiliary distribution is minimize by updating encoder and centroids. 
 $$
 q_{ij} = \frac{(1+\|z_i - \mu_j\|^2/\alpha)^{-\frac{\alpha+1}{2}}}{\sum_{j'}(1+\|z_i - \mu_j\|^2/\alpha)^{-\frac{\alpha+1}{2}}}\\
@@ -22,7 +22,7 @@ Trained Stacked Autoencoder(SAE) with denoising autoencoder for each layer is us
 
 ## So?
 DEC outperformed many clustering methods including k-means, LDMGI, and SEC in unsupervised clustering task of MNIST, STL-10, and Reuters. 
-![image](/assets/images/dec2.png){: .center-image width="50px"}
+![image](/assets/images/dec2.png){: .body-image}
 Visualization verified that embeddings are well separated.
 
 ## Critic

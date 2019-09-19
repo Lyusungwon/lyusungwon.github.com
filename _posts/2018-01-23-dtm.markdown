@@ -10,7 +10,7 @@ tags: statistics probabilistic-graphical-modeling
 LDA를 통하여 토픽 모델링을 할 때 시간적으로 토픽과 그에 대한 단어 분포가 변화하는 정보를 반영하지 못한다. 
 
 ## WHAT?
-![image](/assets/images/dynamic_topic_model.png){: .center-image width="50px"}
+![image](/assets/images/dynamic_topic_model.png){: .body-image}
 기존의 LDA의 모델에서 파라미터(토픽과 토픽의 비율 - $$\alpha, \beta$$)를 평균으로 정규분포를 통하여 표본 추출했다고 가정함으로서 시계열적인 latent variable을 가지고 있다고 가정하고 근사 추정을 한다. 
 
 ## So

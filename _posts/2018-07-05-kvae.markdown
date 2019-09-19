@@ -11,7 +11,7 @@ This paper wanted to catch non-linear dynamics of the object in video.
 
 ## WHAT?
 KVAE(Kalman Variational Autoencoder) combined Kalman filter with VAE to model dynamic latent variables. 
-![image](/assets/images/kvae1.png){: .center-image width="50px"}
+![image](/assets/images/kvae1.png){: .body-image}
 Linear Gaussian state space models are used to model Kalman filter and stable latent variables of the variational autoencoder. Matrices $$\gamma_t = [A_t, B_t, C_t]$$ are the state transition, control and emission matrices at time t and Q and R are the covariances matrices of process and measurement noise. Using Kalman filter, we can estimate the $$p(z_t|a_{1:t}, u_{1:t})$$ and $$p(z_t|a, u)$$ exactly. 
 $$p_{\gamma_t}(z_t|z_{t-1}, u_t) = N(z_t; A_tz_{t-1} + B_t u_t, Q), p_{\gamma_t}(a_t|z_t) = N(a_t;C_t z_t, R)\\
 p_{\gamma_t}(a,z|u)=p_{\gamma_t}(a|z)p_{\gamma_t}(z|u)$$

@@ -11,7 +11,7 @@ This paper wanted to disentangle the label related and label unrelated informati
 
 ## WHAT?
 Let S represents labeled information and Z represents the rest. 
-![image](/assets/images/tsd.png){: .center-image width="50px"}
+![image](/assets/images/tsd.png){: .body-image}
 The first step is to train the S-encoder with a classifier to classify the label so that S-encoder can extract the information that are related to label.
 In the second step, while the S-encoder is kept fixed, the output of S-encoder and that of Z-encoder are used together for reconstruction. To make sure that Z-encoder does not contain any information of label, another adversarial classifier are train to classify the output of Z-encoder. Z-encoder and decoder is trained together to minimize the loss of reconstruction and the negative of the loss of classifier (maximize the loss of classifier: $$L_{rec} - \lambda * L_{adv}$$).
 

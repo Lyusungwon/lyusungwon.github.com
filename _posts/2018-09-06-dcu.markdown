@@ -8,7 +8,7 @@ tags: deep-learning audio
 ---
 ## WHY? 
 For audio source separation task, traditional approach only utilized magnitude part ignoring phase part. Previously deep complex network provided complex arithmetics via convolution. 
-![image](/assets/images/dcu1.png){: .center-image width="50px"}
+![image](/assets/images/dcu1.png){: .body-image}
 
 ## WHAT?
 Deep Complex U-net modified simple DCN to better preseve audio information. First, DCU used strided complex-valued convolutional layers instead of max pooling operation. Second, complex batch normalization is used. Third, leaky CReLU is used instead of CReLU. For source separation task, DCU used complex-valued mask instead of real-valued mask.
@@ -20,7 +20,7 @@ $$
 
 The problem of complex-valued mask is that the values can range from -$$\infty$$ to $$\infty$$(Unbounded mask). Unbounded mask may capture any form of appropriate mask, but empirically proved that the good optimization is difficult. 
 
-![image](/assets/images/dcu2.png){: .center-image width="50px"}
+![image](/assets/images/dcu2.png){: .body-image}
 
 Previous work suggested sigmoid activation for each of real and imaginary part. However, seeing the distribution of appropriate mask, this activation can capture very limited area. DCU suggest polar-coordinate-wise masking to keep the mask bounded in a unit-circle in complex-space. 
 

@@ -12,27 +12,27 @@ High quality disentangled generation of images has been the goal for all the gen
 ## WHAT?
 SBGAN changes the architecture of generator on the top of [PGGAN](https://lyusungwon.github.io/generative-models/2019/01/02/pggan.html). 
 
-![image](/assets/images/sbgan1.png){: .center-image width="50px"}
+![image](/assets/images/sbgan1.png){: .body-image}
 
 Instead of feeding a latent code z through the input layer of generator, SBGAN starts from learned constant. Latent codes are transformed with mapping network of 8-layer MLP and feed through adaptive instance normalization(AdaIN) to each layer. This paper argues that mapping network restores the real distribution of dataset.
 
-![image](/assets/images/sbgan2.png){: .center-image width="50px"}
+![image](/assets/images/sbgan2.png){: .body-image}
 
 Finally, external noise inputs are added to each layer to provide stochasticity. 
 
-![image](/assets/images/sbgan3.png){: .center-image width="50px"}
+![image](/assets/images/sbgan3.png){: .body-image}
 
 Comprehensive ablation study was conducted. To start with (A) PGGAN, (B) bilinear up/downsamplig operation helped improve the quality. (C) Mapping network, AdaIN and (D) constant input tensor further improved the results. (E) External nput noise and (F) mixing regularization which is generating a portion of inputs with mixing of two random latent codes. Truncation trick in W is used only for demonstration.  
 
-![image](/assets/images/sbgan4.png){: .center-image width="50px"}
+![image](/assets/images/sbgan4.png){: .body-image}
 
 ## So?
 By mixing the latent codes in different scales of layers, different levels of style are mixed. 
 
-![image](/assets/images/sbgan5.png){: .center-image width="50px"}
+![image](/assets/images/sbgan5.png){: .body-image}
 
 Controlling the input noise in different levels of layers can control stochastic variation in different scales. 
 
-![image](/assets/images/sbgan6.png){: .center-image width="50px"}
+![image](/assets/images/sbgan6.png){: .body-image}
 
 [Karras, Tero, Samuli Laine, and Timo Aila. "A Style-Based Generator Architecture for Generative Adversarial Networks." arXiv preprint arXiv:1812.04948 (2018).](https://arxiv.org/abs/1812.04948)

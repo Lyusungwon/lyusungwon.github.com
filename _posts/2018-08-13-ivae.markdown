@@ -11,7 +11,7 @@ VAE can learn useful representation while GAN can sample sharp images.
 
 ## WHAT?
 Introspective Variational Autoencoder(IVAE) combines the advantage of VAE and GAN to make a model to learn useful representation and output sharp images. IVAE uses encoder to introspectively estimate the generated samples and the training data as a discriminator. 
-![image](/assets/images/ivae1.png){: .center-image width="50px"}
+![image](/assets/images/ivae1.png){: .body-image}
 
 $$
 L_{AE} = -E_{q_{\phi}(z|x)}log p_{\theta}(x|z) = \frac{1}{2}\sum_{i=1}^N\|x_{r,i}-x_i\|^2_F\\
@@ -22,7 +22,7 @@ $$
 
 Algorithm is as follows.
 
-![image](/assets/images/ivae2.png){: .center-image width="50px"}
+![image](/assets/images/ivae2.png){: .body-image}
 
 ## So?
 IVAE achieved realistic quality reconstruction and sample from CelebA, CelebA-HQ, and LSUN Bedroom. Also the representations learned from IVAE showed meaningful latent manifold.

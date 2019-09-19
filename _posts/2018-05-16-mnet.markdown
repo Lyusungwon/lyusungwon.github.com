@@ -11,7 +11,7 @@ tags: deep-learning deep-learning
 
 ## WHAT?
 Matching network는 few-shot learning을 위하여 주어진 labeled data를 memory처럼 활용한다. 
-![image](/assets/images/mnet.png){: .center-image width="50px"}
+![image](/assets/images/mnet.png){: .body-image}
 이 메모리를 활용하여 주어진 데이터들과 새로운 데이터의 attention을 통하여 y를 학습한다. 여기서 embedding vector f와 g는 VGG나 Inception같은 deep convolution network를 사용하거나 word embedding을 사용한다. 하지만 g의 경우 주어진 labeled데이터의 context를 반영하는 embedding이 필요하기 때문에 bidirectional LSTM with read-attention을 사용한다. 
 $$S \rightarrow c_S(\hat{x})\\
 argmax P(y|\hat{x}, S)\\

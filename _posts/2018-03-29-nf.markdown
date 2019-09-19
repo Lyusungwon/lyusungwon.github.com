@@ -24,7 +24,7 @@ $$ln q(\mathbf{z}_K) = ln q_0(\mathbf{z}_0)-\Sigma_{k=1}^K ln|1 + \mathbf{u}^\to
 로 나타낼 수 있다. 이와 같은 변환을 planar flow라고 구한다. Free energy bound에 있는 posteior를 K번 변화시킨 식을 위에서 구한 식을 통하여 나타내면 다음과 같이 나타낼 수 있다.\\
 $$F(x) = E_{q_\phi (z|x)}[log q_\phi (\mathbf{z}|\mathbf{x}) - log p(\mathbf{x}, \mathbf{z})] \\= E_{q_0 (z_0)}[ln q_0(\mathbf{z}_0)] - E_{q_0 (z_0)}[log p(\mathbf{x}, \mathbf{z}_K)] - E_{q_0 (z_0)}[\Sigma_{k=1}^K ln|1+ \mathbf{u}_k^\top \psi_k(\mathbf{z}_{k-1})]$$ 
 이 식을 variational EM이나 amortized variational inference에 사용할 수 있다. 알고리즘은 다음과 같다.
-![image](/assets/images/nf.png){: .center-image width="50px"}\\
+![image](/assets/images/nf.png){: .body-image}
 다른 flow based posterior인 NICE(Non-linear Independent Components Estimation)은 다음에 소개하기로 한다. 
 
 ## So?

@@ -11,7 +11,7 @@ tags: deep-learning generative-models
 
 ## WHAT?
 PixelGAN Autoencoder는 위 두 가지 방법을 통합하려 하였다. 우선 노이즈를 섞은 데이터를 인코더를 통하여 latent space로 보낸다. 그리고 이 latent variable의 분포를 adversarial training을 통하여 특정 분포에 근사한다. 그리고 이 latent variable을 PixelCNN에 Adaptive Bias로 반영하여 학습한다. 
-![image](/assets/images/pixelgan.png){: .center-image width="50px"}
+![image](/assets/images/pixelgan.png){: .body-image}
 학습은 reconstruction phase와 adversarial phase로 나뉘는데 reconstruction phase에서는 PixelCNN을 학습하고 adversarial phase에서는 encoder와 discriminator를 학습한다. 
 
 ## So?

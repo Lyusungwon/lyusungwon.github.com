@@ -10,17 +10,17 @@ tags: deep-learning natural-language-processing
 Former [Transformer](https://lyusungwon.github.io/natural-language-processing/2018/03/21/transformer.html) was unidirectional language model. 
 
 ## WHAT?
-![image](/assets/images/bert1.png){: .center-image width="50px"}
+![image](/assets/images/bert1.png){: .body-image}
 
 BERT is multi-layer bidirectional Transformer encoder.
 
-![image](/assets/images/bert2.png){: .center-image width="50px"}
+![image](/assets/images/bert2.png){: .body-image}
 
 A sequence of input representation can be either a single text sentence or a pair of text sentences. The first token of every sequence is a classification token and sentences in a sequence are separated by a separation token. Each token in the sequence is the sum of three components: Token embeddings, segment embeddings and position embeddings. Two sentences in a sequence is differentiated again by segment embeddings. 
 
 Two kinds of pretraining tasks are used for BERT. Since BERT is bidirectional, masked language modeling task is used. Mased LM randomly choose words in the corpus and replace with mask token and the hidden vector of the mask token is used for the softmax. BERT randomly choose 15% of the tokens. 80% of the chosen words are turn into mask tokens. 10% are replaced with a random word and the rest 10% are kept unchanged. The second task is next sentence prediction task. The training loss is the sum of the mean masked LM likelihood and mean next sentence prediction likelihood. 
 
-![image](/assets/images/bert3.png){: .center-image width="50px"}
+![image](/assets/images/bert3.png){: .body-image}
 
 Fine-tuning for each task can be differ. Sentence level classification task only need a W matrix that can be multiplied to classification token. Start and end vector is trained to estimate the span in question answering task. A classifier is trained to classify each token in named entity recognition task. 
 
