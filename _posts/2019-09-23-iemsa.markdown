@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "Story Ending Generation with Incremental Encoding and Commonsense Knowledge"
+date:   2019-09-23 21:14:59
+author: Sungwon Lyu
+categories: studies
+tags: deep-learning natural-language-processing knowledge-graph
+---
+## WHY? 
+[Commonsense knowledge graph](https://lyusungwon.github.io/studies/2019/09/16/comet/) can be useful source of explicit knowledge for generating texts that make sense. However, it is hard to use KG since it would hold huge amount of information than needed. Retrieving graphs which is relevent for the generation is the key. 
+
+## WHAT?
+The story ending generation is generating the last sentence given few lines of story. 
+![image](/assets/images/iemsa1.png){: .body-image}
+This paper bypasses the problem of graph retrieval by retrieving one-hop knowledge graph of every words in previous sentences in advance. And the model uses retrieved graphs to generate final sentences. Therefore, the task is simplified to generating plausible sentence given graphs similar to that of [GraphWriter](https://lyusungwon.github.io/studies/2019/09/19/graphwriter/). 
+![image](/assets/images/iemsa2.png){: .body-image}
+The main two contribution of this paper is incremental encoding and multi-source attention. Incremental encoding is used to encode texts with hierarchical structure(multiple sentences). 
+
+$$
+\mathbf{h}_j^{(i)} = \mathbf{LSTM}(\mathbf{h}_{j-1}^{(i)}, \mathbf{e}(x_j^{(i)}), \mathbf{c}_{\mathbf{l}j}^{(i)}), i \geq 2
+$$
+
+While i indexes sentence and j indexes word, $\mathbf{c}_{\mathbf{l}j}^{(i)}$ represent a context vector. This context vector is derived by multi-Source attention.
+
+$$
+\mathbf{c}_{\mathbf{l}j}^{(i)} = \mathbf{W}_{\mathbf{l}}(\[\mathbf{c}_{\mathbf{h}j}^{(i)};\mathbf{c}_{\mathbf{x}j}^{(i)}\])
+$$
+
+$\mathbf{c}_{\mathbf{h}j}^{(i)}$ is derived by attending on hidden states of previous sentence, and $\mathbf{c}_{\mathbf{h}j}^{(i)}$ by attending on one-hop knowledge graphs of previous sentence. 
+
+This model compared two methods(graph attention and contextual attention-BiGRU) for graph representation and imposed NLL loss on generation of all sentences including previous sentences. 
+
+## So?
+![image](/assets/images/iemsa3.png){: .body-image}
+This model generated natural sentence that makes sense using information from knowledge graph. 
+
+## Review
+Retrieving all the relations related to sentences beforehand is obviously limited but effective idea. This can be good first trial to using commonsense knowledge graph for text generation. 
+
+[Guan, Jian, Yansen Wang, and Minlie Huang. "Story ending generation with incremental encoding and commonsense knowledge." Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 33. 2019.](https://www.aaai.org/ojs/index.php/AAAI/article/view/4612)
+
