@@ -20,13 +20,13 @@ $$
 \mathbf{h}_j^{(i)} = \mathbf{LSTM}(\mathbf{h}_{j-1}^{(i)}, \mathbf{e}(x_j^{(i)}), \mathbf{c}_{\mathbf{l}j}^{(i)}), i \geq 2
 $$
 
-While i indexes sentence and j indexes word, $\mathbf{c}_{\mathbf{l}j}^{(i)}$ represent a context vector. This context vector is derived by multi-Source attention.
+While i indexes sentence and j indexes word, $$\mathbf{c}_{\mathbf{l}j}^{(i)}$$ represent a context vector. This context vector is derived by multi-Source attention.
 
 $$
-\mathbf{c}_{\mathbf{l}j}^{(i)} = \mathbf{W}_{\mathbf{l}}(\[\mathbf{c}_{\mathbf{h}j}^{(i)};\mathbf{c}_{\mathbf{x}j}^{(i)}\])
+\mathbf{c}_{\mathbf{l}j}^{(i)} = \mathbf{W}_{\mathbf{l}}([\mathbf{c}_{\mathbf{h}j}^{(i)};\mathbf{c}_{\mathbf{x}j}^{(i)}])
 $$
 
-$\mathbf{c}_{\mathbf{h}j}^{(i)}$ is derived by attending on hidden states of previous sentence, and $\mathbf{c}_{\mathbf{h}j}^{(i)}$ by attending on one-hop knowledge graphs of previous sentence. 
+$$\mathbf{c}_{\mathbf{h}j}^{(i)}$$ is derived by attending on hidden states of previous sentence, and $$\mathbf{c}_{\mathbf{h}j}^{(i)}$$ by attending on one-hop knowledge graphs of previous sentence. 
 
 This model compared two methods(graph attention and contextual attention-BiGRU) for graph representation and imposed NLL loss on generation of all sentences including previous sentences. 
 
